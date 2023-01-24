@@ -16,3 +16,9 @@ This makes it easier for others in the community to contribute to your package, 
 
 Otherwise, each page on this site highlights recommended packages or services for each area.
 These shouldn't be taken as set in stone for every project, but are a good place to start.
+
+### Traffic lights
+Each item has an (opinionated) traffic light. The meaning of these is:
+- 🟢 At least one person in ARC uses this. We actively recommend using it above other tools. It is the single recommended package for a given purpose.
+- 🟠 We don't discourage using this, but it may duplicate functionality of a green tool.
+- 🔴 We actively discourage using this. This could be because it's no longer maintained, not open source, or difficult to use. Consider moving to alternatives if you're currently using something that's red. A reason is given next to each red item.

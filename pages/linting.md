@@ -11,7 +11,7 @@ See [here for example configuration](https://github.com/paddyroddy/python-templa
 | -------- | ------------------| - |
 | [autopep8](https://github.com/hhatto/autopep8) | formatter which conforms to PEP 8 | 🟠 |
 | [black](https://black.readthedocs.io/en/stable/) | opinionated formatter, defaults to 88 characters per line | 🟢 |
-| [flake8](https://flake8.pycqa.org/en/latest/) | linter which complains if code doesn't follow a rule, sole maintainer who seems confrontational | 🔴 |
+| [flake8](https://flake8.pycqa.org/en/latest/) | linter which complains if code doesn't follow a rule. Does not support modern `pyproject.toml` configuration. | 🔴 |
 | [isort](https://pycqa.github.io/isort/) | sorts imports alphabetically, splits into first/third party, works on python & cython code | 🟢 |
 | [mypy](https://mypy.readthedocs.io/en/stable/) | static type checker, won't fail if no typing but will if typing is incorrect | 🟢 |
 | [pre-commit](https://pre-commit.com/) | universal tool which performs a git hook on commit, allows you to run linters/formatters on any code | 🟢 |
