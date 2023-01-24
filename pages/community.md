@@ -7,7 +7,7 @@ layout: default
 
 ## FAQs.
 General FAQs.
-What's 
+What's python-tooling?
 
 ## Monthly Newsletter 
 Monthly Newsletter is a free weekly email newsletter featuring curated news, articles, new releases, jobs, and more. 
@@ -16,8 +16,7 @@ Monthly Newsletter is a free weekly email newsletter featuring curated news, art
 Python enthusiasts centered around an open Slack team.
 
 ## Discussions [:link:](https://github.com/UCL-ARC/python-tooling/discussions/landing)
-* Who's using python-tooling?
 * Developers Meetings
+* Who's using python-tooling?
 * Ideas for New Directions
 * Help and Support
-
