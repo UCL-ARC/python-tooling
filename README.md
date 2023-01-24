@@ -14,3 +14,9 @@ To contribute:
 4. Someone who did not contribute to the PR should review it.
 5. If approved, the reviewer should merge the PR.
 6. If changes requested, the PR author should address the comments, then ask for review again.
+
+### Building locally
+1. [Install jekyll](https://jekyllrb.com/docs/installation/)
+2. Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
+
+See the [jekyll docs](https://jekyllrb.com/docs/) for more info.
