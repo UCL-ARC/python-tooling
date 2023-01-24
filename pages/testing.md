@@ -1,5 +1,5 @@
 ---
-title: Tests
+title: Testing
 layout: default
 ---
 
