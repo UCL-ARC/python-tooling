@@ -3,7 +3,8 @@ title: CI
 layout: default
 ---
 
-## Continuous integration
+# Continuous integration
+
 | Name     | Short description | 🚦 |
 | -------- | ------------------| -- |
 | [GitHub Actions](https://docs.github.com/en/actions) | Continuous integration and continuous delivery (CI/CD) platform (integrated with GitHub) | 🟢 |
@@ -12,7 +13,8 @@ layout: default
 | [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery (CI/CD) platform | 🟠 |
 
 
-## Coverage monitoring
+# Coverage monitoring
+
 | Name     | Short description | 🚦 |
 | -------- | ------------------| -- |
 | [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics | 🟢 |

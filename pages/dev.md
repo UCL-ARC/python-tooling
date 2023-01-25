@@ -4,6 +4,7 @@ layout: default
 ---
 
 # Integrated Development Environments (IDEs)
+
 | Name     | Short description | 🚥 |
 | -------- | ------------------| ---------------|
 | [Visual Studio Code](https://code.visualstudio.com/docs) | A light-weight general-purpose IDE | 🟠 |
@@ -11,12 +12,13 @@ layout: default
 
 # Virtual environments
 
- Name     | Short description | 🚥 |
+| Name     | Short description | 🚥 |
 | -------- | ------------------| ---------------|
 | [pipenv](https://pipenv.pypa.io/en/latest/) | A tool that automatically creates and manages a virtualenv for your projects | 🟠 |
 | [virtualenv](https://virtualenv.pypa.io/en/latest/) | A tool to create isolated Python environments | 🟠 |
 
 # Other
+
 | Name     | Short description | 🚥 |
 | -------- | ------------------| ---------------|
 | [jedi](https://jedi.readthedocs.io/en/latest/) | Refactoring and autocompletion used in IDEs| |
