@@ -24,4 +24,4 @@ layout: default
 | [jedi](https://jedi.readthedocs.io/en/latest/) | Refactoring and autocompletion used in IDEs. | |
 | [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library. |  |
 | [tqdm](https://pypi.org/project/tqdm/2.2.3/) | Progress bar for loops. |  |
-| [psutil](https://psutil.readthedocs.io/en/latest/) | system monitoring, profiling, limiting process resources and the management of running processes. |  |
+| [psutil](https://psutil.readthedocs.io/en/latest/) | System monitoring, profiling, limiting process resources and the management of running processes. |  |
