@@ -12,6 +12,11 @@ layout: default
 | [AppVeyor](https://www.appveyor.com/docs/) | Continuous integration and continuous delivery platform. | 🟠 |
 | [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform. | 🟠 |
 
+<summary> 🟢 explanation</summary>
+
+We have many projects using github CI, it's both convenient and works well. It's become the standard.
+
+</details>
 
 # Coverage monitoring
 

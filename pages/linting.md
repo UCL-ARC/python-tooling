@@ -24,6 +24,20 @@ See [here for example configuration](https://github.com/paddyroddy/python-templa
 | [yapf](https://github.com/google/yapf) | Google formatter. | 🟠 |
 | [flake8](https://flake8.pycqa.org/en/latest/) | Linter which complains if code doesn't follow a rule. Does not support modern `pyproject.toml` configuration. | 🔴 |
 
+<details>
+<summary> 🟢 explanation</summary>
+We a suite of 🟢 tools that we've used and work well together.
+
+* Pre-commit is a useful framework tool to list several linters and run it automatically. It can be used to run all of our recommended linters.
+* `black` is a nice "no need to think" code formatter. If you have your own opinions about code style you might not like this. But it's widely used by almost all ARC python projects.
+</details>
+
+<details>
+<summary> 🔴 explanation</summary>
+
+Flake8 is not recommended because it doesn't support `pyproject.toml` and seemingly won't. There are now better tools available.
+</details>
+
 ## Type checking
 
 | Name     | Short description | 🚦 |

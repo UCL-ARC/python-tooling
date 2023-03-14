@@ -14,6 +14,11 @@ layout: default
 | [pdoc](https://pdoc.dev/) | Auto-generates API documentation from docstrings | 🟠 | [MICI](https://github.com/matt-graham/mici) |
 | [gitbook](https://www.gitbook.com/) | General documentation builder; integrates with GitHub | 🟠 |  |
 
+<details>
+<summary>Explanation of the 🟢</summary>
+Lorem ipsum dolor set.
+</details>
+
 ## Sphinx extensions
 
 |  Name     | Short description | 🚦 | Used by |
