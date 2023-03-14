@@ -14,7 +14,7 @@ layout: default
 
 <details>
 <summary> 🟢 explanation</summary>
-We have many projects using github CI, it's both convenient and works well. It's become the standard.
+We have many projects using github CI, it's both convenient and works well. It's become the standard. Also, note that it's free for public repos.
 </details>
 
 # Coverage monitoring
