@@ -7,7 +7,7 @@ requires = [
 
 [project]
 authors = [
-    {email = "{{ cookiecutter.email }}", name = "{{ cookiecutter.full_name }}"},
+    {email = "", name = "UCL ARC"},
 ]
 classifiers = [
     "License :: OSI Approved :: BSD License",
@@ -22,9 +22,9 @@ dynamic = [
 ]
 keywords = [
 ]
-name = "{{ cookiecutter.project_slug }}"
+name = "python-template"
 readme = "README.md"
-requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
+requires-python = ">=3.8"
 license.file = "LICENSE.md"
 optional-dependencies.dev = [
     "black",
@@ -32,12 +32,12 @@ optional-dependencies.dev = [
     "pre-commit",
     "tox",
 ]
-urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+urls.homepage = "https://github.com/UCL-ARC/python-template"
 
 [tool.coverage]
 report = {skip_covered = true, sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{ cookiecutter.project_slug }}",
+    "{{cookiecutter.project_slug}}",
 ]}
 paths.source = [
     "src",
@@ -90,7 +90,7 @@ select = [
     "W",
     "YTT",
 ]
-isort.known-first-party = ["{{ cookiecutter.project_slug }}"]
+isort.known-first-party = ["{{cookiecutter.project_slug}}"]
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
     "classmethod",
@@ -110,26 +110,21 @@ trailing_comma_inline_array = true
 legacy_tox_ini = """
     [gh-actions]
     python =
-    {% for python_version in range(
-        cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int
-    )%}
-        3.{{ python_version }}: py3{{ python_version }}
-    {% endfor %}
+        3.8: py38
+        3.9: py39
+        3.10: py310
+        3.11: py311
 
     [testenv]
-    commands =
-        pytest --cov
+    skip_install = true
+    description =
+        Test package creation
     deps =
+        cookieninja
         pytest
-        pytest-cov
+    commands =
+        pytest {posargs}
 
     [tox]
-    env_list =
-    {% for python_version in range(
-        cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int
-    )%}
-        py3{{ python_version }}
-    {% endfor %}
+    envlist = py3{8,9,10,11}
 """
