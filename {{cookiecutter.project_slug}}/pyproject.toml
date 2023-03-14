@@ -110,8 +110,8 @@ trailing_comma_inline_array = true
 legacy_tox_ini = """
     [gh-actions]
     python =
-    {%- for version in python_versions -%}
-        version: py{{ version | replace: '.', ''}
+    {% for version in range(min_python_version | replace '3.', '', max_python_version | replace '3.', '') %}
+        3.{{ version}}: py3{{ version | replace: '.', ''}
     {% endfor %}
 
     [testenv]
@@ -123,7 +123,7 @@ legacy_tox_ini = """
 
     [tox]
     env_list = 
-    {%- for version in python_versions -%}
-        py{{ version | replace: '.', ''}
+    {% for version in range(min_python_version | replace '3.', '', max_python_version | replace '3.', '') %}
+        py3{{ version | replace: '.', ''}
     {% endfor %}
 """
