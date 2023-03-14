@@ -1,8 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-  "setuptools",
-  "setuptools-scm"
+  "setuptools"
 ]
 
 [project]
@@ -94,8 +93,6 @@ pep8-naming.classmethod-decorators = [
   "classmethod",
   "pydantic.validator"
 ]
-
-[tool.setuptools_scm]
 
 [tool.tomlsort]
 sort_inline_arrays = false
