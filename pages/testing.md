@@ -15,9 +15,7 @@ layout: default
 
 <details>
 <summary>🟢 explanation</summary>
-
 We recommend `pytest` over `unittest` because of the extensive plugins and widespread use.
-
 </details>
 
 ## pytest plugins
