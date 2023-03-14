@@ -1,6 +1,6 @@
 {
   "full_name": "UCL ARC",
-  "email": "",
+  "email": "temp@gmail.com",
   "github_username": "{{ cookiecutter.full_name.replace(' ', '-') }}",
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
