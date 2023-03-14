@@ -77,6 +77,10 @@ How to run tests on your local system.
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
+- [x] Initial Research
+- [ ] Minimum viable product <-- You are Here
+- [ ] Alpha Release
+- [ ] Feature-Complete Release
 
 ## License
 
