@@ -24,7 +24,7 @@ keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
 readme = "README.md"
-requires-python = ">={{ cookiecutter.min_python_version }}"
+requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
 license.file = "LICENSE.md"
 optional-dependencies.dev = [
     "black",
