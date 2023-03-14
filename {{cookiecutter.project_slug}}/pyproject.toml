@@ -1,25 +1,23 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools",
-    "setuptools-scm",
+  "setuptools",
+  "setuptools-scm"
 ]
 
 [project]
 authors = [
-    {email = "{{ cookiecutter.email }}", name = "{{ cookiecutter.full_name }}"},
+  {email = "{{ cookiecutter.email }}", name = "{{ cookiecutter.full_name }}"}
 ]
 classifiers = [
-    "License :: OSI Approved :: BSD License",
-    "Programming Language :: Python :: 3 :: Only",
-    "Typing :: Typed",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed"
 ]
 dependencies = [
 ]
 description = ""
-dynamic = [
-    "version",
-]
+version = "0.0.1"
 keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
@@ -27,74 +25,74 @@ readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
 license.file = "LICENSE.md"
 optional-dependencies.dev = [
-    "black",
-    "mypy",
-    "pre-commit",
-    "tox",
+  "black",
+  "mypy",
+  "pre-commit",
+  "tox"
 ]
 urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 
 [tool.coverage]
 report = {skip_covered = true, sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{ cookiecutter.project_slug }}"
+  "{{ cookiecutter.project_slug }}"
 ]}
 paths.source = [
-    "src",
-    ".tox*/*/lib/python*/site-packages",
+  "src",
+  ".tox*/*/lib/python*/site-packages"
 ]
 
 [tool.mypy]
 explicit_package_bases = true
 plugins = [
-    "numpy.typing.mypy_plugin",
-    "pydantic.mypy",
+  "numpy.typing.mypy_plugin",
+  "pydantic.mypy"
 ]
 
 [tool.pytest.ini_options]
 addopts = "--color=yes -v"
 testpaths = [
-    "tests",
+  "tests"
 ]
 
 [tool.ruff]
 fix = true
 force-exclude = true
 per-file-ignores = {"tests/*" = [
-    "S101",
+  "S101"
 ]}
 select = [
-    "A",
-    "B",
-    "C",
-    "DTZ",
-    "E",
-    "EM",
-    "F",
-    "FBT",
-    "I",
-    "ICN",
-    "ISC",
-    "N",
-    "PLC",
-    "PLE",
-    "PLR",
-    "PLW",
-    "Q",
-    "RUF",
-    "S",
-    "SIM",
-    "T",
-    "TID",
-    "UP",
-    "W",
-    "YTT",
+  "A",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "SIM",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT"
 ]
 isort.known-first-party = ["{{ cookiecutter.project_slug }}"]
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
-    "classmethod",
-    "pydantic.validator",
+  "classmethod",
+  "pydantic.validator"
 ]
 
 [tool.setuptools_scm]
@@ -125,7 +123,7 @@ legacy_tox_ini = """
         pytest-cov
 
     [tox]
-    env_list = 
+    env_list =
     {% for python_version in range(
         cookiecutter.min_python_version | replace('3.', '') | int,
         cookiecutter.max_python_version | replace('3.', '') | int
