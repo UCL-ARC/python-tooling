@@ -38,10 +38,6 @@ select = [
     "YTT",
 ]
 mccabe.max-complexity = 18
-pep8-naming.classmethod-decorators = [
-    "classmethod",
-    "pydantic.validator",
-]
 
 [tool.tomlsort]
 sort_inline_arrays = false
