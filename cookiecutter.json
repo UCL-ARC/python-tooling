@@ -1,0 +1,9 @@
+{
+    "full_name": "UCL ARC",
+    "email": "",
+    "github_username": "{{ cookiecutter.full_name.replace(' ', '_') }}",
+    "project_name": "Python Template",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "project_short_description": "A cookieninja template with ARC recommendations.",
+    "version": "0.1.0"
+  }
