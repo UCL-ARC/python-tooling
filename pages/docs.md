@@ -14,6 +14,12 @@ layout: default
 | [pdoc](https://pdoc.dev/) | Auto-generates API documentation from docstrings | 🟠 | [MICI](https://github.com/matt-graham/mici) |
 | [gitbook](https://www.gitbook.com/) | General documentation builder; integrates with GitHub | 🟠 |  |
 
+<details>
+<summary> 🟢 explaination</summary>
+Sphinx is the de-facto standard that is widely used. It is well tested, reliable and very customisable.
+</details>
+
+
 ## Sphinx extensions
 
 |  Name     | Short description | 🚦 | Used by |
