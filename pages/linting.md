@@ -19,7 +19,7 @@ See [here for example configuration](https://github.com/paddyroddy/python-templa
 | [pycodestyle](https://pycodestyle.pycqa.org/en/latest/) | Linter which checks for errors. | 🟠 |
 | [pyflakes](https://github.com/PyCQA/pyflakes) | Linter which checks for errors. | 🟠 |
 | [pylint](https://pylint.readthedocs.io/en/latest/) | Linter which checks for errors. | 🟠 |
-| [ruff](https://github.com/charliermarsh/ruff) | A very fast linter which incorporates a range of other linters. | 🟠 |
+| [ruff](https://github.com/charliermarsh/ruff) | A very fast linter which incorporates a range of other linters. | 🟢 |
 | [sourcery](https://sourcery.ai/) | An AI code reviewer which simplifies code, has a free version but can pay for fancier features. | 🟠 |
 | [yapf](https://github.com/google/yapf) | Google formatter. | 🟠 |
 | [flake8](https://flake8.pycqa.org/en/latest/) | Linter which complains if code doesn't follow a rule. Does not support modern `pyproject.toml` configuration. | 🔴 |
