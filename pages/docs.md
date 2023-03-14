@@ -15,9 +15,10 @@ layout: default
 | [gitbook](https://www.gitbook.com/) | General documentation builder; integrates with GitHub | 🟠 |  |
 
 <details>
-<summary>Explanation of the 🟢</summary>
-Lorem ipsum dolor set.
+<summary> 🟢 explaination</summary>
+Sphinx is the de-facto standard that is widely used. It is well tested, reliable and very customisable.
 </details>
+
 
 ## Sphinx extensions
 
