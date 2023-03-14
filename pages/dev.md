@@ -14,8 +14,8 @@ layout: default
 
 | Name     | Short description | 🚦 |
 | -------- | ------------------| :--: |
-| [conda](https://conda.io/projects/conda/en/latest/) | Conda quickly installs, runs, and updates packages and their dependencies. | 🟢 |
-| [mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) | A tool to manage conda environments. | 🟠 |
+| [mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) | A tool to manage conda environments. Faster than conda for installing dependencies. | 🟢 |
+| [conda](https://conda.io/projects/conda/en/latest/) | Conda quickly installs, runs, and updates packages and their dependencies. | 🟠 |
 | [pipenv](https://pipenv.pypa.io/en/latest/) | A tool that automatically creates and manages a virtualenv for your projects. | 🟠 |
 | [virtualenv](https://virtualenv.pypa.io/en/latest/) | A tool to create isolated Python environments. | 🟠 |
 
