@@ -1,4 +1,4 @@
-# python-template
+# ARC Python Package Template
 
 ⚠️ This repository is still under construction! ⚠️
 
