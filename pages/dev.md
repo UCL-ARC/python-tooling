@@ -17,7 +17,10 @@ layout: default
 | [mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) | A tool to manage conda environments. Faster than conda for installing dependencies. | 🟢 |
 | [conda](https://conda.io/projects/conda/en/latest/) | Conda quickly installs, runs, and updates packages and their dependencies. | 🟠 |
 | [pipenv](https://pipenv.pypa.io/en/latest/) | A tool that automatically creates and manages a virtualenv for your projects. | 🟠 |
-| [virtualenv](https://virtualenv.pypa.io/en/latest/) | A tool to create isolated Python environments. | 🟠 |
+| [venv](https://docs.python.org/3/library/venv.html) | A tool to create isolated Python environments. | 🔴 |
+| [virtualenv](https://virtualenv.pypa.io/en/latest/) | A tool to create isolated Python environments which offers more features than venv. | 🟠 |
+| [pyenv](https://github.com/pyenv/pyenv) | A tool that lets you easily switch between multiple versions of Python. | 🟠 |
+
 
 # Other
 
