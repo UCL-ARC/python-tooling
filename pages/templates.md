@@ -17,8 +17,8 @@ If you're making a package within one of the communities listed below, we recomm
 These templates are used by specific communities.
 If you're making a package within one of these communities, we recommend using their package template.
 
-| Name | Short description |  🚦 |
-| ---- | ----------------- | :---: |
+| Name | Short description |
+| ---- | ----------------- |
 
 
 
