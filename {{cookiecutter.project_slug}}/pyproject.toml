@@ -109,7 +109,7 @@ legacy_tox_ini = """
     python =
     {%- for python_version in range(
         cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int
+        cookiecutter.max_python_version | replace('3.', '') | int + 1
     ) %}
         3.{{ python_version }}: py3{{ python_version }}
     {%- endfor %}
@@ -125,7 +125,7 @@ legacy_tox_ini = """
     env_list =
     {%- for python_version in range(
         cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int
+        cookiecutter.max_python_version | replace('3.', '') | int + 1
     ) %}
         py3{{ python_version }}
     {%- endfor %}
