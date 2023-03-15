@@ -13,7 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
+        python-version: |
+          {%- for python_version in range(
+            cookiecutter.min_python_version | replace('3.', '') | int,
+            cookiecutter.max_python_version | replace('3.', '') | int
+          ) %}
+            - {{ python_version) }}
+          {%- endfor %}
 
     steps:
       - name: Checkout source
