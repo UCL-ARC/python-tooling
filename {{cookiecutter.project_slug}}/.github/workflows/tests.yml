@@ -14,12 +14,12 @@ jobs:
     strategy:
       matrix:
         python-version:
-        {% for python_version in range(
+        {%- for python_version in range(
           cookiecutter.min_python_version | replace('3.', '') | int,
           cookiecutter.max_python_version | replace('3.', '') | int
         ) %}
-          - py3.{{ python_version }}
-        {% endfor %}
+          - 3.{{ python_version }}
+        {%- endfor %}
 
     steps:
       - name: Checkout source
