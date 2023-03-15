@@ -18,7 +18,7 @@ jobs:
           cookiecutter.min_python_version | replace('3.', '') | int,
           cookiecutter.max_python_version | replace('3.', '') | int
         ) %}
-          - {{ '3.' ~ python_version | string }}
+          - "3.{{ python_version }}"
         {%- endfor %}
 
     steps:
