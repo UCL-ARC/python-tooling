@@ -128,5 +128,5 @@ legacy_tox_ini = """
         cookiecutter.max_python_version | replace('3.', '') | int
     ) %}
         py3{{ python_version }}
-    {% endfor -%}
+    {%- endfor %}
 """
