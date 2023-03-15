@@ -107,12 +107,12 @@ trailing_comma_inline_array = true
 legacy_tox_ini = """
     [gh-actions]
     python =
-    {% for python_version in range(
+    {%- for python_version in range(
         cookiecutter.min_python_version | replace('3.', '') | int,
         cookiecutter.max_python_version | replace('3.', '') | int
-    )%}
+    ) -%}
         3.{{ python_version }}: py3{{ python_version }}
-    {% endfor %}
+    {%- endfor -%}
 
     [testenv]
     commands =
@@ -123,10 +123,10 @@ legacy_tox_ini = """
 
     [tox]
     env_list =
-    {% for python_version in range(
+    {%- for python_version in range(
         cookiecutter.min_python_version | replace('3.', '') | int,
         cookiecutter.max_python_version | replace('3.', '') | int
-    )%}
+    ) -%}
         py3{{ python_version }}
-    {% endfor %}
+    {%- endfor -%}
 """
