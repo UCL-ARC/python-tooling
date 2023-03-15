@@ -16,14 +16,12 @@ classifiers = [
 dependencies = [
 ]
 description = ""
-dynamic = [
-    "version",
-]
 keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
+version = "{{ cookiercutter.version }}"
 license.file = "LICENSE.md"
 optional-dependencies.dev = [
     "black",
