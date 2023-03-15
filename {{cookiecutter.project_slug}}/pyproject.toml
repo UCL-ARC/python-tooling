@@ -88,7 +88,7 @@ select = [
     "YTT",
 ]
 isort.known-first-party = [
-    "{{ cookiecutter.project_slug }} | replace('-', '_') }}",
+    "{{ cookiecutter.project_slug | replace('-', '_') }}",
 ]
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
