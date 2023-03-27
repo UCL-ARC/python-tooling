@@ -40,11 +40,10 @@ select = [
 mccabe.max-complexity = 18
 
 [tool.tomlsort]
-sort_inline_arrays = false
-sort_inline_tables = true
-sort_table_keys = true
+all = true
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
+overrides."tool.coverage.paths.source".inline_arrays = false
 
 [tool.tox]
 legacy_tox_ini = """
