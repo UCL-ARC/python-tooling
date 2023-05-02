@@ -3,7 +3,8 @@ import subprocess
 
 def test_package_generation(tmpdir):
     subprocess.run(
-        ["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)]  # noqa: S603,S607
+        ["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)],  # noqa: S607
+        shell=False,  # noqa: S603
     )
 
     assert (tmpdir / "python-template").exists()
