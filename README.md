@@ -73,3 +73,10 @@ If you're making a package within a community that has an existing package templ
    # PROJECT_NAME
    ...
    ```
+
+## Notes for developers
+
+- To run cookieninja using a specific branch of the template:
+  ```
+  cookieninja https://github.com/UCL-ARC/python-template --checkout <branch-name>
+  ```
