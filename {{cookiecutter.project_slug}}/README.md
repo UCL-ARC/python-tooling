@@ -36,7 +36,7 @@ This project is developed in collaboration with the [Centre for Advanced Researc
 
 ### Project Team
 
-{{cookiecutter.full_name}} ([{{cookiecutter.email}}](mailto:{{cookiecutter.email}}))
+{{cookiecutter.author_name}} ([{{cookiecutter.author_email}}](mailto:{{cookiecutter.author_email}}))
 
 <!-- TODO: how do we have an array of collaborators ? -->
 

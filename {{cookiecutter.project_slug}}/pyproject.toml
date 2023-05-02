@@ -7,7 +7,7 @@ requires = [
 
 [project]
 authors = [
-    {email = "{{ cookiecutter.email }}", name = "{{ cookiecutter.full_name }}"},
+    {email = "{{ cookiecutter.author_email }}", name = "{{ cookiecutter.author_name }}"},
 ]
 classifiers = [
     "Operating System :: POSIX",
