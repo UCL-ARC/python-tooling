@@ -1,0 +1,69 @@
+[tool.pytest.ini_options]
+addopts = "--color=yes -v"
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+fix = true
+force-exclude = true
+per-file-ignores = {"tests/*" = [
+    "S101",
+]}
+select = [
+    "A",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FBT",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "SIM",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+mccabe.max-complexity = 18
+
+[tool.tomlsort]
+all = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+overrides."tool.coverage.paths.source".inline_arrays = false
+
+[tool.tox]
+legacy_tox_ini = """
+    [gh-actions]
+    python =
+        3.8: py38
+        3.9: py39
+        3.10: py310
+        3.11: py311
+
+    [testenv]
+    skip_install = true
+    description =
+        Test package creation
+    deps =
+        cookieninja
+        pytest
+    commands =
+        pytest {posargs}
+
+    [tox]
+    envlist = py3{8,9,10,11}
+"""
