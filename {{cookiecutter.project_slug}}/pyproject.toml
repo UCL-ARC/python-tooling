@@ -12,12 +12,12 @@ classifiers = [
     "Operating System :: POSIX",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    # {%- for python_version in range(
-    # cookiecutter.min_python_version | replace('3.', '') | int,
-    # cookiecutter.max_python_version | replace('3.', '') | int + 1
-    # ) %}
+    {%- for python_version in range(
+        cookiecutter.min_python_version | replace('3.', '') | int,
+        cookiecutter.max_python_version | replace('3.', '') | int + 1
+    ) %}
     "Programming Language :: Python :: {{ python_version }}",
-    # {%- endfor %}
+    {%- endfor %}
     "Typing :: Typed",
 ]
 dependencies = [
