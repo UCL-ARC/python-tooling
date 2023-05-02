@@ -1,20 +1,43 @@
+"""Checks that the cookiecutter works."""
+
 import pathlib as pl
 import subprocess
 
 import pytest
 
 
-@pytest.fixture
+@pytest.fixture()
 def project_config():
+    """
+    Pytest fixture for defining the project config.
+
+    Returns
+    -------
+    dict
+        dictionary with values for the cookiecutter template,
+        as defined in the cookiecutter.json
+    """
     return {
         "project_slug": "cookiecutter_test",
     }
 
 
-def test_package_generation(tmp_path, project_config):
-    # tmp_path fixture preferred over tmpdir
-    # see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures
+def test_package_generation(
+    tmp_path: pl.Path,
+    project_config: dict,
+):
+    """
+    Creates a project cookiecutter from the template.
 
+    Once the project is made it verifies a series of actions work.
+
+    tmp_path pytest fixture preferred over tmpdir
+    see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures
+
+    Args:
+    ----
+        tmpdir: A temporary directory path object which is unique.
+    """
     # Run cookieninja with PROJECT_SLUG for project_slug
     subprocess.run(
         [  # noqa: S607

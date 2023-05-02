@@ -2,6 +2,7 @@
 build-backend = "setuptools.build_meta"
 requires = [
     "setuptools",
+    "setuptools-scm",
 ]
 
 [project]
@@ -9,26 +10,42 @@ authors = [
     {email = "{{ cookiecutter.email }}", name = "{{ cookiecutter.full_name }}"},
 ]
 classifiers = [
-    "License :: OSI Approved :: BSD License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    {%- for python_version in range(
+       cookiecutter.min_python_version | replace('3.', '') | int,
+       cookiecutter.max_python_version | replace('3.', '') | int + 1
+    ) %}
+    "Programming Language :: Python :: 3.{{ python_version }}",
+    {%- endfor %}
     "Typing :: Typed",
 ]
 dependencies = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
+ignore = [
+    "D203", # no-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D417", # argument description in docstring (unreliable)
+dynamic = [
+    "version",
+]
 keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
-readme = "README.md"
-requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
-version = "{{ cookiecutter.version }}"
-license.file = "LICENSE.md"
-optional-dependencies.dev = [
+optional-dependencies = {dev = [
     "black",
+    "build",
     "mypy",
     "pre-commit",
+    "ruff",
     "tox",
-]
+    "twine",
+]}
+readme = "README.md"
+requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
+license.file = "LICENCE.md"
 urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 
 [tool.coverage]
@@ -57,36 +74,51 @@ testpaths = [
 [tool.ruff]
 fix = true
 force-exclude = true
-per-file-ignores = {"tests/*" = [
+per-file-ignores = {"test_*" = [
     "S101",
 ]}
 select = [
     "A",
+    "ARG",
     "B",
+    "BLE",
     "C",
+    "COM",
+    "D",
+    "DJ",
     "DTZ",
     "E",
     "EM",
+    "ERA",
+    "EXE",
     "F",
     "FBT",
     "I",
     "ICN",
     "ISC",
     "N",
-    "PLC",
-    "PLE",
-    "PLR",
-    "PLW",
+    "NPY",
+    "PD",
+    "PGH",
+    "PIE",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
     "Q",
+    "RET",
+    "RSE",
     "RUF",
     "S",
     "SIM",
     "T",
+    "TCH",
     "TID",
     "UP",
     "W",
     "YTT",
 ]
+target-version = "py{{ cookiecutter.min_python_version | replace('.', '') }}"
 isort.known-first-party = [
     "{{ cookiecutter.project_slug | replace('-', '_') }}",
 ]
@@ -96,10 +128,15 @@ pep8-naming.classmethod-decorators = [
     "pydantic.validator",
 ]
 
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
+
 [tool.tomlsort]
 all = true
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
+overrides."project.classifiers".inline_arrays = false
 overrides."tool.coverage.paths.source".inline_arrays = false
 
 [tool.tox]
