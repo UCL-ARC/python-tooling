@@ -22,7 +22,6 @@ name = "{{ cookiecutter.project_slug }}"
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
 version = "{{ cookiecutter.version }}"
-license = "{{ cookiecutter.licence }}"
 license.file = "LICENCE.md"
 optional-dependencies.dev = [
     "black",
