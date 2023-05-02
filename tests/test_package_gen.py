@@ -14,7 +14,10 @@ def test_package_generation(tmpdir: Path):
     ----
         tmpdir: A temporary directory path object which is unique.
     """
-    subprocess.run(["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)])
+    subprocess.run(
+        ["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)],  # noqa: S607
+        shell=False,  # noqa: S603
+    )
 
     assert (tmpdir / "python-template").exists()
     expected_files = ["README.md"]
