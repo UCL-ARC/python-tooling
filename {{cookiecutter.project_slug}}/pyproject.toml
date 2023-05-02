@@ -137,4 +137,3 @@ legacy_tox_ini = """
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
 write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
-use_scm_version={'root':'../', ...}
