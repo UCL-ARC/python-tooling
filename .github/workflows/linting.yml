@@ -55,10 +55,8 @@ jobs:
       - name: Create template
         run: cookieninja . --no-input --output-dir cookie-template
 
-      - name: Move into template folder
-        run: pre-commit install
-        working-directory: cookie-template
-
       - name: Run pre-commit
-        run: pre-commit run --all-files --color always
+        run: |-
+          pre-commit install
+          pre-commit run --all-files --color always
         working-directory: cookie-template
