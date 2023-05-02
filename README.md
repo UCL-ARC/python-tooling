@@ -12,4 +12,64 @@ If you're making a package within a community that has an existing package templ
 
 ## Using the template
 
-PUT INSTRUCTIONS HERE
+1. Install [cookieninja](https://libraries.io/pypi/cookieninja)
+   ```
+   pip install cookieninja
+   ```
+2. Run cookieninja in the desired directory
+   ```
+   cookiecutter https://github.com/UCL-ARC/python-template
+   ```
+   If you have this repo locally (this may be the case if you are developing), you can alternatively run the following:
+   ```
+   cookieninja python-template
+   ```
+3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option.
+
+   ```
+   full_name [UCL ARC]:
+   email [temp@gmail.com]:
+   github_username [UCL-ARC]:
+   project_name [Python Template]:
+   project_slug [python-template-cookiecutter]:
+   project_short_description [A cookieninja template with ARC recommendations.]:
+   version [0.1.0]:
+   Select min_python_version:
+   Choose from 1, 2, 3, 4 [1]: 3.10
+   Select max_python_version:
+   Choose from 1, 2, 3, 4 [1]: 1
+   ...
+   ```
+
+   Note that these project variables are defined in the `cookiecutter.json` file.
+
+4. This will create a specific directory structure.
+
+   For example, for a project with the following variables:
+
+   ```
+   project_slug [python-template-cookiecutter]: PROJECT_SLUG
+   project_name [Python Template]: PROJECT_NAME
+   ```
+
+   we will get a project folder named after `project_slug`, structured like this:
+
+   ```
+   PROJECT_SLUG
+   ├── README.md
+   ├── pyproject.toml
+   ├── src
+   │   └── PROJECT_SLUG
+   │       └── PROJECT_SLUG.py
+   └── tests
+       ├── conftest.py
+       └── test_dummy.py
+   ```
+
+   And the `project_name` will appear in the README.md as the human-readable name of the project.
+
+   ```
+   cat PROJECT_SLUG/README.md
+   # PROJECT_NAME
+   ...
+   ```
