@@ -18,13 +18,13 @@ If you're making a package within a community that has an existing package templ
    ```
 2. Run cookieninja in the desired directory
    ```
-   cookiecutter https://github.com/UCL-ARC/python-template
+   cookiecutter gh:ucl-arc/python-template
    ```
    If you have this repo locally (this may be the case if you are developing), you can alternatively run the following:
    ```
-   cookieninja python-template
+   cookieninja /path/to/your/checkout/of/python-template
    ```
-3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option.
+3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option (shown in square brackets).
 
    ```
    full_name [UCL ARC]:
