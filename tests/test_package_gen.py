@@ -1,10 +1,17 @@
 import pathlib as pl
 import subprocess
 
-PROJECT_SLUG = "cookiecutter_test"
+import pytest
 
 
-def test_package_generation(tmp_path):
+@pytest.fixture
+def project_config():
+    return {
+        "project_slug": "cookiecutter_test",
+    }
+
+
+def test_package_generation(tmp_path, project_config):
     # tmp_path fixture preferred over tmpdir
     # see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures
 
@@ -16,26 +23,25 @@ def test_package_generation(tmp_path):
             "--no-input",
             "--output-dir",
             str(tmp_path),
-            f"project_slug={PROJECT_SLUG}",
+            f"project_slug={project_config['project_slug']}",
         ],
         shell=False,  # noqa: S603
     )
 
     # Check parent directory exists
-    assert (tmp_path / PROJECT_SLUG).exists()
+    assert (tmp_path / project_config["project_slug"]).exists()
 
     # Check files and directories inside
     expected_files = [
         "README.md",
         ".pre-commit-config.yaml",
-        # "LICENSE",
+        "LICENSE.md",
         "pyproject.toml",
-        # Directories
         "src",
-        pl.Path("src") / PROJECT_SLUG,
+        pl.Path("src") / project_config["project_slug"],
         "tests",
         pl.Path(".github"),
         pl.Path(".github") / "workflows",
     ]
     for f in expected_files:
-        assert (tmp_path / PROJECT_SLUG / f).exists()
+        assert (tmp_path / project_config["project_slug"] / f).exists()
