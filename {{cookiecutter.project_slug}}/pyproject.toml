@@ -94,6 +94,8 @@ select = [
 isort.known-first-party = [
     "{{ cookiecutter.project_slug | replace('-', '_') }}",
 ]
+local_scheme = "no-local-version"
+write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
     "classmethod",
