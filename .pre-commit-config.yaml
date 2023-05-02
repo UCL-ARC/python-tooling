@@ -12,6 +12,7 @@ repos:
     rev: v0.23.0
     hooks:
       - id: toml-sort-fix
+        exclude: "{{cookiecutter.project_slug}}/pyproject.toml"
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.1.1
     hooks:
@@ -27,7 +28,6 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-merge-conflict
-      - id: check-toml
       - id: end-of-file-fixer
       - id: mixed-line-ending
         args: [--fix=lf]
