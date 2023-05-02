@@ -90,7 +90,6 @@ select = [
     "W",
     "YTT",
 ]
-
 isort.known-first-party = [
     "{{ cookiecutter.project_slug | replace('-', '_') }}",
 ]
@@ -99,6 +98,10 @@ pep8-naming.classmethod-decorators = [
     "classmethod",
     "pydantic.validator",
 ]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
 
 [tool.tomlsort]
 all = true
@@ -133,7 +136,3 @@ legacy_tox_ini = """
         py3{{ python_version }}
     {%- endfor %}
 """
-
-[tool.setuptools_scm]
-local_scheme = "no-local-version"
-write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
