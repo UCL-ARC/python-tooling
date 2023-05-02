@@ -1,4 +1,6 @@
-def test_stupid_example(dummy_fixture):
-    """
-    this test is merely a placeholder
-    """
+"""An example set of tests."""
+
+
+def test_stupid_example():
+    """Test is merely a placeholder."""
+    assert True
