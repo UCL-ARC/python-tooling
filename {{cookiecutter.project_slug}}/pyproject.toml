@@ -2,6 +2,7 @@
 build-backend = "setuptools.build_meta"
 requires = [
     "setuptools",
+    "setuptools-scm",
 ]
 
 [project]
@@ -16,12 +17,14 @@ classifiers = [
 dependencies = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
+dynamic = [
+    "version",
+]
 keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
-version = "{{ cookiecutter.version }}"
 license.file = "LICENCE.md"
 optional-dependencies.dev = [
     "black",
@@ -95,6 +98,10 @@ pep8-naming.classmethod-decorators = [
     "classmethod",
     "pydantic.validator",
 ]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
 
 [tool.tomlsort]
 all = true
