@@ -90,9 +90,7 @@ select = [
     "W",
     "YTT",
 ]
-[tool.setuptools_scm]
-local_scheme = "no-local-version"
-write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
+
 isort.known-first-party = [
     "{{ cookiecutter.project_slug | replace('-', '_') }}",
 ]
@@ -135,3 +133,7 @@ legacy_tox_ini = """
         py3{{ python_version }}
     {%- endfor %}
 """
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
