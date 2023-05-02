@@ -19,6 +19,7 @@ python -m pip install cookieninja
 ```
 
 It should then be as simple as running cookieninja with this template as input:
+
 ```bash
 cookieninja gh:ucl-arc/python-template
 ```
