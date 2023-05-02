@@ -12,4 +12,16 @@ If you're making a package within a community that has an existing package templ
 
 ## Using the template
 
-PUT INSTRUCTIONS HERE
+This is a [cookieninja](https://cookieninja.readthedocs.io/en/latest/) template, so firstly you'll need to install that.
+
+```bash
+python -m pip install cookieninja
+```
+
+It should then be as simple as running cookieninja with this template as input:
+
+```bash
+cookieninja gh:ucl-arc/python-template
+```
+
+You'll be prompted to enter some details. If you don't enter anything you'll get cookieninja's best guess or recommended values which are in square braces.
