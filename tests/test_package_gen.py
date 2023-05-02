@@ -2,7 +2,9 @@ import subprocess
 
 
 def test_package_generation(tmpdir):
-    subprocess.run(["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)])
+    subprocess.run(
+        ["cookieninja", ".", "--no-input", "--output-dir", str(tmpdir)]  # noqa: S603
+    )
 
     assert (tmpdir / "python-template").exists()
     expected_files = ["README.md"]
