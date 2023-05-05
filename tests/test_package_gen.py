@@ -1,7 +1,7 @@
 """Checks that the cookiecutter works."""
 
-import pathlib as pl
 import subprocess
+from pathlib import Path
 
 import pytest
 
@@ -23,7 +23,7 @@ def project_config():
 
 
 def test_package_generation(
-    tmp_path: pl.Path,
+    tmp_path: Path,
     project_config: dict,
 ):
     """
@@ -31,12 +31,16 @@ def test_package_generation(
 
     Once the project is made it verifies a series of actions work.
 
-    tmp_path pytest fixture preferred over tmpdir
-    see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures
-
     Args:
     ----
-        tmpdir: A temporary directory path object which is unique.
+        tmp_path: Path
+            A temporary directory path object which is unique.
+        project_config: dict
+            A dictionary with values for the cookiecutter template,
+            as defined in the cookiecutter.json
+
+    Note that 'tmp_path' pytest fixture is preferred over 'tmpdir'
+    (see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures)
     """
     # Run cookieninja with PROJECT_SLUG for project_slug
     subprocess.run(
@@ -61,10 +65,10 @@ def test_package_generation(
         "LICENCE.md",
         "pyproject.toml",
         "src",
-        pl.Path("src") / project_config["project_slug"],
+        Path("src") / project_config["project_slug"],
         "tests",
-        pl.Path(".github"),
-        pl.Path(".github") / "workflows",
+        Path(".github"),
+        Path(".github") / "workflows",
     ]
     for f in expected_files:
         assert (tmp_path / project_config["project_slug"] / f).exists()
