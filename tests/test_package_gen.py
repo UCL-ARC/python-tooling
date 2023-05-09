@@ -9,9 +9,10 @@ def test_package_generation(
     project_config: dict,
 ):
     """
-    Creates a project cookiecutter from the template.
+    Creates a project from the cookiecutter template.
 
-    Once the project is made it verifies a series of actions work.
+    Once the project is made it verifies a series of files and
+    directories exist.
 
     Args:
     ----
@@ -24,7 +25,7 @@ def test_package_generation(
     Note that 'tmp_path' pytest fixture is preferred over 'tmpdir'
     (see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures)
     """
-    # Run cookieninja with PROJECT_SLUG for project_slug
+    # Run cookieninja with project_slug set to the value in the project config
     subprocess.run(
         [  # noqa: S607
             "cookieninja",
@@ -40,7 +41,7 @@ def test_package_generation(
     # Check parent directory exists
     assert (tmp_path / project_config["project_slug"]).exists()
 
-    # Check files and directories inside
+    # Check main files and directories inside parent directory
     expected_files = [
         "README.md",
         ".pre-commit-config.yaml",
