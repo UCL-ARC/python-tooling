@@ -2,7 +2,7 @@
 
 # The MIT License (MIT)
 
-Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.full_name}}
+Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.author_name}}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 {%- elif cookiecutter.licence == "BSD-3" -%}
 
-Copyright (c) {% now 'utc', '%Y' %}, {{cookiecutter.full_name}}
+Copyright (c) {% now 'utc', '%Y' %}, {{cookiecutter.author_name}}
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

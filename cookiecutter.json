@@ -1,7 +1,7 @@
 {
-  "full_name": "UCL ARC",
-  "email": "temp@gmail.com",
-  "github_username": "UCL-ARC",
+  "author_name": "UCL ARC",
+  "author_email": "temp@gmail.com",
+  "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "A cookieninja template with ARC recommendations.",
