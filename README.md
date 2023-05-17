@@ -18,7 +18,7 @@ If you're making a package within a community that has an existing package templ
    ```
 2. Run cookieninja in the desired directory
    ```
-   cookiecutter gh:ucl-arc/python-template
+   cookieninja gh:ucl-arc/python-template
    ```
    If you have this repo locally (this may be the case if you are developing), you can alternatively run the following:
    ```
