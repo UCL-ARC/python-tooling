@@ -74,6 +74,16 @@ If you're making a package within a community that has an existing package templ
    ...
    ```
 
+5. To work on your project, initialise a git repository and _install_ it in editable mode.
+   (If you want to develop in a `venv` or `conda` environment, now is a good time to set that up)
+   ```
+   cd PROJECT_SLUG
+   git init
+   # conda create -n PROJECT_SLUG-dev python=3.11
+   # conda activate PROJECT_SLUG-dev
+   python -m pip install -e .
+   ```
+
 ## Notes for developers
 
 - To run cookieninja using a specific branch of the template:

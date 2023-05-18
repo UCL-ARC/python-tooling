@@ -24,10 +24,6 @@ classifiers = [
 dependencies = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
-ignore = [
-    "D203", # no-blank-line-before-class
-    "D212", # multi-line-summary-first-line
-    "D417", # argument description in docstring (unreliable)
 dynamic = [
     "version",
 ]
@@ -74,6 +70,11 @@ testpaths = [
 [tool.ruff]
 fix = true
 force-exclude = true
+ignore = [
+    "D203", # no-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D417", # argument description in docstring (unreliable)
+]
 per-file-ignores = {"test_*" = [
     "S101",
 ]}

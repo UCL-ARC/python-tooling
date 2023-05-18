@@ -38,8 +38,10 @@ def test_package_generation(
         shell=False,  # noqa: S603
     )
 
+    test_project_dir = tmp_path / project_config["project_slug"]
+
     # Check parent directory exists
-    assert (tmp_path / project_config["project_slug"]).exists()
+    assert test_project_dir.exists()
 
     # Check main files and directories inside parent directory
     expected_files = [
@@ -54,4 +56,23 @@ def test_package_generation(
         Path(".github") / "workflows",
     ]
     for f in expected_files:
-        assert (tmp_path / project_config["project_slug"] / f).exists()
+        assert (test_project_dir / f).exists()
+
+    # Need a .git directory in the project root
+    subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
+
+    # Check it's pip-installable
+    pipinstall = subprocess.run(
+        [  # noqa: S603,S607
+            "python",
+            "-m",
+            "pip",
+            "install",
+            "-e",
+            test_project_dir,
+        ],
+        capture_output=True,
+    )
+    assert (
+        pipinstall.returncode == 0
+    ), f"Something went wrong with intallation: {pipinstall.stderr!r}"
