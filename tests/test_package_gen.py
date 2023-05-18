@@ -55,3 +55,17 @@ def test_package_generation(
     ]
     for f in expected_files:
         assert (tmp_path / project_config["project_slug"] / f).exists()
+
+    # Check it's pip-installable
+    return_code = subprocess.run(
+        [  # noqa: S603,S607
+            "python",
+            "-m",
+            "pip",
+            "install",
+            "-e",
+            tmp_path / project_config["project_slug"],
+        ],
+        capture_output=True,
+    )
+    assert return_code == 0, "Something went wrong with intallation"
