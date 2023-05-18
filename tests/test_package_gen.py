@@ -38,10 +38,10 @@ def test_package_generation(
         shell=False,  # noqa: S603
     )
 
-    # Check parent directory exists
-    assert (tmp_path / project_config["project_slug"]).exists()
-
     test_project_dir = tmp_path / project_config["project_slug"]
+
+    # Check parent directory exists
+    assert test_project_dir.exists()
 
     # Check main files and directories inside parent directory
     expected_files = [
