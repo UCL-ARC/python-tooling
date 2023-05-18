@@ -62,7 +62,7 @@ def test_package_generation(
     subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
 
     # Check it's pip-installable
-    return_code = subprocess.run(
+    pipinstall = subprocess.run(
         [  # noqa: S603,S607
             "python",
             "-m",
@@ -73,4 +73,6 @@ def test_package_generation(
         ],
         capture_output=True,
     )
-    assert return_code == 0, "Something went wrong with intallation"
+    assert (
+        pipinstall.returncode == 0
+    ), f"Something went wrong with intallation: {pipinstall.stderr!r}"
