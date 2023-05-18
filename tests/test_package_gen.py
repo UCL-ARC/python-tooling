@@ -41,6 +41,8 @@ def test_package_generation(
     # Check parent directory exists
     assert (tmp_path / project_config["project_slug"]).exists()
 
+    test_project_dir = tmp_path / project_config["project_slug"]
+
     # Check main files and directories inside parent directory
     expected_files = [
         "README.md",
@@ -54,7 +56,10 @@ def test_package_generation(
         Path(".github") / "workflows",
     ]
     for f in expected_files:
-        assert (tmp_path / project_config["project_slug"] / f).exists()
+        assert (test_project_dir / f).exists()
+
+    # Need a .git directory in the project root
+    subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
 
     # Check it's pip-installable
     return_code = subprocess.run(
@@ -64,7 +69,7 @@ def test_package_generation(
             "pip",
             "install",
             "-e",
-            tmp_path / project_config["project_slug"],
+            test_project_dir,
         ],
         capture_output=True,
     )
