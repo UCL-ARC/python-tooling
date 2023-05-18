@@ -44,7 +44,7 @@ optional-dependencies = {dev = [
     "twine",
 ]}
 readme = "README.md"
-requires-python = ">={{ cookiecutter.min_python_version }}, <={{ cookiecutter.max_python_version }}"
+requires-python = ">={{ cookiecutter.min_python_version }}"
 license.file = "LICENCE.md"
 urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 
