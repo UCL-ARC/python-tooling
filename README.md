@@ -79,7 +79,7 @@ If you're making a package within a community that has an existing package templ
    ```
    cd PROJECT_SLUG
    git init
-   # conda create -n PROJECT_SLUG-dev python=3.10
+   # conda create -n PROJECT_SLUG-dev python=3.11
    # conda activate PROJECT_SLUG-dev
    python -m pip install -e .
    ```
