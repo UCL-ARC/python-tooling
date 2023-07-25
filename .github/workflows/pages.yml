@@ -32,6 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Ruby
+        working-directory: docs
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1" # Not needed with a .ruby-version file
@@ -41,9 +42,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
+        working-directory: docs
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        working-directory: docs
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
