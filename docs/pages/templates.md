@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Recommended ARC template
 
-The [UCL-ARC/python-template](https://github.com/UCL-ARC/python-template) repository contains our recommended package template for new ARC projects.
+This [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling) repository contains our recommended package template for new ARC projects.
 It pre-configures the recommended tools listed in the other pages of this site.
 If you're making a package within one of the communities listed below, we recommend using their template instead.
 
