@@ -59,11 +59,31 @@ Centre for Advanced Research Computing, University College London
 
 ### Prerequisites
 
-Any tools or versions of languages needed to run code. For example specific Python or Node versions. Minimum hardware requirements also go here.
+<!-- Any tools or versions of languages needed to run code. For example specific Python or Node versions. Minimum hardware requirements also go here. -->
+
+`{{cookiecutter.project_slug}}` requires Python {{cookiecutter.min_python_version}}{% if cookiecutter.min_python_version != cookiecutter.max_python_version %}&ndash;{{cookiecutter.max_python_version}}{% endif %}.
 
 ### Installation
 
-How to build or install the application.
+<!-- How to build or install the application. -->
+
+We recommend installing in a project specific virtual environment created using a environment management tool such as [Mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) or [Conda](https://conda.io/projects/conda/en/latest/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
+
+```sh
+pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+```
+
+Alternatively create a local clone of the repository with
+
+```sh
+git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+```
+
+and then install in editable mode by running
+
+```sh
+pip install -e .
+```
 
 ### Running Locally
 
@@ -71,7 +91,22 @@ How to run the application on your local system.
 
 ### Running Tests
 
-How to run tests on your local system.
+<!-- How to run tests on your local system. -->
+
+Tests can be run across all compatible Python versions in isolated environments using
+[`tox`](https://tox.wiki/en/latest/) by running
+
+```sh
+tox
+```
+
+To run tests manually in a Python environment with `pytest` installed run
+
+```sh
+pytest tests
+```
+
+again from the root of the repository.
 
 ## Roadmap
 
