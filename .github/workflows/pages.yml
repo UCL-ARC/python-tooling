@@ -55,11 +55,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: docs/_site
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
-        with:
-          limit-access-to-actor: true
 
   # Deployment job
   deploy:
