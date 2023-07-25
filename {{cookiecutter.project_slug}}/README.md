@@ -21,14 +21,13 @@
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
 [pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
-{%- if cookiecutter.licence == "MIT" -%}
-[licence-badge]             https://img.shields.io/badge/License-MIT-yellow.svg
+{% if cookiecutter.licence == "MIT" -%}
+[licence-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
 {%- elif cookiecutter.licence == "BSD-3" -%}
-[licence-badge]             https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
+[licence-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
 {%- elif cookiecutter.licence == "GPL-3.0" -%}
-[licence-badge]             https://img.shields.io/badge/License-GPLv3-blue.svg
-{%- endif -%}
-
+[licence-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
+{% endif %}
 <!-- prettier-ignore-end -->
 
 {{cookiecutter.project_short_description}}
