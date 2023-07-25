@@ -5,7 +5,7 @@ layout: default
 
 # Linting
 
-See [here for example configuration](https://github.com/paddyroddy/python-template) for some of these.
+See [here for example configuration](https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.pre-commit-config.yaml) for some of these.
 
 ## Code formatting
 
