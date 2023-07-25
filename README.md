@@ -6,7 +6,7 @@
 
 This is a Python package template for new ARC Python packages.
 It automatically creates new Python packages with the recommended tooling set up and ready to go.
-The recommended tooling is documented on the [UCL-ARC/python-template website](http://github-pages.arc.ucl.ac.uk/python-template/).
+The recommended tooling is documented on the [UCL-ARC/python-tooling website](http://github-pages.arc.ucl.ac.uk/python-tooling/).
 
 If you're making a package within a community that has an existing package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)), we recommend using their template instead of this one.
 
@@ -18,11 +18,11 @@ If you're making a package within a community that has an existing package templ
    ```
 2. Run cookieninja in the desired directory
    ```
-   cookieninja gh:ucl-arc/python-template
+   cookieninja gh:ucl-arc/python-tooling
    ```
    If you have this repo locally (this may be the case if you are developing), you can alternatively run the following:
    ```
-   cookieninja /path/to/your/checkout/of/python-template
+   cookieninja /path/to/your/checkout/of/python-tooling
    ```
 3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option (shown in square brackets).
 
@@ -31,7 +31,7 @@ If you're making a package within a community that has an existing package templ
    email [temp@gmail.com]:
    github_username [UCL-ARC]:
    project_name [Python Template]:
-   project_slug [python-template-cookiecutter]:
+   project_slug [python-tooling-cookiecutter]:
    project_short_description [A cookieninja template with ARC recommendations.]:
    version [0.1.0]:
    Select min_python_version:
@@ -48,7 +48,7 @@ If you're making a package within a community that has an existing package templ
    For example, for a project with the following variables:
 
    ```
-   project_slug [python-template-cookiecutter]: PROJECT_SLUG
+   project_slug [python-tooling-cookiecutter]: PROJECT_SLUG
    project_name [Python Template]: PROJECT_NAME
    ```
 
@@ -88,5 +88,5 @@ If you're making a package within a community that has an existing package templ
 
 - To run cookieninja using a specific branch of the template:
   ```
-  cookieninja https://github.com/UCL-ARC/python-template --checkout <branch-name>
+  cookieninja https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
   ```
