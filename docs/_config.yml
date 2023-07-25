@@ -2,7 +2,7 @@ title: UCL ARC Python tooling
 description: Common Python tooling used in UCL's Advanced Research Computing center
 theme: just-the-docs
 
-url: https://UCL-ARC.github.io/python-tooling
+url: https://UCL-ARC.github.io/python-template
 
 aux_links:
-  Source repository: https://github.com/UCL-ARC/python-tooling
+  Source repository: https://github.com/UCL-ARC/python-template
