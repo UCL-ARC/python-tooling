@@ -1,7 +1,8 @@
 # {{ cookiecutter.project_name }}
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Actions Status][actions-badge]][actions-link]
+[![Tests status][tests-badge]][tests-link]
+[![Linting status][linting-badge]][linting-link]
 [![Licence][licence-badge]](./LICENCE.md)
 
 <!--
@@ -11,21 +12,22 @@
 -->
 
 <!-- prettier-ignore-start -->
-[actions-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/workflows/CI/badge.svg
-[actions-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions
+[tests-badge]:              https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
+[tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
+[linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
+[linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
 [pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
-{%- if cookiecutter.licence == "MIT" -%}
-[licence-badge]             https://img.shields.io/badge/License-MIT-yellow.svg
+{% if cookiecutter.licence == "MIT" -%}
+[licence-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
 {%- elif cookiecutter.licence == "BSD-3" -%}
-[licence-badge]             https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
+[licence-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
 {%- elif cookiecutter.licence == "GPL-3.0" -%}
-[licence-badge]             https://img.shields.io/badge/License-GPLv3-blue.svg
-{%- endif -%}
-
+[licence-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
+{% endif %}
 <!-- prettier-ignore-end -->
 
 {{cookiecutter.project_short_description}}
