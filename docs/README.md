@@ -1,11 +1,11 @@
-# python-tooling
+# python-template
 
 This repository documents common tooling we use in our Python projects in the [Advanced Research Computing center](https://www.ucl.ac.uk/arc/) (ARC) at [UCL](https://www.ucl.ac.uk).
 It is designed as a static GitHub pages site.
 
 ## Contributing
 
-The [website](https://ucl-arc.github.io/python-tooling/) and source pages are publicly available, but contributions are restricted to members and associate members of ARC.
+The [website](https://ucl-arc.github.io/python-template/) and source pages are publicly available, but contributions are restricted to members and associate members of ARC.
 
 Pages all live in the `pages` sub-directory, and are written in markdown.
 
