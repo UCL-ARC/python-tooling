@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BUNDLE_GEMFILE: docs/Gemfile
+      BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
     steps:
       - name: Checkout
         uses: actions/checkout@v3
