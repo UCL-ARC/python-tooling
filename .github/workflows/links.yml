@@ -1,0 +1,29 @@
+# This is a basic workflow to check for broken links with GitHub Actions
+
+name: Link Checker
+
+on:
+  pull_request:
+     branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  linkChecker:
+    timeout-minutes: 2
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.5.1
+        # Currently just checks internal links by excluding anything starting with "http"
+        with:
+          args: "--verbose --exclude-mail --exclude http.* -- ."
+          fail: true
+          jobSummary: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
