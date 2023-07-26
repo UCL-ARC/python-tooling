@@ -5,13 +5,11 @@ name: Link Checker
 on:
   pull_request:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   linkChecker:
     timeout-minutes: 2
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +19,11 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v1.5.1
         with:
-          args: "--verbose --exclude-mail --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
+          # Exclude the image.sc forum (which works) but returns 403 from
+          # github runners, ignore the project slug README since the links are
+          # necessarily not real links - i.e. demos and to be filled by
+          # cookiecutter values.
+          args: "--verbose --exclude https://forum.image.sc/ --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
           fail: true
           jobSummary: true
         env:
