@@ -20,9 +20,8 @@ jobs:
       - name: Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v1.5.1
-        # Currently just checks internal links by excluding anything starting with "http"
         with:
-          args: "--verbose --exclude-mail --exclude http.* -- ."
+          args: "--verbose --exclude-mail --exclude-path \{\{cookiecutter.project_slug\}\}/README.md  -- ."
           fail: true
           jobSummary: true
         env:
