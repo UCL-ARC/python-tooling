@@ -45,7 +45,7 @@ This project is developed in collaboration with the [Centre for Advanced Researc
 ### Research Software Engineering Contact
 
 Centre for Advanced Research Computing, University College London
-([arc-collab@ucl.ac.uk](mailto:arc-collab@ucl.ac.uk))
+([arc.collaborations@ucl.ac.uk](mailto:arc.collaborations@ucl.ac.uk))
 
 ## Built With
 
