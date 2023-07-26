@@ -1,0 +1,30 @@
+# This is a basic workflow to check for broken links with GitHub Actions
+
+name: Link Checker
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  linkChecker:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.5.1
+        with:
+          # Exclude the image.sc forum (which works) but returns 403 from
+          # github runners, ignore the project slug README since the links are
+          # necessarily not real links - i.e. demos and to be filled by
+          # cookiecutter values.
+          args: "--verbose --exclude https://forum.image.sc/ --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
+          fail: true
+          jobSummary: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
