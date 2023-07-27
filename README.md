@@ -1,7 +1,7 @@
 # UCL ARC Python Recommendations
 
 This is repository collects the [UCL ARC] recommendations for a Research Software project in Python.
-It contains template for new ARC Python packages and [website] documenting our recommendations.
+It contains a template for new Python packages and a [website] documenting our recommendations.
 We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this repo, and we welcome questions there or in the `#programming-help` channel on the [UCL research software hub slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
 🍪🥷 Our template is a [cookieninja] template which automatically creates new Python packages with our recommended tooling set up and ready to go.
@@ -98,13 +98,13 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 The [website] and source pages are publicly available, but contributions are restricted to members and associate members of ARC.
 Bug reports (and fixes) are welcome from anyone!
 
-Pages all live in the `docs/pages` sub-directory, and are written in markdown.
+Pages all live in the [docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages) sub-directory, and are written in markdown.
 
 To contribute:
 
 1. Create a new branch.
 2. Modify an existing page, create a new one, or tweak the template.
-   a. Run [pre-commit](https://pre-commit.com/) which will lint your changes.
+   a. Run [pre-commit](https://pre-commit.com) which will lint your changes.
    b. Check the tests pass if you modified the template (`pytest -s`).
 3. Open a pull request with changes.
 4. Someone who did not contribute to the PR should review it.
@@ -129,8 +129,8 @@ To contribute:
 
 - To build the docs locally
 
-  1.  [Install jekyll](https://jekyllrb.com/docs/installation/)
+  1.  [Install jekyll](https://jekyllrb.com/docs/installation)
   2.  Run `bundle install` from the root of this repository to install dependencies
   3.  Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
 
-  See the [jekyll docs](https://jekyllrb.com/docs/) for more info.
+  See the [jekyll docs](https://jekyllrb.com/docs) for more info.
