@@ -95,14 +95,14 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 
 ### Contributing
 
-The [website] and source pages are publicly available, but contributions are restricted to members and associate members of ARC.
-Bug reports (and fixes) are welcome from anyone!
+The [website] and source pages are open to contributions but must be reviewed by a member or associate member of ARC.
+We might be slow to approve new tool suggestions (since we'll probably want to discuss them first), but bug reports (and fixes) are very welcome from anyone!
 
 Pages all live in the [docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages) sub-directory, and are written in markdown.
 
 To contribute:
 
-1. Create a new branch.
+1. Create a new branch (or fork if you're not in ARC-collaborations).
 2. Modify an existing page, create a new one, or tweak the template.
    a. Run [pre-commit](https://pre-commit.com) which will lint your changes.
    b. Check the tests pass if you modified the template (`pytest -s`).
