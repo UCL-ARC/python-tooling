@@ -19,9 +19,11 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 
 ## Using this template
 
-1. Install [cookieninja]
+1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
    ```
-   pip install cookieninja
+   # conda create -n ptoolingVE python=3.11 pip -c conda-forge
+   # conda activate ptoolingVE
+   pip install cookieninja build twine setuptools-scm pytest
    ```
 2. Run cookieninja in the desired directory
    ```
@@ -82,13 +84,16 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
    ```
 
 5. To work on your project, initialise a git repository and _install_ it in editable mode.
-   (If you want to develop in a `venv` or `conda` environment, now is a good time to set that up)
    ```
    cd PROJECT_SLUG
    git init
-   # conda create -n PROJECT_SLUG-dev python=3.11
-   # conda activate PROJECT_SLUG-dev
    python -m pip install -e .
+   ```
+6. Build your package
+   ```
+   python -m build
+   python -m setuptools_scm
+   twine check dist/*
    ```
 
 ## Notes for developers
@@ -112,6 +117,28 @@ To contribute:
 6. If changes requested, the PR author should address the comments, then ask for review again.
 
 ### Development
+
+- Clone repository
+   * Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   * Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
+   ```
+   cd && mkdir -p $HOME/repositories/ && cd  $HOME/repositories/
+   git clone git@github.com:UCL-ARC/python-tooling.git
+   cd python-tooling
+   ```
+
+- To create and remove your virtual environment 
+   ```
+   # conda create -n ptoolingVE python=3.11 pip -c conda-forge
+   # conda activate ptoolingVE
+   # conda deactivate ptoolingVE  ## TO_REMOVE
+   # conda remove -n ptoolingVE --all   ## TO_REMOVE
+   ``` 
+
+- To run template in the same path of this repo.
+   ```
+   cookieninja .
+   ```
 
 - To run cookieninja using a specific branch of the template:
 
