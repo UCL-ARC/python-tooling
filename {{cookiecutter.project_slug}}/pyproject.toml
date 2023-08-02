@@ -38,6 +38,7 @@ optional-dependencies = {dev = [
     "ruff",
     "tox>=4",
     "twine",
+    "pytest",
 ]}
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}"

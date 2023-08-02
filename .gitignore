@@ -3,4 +3,4 @@
 *.idea
 
 #default project path
-**/python-template
+python-template

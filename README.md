@@ -22,9 +22,9 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
 
 ```
-# conda create -n ptoolingVE python=3.11 pip -c conda-forge
+# conda create -n ptoolingVE pip -c conda-forge
 # conda activate ptoolingVE
-pip install cookieninja build twine setuptools-scm pytest pre-commit
+pip install cookieninja
 ```
 
 2. Run cookieninja in the desired directory
@@ -89,13 +89,11 @@ pip install cookieninja build twine setuptools-scm pytest pre-commit
    ```
    cd PROJECT_SLUG
    git init
-   python -m pip install -e .
+   python -m pip install -e ".[dev]"
    ```
 6. Build your package
    ```
    python -m build
-   python -m setuptools_scm
-   twine check dist/*
    ```
 
 ## Notes for developers
@@ -122,11 +120,11 @@ To contribute:
 
 - Clone repository
 
-  - Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - (Optional) Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - (Optional) GitHub CLI as suggested [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
   - Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
 
   ```
-  cd && mkdir -p $HOME/repositories/ && cd  $HOME/repositories/
   git clone git@github.com:UCL-ARC/python-tooling.git
   cd python-tooling
   ```
@@ -134,16 +132,20 @@ To contribute:
 - To create and remove your virtual environment
 
   ```
-  # conda create -n ptoolingVE python=3.11 pip -c conda-forge
-  # conda activate ptoolingVE
-  # conda deactivate ptoolingVE  ## TO_REMOVE
-  # conda remove -n ptoolingVE --all   ## TO_REMOVE
+  conda create -n ptoolingVE pip -c conda-forge
+  conda activate ptoolingVE
+  conda deactivate ptoolingVE
+  conda remove -n ptoolingVE --all
   ```
 
 - To run template in the same path of this repo.
+  We do a test cookiecut of a dummy package and install it to ensure the template setup works.
 
   ```
   cookieninja .
+  cd python-template
+  git init
+  python -m pip install -e ".[dev]"
   ```
 
 - To run cookieninja using a specific branch of the template:
@@ -161,13 +163,11 @@ To contribute:
 - To commit changes
 
   ```
-  pre-commit run --all-files --color always --verbose
+  pre-commit run -a
   git add .
   git commmit -m 'message issue number (#NN)'
   git push origin NN-future-branch
   ```
-
-We do a test cookiecut of a dummy package and install it to ensure the template setup works.
 
 - To build the docs locally
 
