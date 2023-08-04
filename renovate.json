@@ -3,8 +3,10 @@
   "extends": ["config:base", ":disableDependencyDashboard", ":enablePreCommit"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
       "automerge": true
     }
-  ]
+  ],
+  "autoApprove": true,
+  "platformAutomerge": true
 }
