@@ -52,7 +52,7 @@ def test_package_generation(
         Path("src") / project_config["expected_slug"],
         Path("src")
         / project_config["expected_slug"]
-        / (project_config["expected_slug"] + ".py"),
+        / f"{project_config['expected_slug']}.py",
         "tests",
         Path(".github"),
         Path(".github") / "workflows",
