@@ -23,11 +23,12 @@ There is one exception: we've found that [black]'s own Jupyter extension works m
 | `nbqa black`     | [black] via [nbQA].                                                              | 🟠  |
 
 <!-- URLs for a more readable table & prose 👆 -->
-[black]:      https://nbqa.readthedocs.io/en/latest/index.html
-[nbQA]:       https://nbqa.readthedocs.io/en/latest/index.html
-[isort]:      https://pycqa.github.io/isort
-[ruff]:       https://github.com/charliermarsh/ruff
-[mypy]:       https://mypy.readthedocs.io/en/stable
+
+[black]: https://nbqa.readthedocs.io/en/latest/index.html
+[nbQA]: https://nbqa.readthedocs.io/en/latest/index.html
+[isort]: https://pycqa.github.io/isort
+[ruff]: https://github.com/charliermarsh/ruff
+[mypy]: https://mypy.readthedocs.io/en/stable
 [pre-commit]: https://github.com/kynan/nbstripout
 
 <!-- TODO: more sections to consider>
