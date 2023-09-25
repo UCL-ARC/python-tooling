@@ -1,11 +1,21 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":disableDependencyDashboard", ":enablePreCommit"],
-  "packageRules": [
-    {
-      "automerge": true,
-      "automergeType": "branch",
-      "matchUpdateTypes": ["digest", "minor", "patch", "pin"]
-    }
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        "schedule:nonOfficeHours",
+        ":enablePreCommit"
+    ],
+    "packageRules": [
+        {
+            "description": "Automatically merge minor and patch-level updates",
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "digest"
+            ],
+            "automerge": true,
+            "automergeType": "branch"
+        }
+    ],
+    "platformAutomerge": true
 }
