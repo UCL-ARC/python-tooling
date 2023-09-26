@@ -1,9 +1,14 @@
 name: Run template tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - "renovate/**"
+  pull_request:
 
 jobs:
-  build:
+  test-template:
     runs-on: ubuntu-latest
     strategy:
       matrix:
