@@ -27,7 +27,7 @@ concurrency:
 
 jobs:
   # Build job
-  website:
+  website-build:
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
@@ -58,12 +58,12 @@ jobs:
           path: docs/_site
 
   # Deployment job
-  deploy:
+  website-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: website-build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
