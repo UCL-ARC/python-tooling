@@ -8,6 +8,8 @@ on:
       - main
       - "renovate/**"
   pull_request:
+    branches-ignore:
+      - "renovate/**"
 
 jobs:
   link-checker:
