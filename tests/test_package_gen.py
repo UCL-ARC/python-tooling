@@ -35,6 +35,7 @@ def test_package_generation(
             str(tmp_path),
             f"project_slug={project_config['project_slug']}",
         ],
+        check=False,
         shell=False,  # noqa: S603
     )
 
@@ -59,7 +60,7 @@ def test_package_generation(
         assert (test_project_dir / f).exists()
 
     # Need a .git directory in the project root
-    subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
+    subprocess.run(["git", "init", test_project_dir], check=False)  # noqa: S603,S607
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
@@ -72,6 +73,7 @@ def test_package_generation(
             test_project_dir,
         ],
         capture_output=True,
+        check=False,
     )
     assert (
         pipinstall.returncode == 0
