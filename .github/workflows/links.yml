@@ -3,12 +3,11 @@
 name: Link Checker
 
 on:
+  push:
   pull_request:
-    branches: [main]
-  workflow_dispatch:
 
 jobs:
-  linkChecker:
+  link-checker:
     timeout-minutes: 2
     runs-on: ubuntu-latest
 

@@ -1,9 +1,10 @@
 name: Run template tests
 
-on: [push]
+on:
+  push:
 
 jobs:
-  build:
+  test-template:
     runs-on: ubuntu-latest
     strategy:
       matrix:
