@@ -4,6 +4,9 @@ name: Link Checker
 
 on:
   push:
+    branches:
+      - main
+      - "renovate/**"
   pull_request:
 
 jobs:
