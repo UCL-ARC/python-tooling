@@ -32,6 +32,6 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 23.7.0
+    rev: 23.9.1
     hooks:
       - id: black
