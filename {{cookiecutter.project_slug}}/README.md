@@ -114,10 +114,6 @@ again from the root of the repository.
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
-- [x] Initial Research
-- [ ] Minimum viable product <-- You are Here
-- [ ] Alpha Release
-- [ ] Feature-Complete Release
 
 ## Citation
 
