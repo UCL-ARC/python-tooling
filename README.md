@@ -19,10 +19,14 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 
 ## Using this template
 
-1. Install [cookieninja]
-   ```
-   pip install cookieninja
-   ```
+1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
+
+```
+# conda create -n ptoolingVE pip -c conda-forge
+# conda activate ptoolingVE
+pip install cookieninja
+```
+
 2. Run cookieninja in the desired directory
    ```
    cookieninja gh:ucl-arc/python-tooling
@@ -82,13 +86,14 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
    ```
 
 5. To work on your project, initialise a git repository and _install_ it in editable mode.
-   (If you want to develop in a `venv` or `conda` environment, now is a good time to set that up)
    ```
    cd PROJECT_SLUG
    git init
-   # conda create -n PROJECT_SLUG-dev python=3.11
-   # conda activate PROJECT_SLUG-dev
-   python -m pip install -e .
+   python -m pip install -e ".[dev]"
+   ```
+6. Build your package
+   ```
+   python -m build
    ```
 
 ## Notes for developers
@@ -113,6 +118,36 @@ To contribute:
 
 ### Development
 
+- Clone repository
+
+  - (Optional) Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - (Optional) GitHub CLI as suggested [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
+  - Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
+
+  ```
+  git clone git@github.com:UCL-ARC/python-tooling.git
+  cd python-tooling
+  ```
+
+- To create and remove your virtual environment
+
+  ```
+  conda create -n ptoolingVE pip -c conda-forge
+  conda activate ptoolingVE
+  conda deactivate ptoolingVE
+  conda remove -n ptoolingVE --all
+  ```
+
+- To run template in the same path of this repo.
+  We do a test cookiecut of a dummy package and install it to ensure the template setup works.
+
+  ```
+  cookieninja .
+  cd python-template
+  git init
+  python -m pip install -e ".[dev]"
+  ```
+
 - To run cookieninja using a specific branch of the template:
 
   ```
@@ -125,7 +160,14 @@ To contribute:
   pytest -s
   ```
 
-  We do a test cookiecut of a dummy package and install it to ensure the template setup works.
+- To commit changes
+
+  ```
+  pre-commit run -a
+  git add .
+  git commmit -m 'message issue number (#NN)'
+  git push origin NN-future-branch
+  ```
 
 - To build the docs locally
 

@@ -35,6 +35,7 @@ def test_package_generation(
             str(tmp_path),
             f"project_name={project_config['project_name']}",
         ],
+        check=False,
         shell=False,  # noqa: S603
     )
 
@@ -64,7 +65,7 @@ def test_package_generation(
         ), f"Expected file/folder: {full_path}, but didn't find it."
 
     # Need a .git directory in the project root
-    subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
+    subprocess.run(["git", "init", test_project_dir], check=False)  # noqa: S603,S607
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
@@ -77,6 +78,7 @@ def test_package_generation(
             test_project_dir,
         ],
         capture_output=True,
+        check=False,
     )
     assert (
         pipinstall.returncode == 0

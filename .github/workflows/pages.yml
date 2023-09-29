@@ -8,7 +8,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,13 +27,13 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  website-build:
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/docs/Gemfile
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -57,12 +58,12 @@ jobs:
           path: docs/_site
 
   # Deployment job
-  deploy:
+  website-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: website-build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
