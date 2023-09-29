@@ -22,7 +22,7 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
 
 ```
-# conda create --channel conda-forge --name new-env-name 
+# conda create --channel conda-forge --name new-env-name
 # conda activate new-env-name
 # conda install pip
 pip install cookieninja
