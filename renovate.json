@@ -1,19 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":automergeBranch",
-    ":automergeDigest",
-    ":automergeMinor",
-    ":automergePatch",
-    ":disableDependencyDashboard",
-    ":enablePreCommit"
-  ],
-  "commitMessageAction": "Renovate:",
-  "packageRules": [
-    {
-      "commitMessageTopic": "{{depName}}",
-      "matchManagers": ["github-actions", "pre-commit"]
-    }
-  ]
+  "extends": ["github>UCL-ARC/renovate-config"]
 }
