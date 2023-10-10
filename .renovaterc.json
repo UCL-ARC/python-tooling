@@ -1,4 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>UCL-ARC/renovate-config"]
+  "extends": ["github>UCL-ARC/.github//renovate/default-config.json"]
 }
