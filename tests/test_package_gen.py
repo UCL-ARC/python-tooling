@@ -25,10 +25,10 @@ def test_package_generation(
     Note that 'tmp_path' pytest fixture is preferred over 'tmpdir'
     (see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures)
     """
-    # Run cookieninja with project_slug set to the value in the project config
+    # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
         [  # noqa: S607
-            "cookieninja",
+            "cookiecutter",
             ".",
             "--no-input",
             "--output-dir",
@@ -77,4 +77,4 @@ def test_package_generation(
     )
     assert (
         pipinstall.returncode == 0
-    ), f"Something went wrong with intallation: {pipinstall.stderr!r}"
+    ), f"Something went wrong with installation: {pipinstall.stderr!r}"

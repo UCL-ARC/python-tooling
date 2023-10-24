@@ -1,3 +1,6 @@
+[tool.codespell]
+skip = '*.lock'
+
 [tool.pytest.ini_options]
 addopts = "--color=yes -v"
 testpaths = [
@@ -79,7 +82,7 @@ legacy_tox_ini = """
     description =
         Test package creation
     deps =
-        cookieninja
+        cookiecutter
         pytest
     commands =
         pytest {posargs}
