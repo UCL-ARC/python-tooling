@@ -115,24 +115,6 @@ again from the root of the repository.
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
 
-## Citation
-
-Please cite [xx.yyy/zenodo.zzzz](https://doi.org/xx.yyy/zenodo.zzzzz) for this work if you use this code.
-
-<details>
-<summary>BibTEX</summary>
-
-```bibtex
-@article{xxx2023paper,
-  title={Title},
-  author={Author},
-  journal={arXiv},
-  year={2023}
-}
-```
-
-</details>
-
 ## Acknowledgements
 
 This work was funded by a grant from the {{ cookiecutter.funder }}.
