@@ -25,7 +25,7 @@ See [here for example configuration](https://github.com/UCL-ARC/python-tooling/b
 | [flake8](https://flake8.pycqa.org/en/latest/)            | Linter which complains if code doesn't follow a rule. Does not support modern `pyproject.toml` configuration.                                                     | 🔴  |
 
 <details>
-<summary> 🟢 explaination</summary>
+<summary> 🟢 explanation</summary>
 
 We recommend a suite of 🟢 tools that we've used and work well together.
 
@@ -36,9 +36,9 @@ We recommend a suite of 🟢 tools that we've used and work well together.
 </details>
 
 <details>
-<summary> 🔴 explaination</summary>
+<summary> 🔴 explanation</summary>
 
-Flake8 is not recommended because it doesn't support `pyproject.toml` and [seemingly wont](https://github.com/PyCQA/flake8/issues/234#issuecomment-1206730688). There are now better and more flexible tools available.
+Flake8 is not recommended because it doesn't support `pyproject.toml` and [seemingly won't](https://github.com/PyCQA/flake8/issues/234#issuecomment-1206730688). There are now better and more flexible tools available.
 
 </details>
 
