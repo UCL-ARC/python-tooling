@@ -79,7 +79,7 @@ legacy_tox_ini = """
     description =
         Test package creation
     deps =
-        cookieninja
+        cookiecutter
         pytest
     commands =
         pytest {posargs}

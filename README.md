@@ -4,7 +4,7 @@ This is repository collects the [UCL ARC] recommendations for a Research Softwar
 It contains a template for new Python packages and a [website] documenting our recommendations.
 We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this repo, and we welcome questions there or in the `#programming-help` channel on the [UCL research software hub slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
-🍪🥷 Our template is a [cookieninja] template which automatically creates new Python packages with our recommended tooling set up and ready to go.
+🍪 Our template is a [cookiecutter] template which automatically creates new Python packages with our recommended tooling set up and ready to go.
 
 > **Note**
 > If you're making a package within a community that has an existing package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)), we recommend using their template instead of this one.
@@ -14,27 +14,27 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
-[cookieninja]: https://libraries.io/pypi/cookieninja
+[cookiecutter]: https://libraries.io/pypi/cookiecutter
 <!-- prettier-ignore-end -->
 
 ## Using this template
 
-1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
+1.  Install [cookiecutter](https://libraries.io/pypi/cookiecutter) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
 
 ```
 # conda create --channel conda-forge --name new-env-name
 # conda activate new-env-name
 # conda install pip
-pip install cookieninja
+pip install cookiecutter
 ```
 
-2. Run cookieninja in the desired directory
+2. Run cookiecutter in the desired directory
    ```
-   cookieninja gh:ucl-arc/python-tooling
+   cookiecutter gh:ucl-arc/python-tooling
    ```
    If you have this repo locally (this may be the case if you are developing), you can run the following:
    ```
-   cookieninja /path/to/your/checkout/of/python-tooling
+   cookiecutter /path/to/your/checkout/of/python-tooling
    ```
 3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option (shown in square brackets).
 
@@ -44,7 +44,7 @@ pip install cookieninja
    github_username [UCL-ARC]:
    project_name [Python Template]:
    project_slug [python-tooling-cookiecutter]:
-   project_short_description [A cookieninja template with ARC recommendations.]:
+   project_short_description [A cookiecutter template with ARC recommendations.]:
    version [0.1.0]:
    Select min_python_version:
    Choose from 1, 2, 3, 4 [1]: 3.10
@@ -143,16 +143,16 @@ To contribute:
   We do a test cookiecut of a dummy package and install it to ensure the template setup works.
 
   ```
-  cookieninja .
+  cookiecutter .
   cd python-template
   git init
   python -m pip install -e ".[dev]"
   ```
 
-- To run cookieninja using a specific branch of the template:
+- To run cookiecutter using a specific branch of the template:
 
   ```
-  cookieninja https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
+  cookiecutter https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
   ```
 
 - To run the tests locally:
