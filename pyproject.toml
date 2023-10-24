@@ -1,3 +1,6 @@
+[tool.codespell]
+skip = '*.lock'
+
 [tool.pytest.ini_options]
 addopts = "--color=yes -v"
 testpaths = [
@@ -73,17 +76,18 @@ legacy_tox_ini = """
         3.9: py39
         3.10: py310
         3.11: py311
+        3.12: py312
 
     [testenv]
     skip_install = true
     description =
         Test package creation
     deps =
-        cookieninja
+        cookiecutter
         pytest
     commands =
         pytest {posargs}
 
     [tox]
-    env_list = py3{8,9,10,11}
+    env_list = py3{9,10,11,12}
 """
