@@ -25,9 +25,9 @@ def main(initialise_git_repository: str) -> int:
             "{{cookiecutter.project_slug}} - DO NOT SELECT ANY OTHER OPTION. "
             "Alternatively, if you have the GitHub CLI installed "
             "https://cli.github.com, then you can run "
-            "gh repo create {{cookiecutter.project_slug}} -d "
-            "{{cookiecutter.project_short_description}} --public -r origin "
-            "--source .",
+            "`gh repo create {{cookiecutter.project_slug}} -d "
+            "'{{cookiecutter.project_short_description}}' --public -r origin "
+            "--source {{cookiecutter.project_slug}}`",
         )
         return result.returncode
     return 0
