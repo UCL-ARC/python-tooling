@@ -77,4 +77,4 @@ def test_package_generation(
     )
     assert (
         pipinstall.returncode == 0
-    ), f"Something went wrong with intallation: {pipinstall.stderr!r}"
+    ), f"Something went wrong with installation: {pipinstall.stderr!r}"

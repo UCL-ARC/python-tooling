@@ -15,7 +15,7 @@ layout: default
 | [gitbook](https://www.gitbook.com/)             | General documentation builder; integrates with GitHub           | 🟠  |                                                                        |
 
 <details>
-<summary> 🟢 explaination</summary>
+<summary> 🟢 explanation</summary>
 Sphinx is the de-facto standard that is widely used. It is well tested, reliable and very customisable.
 </details>
 
