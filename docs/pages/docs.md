@@ -8,9 +8,9 @@ layout: default
 ## Doc building
 
 | Name                                            | Short description                                               | 🚦  | Used by                                                                |
-| ----------------------------------------------- | --------------------------------------------------------------- | :-: | ---------------------------------------------------------------------- |
+| ----------------------------------------------- | --------------------------------------------------------------- | :-: | ---------------------------------------------------------------------- | --- |
 | [sphinx](https://www.sphinx-doc.org/en/master/) | Generates documentation from reStructuredText or Markdown files | 🟢  | [WAZP](https://github.com/SainsburyWellcomeCentre/WAZP/tree/main/docs) |
-| [mkdocs](https://www.mkdocs.org/)               | Generates documentation from Markdown files                     | 🟠  | [XNAT SRR](https://github.com/UCL-MIRSG/UCLH-MPBE-SRR-XNAT)   |                                                                     |
+| [mkdocs](https://www.mkdocs.org/)               | Generates documentation from Markdown files                     | 🟠  | [XNAT SRR](https://github.com/UCL-MIRSG/UCLH-MPBE-SRR-XNAT)            |     |
 | [pdoc](https://pdoc.dev/)                       | Auto-generates API documentation from docstrings                | 🟠  | [MICI](https://github.com/matt-graham/mici)                            |
 | [gitbook](https://www.gitbook.com/)             | General documentation builder; integrates with GitHub           | 🟠  |                                                                        |
 
