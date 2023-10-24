@@ -48,7 +48,7 @@ def test_package_generation(
     expected_files = [
         "README.md",
         ".pre-commit-config.yaml",
-        "LICENCE.md",
+        "LICENSE.md",
         "pyproject.toml",
         "src",
         Path("src") / project_config["project_slug"],
