@@ -4,6 +4,7 @@
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "A cookieninja template with ARC recommendations.",
+  "initialise_git_repository": true,
   "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "min_python_version": ["3.9", "3.10", "3.11"],
   "max_python_version": ["3.11", "3.10", "3.9"],
