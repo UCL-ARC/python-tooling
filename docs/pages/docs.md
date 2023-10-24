@@ -11,11 +11,11 @@ layout: default
 | ----------------------------------------------- | --------------------------------------------------------------- | :-: | ---------------------------------------------------------------------- |
 | [sphinx](https://www.sphinx-doc.org/en/master/) | Generates documentation from reStructuredText or Markdown files | 🟢  | [WAZP](https://github.com/SainsburyWellcomeCentre/WAZP/tree/main/docs) |
 | [mkdocs](https://www.mkdocs.org/)               | Generates documentation from Markdown files                     | 🟠  |                                                                        |
-| [pdoc](https://pdoc.dev/)                       | Auto-generates API documentation from docstrings                | 🟠  | [MICI](https://github.com/matt-graham/mici)                            |
+| [pdoc](https://pdoc.dev/)                       | Auto-generates API documentation from docstrings                | 🟠  | [sleplet](https://github.com/astro-informatics/sleplet/)               |
 | [gitbook](https://www.gitbook.com/)             | General documentation builder; integrates with GitHub           | 🟠  |                                                                        |
 
 <details>
-<summary> 🟢 explaination</summary>
+<summary> 🟢 explanation</summary>
 Sphinx is the de-facto standard that is widely used. It is well tested, reliable and very customisable.
 </details>
 

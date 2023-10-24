@@ -1,3 +1,6 @@
+ci:
+  autofix_prs: false
+
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.1
@@ -5,6 +8,11 @@ repos:
       - id: ruff
         args: ["--config", "pyproject.toml"]
         exclude: "{{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}"
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args: [--write-changes]
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.5.4
     hooks:
