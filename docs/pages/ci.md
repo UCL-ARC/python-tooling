@@ -7,7 +7,7 @@ layout: default
 
 | Name                                                                                  | Short description                                                                 | 🚦  | Used by |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --- | :-: |
-| [GitHub Actions](https://docs.github.com/en/actions)                                  | Continuous integration and continuous delivery platform (integrated with GitHub). | 🟢  | [Crabs Exploration](https://github.com/SainsburyWellcomeCentre/crabs-exploration) |
+| [GitHub Actions](https://docs.github.com/en/actions)                                  | Continuous integration and continuous delivery platform (integrated with GitHub). | 🟢  | [Crabs Exploration,](https://github.com/SainsburyWellcomeCentre/crabs-exploration) [DiRAC,](https://github.com/UCL-ARC/dirac-swift-api) [RRED](https://github.com/UCL-ARC/rred-reports)  |
 | [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                          | 🟠  | |
 | [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                          | 🟠  | |
 | [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform.                | 🟠  | |

@@ -10,7 +10,7 @@ layout: default
 | Name                                                                          | Short description                                                              | 🚦  | Used by |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---- | :-: |
 | [pytest](https://docs.pytest.org/en/stable/contents.html)                     | A framework for writing and running tests.                                     | 🟢  | [RRED,](https://github.com/UCL-ARC/rred-reports) [DiRAC](https://github.com/UCL-ARC/dirac-swift-api) |
-| [tox](https://tox.wiki/en/latest/index.html)                                  | A framework that allows running tests and packaging in different environments. | 🟢  | [DiRAC,](https://github.com/UCL-ARC/dirac-swift-api) [Crabs Exploration](https://github.com/SainsburyWellcomeCentre/crabs-exploration) |
+| [tox](https://tox.wiki/en/latest/index.html)                                  | A framework that allows running tests and packaging in different environments. | 🟢  | [DiRAC,](https://github.com/UCL-ARC/dirac-swift-api) [Crabs Exploration,](https://github.com/SainsburyWellcomeCentre/crabs-exploration) [XNAT SRR](https://github.com/UCL-MIRSG/UCLH-MPBE-SRR-XNAT) |
 | [unittest](https://docs.python.org/dev/library/unittest.html#module-unittest) | A framework built in to Python for writing and running tests.                  | 🟠  | |
 
 <details>
