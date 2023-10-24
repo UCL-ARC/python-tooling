@@ -17,9 +17,12 @@ from datetime import datetime, timezone
 # -- Project information -----------------------------------------------------
 
 project = "{{cookiecutter.project_name}}"
-copyright = str( # noqa: A001
-    datetime.now(tz=timezone.utc).year,
-) + ", {{cookiecutter.author_name}}"
+copyright = (  # noqa: A001
+    str(
+        datetime.now(tz=timezone.utc).year,
+    )
+    + ", {{cookiecutter.author_name}}"
+)
 author = "{{cookiecutter.author_name}}"
 
 

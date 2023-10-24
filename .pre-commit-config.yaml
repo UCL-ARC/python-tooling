@@ -39,5 +39,5 @@ repos:
       - id: black
         exclude: |
           (?x)(
-              ^{{cookiecutter.project_slug}}/docs/source/conf.py
+              ^{{cookiecutter.project_slug}}
           )
