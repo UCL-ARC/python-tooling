@@ -4,6 +4,8 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+from datetime import datetime, timezone
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -15,7 +17,9 @@
 # -- Project information -----------------------------------------------------
 
 project = "{{cookiecutter.project_name}}"
-copyright = "2023, {{cookiecutter.author_name}}" # noqa: A001
+copyright = str( # noqa: A001
+    datetime.now(tz=timezone.utc).year,
+) + ", {{cookiecutter.author_name}}"
 author = "{{cookiecutter.author_name}}"
 
 

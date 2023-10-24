@@ -37,7 +37,7 @@ repos:
     rev: 23.7.0
     hooks:
       - id: black
-        exclude: >
-          (?x)^(
-            {{cookiecutter.project_slug}}/pyproject.toml
-          )$
+        exclude: |
+          (?x)(
+              ^{{cookiecutter.project_slug}}/docs/source/conf.py
+          )
