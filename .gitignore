@@ -3,3 +3,5 @@
 
 # Sphinx
 docs/build
+.DS_Store
+.vscode/settings.json
