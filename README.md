@@ -38,21 +38,6 @@ pip install cookieninja
    ```
 3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option (shown in square brackets).
 
-   ```
-   full_name [UCL ARC]:
-   email [temp@gmail.com]:
-   github_username [UCL-ARC]:
-   project_name [Python Template]:
-   project_slug [python-tooling-cookiecutter]:
-   project_short_description [A cookieninja template with ARC recommendations.]:
-   version [0.1.0]:
-   Select min_python_version:
-   Choose from 1, 2, 3, 4 [1]: 3.10
-   Select max_python_version:
-   Choose from 1, 2, 3, 4 [1]: 1
-   ...
-   ```
-
    Note that these project variables are defined in the `cookiecutter.json` file.
 
 4. This will create a specific directory structure.
@@ -60,25 +45,25 @@ pip install cookieninja
    For example, for a project with the following variables:
 
    ```
-   project_slug [python-tooling-cookiecutter]: PROJECT_SLUG
    project_name [Python Template]: PROJECT_NAME
+   project_slug [python-template]: PROJECT_SLUG
    ```
 
-   we will get a project folder named after `project_slug`, structured like this:
+   we will get a project folder named `PROJECT_SLUG`, structured like this:
 
    ```
    PROJECT_SLUG
+   ├── ...
    ├── README.md
    ├── pyproject.toml
    ├── src
    │   └── PROJECT_SLUG
    │       └── PROJECT_SLUG.py
    └── tests
-       ├── conftest.py
        └── test_dummy.py
    ```
 
-   And the `project_name` will appear in the README.md as the human-readable name of the project.
+   And the `PROJECT_NAME` will appear in the README.md as the human-readable name of the project.
 
    ```
    cat PROJECT_SLUG/README.md
