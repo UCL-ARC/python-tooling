@@ -8,6 +8,6 @@
   "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
   "max_python_version": ["3.12", "3.11", "3.10", "3.9"],
-  "licence": ["MIT", "BSD-3", "GPL-3.0"],
+  "license": ["MIT", "BSD-3", "GPL-3.0"],
   "funder": "JBFC: The Joe Bloggs Funding Council"
 }
