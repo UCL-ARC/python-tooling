@@ -1,3 +1,6 @@
+[tool.codespell]
+skip = '*.lock'
+
 [tool.pytest.ini_options]
 addopts = "--color=yes -v"
 testpaths = [
@@ -87,6 +90,3 @@ legacy_tox_ini = """
     [tox]
     env_list = py3{8,9,10,11}
 """
-
-[tool.codespell]
-skip = '*.lock'
