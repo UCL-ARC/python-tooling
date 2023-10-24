@@ -1,12 +1,12 @@
 {
   "author_name": "UCL ARC",
   "author_email": "temp@gmail.com",
-  "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "A cookieninja template with ARC recommendations.",
-  "funder": "JBFC: The Joe Bloggs Funding Council",
-  "licence": ["MIT", "BSD-3", "GPL-3.0"],
+  "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "min_python_version": ["3.9", "3.10", "3.11"],
-  "max_python_version": ["3.11", "3.10", "3.9"]
+  "max_python_version": ["3.11", "3.10", "3.9"],
+  "licence": ["MIT", "BSD-3", "GPL-3.0"],
+  "funder": "JBFC: The Joe Bloggs Funding Council"
 }
