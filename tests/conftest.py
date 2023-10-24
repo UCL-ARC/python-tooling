@@ -17,5 +17,5 @@ def project_config():
     return {
         "project_name": "Cookiecutter Test",
         "expected_repo_name": "cookiecutter-test",
-        "expected_slug": "cookiecutter_test",
+        "expected_package_name": "cookiecutter_test",
     }

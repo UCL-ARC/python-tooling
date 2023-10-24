@@ -50,10 +50,8 @@ def test_package_generation(
         "LICENCE.md",
         "pyproject.toml",
         "src",
-        Path("src") / project_config["expected_slug"],
-        Path("src")
-        / project_config["expected_slug"]
-        / f"{project_config['expected_slug']}.py",
+        Path("src") / project_config["expected_package_name"],
+        Path("src") / project_config["expected_package_name"] / "__init__.py",
         "tests",
         Path(".github"),
         Path(".github") / "workflows",
