@@ -3,7 +3,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Tests status][tests-badge]][tests-link]
 [![Linting status][linting-badge]][linting-link]
-[![Licence][licence-badge]](./LICENCE.md)
+[![License][license-badge]](./LICENSE.md)
 
 <!--
 [![PyPI version][pypi-version]][pypi-link]
@@ -21,12 +21,12 @@
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
 [pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
-{% if cookiecutter.licence == "MIT" -%}
-[licence-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
-{%- elif cookiecutter.licence == "BSD-3" -%}
-[licence-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
-{%- elif cookiecutter.licence == "GPL-3.0" -%}
-[licence-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
+{% if cookiecutter.license == "MIT" -%}
+[license-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
+{%- elif cookiecutter.license == "BSD-3" -%}
+[license-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
+{%- elif cookiecutter.license == "GPL-3.0" -%}
+[license-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
 {% endif %}
 <!-- prettier-ignore-end -->
 
