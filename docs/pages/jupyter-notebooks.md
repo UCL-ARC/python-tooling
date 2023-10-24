@@ -5,7 +5,7 @@ layout: default
 
 # Jupyter notebooks
 
-We generally recommend packaging resuable code components into Python modules where possible.
+We generally recommend packaging reusable code components into Python modules where possible.
 However occasionally we support researchers who prefer a notebook environment or projects which want to provide examples and tutorials in notebook format.
 Notebooks can also be a valid alternative to Python scripts for running and recording the results of numerical experiments for example.
 
