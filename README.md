@@ -166,7 +166,7 @@ To contribute:
   ```
   pre-commit run -a
   git add .
-  git commmit -m 'message issue number (#NN)'
+  git commit -m 'message issue number (#NN)'
   git push origin NN-future-branch
   ```
 
