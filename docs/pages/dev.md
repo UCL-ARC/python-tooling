@@ -25,7 +25,7 @@ layout: default
 
 | Name                                                        | Short description                                                                                 | 🚦  | Used by |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --- | :-: |
-| [jedi](https://jedi.readthedocs.io/en/latest/)              | Refactoring and autocompletion used in IDEs.                                                      |     | |
+| [jedi](https://jedi.readthedocs.io/en/latest/)              | Refactoring and autocompletion used in IDEs.                                                      | 🟢     | [Conjurer](https://github.com/UCL-ARC/Conjurer/tree/main/MLDE) |
 | [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library.                                                                              |     | |
-| [tqdm](https://pypi.org/project/tqdm/2.2.3/)                | Progress bar for loops.                                                                           |     | |
+| [tqdm](https://pypi.org/project/tqdm/2.2.3/)                | Progress bar for loops.                                                                           |  🟢   | [RRED,](https://github.com/UCL-ARC/rred-reports) [Conjurer](https://github.com/UCL-ARC/Conjurer/tree/main/MLDE) |
 | [psutil](https://psutil.readthedocs.io/en/latest/)          | System monitoring, profiling, limiting process resources and the management of running processes. |     | |
