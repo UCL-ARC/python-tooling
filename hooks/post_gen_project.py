@@ -33,4 +33,5 @@ def main(initialise_git_repository: str) -> int:
 
 
 if __name__ == "__main__":
+    print("{{ cookiecutter.initialise_git_repository }}")
     sys.exit(main("{{ cookiecutter.initialise_git_repository }}"))
