@@ -27,5 +27,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    if "{{cookiecutter.initialise_git_repository}}":
+    if "{% cookiecutter.initialise_git_repository %}":
         sys.exit(main())
