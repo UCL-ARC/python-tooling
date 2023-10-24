@@ -8,6 +8,6 @@
   "project_short_description": "A cookieninja template with ARC recommendations.",
   "funder": "JBFC: The Joe Bloggs Funding Council",
   "licence": ["MIT", "BSD-3", "GPL-3.0"],
-  "min_python_version": ["3.9", "3.10", "3.11"],
-  "max_python_version": ["3.11", "3.10", "3.9"]
+  "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
+  "max_python_version": ["3.12", "3.11", "3.10", "3.9"]
 }

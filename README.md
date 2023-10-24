@@ -22,8 +22,9 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 1.  Install [cookieninja](https://libraries.io/pypi/cookieninja) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
 
 ```
-# conda create -n ptoolingVE pip -c conda-forge
-# conda activate ptoolingVE
+# conda create --channel conda-forge --name new-env-name
+# conda activate new-env-name
+# conda install pip
 pip install cookieninja
 ```
 
@@ -172,7 +173,7 @@ To contribute:
 - To build the docs locally
 
   1.  [Install jekyll](https://jekyllrb.com/docs/installation)
-  2.  Run `bundle install` from the root of this repository to install dependencies
+  2.  Run `bundle install` from the `docs/` directory of this repository to install dependencies.
   3.  Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
 
   See the [jekyll docs](https://jekyllrb.com/docs) for more info.
