@@ -33,31 +33,34 @@ def test_package_generation(
             "--no-input",
             "--output-dir",
             str(tmp_path),
-            f"project_slug={project_config['project_slug']}",
+            f"project_name={project_config['project_name']}",
         ],
         check=False,
         shell=False,  # noqa: S603
     )
 
-    test_project_dir = tmp_path / project_config["project_slug"]
-
-    # Check parent directory exists
+    # Check project directory exists
+    test_project_dir = tmp_path / project_config["expected_repo_name"]
     assert test_project_dir.exists()
 
-    # Check main files and directories inside parent directory
+    # Check main files and directories inside
     expected_files = [
         "README.md",
         ".pre-commit-config.yaml",
         "LICENSE.md",
         "pyproject.toml",
         "src",
-        Path("src") / project_config["project_slug"],
+        Path("src") / project_config["expected_package_name"],
+        Path("src") / project_config["expected_package_name"] / "__init__.py",
         "tests",
         Path(".github"),
         Path(".github") / "workflows",
     ]
     for f in expected_files:
-        assert (test_project_dir / f).exists()
+        full_path = test_project_dir / f
+        assert (
+            full_path.exists()
+        ), f"Expected file/folder: {full_path}, but didn't find it."
 
     # Need a .git directory in the project root
     subprocess.run(["git", "init", test_project_dir], check=False)  # noqa: S603,S607

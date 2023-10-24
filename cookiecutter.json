@@ -4,6 +4,7 @@
   "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "project_short_description": "A cookiecutter template with ARC recommendations.",
   "funder": "JBFC: The Joe Bloggs Funding Council",
   "license": ["MIT", "BSD-3", "GPL-3.0"],
