@@ -3,4 +3,7 @@
 
 # Sphinx
 docs/build
+
 .DS_Store
+*.idea
+

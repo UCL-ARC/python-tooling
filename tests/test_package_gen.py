@@ -25,16 +25,17 @@ def test_package_generation(
     Note that 'tmp_path' pytest fixture is preferred over 'tmpdir'
     (see https://docs.pytest.org/en/7.3.x/how-to/tmp_path.html#the-tmpdir-and-tmpdir-factory-fixtures)
     """
-    # Run cookieninja with project_slug set to the value in the project config
+    # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
         [  # noqa: S607
-            "cookieninja",
+            "cookiecutter",
             ".",
             "--no-input",
             "--output-dir",
             str(tmp_path),
             f"project_slug={project_config['project_slug']}",
         ],
+        check=False,
         shell=False,  # noqa: S603
     )
 
@@ -47,7 +48,7 @@ def test_package_generation(
     expected_files = [
         "README.md",
         ".pre-commit-config.yaml",
-        "LICENCE.md",
+        "LICENSE.md",
         "pyproject.toml",
         "src",
         Path("src") / project_config["project_slug"],
@@ -59,7 +60,7 @@ def test_package_generation(
         assert (test_project_dir / f).exists()
 
     # Need a .git directory in the project root
-    subprocess.run(["git", "init", test_project_dir])  # noqa: S603,S607
+    subprocess.run(["git", "init", test_project_dir], check=False)  # noqa: S603,S607
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
@@ -72,7 +73,8 @@ def test_package_generation(
             test_project_dir,
         ],
         capture_output=True,
+        check=False,
     )
     assert (
         pipinstall.returncode == 0
-    ), f"Something went wrong with intallation: {pipinstall.stderr!r}"
+    ), f"Something went wrong with installation: {pipinstall.stderr!r}"

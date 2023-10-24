@@ -1,8 +1,9 @@
 # {{ cookiecutter.project_name }}
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Actions Status][actions-badge]][actions-link]
-[![Licence][licence-badge]](./LICENCE.md)
+[![Tests status][tests-badge]][tests-link]
+[![Linting status][linting-badge]][linting-link]
+[![License][license-badge]](./LICENSE.md)
 
 <!--
 [![PyPI version][pypi-version]][pypi-link]
@@ -11,21 +12,22 @@
 -->
 
 <!-- prettier-ignore-start -->
-[actions-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/workflows/CI/badge.svg
-[actions-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions
+[tests-badge]:              https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
+[tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
+[linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
+[linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
 [pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
-{%- if cookiecutter.licence == "MIT" -%}
-[licence-badge]             https://img.shields.io/badge/License-MIT-yellow.svg
-{%- elif cookiecutter.licence == "BSD-3" -%}
-[licence-badge]             https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
-{%- elif cookiecutter.licence == "GPL-3.0" -%}
-[licence-badge]             https://img.shields.io/badge/License-GPLv3-blue.svg
-{%- endif -%}
-
+{% if cookiecutter.license == "MIT" -%}
+[license-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
+{%- elif cookiecutter.license == "BSD-3" -%}
+[license-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
+{%- elif cookiecutter.license == "GPL-3.0" -%}
+[license-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
+{% endif %}
 <!-- prettier-ignore-end -->
 
 {{cookiecutter.project_short_description}}
@@ -43,7 +45,7 @@ This project is developed in collaboration with the [Centre for Advanced Researc
 ### Research Software Engineering Contact
 
 Centre for Advanced Research Computing, University College London
-([arc-collab@ucl.ac.uk](mailto:arc-collab@ucl.ac.uk))
+([arc.collaborations@ucl.ac.uk](mailto:arc.collaborations@ucl.ac.uk))
 
 ## Built With
 
@@ -57,11 +59,31 @@ Centre for Advanced Research Computing, University College London
 
 ### Prerequisites
 
-Any tools or versions of languages needed to run code. For example specific Python or Node versions. Minimum hardware requirements also go here.
+<!-- Any tools or versions of languages needed to run code. For example specific Python or Node versions. Minimum hardware requirements also go here. -->
+
+`{{cookiecutter.project_slug}}` requires Python {{cookiecutter.min_python_version}}{% if cookiecutter.min_python_version != cookiecutter.max_python_version %}&ndash;{{cookiecutter.max_python_version}}{% endif %}.
 
 ### Installation
 
-How to build or install the application.
+<!-- How to build or install the application. -->
+
+We recommend installing in a project specific virtual environment created using a environment management tool such as [Mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) or [Conda](https://conda.io/projects/conda/en/latest/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
+
+```sh
+pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+```
+
+Alternatively create a local clone of the repository with
+
+```sh
+git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+```
+
+and then install in editable mode by running
+
+```sh
+pip install -e .
+```
 
 ### Running Locally
 
@@ -69,14 +91,25 @@ How to run the application on your local system.
 
 ### Running Tests
 
-How to run tests on your local system.
+<!-- How to run tests on your local system. -->
+
+Tests can be run across all compatible Python versions in isolated environments using
+[`tox`](https://tox.wiki/en/latest/) by running
+
+```sh
+tox
+```
+
+To run tests manually in a Python environment with `pytest` installed run
+
+```sh
+pytest tests
+```
+
+again from the root of the repository.
 
 ## Roadmap
 
-- [x] Initial Research
-- [ ] Minimum viable product <-- You are Here
-- [ ] Alpha Release
-- [ ] Feature-Complete Release
 - [x] Initial Research
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release

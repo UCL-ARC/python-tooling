@@ -1,9 +1,14 @@
 name: Run template tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - "renovate/**"
+  pull_request:
 
 jobs:
-  build:
+  test-template:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -11,9 +16,10 @@ jobs:
           - "3.9"
           - "3.10"
           - "3.11"
+          - "3.12"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4

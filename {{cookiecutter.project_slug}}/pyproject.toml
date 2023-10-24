@@ -35,13 +35,14 @@ optional-dependencies = {dev = [
     "build",
     "mypy",
     "pre-commit",
+    "pytest",
     "ruff",
     "tox>=4",
     "twine",
 ]}
 readme = "README.md"
 requires-python = ">={{ cookiecutter.min_python_version }}"
-license.file = "LICENCE.md"
+license.file = "LICENSE.md"
 urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 
 [tool.coverage]
@@ -58,7 +59,6 @@ paths.source = [
 explicit_package_bases = true
 plugins = [
     "numpy.typing.mypy_plugin",
-    "pydantic.mypy",
 ]
 
 [tool.pytest.ini_options]
@@ -126,7 +126,6 @@ isort.known-first-party = [
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
     "classmethod",
-    "pydantic.validator",
 ]
 
 [tool.setuptools_scm]
@@ -153,7 +152,7 @@ legacy_tox_ini = """
 
     [testenv]
     commands =
-        pytest --cov
+        pytest --cov --cov-report=xml
     deps =
         pytest
         pytest-cov
