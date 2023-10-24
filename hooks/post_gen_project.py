@@ -26,12 +26,12 @@ def main(initialise_git_repository: str) -> int:
             "Alternatively, if you have the GitHub CLI installed "
             "https://cli.github.com, then you can run "
             "gh repo create {{cookiecutter.project_slug}} -d "
-            "{{cookiecutter.description}} --public -r origin --source .",
+            "{{cookiecutter.project_short_description}} --public -r origin "
+            "--source .",
         )
         return result.returncode
     return 0
 
 
 if __name__ == "__main__":
-    print("{{ cookiecutter.initialise_git_repository }}")
     sys.exit(main("{{ cookiecutter.initialise_git_repository }}"))
