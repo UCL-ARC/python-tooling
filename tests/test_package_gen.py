@@ -30,7 +30,7 @@ def test_package_generation(
     subprocess.run(
         shlex.split(
             f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
-            f"{project_config['project_name']}"
+            f"'{project_config['project_name']}'"
         ),
         check=False,
         shell=False,  # noqa: S603

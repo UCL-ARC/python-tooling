@@ -22,7 +22,7 @@ def test_git_not_initialised(
         shlex.split(  # noqa: S603
             f"cookiecutter . --no-input "
             "--output-dir {tmp_path} project_name="
-            f"{project_config['project_name']} initialise_git_repository=False"
+            f"'{project_config['project_name']}' initialise_git_repository=False"
         ),
         check=True,
     )
@@ -57,7 +57,7 @@ def test_git_initialised(
     subprocess.run(
         shlex.split(  # noqa: S603
             f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
-            f"{project_config['project_name']} initialise_git_repository=True",
+            f"'{project_config['project_name']}' initialise_git_repository=True",
         ),
         check=True,
         capture_output=True,
