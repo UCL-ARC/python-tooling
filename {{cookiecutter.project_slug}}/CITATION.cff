@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "{{cookiecutter.author_family_names }}"
+    given-names: "{{ cookiecutter.author_given_names }}"
+    email: "{{ cookiecutter.author_email }}"
+repository-code: "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+title: "{{ cookiecutter.project_name }}: {{ cookiecutter.project_short_description }}"
+license: "{{ cookiecutter.license }}"

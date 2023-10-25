@@ -7,7 +7,7 @@ requires = [
 
 [project]
 authors = [
-    {email = "{{ cookiecutter.author_email }}", name = "{{ cookiecutter.author_name }}"},
+    {email = "{{ cookiecutter.author_email }}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
 ]
 classifiers = [
     "Operating System :: POSIX",
@@ -130,7 +130,7 @@ pep8-naming.classmethod-decorators = [
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
-write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
+write_to = "src/{{ cookiecutter.package_name }}/_version.py"
 
 [tool.tomlsort]
 all = true
