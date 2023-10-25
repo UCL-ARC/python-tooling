@@ -4,8 +4,6 @@ import logging
 import subprocess
 import sys
 
-import colorama
-
 
 def main(initialise_git_repository: str) -> int:
     """
@@ -27,13 +25,13 @@ def main(initialise_git_repository: str) -> int:
                 check=True,
             )
         except subprocess.CalledProcessError:
-            logging.error(f"{colorama.Fore.RED}git not installed")
+            logging.error("git not installed")
             return 1
 
         # create GitHub repo with CLI if possible
         try:
             logging.info(
-                f"{colorama.Fore.GREEN}GitHub CLI found, creating a remote",
+                "GitHub CLI found, creating a remote",
             )
             subprocess.run(
                 [  ## noqa: S603,S607
@@ -53,10 +51,10 @@ def main(initialise_git_repository: str) -> int:
             )
         except FileNotFoundError:
             logging.error(
-                f"{colorama.Fore.RED}You now have a local git repository. To "
-                "sync this to GitHub you need to create an empty GitHub repo "
-                "with the name {{cookiecutter.project_slug}} - DO NOT SELECT "
-                "ANY OTHER OPTION. See this link for more detail ",
+                "You now have a local git repository. To sync this to GitHub "
+                "you need to create an empty GitHub repo with the name "
+                "{{cookiecutter.project_slug}} - DO NOT SELECT ANY OTHER "
+                "OPTION. See this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
             return 2
