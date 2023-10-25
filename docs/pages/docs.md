@@ -7,12 +7,12 @@ layout: default
 
 ## Doc building
 
-| Name                                            | Short description                                               | 🚦  | Used by                                                                |
-| ----------------------------------------------- | --------------------------------------------------------------- | :-: | ---------------------------------------------------------------------- |
-| [sphinx](https://www.sphinx-doc.org/en/master/) | Generates documentation from reStructuredText or Markdown files | 🟢  | [WAZP](https://github.com/SainsburyWellcomeCentre/WAZP/tree/main/docs) |
-| [mkdocs](https://www.mkdocs.org/)               | Generates documentation from Markdown files                     | 🟠  |                                                                        |
-| [pdoc](https://pdoc.dev/)                       | Auto-generates API documentation from docstrings                | 🟠  | [sleplet](https://github.com/astro-informatics/sleplet/)               |
-| [gitbook](https://www.gitbook.com/)             | General documentation builder; integrates with GitHub           | 🟠  |                                                                        |
+| Name                                            | Short description                                               | 🚦  | Used by                                                                                               |
+| ----------------------------------------------- | --------------------------------------------------------------- | :-: | ----------------------------------------------------------------------------------------------------- |
+| [sphinx](https://www.sphinx-doc.org/en/master/) | Generates documentation from reStructuredText or Markdown files | 🟢  | [WAZP](https://github.com/SainsburyWellcomeCentre/WAZP/tree/main/docs)                                |
+| [mkdocs](https://www.mkdocs.org/)               | Generates documentation from Markdown files                     | 🟠  |                                                                                                       |
+| [pdoc](https://pdoc.dev/)                       | Auto-generates API documentation from docstrings                | 🟠  | [sleplet](https://github.com/astro-informatics/sleplet/), [MICI](https://github.com/matt-graham/mici) |
+| [gitbook](https://www.gitbook.com/)             | General documentation builder; integrates with GitHub           | 🟠  |                                                                                                       |
 
 <details>
 <summary> 🟢 explanation</summary>
