@@ -15,5 +15,7 @@ def project_config():
         as defined in the cookiecutter.json
     """
     return {
-        "project_slug": "cookiecutter_test",
+        "project_name": "Cookiecutter Test",
+        "expected_repo_name": "cookiecutter-test",
+        "expected_package_name": "cookiecutter_test",
     }

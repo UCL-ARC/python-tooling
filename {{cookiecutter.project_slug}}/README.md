@@ -38,7 +38,7 @@ This project is developed in collaboration with the [Centre for Advanced Researc
 
 ### Project Team
 
-{{cookiecutter.author_name}} ([{{cookiecutter.author_email}}](mailto:{{cookiecutter.author_email}}))
+{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}} ([{{cookiecutter.author_email}}](mailto:{{cookiecutter.author_email}}))
 
 <!-- TODO: how do we have an array of collaborators ? -->
 
@@ -114,24 +114,6 @@ again from the root of the repository.
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
-
-## Citation
-
-Please cite [xx.yyy/zenodo.zzzz](https://doi.org/xx.yyy/zenodo.zzzzz) for this work if you use this code.
-
-<details>
-<summary>BibTEX</summary>
-
-```bibtex
-@article{xxx2023paper,
-  title={Title},
-  author={Author},
-  journal={arXiv},
-  year={2023}
-}
-```
-
-</details>
 
 ## Acknowledgements
 
