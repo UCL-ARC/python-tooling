@@ -32,27 +32,15 @@ def main(initialise_git_repository: str) -> int:
             )
             return _EXIT_FAILURE
 
-        # create GitHub repo with CLI if possible
+        # check for presence of GitHub CLI
         try:
-            github_cli = subprocess.run(
-                [  ## noqa: S603,S607
-                    "gh",
-                    "repo",
-                    "create",
-                    "{{cookiecutter.project_slug}}",
-                    "-d",
-                    "'{{cookiecutter.project_short_description}}'",
-                    "--public",
-                    "-r",
-                    "origin",
-                    "--source",
-                    ".",
-                ],
-                capture_output=True,
-                check=True,
-                text=True,
+            subprocess.run(["gh", "--version"], check=True)  # noqa: S603,S607
+            print(  # noqa: T201
+                "GitHub CLI detected, you can create a repo with the following: "
+                "gh repo create {{cookiecutter.project_slug}} -d "
+                "'{{cookiecutter.project_short_description}}' --public -r "
+                "origin --source {{cookiecutter.project_slug}}"
             )
-            print(f"GitHub CLI created a repo at {github_cli.stdout}")  # noqa: T201
         except FileNotFoundError:
             print(  # noqa: T201
                 "You now have a local git repository. To sync this to GitHub "
@@ -63,7 +51,7 @@ def main(initialise_git_repository: str) -> int:
             )
         except subprocess.CalledProcessError as e:
             print(  # noqa: T201
-                f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
+                f"There was an error with git: {e.returncode}\n{e.stderr}"
             )
             return _EXIT_FAILURE
 
