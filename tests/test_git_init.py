@@ -20,8 +20,7 @@ def test_git_not_initialised(
     # Run cookiecutter with `initialise_git_repository=False`
     subprocess.run(
         shlex.split(  # noqa: S603
-            f"cookiecutter . --no-input "
-            f"--output-dir {tmp_path} project_name="
+            f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
             f"'{project_config['project_name']}' initialise_git_repository=False"
         ),
         check=True,
