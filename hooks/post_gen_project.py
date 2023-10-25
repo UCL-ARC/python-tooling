@@ -19,8 +19,8 @@ def main(initialise_git_repository: str) -> int:
         The return code of the process
     """
     if initialise_git_repository == "True":
-        # initialise git repo
         try:
+            # initialise git repo
             subprocess.run(shlex.split("git init"), check=True)  # noqa: S603
             # old versions of git still default to `master`
             subprocess.run(
@@ -29,16 +29,18 @@ def main(initialise_git_repository: str) -> int:
                 capture_output=True,
             )
         except FileNotFoundError:
+            # cannot find git
             print("git isn't installed")  # noqa: T201
             return _EXIT_FAILURE
         except subprocess.CalledProcessError as e:
+            # some other error
             print(  # noqa: T201
                 f"There was an error with git: {e.returncode}\n{e.stderr}"
             )
             return _EXIT_FAILURE
 
-        # check for presence of GitHub CLI
         try:
+            # check for presence of GitHub CLI
             subprocess.run(
                 shlex.split("gh --version"),  # noqa: S603
                 check=True,
@@ -52,6 +54,7 @@ def main(initialise_git_repository: str) -> int:
                 "origin --source {{cookiecutter.project_slug}}"
             )
         except FileNotFoundError:
+            # GitHub CLI isn't installed
             print(  # noqa: T201
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
@@ -60,6 +63,7 @@ def main(initialise_git_repository: str) -> int:
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
         except subprocess.CalledProcessError as e:
+            # some other error
             print(  # noqa: T201
                 f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
             )
