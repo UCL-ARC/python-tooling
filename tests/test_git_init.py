@@ -16,7 +16,7 @@ def test_git_not_initialised(
         project_config: A dictionary with values for the cookiecutter template,
             as defined in the cookiecutter.json
     """
-    # Run cookiecutter with project_slug set to the value in the project config
+    # Run cookiecutter with `initialise_git_repository=False`
     subprocess.run(
         [  # noqa: S603,S607
             "cookiecutter",
@@ -44,19 +44,19 @@ def test_git_not_initialised(
     ), f"Error: {result.stderr!r}"
 
 
-def test_git_initialised_no_cli(
+def test_git_initialised(
     tmp_path: pathlib.Path,
     project_config: dict,
 ) -> None:
     """
-    Checks for the case with git initialisation without GitHub CLI.
+    Checks for the case with git initialisation.
 
     Args:
         tmp_path: A temporary directory path object which is unique.
         project_config: A dictionary with values for the cookiecutter template,
             as defined in the cookiecutter.json
     """
-    # Run cookiecutter with project_slug set to the value in the project config
+    # Run cookiecutter with `initialise_git_repository=True`
     subprocess.run(
         [  # noqa: S603,S607
             "cookiecutter",
