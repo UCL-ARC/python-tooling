@@ -130,7 +130,7 @@ pep8-naming.classmethod-decorators = [
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
-write_to = "src/{{ cookiecutter.project_slug }}/_version.py"
+write_to = "src/{{ cookiecutter.package_name }}/_version.py"
 
 [tool.tomlsort]
 all = true
