@@ -7,8 +7,15 @@ import subprocess
 def test_git_not_initialised(
     tmp_path: pathlib.Path,
     project_config: dict,
-):
-    """ """
+) -> None:
+    """
+    Checks for the case without git initialisation.
+
+    Args:
+        tmp_path: A temporary directory path object which is unique.
+        project_config: A dictionary with values for the cookiecutter template,
+            as defined in the cookiecutter.json
+    """
     # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
         [  # noqa: S603,S607
