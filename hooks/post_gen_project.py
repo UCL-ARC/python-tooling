@@ -66,6 +66,7 @@ def main(initialise_git_repository: str) -> int:
                 "OPTION.\n\nSee this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
+            return _EXIT_SUCCESS
         except subprocess.CalledProcessError:
             # fails because the repository doesn't exist
             subprocess.run(
@@ -78,6 +79,7 @@ def main(initialise_git_repository: str) -> int:
                 check=True,
                 capture_output=True,
             )
+            return _EXIT_SUCCESS
 
     return _EXIT_SUCCESS
 
