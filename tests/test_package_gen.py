@@ -1,11 +1,12 @@
 """Checks that the cookiecutter works."""
 
+import pathlib
+import shlex
 import subprocess
-from pathlib import Path
 
 
 def test_package_generation(
-    tmp_path: Path,
+    tmp_path: pathlib.Path,
     project_config: dict,
 ):
     """
@@ -27,14 +28,10 @@ def test_package_generation(
     """
     # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
-        [  # noqa: S607
-            "cookiecutter",
-            ".",
-            "--no-input",
-            "--output-dir",
-            str(tmp_path),
-            f"project_name={project_config['project_name']}",
-        ],
+        shlex.split(
+            f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
+            f"{project_config['project_name']}"
+        ),
         check=False,
         shell=False,  # noqa: S603
     )
@@ -50,11 +47,11 @@ def test_package_generation(
         "LICENSE.md",
         "pyproject.toml",
         "src",
-        Path("src") / project_config["expected_package_name"],
-        Path("src") / project_config["expected_package_name"] / "__init__.py",
+        pathlib.Path("src") / project_config["expected_package_name"],
+        pathlib.Path("src") / project_config["expected_package_name"] / "__init__.py",
         "tests",
-        Path(".github"),
-        Path(".github") / "workflows",
+        pathlib.Path(".github"),
+        pathlib.Path(".github") / "workflows",
     ]
     for f in expected_files:
         full_path = test_project_dir / f
@@ -64,14 +61,7 @@ def test_package_generation(
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
-        [  # noqa: S603,S607
-            "python",
-            "-m",
-            "pip",
-            "install",
-            "-e",
-            test_project_dir,
-        ],
+        shlex.split(f"python -m pip install -e {test_project_dir}"),  # noqa: S603
         capture_output=True,
         check=False,
     )

@@ -1,6 +1,7 @@
 """Checks that the git repo initialisation works."""
 
 import pathlib
+import shlex
 import subprocess
 
 
@@ -18,22 +19,18 @@ def test_git_not_initialised(
     """
     # Run cookiecutter with `initialise_git_repository=False`
     subprocess.run(
-        [  # noqa: S603,S607
-            "cookiecutter",
-            ".",
-            "--no-input",
-            "--output-dir",
-            str(tmp_path),
-            f"project_name={project_config['project_name']}",
-            "initialise_git_repository=False",
-        ],
+        shlex.split(  # noqa: S603
+            f"cookiecutter . --no-input "
+            "--output-dir {tmp_path} project_name="
+            f"{project_config['project_name']} initialise_git_repository=False"
+        ),
         check=True,
     )
 
     test_project_dir = tmp_path / project_config["expected_repo_name"]
 
     result = subprocess.run(
-        ["git", "-C", str(test_project_dir), "status"],  # noqa: S603,S607
+        shlex.split(f"git -C {test_project_dir} status"),  # noqa: S603
         capture_output=True,
         check=False,
         text=True,
@@ -58,15 +55,10 @@ def test_git_initialised(
     """
     # Run cookiecutter with `initialise_git_repository=True`
     subprocess.run(
-        [  # noqa: S603,S607
-            "cookiecutter",
-            ".",
-            "--no-input",
-            "--output-dir",
-            str(tmp_path),
-            f"project_name={project_config['project_name']}",
-            "initialise_git_repository=True",
-        ],
+        shlex.split(  # noqa: S603
+            f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
+            f"{project_config['project_name']} initialise_git_repository=True",
+        ),
         check=True,
         capture_output=True,
     )
@@ -74,7 +66,7 @@ def test_git_initialised(
     test_project_dir = tmp_path / project_config["expected_repo_name"]
 
     result = subprocess.run(
-        ["git", "-C", str(test_project_dir), "status"],  # noqa: S603,S607
+        shlex.split(f"git -C {test_project_dir} status"),  # noqa: S603
         capture_output=True,
         check=False,
         text=True,
