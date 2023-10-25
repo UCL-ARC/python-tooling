@@ -40,7 +40,7 @@ def main(initialise_git_repository: str) -> int:
         try:
             subprocess.run(["gh", "--version"], check=True, capture_output=True)  # noqa: S603,S607
             print(  # noqa: T201
-                "GitHub CLI detected, you can create a repo with the following:\n"
+                "GitHub CLI detected, you can create a repo with the following:\n\n"
                 "gh repo create {{cookiecutter.project_slug}} -d "
                 "'{{cookiecutter.project_short_description}}' --public -r "
                 "origin --source {{cookiecutter.project_slug}}"
@@ -50,7 +50,7 @@ def main(initialise_git_repository: str) -> int:
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
                 "{{cookiecutter.project_slug}} - DO NOT SELECT ANY OTHER "
-                "OPTION. See this link for more detail "
+                "OPTION.\n\nSee this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
         except subprocess.CalledProcessError as e:
