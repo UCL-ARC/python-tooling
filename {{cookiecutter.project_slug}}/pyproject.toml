@@ -31,7 +31,6 @@ keywords = [
 ]
 name = "{{ cookiecutter.project_slug }}"
 optional-dependencies = {dev = [
-    "black",
     "build",
     "mypy",
     "pre-commit",
