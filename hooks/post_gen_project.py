@@ -4,6 +4,9 @@ import logging
 import subprocess
 import sys
 
+_EXIT_FAILURE = 1
+_EXIT_SUCCESS = 0
+
 
 def main(initialise_git_repository: str) -> int:
     """
@@ -26,7 +29,7 @@ def main(initialise_git_repository: str) -> int:
             )
         except subprocess.CalledProcessError:
             logging.error("git not installed")
-            return 1
+            return _EXIT_FAILURE
 
         # create GitHub repo with CLI if possible
         try:
@@ -57,8 +60,8 @@ def main(initialise_git_repository: str) -> int:
                 "OPTION. See this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
-            return 2
-    return 0
+            return _EXIT_SUCCESS
+    return _EXIT_SUCCESS
 
 
 if __name__ == "__main__":
