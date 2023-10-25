@@ -41,7 +41,7 @@ def test_git_not_initialised(
     assert (
         result.stderr
         == "fatal: not a git repository (or any of the parent directories): .git\n"
-    ), "git initialised when it shouldn't be"
+    ), f"Error: {result.stderr!r}"
 
 
 def test_git_initialised_no_cli(
@@ -78,7 +78,4 @@ def test_git_initialised_no_cli(
         check=False,
         text=True,
     )
-    assert (
-        result.stderr
-        == "fatal: not a git repository (or any of the parent directories): .git\n"
-    ), "git initialised when it shouldn't be"
+    assert result.returncode == 0, f"Error: {result.stderr!r}"
