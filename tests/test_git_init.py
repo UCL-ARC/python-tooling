@@ -36,9 +36,9 @@ def test_git_not_initialised(
         ["git", "-C", str(test_project_dir), "status"],  # noqa: S603,S607
         capture_output=True,
         check=False,
+        text=True,
     )
     assert (
-        result.returncode != 0
-        and result.stderr
-        == b"fatal: not a git repository (or any of the parent directories): .git\n"
+        result.stderr
+        == "fatal: not a git repository (or any of the parent directories): .git\n"
     ), "git initialised when it shouldn't be"
