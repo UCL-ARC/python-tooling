@@ -1,7 +1,8 @@
 {
-  "author_name": "UCL ARC",
-  "author_email": "temp@gmail.com",
-  "github_username": "{{ cookiecutter.author_name.replace(' ', '-') }}",
+  "author_given_names": "Eva Lu",
+  "author_family_names": "Ator",
+  "author_email": "eva.lu.ator@ucl.ac.uk",
+  "github_username": "{{ cookiecutter.author_given_names.lower().replace(' ', '-') }}-{{ cookiecutter.author_family_names.lower().replace(' ', '-') }}",
   "project_name": "Python Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
