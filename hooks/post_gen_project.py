@@ -19,16 +19,17 @@ def main(initialise_git_repository: str) -> int:
         The return code of the process
     """
     if initialise_git_repository == "True":
-        # initialise git repo
         try:
-            subprocess.run(["git", "init"], check=True)  # noqa: S603,S607
+            # initialise git repo
+            subprocess.run(shlex.split("git init"), check=True)  # noqa: S603
             # old versions of git still default to `master`
             subprocess.run(
-                ["git", "branch", "-M", "main"],  # noqa: S603,S607
+                shlex.split("git branch -M main"),  # noqa: S603
                 check=True,
                 capture_output=True,
             )
         except FileNotFoundError:
+            # fails because it cannot find git
             print("git isn't installed")  # noqa: T201
             return _EXIT_FAILURE
         except subprocess.CalledProcessError as e:
@@ -37,17 +38,27 @@ def main(initialise_git_repository: str) -> int:
             )
             return _EXIT_FAILURE
 
-        # check for presence of GitHub CLI
         try:
-            subprocess.run(["gh", "--version"], check=True, capture_output=True)  # noqa: S603,S607
+            # check to see if repo exists on GitHub
+            subprocess.run(
+                shlex.split(  # noqa: S603
+                    "gh repo view {{cookiecutter.github_username}}/"
+                    "{{cookiecutter.project_slug}} --json id -q '.id'"
+                ),
+                check=True,
+                capture_output=True,
+            )
             print(  # noqa: T201
-                "GitHub CLI detected, you can create a repo with the following:\n\n"
+                "GitHub CLI detected, but {{cookiecutter.github_username}}/"
+                "{{cookiecutter.project_slug}} already exists. You can create "
+                "a repo with the following:\n\n"
                 "gh repo create {{cookiecutter.github_username}}/"
-                "{{cookiecutter.project_slug}} -d "
+                "{{cookiecutter.project_slug}}-new -d "
                 "'{{cookiecutter.project_short_description}}' --public -r "
                 "origin --source {{cookiecutter.project_slug}}"
             )
         except FileNotFoundError:
+            # fails because the GitHub CLI isn't installed
             print(  # noqa: T201
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
@@ -55,11 +66,18 @@ def main(initialise_git_repository: str) -> int:
                 "OPTION.\n\nSee this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
-        except subprocess.CalledProcessError as e:
-            print(  # noqa: T201
-                f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
+        except subprocess.CalledProcessError:
+            # fails because the repository doesn't exist
+            subprocess.run(
+                shlex.split(  # noqa: S603
+                    "gh repo create {{cookiecutter.github_username}}/"
+                    "{{cookiecutter.project_slug}} -d "
+                    "'{{cookiecutter.project_short_description}}' --public -r "
+                    "origin --source {{cookiecutter.project_slug}}"
+                ),
+                check=True,
+                capture_output=True,
             )
-            return _EXIT_FAILURE
 
     return _EXIT_SUCCESS
 
