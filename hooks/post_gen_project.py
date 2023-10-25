@@ -1,5 +1,6 @@
 """Post project generation hook."""
 
+import shlex
 import subprocess
 import sys
 
