@@ -13,7 +13,7 @@ def main(initialise_git_repository: str) -> int:
     Create a git repository on generation of the project.
 
     Args:
-        initialise: Whether to initialise the repo
+        initialise_git_repository: Whether to initialise the repo
 
     Returns:
         The return code of the process
