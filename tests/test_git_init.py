@@ -11,7 +11,7 @@ def test_git_not_initialised(
     """ """
     # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
-        [  # noqa: S607
+        [  # noqa: S603,S607
             "cookiecutter",
             ".",
             "--no-input",
@@ -26,7 +26,7 @@ def test_git_not_initialised(
     test_project_dir = tmp_path / project_config["expected_repo_name"]
 
     result = subprocess.run(
-        ["git", "-C", str(test_project_dir), "status"],
+        ["git", "-C", str(test_project_dir), "status"],  # noqa: S603,S607
         capture_output=True,
         check=False,
     )
