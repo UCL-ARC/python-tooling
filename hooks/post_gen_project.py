@@ -56,7 +56,8 @@ def main(initialise_git_repository: str) -> int:
                 f"{colorama.Fore.RED}You now have a local git repository. To "
                 "sync this to GitHub you need to create an empty GitHub repo "
                 "with the name {{cookiecutter.project_slug}} - DO NOT SELECT "
-                "ANY OTHER OPTION.",
+                "ANY OTHER OPTION. See this link for more detail ",
+                "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
             return 2
     return 0
