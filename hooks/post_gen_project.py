@@ -19,24 +19,21 @@ def main(initialise_git_repository: str) -> int:
         The return code of the process
     """
     if initialise_git_repository == "True":
-        # initialise git repository and ensure on `main` branch`
+        # initialise git repo
         try:
             subprocess.run(["git", "init"], check=True)  # noqa: S603,S607
             # old versions of git still default to `master`
-            subprocess.run(
-                ["git", "branch", "-M", "main"],  # noqa: S603,S607
-                check=True,
-            )
-        except subprocess.CalledProcessError:
-            logging.error("git not installed")
+            subprocess.run(["git", "branch", "-M", "main"], check=True)  # noqa: S603,S607
+        except FileNotFoundError:
+            logging.error("git isn't installed")
+            return _EXIT_FAILURE
+        except subprocess.CalledProcessError as e:
+            logging.error(f"There was an error with git: {e.returncode}\n{e.stderr}")
             return _EXIT_FAILURE
 
         # create GitHub repo with CLI if possible
         try:
-            logging.info(
-                "GitHub CLI found, creating a remote",
-            )
-            subprocess.run(
+            github_cli = subprocess.run(
                 [  ## noqa: S603,S607
                     "gh",
                     "repo",
@@ -50,17 +47,25 @@ def main(initialise_git_repository: str) -> int:
                     "--source",
                     ".",
                 ],
+                capture_output=True,
                 check=True,
+                text=True,
             )
-        except subprocess.CalledProcessError:
-            logging.error(
+            logging.info(f"GitHub CLI created a repo at {github_cli.stdout}")
+        except FileNotFoundError:
+            logging.info(
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
                 "{{cookiecutter.project_slug}} - DO NOT SELECT ANY OTHER "
                 "OPTION. See this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
-            return _EXIT_SUCCESS
+        except subprocess.CalledProcessError as e:
+            logging.error(
+                f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
+            )
+            return _EXIT_FAILURE
+
     return _EXIT_SUCCESS
 
 

@@ -24,8 +24,8 @@ def test_git_not_initialised(
             "--no-input",
             "--output-dir",
             str(tmp_path),
-            "initialise_git_repository=false",
             f"project_name={project_config['project_name']}",
+            "initialise_git_repository=false",
         ],
         check=True,
     )
@@ -64,8 +64,8 @@ def test_git_initialised_no_cli(
             "--no-input",
             "--output-dir",
             str(tmp_path),
-            "initialise_git_repository=true",
             f"project_name={project_config['project_name']}",
+            "initialise_git_repository=true",
         ],
         check=True,
     )
