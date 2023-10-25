@@ -47,7 +47,7 @@ def main(initialise_git_repository: str) -> int:
                     "-r",
                     "origin",
                     "--source",
-                    "{{cookiecutter.project_slug}}",
+                    ".",
                 ],
                 check=True,
             )
