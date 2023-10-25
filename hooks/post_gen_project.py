@@ -1,13 +1,10 @@
 """Post project generation hook."""
 
-import logging
 import subprocess
 import sys
 
 _EXIT_FAILURE = 1
 _EXIT_SUCCESS = 0
-_logger = logging.getLogger(__name__)
-_logger.setLevel("ERROR")
 
 
 def main(initialise_git_repository: str) -> int:
@@ -27,10 +24,12 @@ def main(initialise_git_repository: str) -> int:
             # old versions of git still default to `master`
             subprocess.run(["git", "branch", "-M", "main"], check=True)  # noqa: S603,S607
         except FileNotFoundError:
-            _logger.error("git isn't installed")
+            print("git isn't installed")  # noqa: T201
             return _EXIT_FAILURE
         except subprocess.CalledProcessError as e:
-            _logger.error(f"There was an error with git: {e.returncode}\n{e.stderr}")
+            print(  # noqa: T201
+                f"There was an error with git: {e.returncode}\n{e.stderr}"
+            )
             return _EXIT_FAILURE
 
         # create GitHub repo with CLI if possible
@@ -53,9 +52,9 @@ def main(initialise_git_repository: str) -> int:
                 check=True,
                 text=True,
             )
-            _logger.info(f"GitHub CLI created a repo at {github_cli.stdout}")
+            print(f"GitHub CLI created a repo at {github_cli.stdout}")  # noqa: T201
         except FileNotFoundError:
-            _logger.info(
+            print(  # noqa: T201
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
                 "{{cookiecutter.project_slug}} - DO NOT SELECT ANY OTHER "
@@ -63,7 +62,7 @@ def main(initialise_git_repository: str) -> int:
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
             )
         except subprocess.CalledProcessError as e:
-            _logger.error(
+            print(  # noqa: T201
                 f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
             )
             return _EXIT_FAILURE
