@@ -49,7 +49,7 @@ def main(initialise_git_repository: str) -> int:
                 ],
                 check=True,
             )
-        except FileNotFoundError:
+        except subprocess.CalledProcessError:
             logging.error(
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
