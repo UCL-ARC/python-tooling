@@ -41,7 +41,8 @@ def main(initialise_git_repository: str) -> int:
             subprocess.run(["gh", "--version"], check=True, capture_output=True)  # noqa: S603,S607
             print(  # noqa: T201
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
-                "gh repo create {{cookiecutter.project_slug}} -d "
+                "gh repo create {{cookiecutter.github_username}}/"
+                "{{cookiecutter.project_slug}} -d "
                 "'{{cookiecutter.project_short_description}}' --public -r "
                 "origin --source {{cookiecutter.project_slug}}"
             )
