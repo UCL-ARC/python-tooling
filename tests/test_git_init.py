@@ -68,6 +68,7 @@ def test_git_initialised_no_cli(
             "initialise_git_repository=True",
         ],
         check=True,
+        capture_output=True,
     )
 
     test_project_dir = tmp_path / project_config["expected_repo_name"]

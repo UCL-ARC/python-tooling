@@ -22,7 +22,11 @@ def main(initialise_git_repository: str) -> int:
         try:
             subprocess.run(["git", "init"], check=True)  # noqa: S603,S607
             # old versions of git still default to `master`
-            subprocess.run(["git", "branch", "-M", "main"], check=True)  # noqa: S603,S607
+            subprocess.run(
+                ["git", "branch", "-M", "main"],  # noqa: S603,S607
+                check=True,
+                capture_output=True,
+            )
         except FileNotFoundError:
             print("git isn't installed")  # noqa: T201
             return _EXIT_FAILURE
@@ -34,7 +38,7 @@ def main(initialise_git_repository: str) -> int:
 
         # check for presence of GitHub CLI
         try:
-            subprocess.run(["gh", "--version"], check=True)  # noqa: S603,S607
+            subprocess.run(["gh", "--version"], check=True, capture_output=True)  # noqa: S603,S607
             print(  # noqa: T201
                 "GitHub CLI detected, you can create a repo with the following: "
                 "gh repo create {{cookiecutter.project_slug}} -d "
