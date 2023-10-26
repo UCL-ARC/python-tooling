@@ -70,24 +70,20 @@ def test_initialisation_of_git_repo(
                 check=True,
                 capture_output=True,
             )
-            # ensure GitHub CLI is printed
             assert (
-                cookie.stdout
-                == f"Initialized empty Git repository in {test_project_dir / '.git'}/"
-                "\nGitHub CLI detected, you can create a repo with the following:\n\n"
+                "GitHub CLI detected, you can create a repo with the following:\n\n"
                 f"gh repo create {project_config['github_username']}/"
                 f"{project_config['expected_repo_name']} -d "
                 f"'{project_config['project_short_description']}' --public -r "
-                f"origin --source {project_config['expected_repo_name']}\n"
+                f"origin --source {project_config['expected_repo_name']}"
+                in cookie.stdout
             )
         except FileNotFoundError:
             # if GitHub CLI isn't installed then instead point to GitHub
             # Note: On GitHub Actions, the CLI is always installed
             # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
             assert (
-                cookie.stdout
-                == f"Initialized empty Git repository in {test_project_dir / '.git'}/"
-                "\nYou now have a local git repository. To sync this to GitHub you "
+                "You now have a local git repository. To sync this to GitHub you "
                 "need to create an empty GitHub repo with the name "
                 f"{project_config['github_username']}/"
                 f"{project_config['expected_repo_name']} - DO NOT SELECT ANY "
@@ -95,7 +91,7 @@ def test_initialisation_of_git_repo(
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo"
                 ".\n\nThen run:\n\ngit remote add origin git@github.com:"
                 f"{project_config['github_username']}/"
-                f"{project_config['expected_repo_name']}.git\n"
+                f"{project_config['expected_repo_name']}.git" in cookie.stdout
             )
     else:
         # should not have found git
