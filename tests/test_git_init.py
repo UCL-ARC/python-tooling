@@ -24,22 +24,26 @@ def test_initialisation_of_git_repo(
             which determines if git should be initialised or not
     """
     # Run cookiecutter with `initialise_git_repository=False`
-    subprocess.run(
+    cookie = subprocess.run(
         [  # noqa: S603,S607
             "cookiecutter",
             ".",
             "--no-input",
             "--output-dir",
             f"{tmp_path}",
+            f"github_username={project_config['github_username']}",
             f"project_name={project_config['project_name']}",
+            f"project_short_description={project_config['project_short_description']}",
             git_init_cookiecutter_option,
         ],
+        capture_output=True,
         check=True,
+        text=True,
     )
 
     test_project_dir = tmp_path / project_config["expected_repo_name"]
 
-    result = subprocess.run(
+    git_status = subprocess.run(
         [  # noqa: S603,S607
             "git",
             "-C",
@@ -52,10 +56,14 @@ def test_initialisation_of_git_repo(
     )
 
     if "True" in git_init_cookiecutter_option:
-        assert result.returncode == 0
+        assert (
+            cookie.stdout
+            == f"Initialized empty Git repository in {test_project_dir}/.git/\nGitHub CLI detected, you can create a repo with the following:\n\ngh repo create {project_config['github_username']}/{project_config['expected_repo_name']} -d '{project_config['project_short_description']}' --public -r origin --source {project_config['expected_repo_name']}\n"
+        )
+        assert git_status.returncode == 0
     else:
         # should not have found repo
         assert (
-            result.stderr
+            git_status.stderr
             == "fatal: not a git repository (or any of the parent directories): .git\n"
         )
