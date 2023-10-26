@@ -16,7 +16,6 @@ repos:
     rev: v1.6.1
     hooks:
       - id: mypy
-        additional_dependencies: [numpy, pydantic]
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v3.0.3
     hooks:
