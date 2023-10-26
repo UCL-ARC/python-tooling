@@ -26,7 +26,9 @@ ignore = [
     'Q003', # ruff-format recommended
     'W191', # ruff-format recommended
 ]
-per-file-ignores = {"test_*" = [
+per-file-ignores = {"post_gen_project.py" = [
+    "T201",
+], "test_*" = [
     "S101",
 ]}
 select = [

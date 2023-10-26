@@ -40,13 +40,11 @@ def main(initialise_git_repository: str) -> int:
             )
         except FileNotFoundError:
             # cannot find git
-            print("git isn't installed")  # noqa: T201
+            print("git isn't installed")
             return _EXIT_FAILURE
         except subprocess.CalledProcessError as e:
             # some other error
-            print(  # noqa: T201
-                f"There was an error with git: {e.returncode}\n{e.stderr}"
-            )
+            print(f"There was an error with git: {e.returncode}\n{e.stderr}")
             return _EXIT_FAILURE
 
         try:
@@ -59,7 +57,7 @@ def main(initialise_git_repository: str) -> int:
                 check=True,
                 capture_output=True,
             )
-            print(  # noqa: T201
+            print(
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
                 "gh repo create {{cookiecutter.github_username}}/"
                 "{{cookiecutter.project_slug}} -d "
@@ -68,7 +66,7 @@ def main(initialise_git_repository: str) -> int:
             )
         except FileNotFoundError:
             # GitHub CLI isn't installed
-            print(  # noqa: T201
+            print(
                 "You now have a local git repository. To sync this to GitHub "
                 "you need to create an empty GitHub repo with the name "
                 "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}} "
@@ -77,9 +75,7 @@ def main(initialise_git_repository: str) -> int:
             )
         except subprocess.CalledProcessError as e:
             # some other error
-            print(  # noqa: T201
-                f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}"
-            )
+            print(f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}")
             return _EXIT_FAILURE
 
     return _EXIT_SUCCESS
