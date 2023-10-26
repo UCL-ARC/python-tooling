@@ -33,7 +33,7 @@ def test_package_generation(
             "--no-input",
             "--output-dir",
             f"{tmp_path}",
-            f"project_name='{project_config['project_name']}'",
+            f"project_name={project_config['project_name']}",
         ],
         check=False,
         shell=False,  # noqa: S603
@@ -70,7 +70,7 @@ def test_package_generation(
             "pip",
             "install",
             "-e",
-            f"{test_project_dir}",
+            test_project_dir,
         ],
         capture_output=True,
         check=False,
