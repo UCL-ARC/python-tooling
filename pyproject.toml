@@ -89,6 +89,12 @@ legacy_tox_ini = """
         3.11: py311
         3.12: py312
 
+    [gh-actions:env]
+    OS =
+        ubuntu-latest: linux
+        macos-latest: macos
+        windows-latest: windows
+
     [testenv]
     skip_install = true
     description =
@@ -100,5 +106,5 @@ legacy_tox_ini = """
         pytest {posargs}
 
     [tox]
-    env_list = py3{9,10,11,12}
+    env_list = py3{9,10,11,12}-{linux,macos,windows}
 """
