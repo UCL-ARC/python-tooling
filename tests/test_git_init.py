@@ -58,7 +58,12 @@ def test_initialisation_of_git_repo(
     if "True" in git_init_cookiecutter_option:
         assert (
             cookie.stdout
-            == f"Initialized empty Git repository in {test_project_dir}/.git/\nGitHub CLI detected, you can create a repo with the following:\n\ngh repo create {project_config['github_username']}/{project_config['expected_repo_name']} -d '{project_config['project_short_description']}' --public -r origin --source {project_config['expected_repo_name']}\n"
+            == f"Initialized empty Git repository in {test_project_dir}/.git/\n"
+            "GitHub CLI detected, you can create a repo with the following:\n\n"
+            f"gh repo create {project_config['github_username']}/"
+            f"{project_config['expected_repo_name']} -d "
+            f"'{project_config['project_short_description']}' --public -r "
+            f"origin --source {project_config['expected_repo_name']}\n"
         )
         assert git_status.returncode == 0
     else:
