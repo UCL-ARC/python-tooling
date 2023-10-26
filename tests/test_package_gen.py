@@ -1,7 +1,6 @@
 """Checks that the cookiecutter works."""
 
 import pathlib
-import shlex
 import subprocess
 
 
@@ -28,10 +27,13 @@ def test_package_generation(
     """
     # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
-        shlex.split(
-            f"cookiecutter . --no-input --output-dir {tmp_path} project_name="
-            f"'{project_config['project_name']}'"
-        ),
+        [  # noqa: S607
+            "cookiecutter" ".",
+            "--no-input",
+            "--output-dir",
+            f"{tmp_path}",
+            f"project_name='{project_config['project_name']}'",
+        ],
         check=False,
         shell=False,  # noqa: S603
     )
@@ -61,7 +63,14 @@ def test_package_generation(
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
-        shlex.split(f"python -m pip install -e {test_project_dir}"),  # noqa: S603
+        [  # noqa: S603,S607
+            "python",
+            "-m",
+            "pip",
+            "install",
+            "-e",
+            f"{test_project_dir}",
+        ],
         capture_output=True,
         check=False,
     )

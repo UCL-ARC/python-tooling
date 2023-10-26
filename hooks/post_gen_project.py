@@ -1,6 +1,5 @@
 """Post project generation hook."""
 
-import shlex
 import subprocess
 import sys
 
@@ -21,10 +20,21 @@ def main(initialise_git_repository: str) -> int:
     if initialise_git_repository == "True":
         try:
             # initialise git repo
-            subprocess.run(shlex.split("git init"), check=True)  # noqa: S603
+            subprocess.run(
+                [  # noqa: S603,S607
+                    "git",
+                    "init",
+                ],
+                check=True,
+            )
             # old versions of git still default to `master`
             subprocess.run(
-                shlex.split("git branch -M main"),  # noqa: S603
+                [  # noqa: S603,S607
+                    "git",
+                    "branch",
+                    "-M",
+                    "main",
+                ],
                 check=True,
                 capture_output=True,
             )
@@ -42,7 +52,10 @@ def main(initialise_git_repository: str) -> int:
         try:
             # check for presence of GitHub CLI
             subprocess.run(
-                shlex.split("gh --version"),  # noqa: S603
+                [  # noqa: S603,S607
+                    "gh",
+                    "--version",
+                ],
                 check=True,
                 capture_output=True,
             )
