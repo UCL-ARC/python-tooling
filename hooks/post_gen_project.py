@@ -73,7 +73,10 @@ def main(initialise_git_repository: str) -> int:
                 "you need to create an empty GitHub repo with the name "
                 "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}} "
                 "- DO NOT SELECT ANY OTHER OPTION.\n\nSee this link for more detail "
-                "https://docs.github.com/en/get-started/quickstart/create-a-repo.",
+                "https://docs.github.com/en/get-started/quickstart/create-a-repo.\n\n"
+                "Then run:\n\n"
+                "git remote add origin git@github.com:"
+                "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git"
             )
         except subprocess.CalledProcessError as e:
             # some other error
