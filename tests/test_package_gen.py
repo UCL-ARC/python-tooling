@@ -28,7 +28,8 @@ def test_package_generation(
     # Run cookiecutter with project_slug set to the value in the project config
     subprocess.run(
         [  # noqa: S607
-            "cookiecutter" ".",
+            "cookiecutter",
+            ".",
             "--no-input",
             "--output-dir",
             f"{tmp_path}",
