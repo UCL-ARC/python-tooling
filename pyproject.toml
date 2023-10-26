@@ -2,7 +2,7 @@
 skip = '*.lock'
 
 [tool.pytest.ini_options]
-addopts = "--color=yes -v"
+addopts = "--color=yes -vv"
 testpaths = [
     "tests",
 ]

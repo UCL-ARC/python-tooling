@@ -73,8 +73,8 @@ def test_initialisation_of_git_repo(
             # ensure GitHub CLI is printed
             assert (
                 cookie.stdout
-                == f"Initialized empty Git repository in {test_project_dir}/.git/\n"
-                "GitHub CLI detected, you can create a repo with the following:\n\n"
+                == f"Initialized empty Git repository in {test_project_dir / '.git'}/"
+                "\nGitHub CLI detected, you can create a repo with the following:\n\n"
                 f"gh repo create {project_config['github_username']}/"
                 f"{project_config['expected_repo_name']} -d "
                 f"'{project_config['project_short_description']}' --public -r "
@@ -86,8 +86,8 @@ def test_initialisation_of_git_repo(
             # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
             assert (
                 cookie.stdout
-                == f"Initialized empty Git repository in {test_project_dir}/.git/\n"
-                "You now have a local git repository. To sync this to GitHub you "
+                == f"Initialized empty Git repository in {test_project_dir / '.git'}/"
+                "\nYou now have a local git repository. To sync this to GitHub you "
                 "need to create an empty GitHub repo with the name "
                 f"{project_config['github_username']}/"
                 f"{project_config['expected_repo_name']} - DO NOT SELECT ANY "
