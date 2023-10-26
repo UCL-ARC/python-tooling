@@ -59,10 +59,12 @@ def main(initialise_git_repository: str) -> int:
             )
             print(
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
-                "gh repo create {{cookiecutter.github_username}}/"
-                "{{cookiecutter.project_slug}} -d "
-                "'{{cookiecutter.project_short_description}}' --public -r "
-                "origin --source {{cookiecutter.project_slug}}"
+                "gh repo create "
+                "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}} "
+                "-d '{{cookiecutter.project_short_description}}' "
+                "--public "
+                "-r origin "
+                "--source {{cookiecutter.project_slug}}"
             )
         except FileNotFoundError:
             # GitHub CLI isn't installed
