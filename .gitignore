@@ -1,6 +1,7 @@
+.idea
+.vscode
 *.egg-info
 *.pyc
-*.idea
 
 #default project path
 python-template
