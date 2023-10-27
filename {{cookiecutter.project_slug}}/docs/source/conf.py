@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 
 project = "{{cookiecutter.project_name}}"
 author = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
-copyright = f"{datetime.now(tz=timezone.utc).year}{author}"  # noqa: A001
+copyright = f"{datetime.now(tz=timezone.utc).year}, {author}"  # noqa: A001
 
 
 # -- General configuration ---------------------------------------------------
