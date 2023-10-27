@@ -1,6 +1,3 @@
-[tool.codespell]
-skip = '*.lock'
-
 [tool.pytest.ini_options]
 addopts = "--color=yes -vv"
 testpaths = [
