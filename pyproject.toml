@@ -2,7 +2,7 @@
 skip = '*.lock'
 
 [tool.pytest.ini_options]
-addopts = "--color=yes -v"
+addopts = "--color=yes -vv"
 testpaths = [
     "tests",
 ]
@@ -13,9 +13,22 @@ force-exclude = true
 ignore = [
     "D203", # no-blank-line-before-class
     "D212", # multi-line-summary-first-line
+    "D407", # removed dashes lines under sections
     "D417", # argument description in docstring (unreliable)
+    'COM812', # ruff-format recommended
+    'COM819', # ruff-format recommended
+    'D206', # ruff-format recommended
+    'E501', # ruff-format recommended
+    'ISC001', # ruff-format recommended
+    'Q000', # ruff-format recommended
+    'Q001', # ruff-format recommended
+    'Q002', # ruff-format recommended
+    'Q003', # ruff-format recommended
+    'W191', # ruff-format recommended
 ]
-per-file-ignores = {"test_*" = [
+per-file-ignores = {"post_gen_project.py" = [
+    "T201",
+], "test_*" = [
     "S101",
 ]}
 select = [
@@ -78,6 +91,12 @@ legacy_tox_ini = """
         3.11: py311
         3.12: py312
 
+    [gh-actions:env]
+    OS =
+        ubuntu-latest: linux
+        macos-latest: macos
+        windows-latest: windows
+
     [testenv]
     skip_install = true
     description =
@@ -89,5 +108,5 @@ legacy_tox_ini = """
         pytest {posargs}
 
     [tox]
-    env_list = py3{9,10,11,12}
+    env_list = py3{9,10,11,12}-{linux,macos,windows}
 """

@@ -1,11 +1,11 @@
 """Checks that the cookiecutter works."""
 
+import pathlib
 import subprocess
-from pathlib import Path
 
 
 def test_package_generation(
-    tmp_path: Path,
+    tmp_path: pathlib.Path,
     project_config: dict,
 ):
     """
@@ -32,7 +32,7 @@ def test_package_generation(
             ".",
             "--no-input",
             "--output-dir",
-            str(tmp_path),
+            f"{tmp_path}",
             f"project_name={project_config['project_name']}",
         ],
         check=False,
@@ -50,20 +50,17 @@ def test_package_generation(
         "LICENSE.md",
         "pyproject.toml",
         "src",
-        Path("src") / project_config["expected_package_name"],
-        Path("src") / project_config["expected_package_name"] / "__init__.py",
+        pathlib.Path("src") / project_config["expected_package_name"],
+        pathlib.Path("src") / project_config["expected_package_name"] / "__init__.py",
         "tests",
-        Path(".github"),
-        Path(".github") / "workflows",
+        pathlib.Path(".github"),
+        pathlib.Path(".github") / "workflows",
     ]
     for f in expected_files:
         full_path = test_project_dir / f
         assert (
             full_path.exists()
         ), f"Expected file/folder: {full_path}, but didn't find it."
-
-    # Need a .git directory in the project root
-    subprocess.run(["git", "init", test_project_dir], check=False)  # noqa: S603,S607
 
     # Check it's pip-installable
     pipinstall = subprocess.run(
