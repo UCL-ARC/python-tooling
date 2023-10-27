@@ -10,11 +10,6 @@ repos:
         exclude: "{{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}"
       - id: ruff-format
         args: ["--config", "pyproject.toml"]
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.6
-    hooks:
-      - id: codespell
-        args: [--write-changes]
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.5.4
     hooks:
