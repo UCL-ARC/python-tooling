@@ -76,7 +76,7 @@ def main(initialise_git_repository: str) -> int:
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.\n\n"
                 "Then run:\n\n"
                 "git remote add origin git@github.com:"
-                "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git",
+                "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git"
             )
         except subprocess.CalledProcessError as e:
             # some other error
