@@ -8,7 +8,7 @@ repos:
       - id: ruff
         args:
           - --config=pyproject.toml
-        exclude: "{{cookiecutter.project_slug }}/src/{{cookiecutter.package_name}}"
+        exclude: "{{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}"
       - id: ruff-format
         args:
           - --config=pyproject.toml
@@ -20,7 +20,7 @@ repos:
     rev: v0.23.1
     hooks:
       - id: toml-sort-fix
-        exclude: "{{ cookiecutter.project_slug }}/pyproject.toml"
+        exclude: "{{ cookiecutter.project_slug}}/pyproject.toml"
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.6.1
     hooks:
