@@ -13,7 +13,7 @@ ignore = [
     "D212", # multi-line-summary-first-line
     "D407", # removed dashes lines under sections
     "D417", # argument description in docstring (unreliable)
-    "ISC001", # ruff-format recommended
+    "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
 per-file-ignores = {"post_gen_project.py" = [
     "T201",
