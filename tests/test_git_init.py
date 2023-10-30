@@ -11,7 +11,9 @@ import pytest
     ["initialise_git_repository=True", "initialise_git_repository=False"],
 )
 def test_initialisation_of_git_repo(
-    tmp_path: pathlib.Path, project_config: dict, git_init_cookiecutter_option: str
+    tmp_path: pathlib.Path,
+    project_config: dict,
+    git_init_cookiecutter_option: str,
 ) -> None:
     """
     Checks to see if git was correctly initialised if desired.
