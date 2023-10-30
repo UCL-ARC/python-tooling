@@ -1,6 +1,6 @@
 ci:
   autofix_prs: false
-exclude: "{{cookiecutter.project_slug}}"
+exclude: "{{ cookiecutter.project_slug }}"
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.3
