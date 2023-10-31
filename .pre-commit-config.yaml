@@ -47,6 +47,6 @@ repos:
           - --fix=lf
       - id: trailing-whitespace
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 37.36.2
+    rev: 37.37.2
     hooks:
       - id: renovate-config-validator
