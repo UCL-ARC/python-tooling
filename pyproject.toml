@@ -19,6 +19,7 @@ per-file-ignores = {"*tests*" = [
     "INP001",
     "S101",
 ], "hooks*" = [
+    "INP001",
     "T201",
 ]}
 select = [
