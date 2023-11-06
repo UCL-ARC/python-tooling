@@ -7,7 +7,7 @@ requires = [
 
 [project]
 authors = [
-    {email = "{{ cookiecutter.author_email }}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
+    {email = "{{cookiecutter.author_email}}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
 ]
 classifiers = [
     "Operating System :: POSIX",
@@ -17,19 +17,19 @@ classifiers = [
        cookiecutter.min_python_version | replace('3.', '') | int,
        cookiecutter.max_python_version | replace('3.', '') | int + 1
     ) %}
-    "Programming Language :: Python :: 3.{{ python_version }}",
+    "Programming Language :: Python :: 3.{{python_version}}",
     {%- endfor %}
     "Typing :: Typed",
 ]
 dependencies = [
 ]
-description = "{{ cookiecutter.project_short_description }}"
+description = "{{cookiecutter.project_short_description}}"
 dynamic = [
     "version",
 ]
 keywords = [
 ]
-name = "{{ cookiecutter.project_slug }}"
+name = "{{cookiecutter.project_slug}}"
 optional-dependencies = {dev = [
     "build",
     "mypy",
@@ -40,14 +40,14 @@ optional-dependencies = {dev = [
     "twine",
 ]}
 readme = "README.md"
-requires-python = ">={{ cookiecutter.min_python_version }}"
+requires-python = ">={{cookiecutter.min_python_version}}"
 license.file = "LICENSE.md"
-urls.homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 
 [tool.coverage]
 report = {skip_covered = true, sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{ cookiecutter.project_slug }}",
+    "{{cookiecutter.project_slug}}",
 ]}
 paths.source = [
     "src",
@@ -83,9 +83,9 @@ per-file-ignores = {"tests*" = [
 select = [
     "ALL"
 ]
-target-version = "py{{ cookiecutter.min_python_version | replace('.', '') }}"
+target-version = "py{{cookiecutter.min_python_version | replace('.', '')}}"
 isort.known-first-party = [
-    "{{ cookiecutter.project_slug | replace('-', '_') }}",
+    "{{cookiecutter.project_slug | replace('-', '_')}}",
 ]
 mccabe.max-complexity = 18
 pep8-naming.classmethod-decorators = [
@@ -94,7 +94,7 @@ pep8-naming.classmethod-decorators = [
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
-write_to = "src/{{ cookiecutter.package_name }}/_version.py"
+write_to = "src/{{cookiecutter.package_name}}/_version.py"
 
 [tool.tomlsort]
 all = true
@@ -111,7 +111,7 @@ legacy_tox_ini = """
         cookiecutter.min_python_version | replace('3.', '') | int,
         cookiecutter.max_python_version | replace('3.', '') | int + 1
     ) %}
-        3.{{ python_version }}: py3{{ python_version }}
+        3.{{python_version}}: py3{{python_version}}
     {%- endfor %}
 
     [testenv]
@@ -127,6 +127,6 @@ legacy_tox_ini = """
         cookiecutter.min_python_version | replace('3.', '') | int,
         cookiecutter.max_python_version | replace('3.', '') | int + 1
     ) %}
-        py3{{ python_version }}
+        py3{{python_version}}
     {%- endfor %}
 """
