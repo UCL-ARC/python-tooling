@@ -4,7 +4,7 @@ import pytest
 
 
 @pytest.fixture()
-def project_config():
+def project_config() -> dict:
     """
     Pytest fixture for defining the project config.
 
