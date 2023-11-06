@@ -7,7 +7,7 @@ import subprocess
 def test_package_generation(
     tmp_path: pathlib.Path,
     project_config: dict,
-):
+) -> None:
     """
     Creates a project from the cookiecutter template.
 

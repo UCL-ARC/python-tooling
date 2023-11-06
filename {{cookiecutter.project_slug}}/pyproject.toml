@@ -77,49 +77,11 @@ ignore = [
     "D417", # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-per-file-ignores = {"test_*" = [
+per-file-ignores = {"tests*" = [
     "S101",
 ]}
 select = [
-    "A",
-    "ARG",
-    "B",
-    "BLE",
-    "C",
-    "COM",
-    "D",
-    "DJ",
-    "DTZ",
-    "E",
-    "EM",
-    "ERA",
-    "EXE",
-    "F",
-    "FBT",
-    "I",
-    "ICN",
-    "ISC",
-    "N",
-    "NPY",
-    "PD",
-    "PGH",
-    "PIE",
-    "PL",
-    "PT",
-    "PTH",
-    "PYI",
-    "Q",
-    "RET",
-    "RSE",
-    "RUF",
-    "S",
-    "SIM",
-    "T",
-    "TCH",
-    "TID",
-    "UP",
-    "W",
-    "YTT",
+    "ALL"
 ]
 target-version = "py{{ cookiecutter.min_python_version | replace('.', '') }}"
 isort.known-first-party = [
