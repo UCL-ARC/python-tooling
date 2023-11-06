@@ -1,4 +1,4 @@
-# {{ cookiecutter.project_name }}
+# {{cookiecutter.project_name}}
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Tests status][tests-badge]][tests-link]
@@ -117,4 +117,4 @@ again from the root of the repository.
 
 ## Acknowledgements
 
-This work was funded by a grant from the {{ cookiecutter.funder }}.
+This work was funded by a grant from the {{cookiecutter.funder}}.
