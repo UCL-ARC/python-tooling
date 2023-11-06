@@ -16,6 +16,7 @@ ignore = [
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
 per-file-ignores = {"*tests*" = [
+    "INP001",
     "S101",
 ], "hooks*" = [
     "T201",
