@@ -1,6 +1,6 @@
 # UCL ARC Python Recommendations
 
-This is repository collects the [UCL ARC] recommendations for a Research Software project in Python.
+This repository collects the [UCL ARC] recommendations for a Research Software project in Python.
 It contains a template for new Python packages and a [website] documenting our recommendations.
 We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this repo, and we welcome questions there or in the `#programming-help` channel on the [UCL research software hub slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
