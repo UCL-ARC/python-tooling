@@ -1,10 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>UCL-ARC/.github//renovate/default-config.json"],
-  "github-actions": {
-    "fileMatch": [
-      "{{cookiecutter.project_slug}}/.github/workflows/[^/]+\\.ya?ml$"
-    ]
-  },
   "reviewers": ["paddyroddy", "samcunliffe", "sfmig"]
 }
