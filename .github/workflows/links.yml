@@ -19,7 +19,7 @@ jobs:
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v1.9.0
+        uses: lycheeverse/lychee-action@v1.9.1
         with:
           # Exclude the image.sc forum (which works) but returns 403 from
           # github runners and exclude relative links to other pages. Ignore
