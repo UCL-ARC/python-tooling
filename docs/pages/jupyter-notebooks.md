@@ -9,6 +9,12 @@ We generally recommend packaging reusable code components into Python modules wh
 However occasionally we support researchers who prefer a notebook environment or projects which want to provide examples and tutorials in notebook format.
 Notebooks can also be a valid alternative to Python scripts for running and recording the results of numerical experiments for example.
 
+## Live executable environment
+
+| Name                            | Short description                                                 | 🚦  | Used by                                               |
+| ------------------------------- | ----------------------------------------------------------------- | :-: | ----------------------------------------------------- |
+| [binder](https://mybinder.org/) | Turns a Git repository into a collection of interactive notebooks | 🟢  | [LiPyphilic](https://github.com/p-j-smith/lipyphilic) |
+
 ## Linting
 
 Many of [our recommended linters](linting) don't work out-of-the box on Jupyter notebooks, however [nbQA] has been found to work well.
