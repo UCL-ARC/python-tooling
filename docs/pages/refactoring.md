@@ -8,4 +8,4 @@ layout: default
 | Name                                                        | Short description                            | 🚦  | Used by |
 | ----------------------------------------------------------- | -------------------------------------------- | --- | :-----: |
 | [jedi](https://jedi.readthedocs.io/en/stable/)              | Refactoring and autocompletion used in IDEs. | 🟢  |         |
-| [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library.                         |     |         |
+| [rope](https://rope.readthedocs.io/en/stable/overview.html) | Refactoring library.                         |     |         |
