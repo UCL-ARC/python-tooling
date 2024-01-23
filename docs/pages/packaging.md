@@ -8,9 +8,9 @@ layout: default
 | Name                                                      | Short description                                                                                                           | 🚦  |
 | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [build](https://pypa-build.readthedocs.io/en/stable/)     | Straightforward tool to build a Python package.                                                                             | 🟢  |
+| [cibuildwheel](https://cibuildwheel.readthedocs.io)       | Builds python wheels for the main operating systems on continuous integration runs (e.g. GitHub actions).                   | 🟢  |
 | [setuptools](https://setuptools.pypa.io)                  | A widely used build backend, used to configure a Python package.                                                            | 🟢  |
 | [setuptools-scm](https://github.com/pypa/setuptools_scm/) | Provides automatic versioning Python packages. Also automatically adds all files under source control to the sdist / wheel. | 🟢  |
-| [cibuildwheel](https://cibuildwheel.readthedocs.io)       | Builds python wheels for the main operating systems on continuous integration runs (e.g. GitHub actions).                   | 🟢  |
 
 ## Conda
 
