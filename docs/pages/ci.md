@@ -19,7 +19,7 @@ We have many projects using github CI, it's both convenient and works well. It's
 
 # Coverage monitoring
 
-| Name                                     | Short description                               | 🚦  | Used by |
-| ---------------------------------------- | ----------------------------------------------- | --- | :-----: |
-| [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics. | 🟢  |         |
-| [Coveralls](https://docs.coveralls.io/)  | Hosted service to report code coverage metrics. | 🟠  |         |
+| Name                                     | Short description                               | 🚦  |
+| ---------------------------------------- | ----------------------------------------------- | --- |
+| [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics. | 🟢  |
+| [Coveralls](https://docs.coveralls.io/)  | Hosted service to report code coverage metrics. | 🟠  |
