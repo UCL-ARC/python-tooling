@@ -1,7 +1,4 @@
-<div style="text-align: center;" align="center">
-  <img src="https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg" alt="UCL ARC Python tooling logo" width="120"/>
-  <h1> UCL ARC Python recommendations</h1>
-</div>
+# UCL ARC Python Recommendations
 
 This repository collects the [UCL ARC] recommendations for a Research Software project in Python.
 It contains a template for new Python packages and a [website] documenting our recommendations.
