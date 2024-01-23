@@ -1,6 +1,6 @@
 This template and our [recommendation pages][website] were made by [RSE]s at
 [UCL's Centre for Advanced Research Computing][UCL ARC]. We made it with
-Research Software projects in mind, but whoever you are, we hope you find this
+research software projects in mind, but whoever you are, we hope you find this
 useful!
 
 We are actively encouraging users to ask questions and start discussions in the
@@ -20,7 +20,7 @@ To contribute a change, please:
 2. Modify an existing page, create a new one, or tweak the template.
    a. Run [pre-commit](https://pre-commit.com) which will lint your changes.
    b. Check the tests pass if you modified the template (`pytest -s`).
-3. Open a pull request with changes.
+3. Open a _pull request_ (PR) with changes.
 4. Ask someone who did not contribute to the PR from ARC-collaborations to
    review it.
 5. If approved with no comments, then the reviewer will merge the PR.
