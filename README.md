@@ -84,36 +84,18 @@ pip install cookiecutter
 
 ## Notes for developers
 
-### Contributing
+First, clone repository
 
-The [website] and source pages are open to contributions but must be reviewed by a member or associate member of ARC.
-We might be slow to approve new tool suggestions (since we'll probably want to discuss them first), but bug reports (and fixes) are very welcome from anyone!
+- (Optional) Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- (Optional) GitHub CLI as suggested [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
+- Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
 
-Pages all live in the [docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages) sub-directory, and are written in markdown.
+```
+git clone git@github.com:UCL-ARC/python-tooling.git
+cd python-tooling
+```
 
-To contribute:
-
-1. Create a new branch (or fork if you're not in ARC-collaborations).
-2. Modify an existing page, create a new one, or tweak the template.
-   a. Run [pre-commit](https://pre-commit.com) which will lint your changes.
-   b. Check the tests pass if you modified the template (`pytest -s`).
-3. Open a pull request with changes.
-4. Someone who did not contribute to the PR should review it.
-5. If approved, the reviewer should merge the PR.
-6. If changes requested, the PR author should address the comments, then ask for review again.
-
-### Development
-
-- Clone repository
-
-  - (Optional) Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  - (Optional) GitHub CLI as suggested [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
-  - Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
-
-  ```
-  git clone git@github.com:UCL-ARC/python-tooling.git
-  cd python-tooling
-  ```
+### Developing the cookiecutter template
 
 - To create and remove your virtual environment
 
@@ -146,19 +128,15 @@ To contribute:
   pytest -s
   ```
 
-- To commit changes
+### Developing the recommended tooling pages
 
-  ```
-  pre-commit run -a
-  git add .
-  git commit -m 'message issue number (#NN)'
-  git push origin NN-future-branch
-  ```
+Edit the files in [./docs/pages]. They are standard markdown so they're viewable
+here in the repo as well as when deployed as a web page.
 
-- To build the docs locally
+To build the webpage locally (for testing)
 
-  1.  [Install jekyll](https://jekyllrb.com/docs/installation)
-  2.  Run `bundle install` from the `docs/` directory of this repository to install dependencies.
-  3.  Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
+1.  [Install jekyll](https://jekyllrb.com/docs/installation)
+2.  Run `bundle install` from the `docs/` directory of this repository to install dependencies.
+3.  Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
 
-  See the [jekyll docs](https://jekyllrb.com/docs) for more info.
+See the [jekyll docs](https://jekyllrb.com/docs) for more info.
