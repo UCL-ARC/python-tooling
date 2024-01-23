@@ -23,8 +23,8 @@ layout: default
 
 # Other
 
-| Name                                                        | Short description                                                                                 | 🚦  |                                                        Used by                                                        |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --- | :-------------------------------------------------------------------------------------------------------------------: |
-| [jedi](https://jedi.readthedocs.io/en/latest/)              | Refactoring and autocompletion used in IDEs.                                                      | 🟢  |                                                                                                                       |
-| [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library.                                                                              |     |                                                                                                                       |
-| [tqdm](https://pypi.org/project/tqdm/2.2.3/)                | Progress bar for loops.                                                                           | 🟢  |                                    [RRED](https://github.com/UCL-ARC/rred-reports)                                    |
+| Name                                                        | Short description                            | 🚦  |                     Used by                     |
+| ----------------------------------------------------------- | -------------------------------------------- | --- | :---------------------------------------------: |
+| [jedi](https://jedi.readthedocs.io/en/latest/)              | Refactoring and autocompletion used in IDEs. | 🟢  |                                                 |
+| [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library.                         |     |                                                 |
+| [tqdm](https://pypi.org/project/tqdm/2.2.3/)                | Progress bar for loops.                      | 🟢  | [RRED](https://github.com/UCL-ARC/rred-reports) |
