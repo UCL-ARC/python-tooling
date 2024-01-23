@@ -25,7 +25,7 @@ layout: default
 
 | Name                                                                                               | Short description                                                                               | 🚦  | Used by |
 | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --- | :-----: |
-| [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/)             | Contains build system requirements and information, which are used by pip to build the package. | 🟢  |         |
+| [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/)             | Contains build system requirements and information, which are used by pip to build the package. It is becoming the accepted standard and we strongly recommend it. | 🟢  |         |
 | [setup.py](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/)  | Strongly coupled with setuptools and therefore not recommended.                                         | 🟠  |         |
 | [setup.cfg](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/) | An ini file that contains defaults for setup.py commands.                                 | 🟠  |         |
 
