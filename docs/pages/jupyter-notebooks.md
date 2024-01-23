@@ -9,12 +9,12 @@ We generally recommend packaging reusable code components into Python modules wh
 However occasionally we support researchers who prefer a notebook environment or projects which want to provide examples and tutorials in notebook format.
 Notebooks can also be a valid alternative to Python scripts for running and recording the results of numerical experiments for example.
 
-## Live executable environment
+## Live executable environments
 
 | Name                                                                                                                                                                                                 | Short description                                                                                                                                             | 🚦  | Used by                                               |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: | ----------------------------------------------------- |
 | [binder](https://mybinder.org/)                                                                                                                                                                      | Turns a Git repository into a collection of interactive notebooks                                                                                             | 🟢  | [LiPyphilic](https://github.com/p-j-smith/lipyphilic) |
-| [Google Colabs](https://colab.google/)                                                                                                                                                               | Colab is a hosted Jupyter Notebook service that requires no setup to use and provides free access to computing resources, including GPUs and TPUs.            | 🟢  |                                                       |
+| [Google Colab](https://colab.google/)                                                                                                                                                                | Colab is a hosted Jupyter Notebook service that requires no setup to use and provides free access to computing resources, including GPUs and TPUs.            | 🟢  |                                                       |
 | [GitHub codespace with JupyterLab](https://docs.github.com/en/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning#opening-your-codespace-in-jupyterlab) | A codespace is a development environment that is hosted in the cloud and can run [Python and Jupyter notebooks](https://github.com/github/codespaces-jupyter) | 🟠  |
 
 ## Linting
