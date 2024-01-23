@@ -1,13 +1,20 @@
 # UCL ARC Python Recommendations
 
-This repository collects the [UCL ARC] recommendations for a Research Software project in Python.
-It contains a template for new Python packages and a [website] documenting our recommendations.
-We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this repo, and we welcome questions there or in the `#programming-help` channel on the [UCL research software hub slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
+This repository collects the [UCL ARC] recommendations for a Research Software
+project in Python. It contains a template for new Python packages and a
+[website] documenting our recommendations. We've turned on
+[discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this
+repo, and we welcome questions there or in the `#programming-help` channel on
+the [UCL research software hub
+slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
-🍪 Our template is a [cookiecutter] template which automatically creates new Python packages with our recommended tooling set up and ready to go.
+🍪 Our template is a [cookiecutter] template which automatically creates new
+Python packages with our recommended tooling set up and ready to go.
 
 > **Note**
-> If you're making a package within a community that has an existing package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)), we recommend using their template instead of this one.
+> If you're making a package within a community that has an existing package
+> template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)), we
+> recommend using their template instead of this one.
 
 <!-- links here -->
 
@@ -19,7 +26,8 @@ We've turned on [discussions](https://github.com/UCL-ARC/python-tooling/discussi
 
 ## Using this template
 
-1.  Install [cookiecutter](https://libraries.io/pypi/cookiecutter) in a `conda`, `mamba` or `venv` environment (commented lines for conda example).
+1.  Install [cookiecutter] in a `conda`, `mamba` or `venv` environment
+    (commented lines for conda example).
 
 ```
 # conda create --channel conda-forge --name new-env-name
@@ -32,13 +40,16 @@ pip install cookiecutter
    ```
    cookiecutter gh:ucl-arc/python-tooling
    ```
-   If you have this repo locally (this may be the case if you are developing), you can run the following:
+   If you have this repo locally (this may be the case if you are developing),
+   you can run the following:
    ```
    cookiecutter /path/to/your/checkout/of/python-tooling
    ```
-3. A series of questions will pop up to configure the project. Type the answer or hit return to use the default option (shown in square brackets).
+3. A series of questions will pop up to configure the project. Type the answer
+   or hit return to use the default option (shown in square brackets).
 
-   Note that these project variables are defined in the `cookiecutter.json` file.
+   Note that these project variables are defined in the `cookiecutter.json`
+   file.
 
 4. This will create a specific directory structure.
 
@@ -63,7 +74,8 @@ pip install cookiecutter
        └── test_dummy.py
    ```
 
-   And the `PROJECT_NAME` will appear in the README.md as the human-readable name of the project.
+   And the `PROJECT_NAME` will appear in the README.md as the human-readable
+   name of the project.
 
    ```
    cat PROJECT_SLUG/README.md
@@ -71,7 +83,8 @@ pip install cookiecutter
    ...
    ```
 
-5. To work on your project, initialise a git repository and _install_ it in editable mode.
+5. To work on your project, initialise a git repository and _install_ it in
+   editable mode.
    ```
    cd PROJECT_SLUG
    git init
@@ -84,11 +97,17 @@ pip install cookiecutter
 
 ## Notes for developers
 
+<details>
+<summary>Click to expand...</summary>
+
 First, clone repository
 
-- (Optional) Generate your SSH keys as suggested [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- (Optional) GitHub CLI as suggested [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
-- Clone the repository by typing (or copying) the following line in a terminal at your selected path in your machine:
+- (Optional) Generate your SSH keys as suggested
+  [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- (Optional) GitHub CLI as suggested
+  [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
+- Clone the repository by typing (or copying) the following line in a terminal
+  at your selected path in your machine:
 
 ```
 git clone git@github.com:UCL-ARC/python-tooling.git
@@ -107,7 +126,8 @@ cd python-tooling
   ```
 
 - To run template in the same path of this repo.
-  We do a test cookiecut of a dummy package and install it to ensure the template setup works.
+  We do a test cookiecut of a dummy package and install it to ensure the
+  template setup works.
 
   ```
   cookiecutter .
@@ -130,13 +150,19 @@ cd python-tooling
 
 ### Developing the recommended tooling pages
 
-Edit the files in [./docs/pages]. They are standard markdown so they're viewable
-here in the repo as well as when deployed as a web page.
+Pages all live in the
+[docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages)
+sub-directory, and are written in markdown.
 
 To build the webpage locally (for testing)
 
 1.  [Install jekyll](https://jekyllrb.com/docs/installation)
 2.  Run `bundle install` from the `docs/` directory of this repository to install dependencies.
-3.  Run `bundle exec jekyll serve` from the root directory of this repository. This should fire up a local web server and tell you its address. By default the server will automatically refresh the HTML pages if any changes are made to the markdown sources.
+3.  Run `bundle exec jekyll serve` from the root directory of this repository.
+    This should fire up a local web server and tell you its address. By default the
+    server will automatically refresh the HTML pages if any changes are made to the
+    markdown sources.
 
 See the [jekyll docs](https://jekyllrb.com/docs) for more info.
+
+</details>
