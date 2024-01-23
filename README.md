@@ -1,6 +1,6 @@
 <div style="text-align: center;" align="center">
   <img src="https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg" alt="UCL ARC Python tooling logo" width="120"/>
-  <h1> UCL ARC Python recommendations</h1>
+  <h1> UCL ARC Python Recommendations</h1>
 </div>
 
 This repository collects the [UCL ARC] recommendations for a Research Software
@@ -32,71 +32,71 @@ Python packages with our recommended tooling set up and ready to go.
 1.  Install [cookiecutter] in a `conda`, `mamba` or `venv` environment
     (commented lines for conda example).
 
-```
-# conda create --channel conda-forge --name new-env-name
-# conda activate new-env-name
-# conda install pip
-pip install cookiecutter
-```
+    ```
+    # conda create --channel conda-forge --name new-env-name
+    # conda activate new-env-name
+    # conda install pip
+    pip install cookiecutter
+    ```
 
-2. Run cookiecutter in the desired directory
-   ```
-   cookiecutter gh:ucl-arc/python-tooling
-   ```
-   If you have this repo locally (this may be the case if you are developing),
-   you can run the following:
-   ```
-   cookiecutter /path/to/your/checkout/of/python-tooling
-   ```
-3. A series of questions will pop up to configure the project. Type the answer
-   or hit return to use the default option (shown in square brackets).
+2.  Run cookiecutter in the desired directory
+    ```
+    cookiecutter gh:ucl-arc/python-tooling
+    ```
+    If you have this repo locally (this may be the case if you are developing),
+    you can run the following:
+    ```
+    cookiecutter /path/to/your/checkout/of/python-tooling
+    ```
+3.  A series of questions will pop up to configure the project. Type the answer
+    or hit return to use the default option (shown in square brackets).
 
-   Note that these project variables are defined in the `cookiecutter.json`
-   file.
+    Note that these project variables are defined in the `cookiecutter.json`
+    file.
 
-4. This will create a specific directory structure.
+4.  This will create a specific directory structure.
 
-   For example, for a project with the following variables:
+    For example, for a project with the following variables:
 
-   ```
-   project_name [Python Template]: PROJECT_NAME
-   project_slug [python-template]: PROJECT_SLUG
-   ```
+    ```
+    project_name [Python Template]: PROJECT_NAME
+    project_slug [python-template]: PROJECT_SLUG
+    ```
 
-   we will get a project folder named `PROJECT_SLUG`, structured like this:
+    we will get a project folder named `PROJECT_SLUG`, structured like this:
 
-   ```
-   PROJECT_SLUG
-   ├── ...
-   ├── README.md
-   ├── pyproject.toml
-   ├── src
-   │   └── PROJECT_SLUG
-   │       └── PROJECT_SLUG.py
-   └── tests
-       └── test_dummy.py
-   ```
+    ```
+    PROJECT_SLUG
+    ├── ...
+    ├── README.md
+    ├── pyproject.toml
+    ├── src
+    │   └── PROJECT_SLUG
+    │       └── PROJECT_SLUG.py
+    └── tests
+        └── test_dummy.py
+    ```
 
-   And the `PROJECT_NAME` will appear in the README.md as the human-readable
-   name of the project.
+    And the `PROJECT_NAME` will appear in the README.md as the human-readable
+    name of the project.
 
-   ```
-   cat PROJECT_SLUG/README.md
-   # PROJECT_NAME
-   ...
-   ```
+    ```
+    cat PROJECT_SLUG/README.md
+    # PROJECT_NAME
+    ...
+    ```
 
-5. To work on your project, initialise a git repository and _install_ it in
-   editable mode.
-   ```
-   cd PROJECT_SLUG
-   git init
-   python -m pip install -e ".[dev]"
-   ```
-6. Build your package
-   ```
-   python -m build
-   ```
+5.  To work on your project, initialise a git repository and _install_ it in
+    editable mode.
+    ```
+    cd PROJECT_SLUG
+    git init
+    python -m pip install -e ".[dev]"
+    ```
+6.  Build your package
+    ```
+    python -m build
+    ```
 
 ## Notes for developers
 
