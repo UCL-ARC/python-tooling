@@ -14,7 +14,7 @@ For projects with UCL, any University of London, and UCL-ARC collaborators we ha
 Any member of ARC can create a project channel. Note, however, the limitation for external collaborators.
 
 | Name                                                  | Short description                                                                        | 🚦  |
-| ----------------------------------------------------- | ---------------------------------------------------------------------------------------- | --- |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------- | :-: |
 | [RPH slack](ucl-programming-hub.slack.com)            | UCL's research programming community on Slack Instant.                                   | 🟢  |
 | [Slack](https://slack.com/intl/en-gb/)                | Instant messaging platform.                                                              | 🟠  |
 | [Discussions](https://docs.github.com/en/discussions) | Discussion forum built into GitHub repositories.                                         | 🟠  |

@@ -6,7 +6,7 @@ layout: default
 # Bindings
 
 | Name                                                                                    | Short description                                                                              | 🚦  |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --- |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | :-: |
 | [Cython](https://cython.readthedocs.io/en/latest/src/userguide/wrapping_CPlusPlus.html) | C/C++ binding library with numpy array integration                                             | 🟢  |
 | [ctypes](https://docs.python.org/3.8/library/ctypes.html)                               | Native python method for calling functions in shared C libraries                               | 🟠  |
 | [pybind11](https://github.com/pybind/pybind11)                                          | Bindings to C++ with a steep learning curve                                                    | 🟠  |

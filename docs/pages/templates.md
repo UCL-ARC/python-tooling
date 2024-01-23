@@ -30,7 +30,7 @@ If you're making a package within one of these communities, we recommend using t
 These are packages that can be used for creating your own package template.
 
 | Name                                                                                                                          | Short description                                                                                                            | 🚦  |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --- |
+| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [Cookiecutter](https://github.com/cookiecutter/cookiecutter)                                                                  | Widely-used tool for creating project templates                                                                              | 🟢  |
 | [Cruft](https://github.com/cruft/cruft)                                                                                       | Can be used to create projects from a cookiecutter template and to keep the project configuration in sync with the template. | 🟠  |
 | [Copier](https://github.com/copier-org/copier)                                                                                | A tool to create project templates that are highly configurable. Project configuration can be kept in sync with the templae. | 🟠  |

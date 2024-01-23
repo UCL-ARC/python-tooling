@@ -10,7 +10,7 @@ See [here for example configuration](https://github.com/UCL-ARC/python-tooling/b
 ## Code formatting
 
 | Name                                                     | Short description                                                                                                                                                 | 🚦  |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [ruff-format](https://github.com/astral-sh/ruff)         | Like `black` but super fast.                                                                                                                                      | 🟢  |
 | [isort](https://pycqa.github.io/isort/)                  | Sorts imports alphabetically, splits into first/third party, works on python & cython code.                                                                       | 🟢  |
 | [pre-commit](https://pre-commit.com/)                    | Universal tool which performs a git hook on commit, allows you to run linters/formatters on any code. A tool to automatically run many of the tools listed below. | 🟢  |
@@ -46,5 +46,5 @@ Flake8 is not recommended because it doesn't support `pyproject.toml` and [seemi
 ## Type checking
 
 | Name                                           | Short description                                                             | 🚦  |
-| ---------------------------------------------- | ----------------------------------------------------------------------------- | --- |
+| ---------------------------------------------- | ----------------------------------------------------------------------------- | :-: |
 | [mypy](https://mypy.readthedocs.io/en/stable/) | Static type checker, won't fail if no typing but will if typing is incorrect. | 🟢  |

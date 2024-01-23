@@ -6,7 +6,7 @@ layout: default
 # Continuous integration
 
 | Name                                                                                  | Short description                                                                 | 🚦  |
-| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --- |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | :-: |
 | [GitHub Actions](https://docs.github.com/en/actions)                                  | Continuous integration and continuous delivery platform (integrated with GitHub). | 🟢  |
 | [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                          | 🟠  |
 | [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                          | 🟠  |
@@ -20,6 +20,6 @@ We have many projects using github CI, it's both convenient and works well. It's
 # Coverage monitoring
 
 | Name                                     | Short description                               | 🚦  |
-| ---------------------------------------- | ----------------------------------------------- | --- |
+| ---------------------------------------- | ----------------------------------------------- | :-: |
 | [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics. | 🟢  |
 | [Coveralls](https://docs.coveralls.io/)  | Hosted service to report code coverage metrics. | 🟠  |
