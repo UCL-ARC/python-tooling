@@ -24,9 +24,3 @@ Sphinx is the de-facto standard that is widely used. It is well tested, reliable
 | Name                                                                 | Short description                                               | 🚦  |
 | -------------------------------------------------------------------- | --------------------------------------------------------------- | :-: |
 | [sphinx-gallery](https://sphinx-gallery.github.io/stable/index.html) | Builds an HTML gallery of examples from a set of Python scripts | 🟢  |
-
-## Other
-
-| Name                            | Short description                                                 | 🚦  |
-| ------------------------------- | ----------------------------------------------------------------- | :-: |
-| [binder](https://mybinder.org/) | Turns a Git repository into a collection of interactive notebooks | 🟢  |
