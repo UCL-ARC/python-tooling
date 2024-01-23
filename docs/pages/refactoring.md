@@ -7,5 +7,5 @@ layout: default
 
 | Name                                                        | Short description                            | 🚦  | Used by |
 | ----------------------------------------------------------- | -------------------------------------------- | --- | :-----: |
-| [jedi](https://jedi.readthedocs.io/en/latest/)              | Refactoring and autocompletion used in IDEs. | 🟢  |         |
+| [jedi](https://jedi.readthedocs.io/en/stable/)              | Refactoring and autocompletion used in IDEs. | 🟢  |         |
 | [rope](https://rope.readthedocs.io/en/latest/overview.html) | Refactoring library.                         |     |         |
