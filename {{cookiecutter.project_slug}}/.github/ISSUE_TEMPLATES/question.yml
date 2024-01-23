@@ -1,12 +1,11 @@
 ---
 name: Question
-description: General Questions About Using the Cookiecutter Template
+description: General Questions About Using {{cookiecutter.project_name}}
 title: "[QUESTION]: "
 labels:
   - question
 assignees:
-  - paddyroddy
-  - samcunliffe
+  - "{{cookiecutter.github_username}}"
 body:
   - id: topic
     type: dropdown
@@ -17,7 +16,6 @@ body:
         - Documentation
         - Installation
         - Usage
-        - Website
         - Other
     validations:
       required: true
