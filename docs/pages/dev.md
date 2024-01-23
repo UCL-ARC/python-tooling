@@ -3,13 +3,6 @@ title: Dev tools
 layout: default
 ---
 
-# Integrated Development Environments (IDEs)
-
-| Name                                                     | Short description                   | 🚦  | Used by |
-| -------------------------------------------------------- | ----------------------------------- | --- | :-----: |
-| [Visual Studio Code](https://code.visualstudio.com/docs) | A light-weight general-purpose IDE. | 🟠  |         |
-| [PyCharm](https://www.jetbrains.com/pycharm/)            | A Python IDE by JetBrains.          | 🟠  |         |
-
 # Virtual environments
 
 | Name                                                     | Short description                                                                   | 🚦  | Used by |
