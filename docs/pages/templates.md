@@ -4,20 +4,23 @@ layout: default
 nav_order: 2
 ---
 
-⚠️ This page is still under construction! ⚠️
-
 # Package templates
 
 ## Recommended ARC template
 
-This [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling) repository contains our recommended package template for new ARC projects.
-It pre-configures the recommended tools listed in the other pages of this site.
-If you're making a package within one of the communities listed below, we recommend using their template instead.
+The [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling)
+repository contains our recommended package template for new ARC projects. It
+pre-configures the recommended tools listed in the other pages of this site. If
+you are working on a new project, our template should be a good starting point!
+
+If you're making a package for a community that already has a template in
+general use (some examples are listed below) we recommend using their template
+instead.
 
 ## Domain specific templates
 
-These templates are used by specific communities.
-If you're making a package within one of these communities, we recommend using their package template.
+These templates are used by specific communities. If you're making a package
+within one of these communities, we recommend using their package template.
 
 | Name                                                               | Short description                                                                                      |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
@@ -27,7 +30,7 @@ If you're making a package within one of these communities, we recommend using t
 
 ## Template engines
 
-These are packages that can be used for creating your own package template.
+These are tools that can be used for creating your own package template.
 
 | Name                                                                                                                          | Short description                                                                                                            | 🚦  |
 | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | :-: |
