@@ -55,5 +55,7 @@ jobs:
         run: cookiecutter . --no-input --output-dir cookie-template
 
       - name: Run pre-commit
-        run: pre-commit run --all-files --color always --verbose
-        working-directory: cookie-template
+        run: |-
+          git add .
+          pre-commit run --all-files --color always --verbose
+        working-directory: cookie-template/python-template
