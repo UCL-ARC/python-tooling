@@ -41,7 +41,7 @@ optional-dependencies = {dev = [
 ]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
-license.file = "LICENSE.md"
+license.file = "LICENSE"
 urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 
 [tool.coverage]
