@@ -42,8 +42,7 @@ repos:
       - id: prettier
         exclude: |-
           (?x)(
-            {{cookiecutter.project_slug}}/.github/workflows/tests.yml|
-            {{cookiecutter.project_slug}}/LICENSE.md
+            {{cookiecutter.project_slug}}/.github/workflows/tests.yml
           )
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
