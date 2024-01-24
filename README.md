@@ -3,13 +3,12 @@
   <h1> UCL ARC Python Recommendations</h1>
 </div>
 
-This repository collects the [UCL ARC] recommendations for a Research Software
+This repository collects the [UCL ARC] recommendations for a research software
 project in Python. It contains a template for new Python packages and a
 [website] documenting our recommendations. We've turned on
 [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this
-repo, and we welcome questions there or in the `#programming-help` channel on
-the [UCL research software hub
-slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
+repo, and we welcome questions there or in the `#helpme` channel on
+the [UCL research programming hub Slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
 🍪 Our template is a [cookiecutter] template which automatically creates new
 Python packages with our recommended tooling set up and ready to go.
