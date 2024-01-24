@@ -52,8 +52,7 @@ body:
       description: |-
         Can be found by
         ```sh
-        python -c "import {{cookiecutter.package_name}};
-                   print({{cookiecutter.package_name}}.__version__)"
+        python -c "import {{cookiecutter.package_name}}; print({{cookiecutter.package_name}}.__version__)"
         ```
     validations:
       required: true
