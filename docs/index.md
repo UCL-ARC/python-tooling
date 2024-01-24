@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-This site documents common tooling we use in research software python projects
+This site documents common tooling we use in research software Python projects
 at the [Centre for Advanced Research Computing](https://www.ucl.ac.uk/arc/)
 (ARC) at [UCL](https://www.ucl.ac.uk).
 
@@ -43,7 +43,7 @@ are a good place to start.
 Each item has an (opinionated) traffic light. The meaning of these is:
 
 - 🟢 At least one person in ARC uses this. We actively recommend using it above
-  other tools. It is the single recommended package for a given purpose.
+  other tools. It is the single recommended tool for a given purpose.
 - 🟠 We don't discourage using this, but it may duplicate functionality of a
   green tool.
 - 🔴 We actively discourage using this. This could be because it's no longer
