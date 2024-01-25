@@ -1,4 +1,4 @@
-# The MIT License (MIT)
+# MIT License
 
 Copyright (c) 2023-2024 UCL Centre for Advanced Research Computing
 
