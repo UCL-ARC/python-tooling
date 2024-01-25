@@ -26,7 +26,7 @@ two that we've used and they're both rather similar. They render the code with
 highlighting to show which lines are not executed but the tests, and can track
 test coverage over time.
 
-| Name                                     | Short description                                                                                                                                | 🚦  |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | :-: |
-| [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics. Occasionally slow to update after a report is updated, can be configured to add extra CI checks. | 🟠  |
-| [Coveralls](https://docs.coveralls.io/)  | Hosted service to report code coverage metrics. Very similar to codecov we don't recommend one over the other.                                   | 🟠  |
+| Name                                     | Short description                                                                                                                                                                                                                                                                      | 🚦  |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [Codecov](https://docs.codecov.com/docs) | Hosted service to report code coverage metrics. Occasionally slow to update after a report is updated, can be configured to add extra CI checks. This service is probably more widely used and is [free for both open-source and private projects](https://about.codecov.io/pricing/). | 🟠  |
+| [Coveralls](https://docs.coveralls.io/)  | Hosted service to report code coverage metrics. ery similar to codecov and we don't strongly recommend one over the other. This service is only [free for open-source projects](https://coveralls.io/pricing).                                                                         | 🟠  |
