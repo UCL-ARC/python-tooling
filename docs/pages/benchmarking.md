@@ -1,5 +1,5 @@
 ---
-title: Benchmarking
+title: Benchmarking and profiling
 layout: default
 ---
 
