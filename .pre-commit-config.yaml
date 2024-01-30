@@ -34,7 +34,7 @@ repos:
           - pytest
         exclude: |-
           (?x)(
-            {{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}
+            {{cookiecutter.project_slug}}/src/{{cookiecutter.package_name}}|
             {{cookiecutter.project_slug}}/tests
           )
   - repo: https://github.com/pre-commit/mirrors-prettier
