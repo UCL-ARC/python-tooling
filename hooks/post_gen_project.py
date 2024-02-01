@@ -16,6 +16,7 @@ def main(initialise_git_repository: str) -> int:
 
     Returns:
         The return code of the process
+
     """
     if initialise_git_repository == "True":
         try:
