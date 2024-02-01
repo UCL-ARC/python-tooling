@@ -13,6 +13,7 @@ def project_config() -> dict:
     dict
         dictionary with values for the cookiecutter template,
         as defined in the cookiecutter.json
+
     """
     return {
         "github_username": "test-user",

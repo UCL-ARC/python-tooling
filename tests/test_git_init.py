@@ -24,6 +24,7 @@ def test_initialisation_of_git_repo(
             as defined in the cookiecutter.json
         git_init_cookiecutter_option: A string defined in cookiecutter.json,
             which determines if git should be initialised or not
+
     """
     # Run cookiecutter with initialise_git_repository
     cookie = subprocess.run(
