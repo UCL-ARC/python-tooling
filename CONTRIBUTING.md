@@ -31,7 +31,7 @@ To contribute a change, please:
 
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
-[UCL ARC]: https://ucl.ac.uk/arc
+[UCL ARC]: https://www.ucl.ac.uk/advanced-research-computing
 [open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
 [Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
 [Research software engineers]: https://society-rse.org/about/history
