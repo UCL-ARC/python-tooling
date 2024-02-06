@@ -34,10 +34,12 @@ optional-dependencies = {dev = [
     "build",
     "mypy",
     "pre-commit",
-    "pytest",
     "ruff",
-    "tox>=4",
+    "tox",
     "twine",
+], test = [
+    "pytest",
+    "pytest-cov",
 ]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
@@ -119,9 +121,8 @@ legacy_tox_ini = """
     [testenv]
     commands =
         pytest --cov --cov-report=xml
-    deps =
-        pytest
-        pytest-cov
+    extras =
+        test
 
     [tox]
     env_list =
