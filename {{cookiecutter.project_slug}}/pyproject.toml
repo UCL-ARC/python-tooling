@@ -30,19 +30,25 @@ dynamic = [
 keywords = [
 ]
 name = "{{cookiecutter.project_slug}}"
-optional-dependencies = {dev = [
-    "build",
-    "mypy",
-    "pre-commit",
-    "pytest",
-    "ruff",
-    "tox>=4",
-    "twine",
-]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
 license.file = "LICENSE.md"
 urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+dev = [
+    "{{cookiecutter.project_slug}}[test]",
+    "build",
+    "mypy",
+    "pre-commit",
+    "ruff",
+    "tox>=4",
+    "twine",
+]
 
 [tool.coverage]
 report = {skip_covered = true, sort = "cover"}
@@ -119,9 +125,7 @@ legacy_tox_ini = """
     [testenv]
     commands =
         pytest --cov --cov-report=xml
-    deps =
-        pytest
-        pytest-cov
+    extras = test
 
     [tox]
     env_list =
