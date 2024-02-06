@@ -5,7 +5,7 @@ title: "[DOCS]: "
 labels:
   - documentation
 assignees:
-  - "{{cookiecutter.github_username}}"
+  - "{{cookiecutter.github_user_or_org}}"
 body:
   - id: section
     type: textarea

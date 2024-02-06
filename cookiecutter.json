@@ -7,7 +7,7 @@
   "package_name": "{{cookiecutter.project_slug.replace('-', '_')}}",
   "project_short_description": "A cookiecutter template with ARC recommendations.",
   "initialise_git_repository": true,
-  "github_username": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
+  "github_user_or_org": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
   "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
   "max_python_version": ["3.12", "3.11", "3.10", "3.9"],
   "license": ["MIT", "BSD-3", "GPL-3.0"],

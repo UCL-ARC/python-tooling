@@ -5,7 +5,7 @@ title: "[FEATURE]: "
 labels:
   - enhancement
 assignees:
-  - "{{cookiecutter.github_username}}"
+  - "{{cookiecutter.github_user_or_org}}"
 body:
   - id: problem
     type: textarea

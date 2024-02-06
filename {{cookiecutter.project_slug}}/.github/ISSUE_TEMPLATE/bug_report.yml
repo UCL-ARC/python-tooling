@@ -5,7 +5,7 @@ title: "[BUG]: "
 labels:
   - bug
 assignees:
-  - "{{cookiecutter.github_username}}"
+  - "{{cookiecutter.github_user_or_org}}"
 body:
   - id: describe
     type: textarea

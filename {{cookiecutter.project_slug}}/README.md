@@ -12,10 +12,10 @@
 -->
 
 <!-- prettier-ignore-start -->
-[tests-badge]:              https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
-[tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
-[linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
-[linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
+[tests-badge]:              https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
+[tests-link]:               https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
+[linting-badge]:            https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
+[linting-link]:             https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
@@ -70,13 +70,13 @@ Centre for Advanced Research Computing, University College London
 We recommend installing in a project specific virtual environment created using a environment management tool such as [Mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) or [Conda](https://conda.io/projects/conda/en/latest/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
 
 ```sh
-pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+pip install git+https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}.git
 ```
 
 Alternatively create a local clone of the repository with
 
 ```sh
-git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+git clone https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.project_slug}}.git
 ```
 
 and then install in editable mode by running

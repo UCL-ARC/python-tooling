@@ -5,7 +5,7 @@ title: "[QUESTION]: "
 labels:
   - question
 assignees:
-  - "{{cookiecutter.github_username}}"
+  - "{{cookiecutter.github_user_or_org}}"
 body:
   - id: topic
     type: dropdown

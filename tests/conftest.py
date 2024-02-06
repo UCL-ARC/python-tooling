@@ -16,7 +16,7 @@ def project_config() -> dict:
 
     """
     return {
-        "github_username": "test-user",
+        "github_user_or_org": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
         "expected_repo_name": "cookiecutter-test",
