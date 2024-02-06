@@ -30,9 +30,6 @@ dynamic = [
 keywords = [
 ]
 name = "{{cookiecutter.project_slug}}"
-readme = "README.md"
-requires-python = ">={{cookiecutter.min_python_version}}"
-license.file = "LICENSE.md"
 optional-dependencies = {dev = [
     "build",
     "mypy",
@@ -44,6 +41,9 @@ optional-dependencies = {dev = [
     "pytest",
     "pytest-cov",
 ]}
+readme = "README.md"
+requires-python = ">={{cookiecutter.min_python_version}}"
+license.file = "LICENSE.md"
 urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 
 [tool.coverage]
