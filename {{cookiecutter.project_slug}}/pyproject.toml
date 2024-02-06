@@ -121,7 +121,8 @@ legacy_tox_ini = """
     [testenv]
     commands =
         pytest --cov --cov-report=xml
-    extras = test
+    extras =
+        test
 
     [tox]
     env_list =
