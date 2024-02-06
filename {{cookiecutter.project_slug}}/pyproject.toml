@@ -41,7 +41,6 @@ test = [
     "pytest-cov",
 ]
 dev = [
-    "{{cookiecutter.project_slug}}[test]",
     "build",
     "mypy",
     "pre-commit",
