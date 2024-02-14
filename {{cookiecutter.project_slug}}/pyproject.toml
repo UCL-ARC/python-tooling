@@ -72,7 +72,7 @@ testpaths = [
 [tool.ruff]
 fix = true
 force-exclude = true
-ignore = [
+lint.ignore = [
     "COM812", # trailing commas (ruff-format recommended)
     "D203", # no-blank-line-before-class
     "D212", # multi-line-summary-first-line
@@ -80,19 +80,18 @@ ignore = [
     "D417", # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-per-file-ignores = {"tests*" = [
+lint.per-file-ignores = {"tests*" = [
     "INP001",
     "S101",
 ]}
-select = [
+lint.select = [
     "ALL",
 ]
-target-version = "py{{cookiecutter.min_python_version | replace('.', '')}}"
-isort.known-first-party = [
+lint.isort.known-first-party = [
     "{{cookiecutter.project_slug | replace('-', '_')}}",
 ]
-mccabe.max-complexity = 18
-pep8-naming.classmethod-decorators = [
+lint.mccabe.max-complexity = 18
+lint.pep8-naming.classmethod-decorators = [
     "classmethod",
 ]
 
