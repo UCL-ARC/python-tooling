@@ -63,4 +63,4 @@ body:
       value: |-
         - Python version:
         - Operating system:
-      render: markdown
+      render: Markdown

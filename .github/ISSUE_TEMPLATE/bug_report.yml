@@ -59,4 +59,4 @@ body:
         - Cookiecutter version:
         - Operating system:
         - Python version:
-      render: markdown
+      render: Markdown
