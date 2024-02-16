@@ -4,8 +4,6 @@ description: Suggest a Way to Improve This Project
 title: "Feature suggestion: What should be added?"
 labels:
   - enhancement
-assignees:
-  - "{{cookiecutter.github_username}}"
 body:
   - id: problem
     type: textarea

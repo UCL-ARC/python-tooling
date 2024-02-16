@@ -4,8 +4,6 @@ description: General Questions About Using {{cookiecutter.project_name}}
 title: "The title of your question."
 labels:
   - question
-assignees:
-  - "{{cookiecutter.github_username}}"
 body:
   - id: topic
     type: dropdown

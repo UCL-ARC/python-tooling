@@ -4,8 +4,6 @@ description: Create a Report to Help us Improve
 title: "A one-line description of your problem"
 labels:
   - bug
-assignees:
-  - "{{cookiecutter.github_username}}"
 body:
   - id: describe
     type: textarea
