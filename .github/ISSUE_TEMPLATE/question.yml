@@ -1,7 +1,7 @@
 ---
 name: Question
 description: General Questions About Using the Cookiecutter Template
-title: ""
+title: "The title of your question."
 labels:
   - question
 assignees:

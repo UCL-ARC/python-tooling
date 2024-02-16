@@ -1,7 +1,7 @@
 ---
 name: Task
 description: A Task to be Completed
-title: ""
+title: "Task: What needs to be done?"
 labels:
   - task
 assignees:

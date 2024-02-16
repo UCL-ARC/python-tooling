@@ -1,7 +1,7 @@
 ---
 name: Question
 description: General Questions About Using {{cookiecutter.project_name}}
-title: "[QUESTION]: "
+title: "The title of your question."
 labels:
   - question
 assignees:
