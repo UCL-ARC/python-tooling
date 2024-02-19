@@ -49,7 +49,7 @@ urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecut
 [tool.coverage]
 report = {skip_covered = true, sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{cookiecutter.project_slug}}",
+    "{{cookiecutter.project_name}}",
 ]}
 paths.source = [
     "src",
@@ -88,7 +88,7 @@ lint.select = [
     "ALL",
 ]
 lint.isort.known-first-party = [
-    "{{cookiecutter.project_slug | replace('-', '_')}}",
+    "{{cookiecutter.project_name}}",
 ]
 lint.mccabe.max-complexity = 18
 lint.pep8-naming.classmethod-decorators = [
