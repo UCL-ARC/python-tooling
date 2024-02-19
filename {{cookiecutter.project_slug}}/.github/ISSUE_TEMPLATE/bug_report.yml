@@ -25,7 +25,7 @@ body:
         import {{cookiecutter.package_name}}
 
         ...
-      render: python
+      render: Python
     validations:
       required: true
   - id: expected
@@ -63,4 +63,4 @@ body:
       value: |-
         - Python version:
         - Operating system:
-      render: markdown
+      render: Markdown
