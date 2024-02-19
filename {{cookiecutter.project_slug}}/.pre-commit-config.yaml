@@ -32,3 +32,12 @@ repos:
         args:
           - --fix=lf
       - id: trailing-whitespace
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: cb934cfd6d2eea1aed7b20e4e9e6339d5952322c # 0.28.0
+    hooks:
+      # Schemas taken from https://www.schemastore.org/json/
+      - id: check-jsonschema
+        name: "Validate GitHub issue templates"
+        files: ^\.github/ISSUE_TEMPLATE/.*\.yml$
+        exclude: ^\.github/ISSUE_TEMPLATE/config\.yml$
+        args: ["--verbose", "--schemafile", "schemas/github-issue-forms.json"]
