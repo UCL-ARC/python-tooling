@@ -4,8 +4,6 @@ description: How Can We Improve the Documentation
 title: "What needs improving in the documentation?"
 labels:
   - documentation
-assignees:
-  - "{{cookiecutter.github_username}}"
 body:
   - id: section
     type: textarea
