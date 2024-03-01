@@ -47,7 +47,7 @@ license.file = "LICENSE.md"
 urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 
 [tool.coverage]
-report = {skip_covered = true, sort = "cover"}
+report = {sort = "cover"}
 run = {branch = true, parallel = true, source = [
     "{{cookiecutter.project_name}}",
 ]}
