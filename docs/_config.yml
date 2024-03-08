@@ -4,6 +4,8 @@ theme: just-the-docs
 
 url: https://UCL-ARC.github.io/python-tooling
 
+color_scheme: dark
+
 aux_links:
   Source repository: https://github.com/UCL-ARC/python-tooling
 
