@@ -14,8 +14,8 @@ layout: default
 
 ## Conda
 
-These tools are helpful if you're looking to publish your package on [conda-forge](https://conda-forge.org/), so users can install it through the [conda](https://docs.conda.io/en/latest/) or [mamba](https://mamba.readthedocs.io/en/latest/index.html) package managers.
+These tools are helpful if you're looking to publish your package on [conda-forge](https://conda-forge.org/), so users can install it through the [Conda](https://docs.conda.io/projects/conda/en/stable/) package manager.
 
 | Name                                                      | Short description                                                           | 🚦  |
 | --------------------------------------------------------- | --------------------------------------------------------------------------- | :-: |
-| [GraySkull](https://github.com/conda-incubator/grayskull) | A tool for automatic conda recipe generation (aimed at conda-forge, above). | 🟢  |
+| [GraySkull](https://github.com/conda-incubator/grayskull) | A tool for automatic Conda recipe generation (aimed at conda-forge, above). | 🟢  |
