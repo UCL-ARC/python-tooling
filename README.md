@@ -28,8 +28,8 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
-1.  Install [cookiecutter] in a `conda` or `venv` environment
-    (commented lines for conda example).
+1.  Install [cookiecutter] in a Conda or `venv` environment
+    (commented lines for Conda example).
 
     ```
     # conda create --channel conda-forge --name new-env-name
