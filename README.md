@@ -28,7 +28,7 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
-1.  Install [cookiecutter] in a `conda`, `mamba` or `venv` environment
+1.  Install [cookiecutter] in a `conda` or `venv` environment
     (commented lines for conda example).
 
     ```

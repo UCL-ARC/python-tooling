@@ -14,7 +14,7 @@ layout: default
 
 ## Conda
 
-These tools are helpful if you're looking to publish your package on [conda-forge](https://conda-forge.org/), so users can install it through the [conda](https://docs.conda.io/en/latest/) or [mamba](https://mamba.readthedocs.io/en/latest/index.html) package managers.
+These tools are helpful if you're looking to publish your package on [conda-forge](https://conda-forge.org/), so users can install it through the [conda](https://docs.conda.io/en/latest/) package manager.
 
 | Name                                                      | Short description                                                           | 🚦  |
 | --------------------------------------------------------- | --------------------------------------------------------------------------- | :-: |

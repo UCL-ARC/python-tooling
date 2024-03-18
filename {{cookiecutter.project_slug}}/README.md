@@ -67,7 +67,7 @@ Centre for Advanced Research Computing, University College London
 
 <!-- How to build or install the application. -->
 
-We recommend installing in a project specific virtual environment created using a environment management tool such as [Mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) or [Conda](https://conda.io/projects/conda/en/latest/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
+We recommend installing in a project specific virtual environment created using a environment management tool such as [Conda](https://docs.conda.io/projects/conda/en/stable/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
 
 ```sh
 pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
