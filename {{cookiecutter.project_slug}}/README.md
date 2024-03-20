@@ -17,8 +17,8 @@
 [tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
 [linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
 [linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
-[documentation-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml/badge.svg
-[documentation-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml
+[documentation-badge]:      https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml/badge.svg
+[documentation-link]:       https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
