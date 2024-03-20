@@ -35,6 +35,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 autodoc2_packages = ["../src/{{cookiecutter.package_name}}"]
 autodoc2_render_plugin = "myst"
 
+myst_enable_extensions = ["fieldlist"]
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
