@@ -29,8 +29,7 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
 }
 
-templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build"]
 
 autodoc2_packages = ["../src/{{cookiecutter.package_name}}"]
 autodoc2_render_plugin = "myst"
