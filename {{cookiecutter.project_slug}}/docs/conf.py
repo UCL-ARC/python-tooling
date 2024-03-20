@@ -42,3 +42,15 @@ myst_enable_extensions = ["fieldlist"]
 
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
+
+
+html_theme_options = {
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/",
+            "icon": "fa-brands fa-square-github",
+            "type": "fontawesome",
+        },
+    ],
+}
