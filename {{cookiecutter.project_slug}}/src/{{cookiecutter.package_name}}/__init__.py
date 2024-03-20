@@ -3,7 +3,7 @@ from ._version import __version__  # noqa: F401
 
 
 def example_function(argument: str, keyword_argument: str = "default") -> str:
-    """An example function docstring.
+    """Concatenate string arguments - an example function docstring.
 
     :param argument: An argument.
     :param keyword_argument: A keyword argument with a default value.
