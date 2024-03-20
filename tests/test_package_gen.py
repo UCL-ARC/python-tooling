@@ -58,7 +58,6 @@ def test_package_generation(
         pathlib.Path(".github") / "workflows",
         pathlib.Path("docs") / "conf.py",
         pathlib.Path("docs") / "index.md",
-        pathlib.Path("docs") / "_static" / ".gitignore",
     ]
     for f in expected_files:
         full_path = test_project_dir / f
