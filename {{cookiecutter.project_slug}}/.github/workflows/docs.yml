@@ -16,7 +16,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .tox
-          key: tox-${{ '{{' }} hashFiles('pyproject.toml')${{ '}}' }}
+          key: tox-${{ '{{' }} hashFiles('pyproject.toml') {{ '}}' }}
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -29,13 +29,13 @@ jobs:
         run: tox -e docs
     # Uncomment lines below to set-up automatic deployment of documentation to a
     # GitHub Pages website on pushing to main - you will need configure the repository
-    # to deploy from a branch `gh-pages` (https://tinyurl.com/gh-pages-from-branch),
+    # to deploy from a branch gh-pages (https://tinyurl.com/gh-pages-from-branch),
     # which will be created the first time this workflow step is run
     #   - name: Publish documentation on GitHub pages
     #     if: success() && github.event_name != 'pull_request'
     #     uses: peaceiris/actions-gh-pages@v3
     #     with:
-    #       github_token: ${{ '{{' }}  secrets.GITHUB_TOKEN ${{ '}}' }}
+    #       github_token: ${{ '{{' }}  secrets.GITHUB_TOKEN {{ '}}' }}
     #       publish_dir: docs/_build/html
     #       publish_branch: gh-pages
     #       user_name: "github-actions[bot]"
