@@ -84,11 +84,11 @@ lint.ignore = [
     "D417", # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-lint.per-file-ignores = {"tests*" = [
+lint.per-file-ignores = {"docs/conf.py" = [
+    "INP001",
+], "tests*" = [
     "INP001",
     "S101",
-], "docs/conf.py" = [
-    "INP001",
 ]}
 lint.select = [
     "ALL",
