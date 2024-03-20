@@ -12,5 +12,6 @@ def example_function(argument: str, keyword_argument: str = "default") -> str:
 
     Returns:
         The concatenation of `argument` and `keyword_argument`.
+
     """
     return argument + keyword_argument
