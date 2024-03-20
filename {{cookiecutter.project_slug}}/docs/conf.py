@@ -46,7 +46,7 @@ html_theme_options = {
         {
             "name": "GitHub",
             "url": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/",
-            "icon": "fa-brands fa-square-github",
+            "icon": "fa-brands fa-github",
             "type": "fontawesome",
         },
     ],
