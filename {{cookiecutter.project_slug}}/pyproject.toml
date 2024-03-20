@@ -33,8 +33,12 @@ name = "{{cookiecutter.project_slug}}"
 optional-dependencies = {dev = [
     "build",
     "mypy",
+    "myst-parser",
     "pre-commit",
     "ruff",
+    "sphinx",
+    "sphinx-autodoc2",
+    "pydata-sphinx-theme",
     "tox",
     "twine",
 ], test = [
@@ -83,6 +87,8 @@ lint.ignore = [
 lint.per-file-ignores = {"tests*" = [
     "INP001",
     "S101",
+], "docs/conf.py" = [
+    "INP001",
 ]}
 lint.select = [
     "ALL",
@@ -131,4 +137,13 @@ legacy_tox_ini = """
     ) %}
         py3{{python_version}}
     {%- endfor %}
+
+    [testenv:docs]
+    commands =
+        sphinx-build -W -b html docs docs/_build/html
+    deps =
+        myst-parser
+        sphinx
+        sphinx-autodoc2
+        pydata-sphinx-theme
 """
