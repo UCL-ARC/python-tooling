@@ -3,6 +3,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Tests status][tests-badge]][tests-link]
 [![Linting status][linting-badge]][linting-link]
+[![Documentation status][documentation-badge]][linting-link]
 [![License][license-badge]](./LICENSE.md)
 
 <!--
@@ -16,6 +17,8 @@
 [tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
 [linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
 [linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
+[documentation-badge]:      https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml/badge.svg
+[documentation-link]:       https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
@@ -107,6 +110,24 @@ pytest tests
 ```
 
 again from the root of the repository.
+
+### Building documenttion
+
+The MkDocs HTML documentation can be built locally by running
+
+```sh
+tox -e docs
+```
+
+from the root of the repository.
+The built documentation will be written to `site`.
+
+Alternatively to build and preview the documentation locally, in a Python environment
+with the development dependencies installed, run
+
+```sh
+mkdocs serve
+```
 
 ## Roadmap
 

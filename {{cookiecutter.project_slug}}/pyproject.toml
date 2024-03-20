@@ -32,6 +32,10 @@ keywords = [
 name = "{{cookiecutter.project_slug}}"
 optional-dependencies = {dev = [
     "build",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python",
     "mypy",
     "pre-commit",
     "ruff",
@@ -131,4 +135,13 @@ legacy_tox_ini = """
     ) %}
         py3{{python_version}}
     {%- endfor %}
+
+    [testenv:docs]
+    commands =
+        mkdocs build -s
+    deps =
+        mkdocs
+        mkdocs-material
+        mkdocstrings
+        mkdocstrings-ptyon
 """
