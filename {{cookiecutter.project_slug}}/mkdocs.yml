@@ -4,6 +4,7 @@ site_author: "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_n
 copyright: "© {% now 'utc', '%Y' %}, {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
 repo_url: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/"
 repo_name: "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+edit_uri: edit/main/docs/
 
 theme:
   name: "material"
