@@ -123,7 +123,7 @@ from the root of the repository.
 The built documentation will be written to `site`.
 
 Alternatively to build and preview the documentation locally, in a Python environment
-with the development dependencies installed, run
+with the optional `docs` dependencies installed, run
 
 ```sh
 mkdocs serve
