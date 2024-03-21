@@ -6,6 +6,11 @@ repo_url: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.pr
 repo_name: "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 edit_uri: edit/main/docs/
 
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
 theme:
   name: "material"
   palette:
