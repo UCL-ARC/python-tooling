@@ -32,8 +32,13 @@ theme:
     repo: fontawesome/brands/github
 
 nav:
-  - index.md
-  - api.md
+  - Overview: index.md
+  - API reference: api.md
+  - License: license.md
+
+markdown_extensions:
+  - pymdownx.tasklist
+  - pymdownx.snippets
 
 plugins:
   - search
