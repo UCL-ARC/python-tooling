@@ -34,7 +34,7 @@ theme:
 nav:
   - Overview: index.md
   - API reference: api.md
-  - License: license.md
+  - License: LICENSE.md
 
 markdown_extensions:
   - pymdownx.tasklist
