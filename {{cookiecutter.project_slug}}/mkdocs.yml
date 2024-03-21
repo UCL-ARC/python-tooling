@@ -45,3 +45,8 @@ plugins:
           import:
             - "https://docs.python.org/3/objects.inv"
           paths: [src]
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/{{cookiecutter.github_username}}
