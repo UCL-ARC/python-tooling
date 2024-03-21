@@ -54,9 +54,9 @@ Centre for Advanced Research Computing, University College London
 
 <!-- TODO: can cookiecutter make a list of frameworks? -->
 
-[Framework 1](https://something.com)
-[Framework 2](https://something.com)
-[Framework 3](https://something.com)
+- [Framework 1](https://something.com)
+- [Framework 2](https://something.com)
+- [Framework 3](https://something.com)
 
 ## Getting Started
 
