@@ -111,7 +111,7 @@ pytest tests
 
 again from the root of the repository.
 
-### Building documenttion
+### Building Documentation
 
 The MkDocs HTML documentation can be built locally by running
 
