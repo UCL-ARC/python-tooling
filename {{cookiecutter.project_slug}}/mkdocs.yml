@@ -13,6 +13,8 @@ validation:
 
 theme:
   name: "material"
+  features:
+    - content.action.edit
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
