@@ -1,3 +1,3 @@
 {!
-   include-markdown "../LICENSE.md"
+include-markdown "../LICENSE.md"
 !}
