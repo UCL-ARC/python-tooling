@@ -56,4 +56,4 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.github_username}}
+      link: "https://github.com/{{cookiecutter.github_username}}"
