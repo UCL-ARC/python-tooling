@@ -12,21 +12,25 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
       - name: Cache tox
         uses: actions/cache@v4
         with:
           path: .tox
           key: tox-${{ '{{' }} hashFiles('pyproject.toml') {{ '}}' }}
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
           cache: "pip"
           cache-dependency-path: "pyproject.toml"
+  
       - name: Install tox
         run: python -m pip install tox
       - name: Build HTML documentation with tox
         run: tox -e docs
+
     # Uncomment lines below to set-up automatic deployment of documentation to a
     # GitHub Pages website on pushing to main - you will need configure the repository
     # to deploy from a branch gh-pages (https://tinyurl.com/gh-pages-from-branch),
