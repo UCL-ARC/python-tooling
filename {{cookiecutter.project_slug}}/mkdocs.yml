@@ -40,7 +40,6 @@ nav:
 
 markdown_extensions:
   - pymdownx.tasklist
-  - pymdownx.snippets
 
 plugins:
   - search
@@ -52,6 +51,9 @@ plugins:
           import:
             - "https://docs.python.org/3/objects.inv"
           paths: [src]
+  - include-markdown:
+      opening_tag: "{!"
+      closing_tag: "!}"
 
 extra:
   social:

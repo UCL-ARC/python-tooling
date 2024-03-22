@@ -1,1 +1,4 @@
---8<-- "README.md"
+{!
+   include-markdown "../README.md"
+   rewrite-relative-urls=false
+!}
