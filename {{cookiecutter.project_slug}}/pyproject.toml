@@ -128,6 +128,12 @@ legacy_tox_ini = """
     extras =
         test
 
+    [testenv:docs]
+    commands =
+        mkdocs build --strict
+    extras =
+        docs
+
     [tox]
     env_list =
     {%- for python_version in range(
@@ -136,10 +142,4 @@ legacy_tox_ini = """
     ) %}
         py3{{python_version}}
     {%- endfor %}
-
-    [testenv:docs]
-    commands =
-        mkdocs build --strict
-    extras =
-        docs
 """
