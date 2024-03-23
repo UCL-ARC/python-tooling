@@ -34,10 +34,12 @@ optional-dependencies = {dev = [
     "build",
     "mypy",
     "pre-commit",
-    "pytest",
     "ruff",
-    "tox>=4",
+    "tox",
     "twine",
+], test = [
+    "pytest",
+    "pytest-cov",
 ]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
@@ -45,9 +47,9 @@ license.file = "LICENSE.md"
 urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 
 [tool.coverage]
-report = {skip_covered = true, sort = "cover"}
+report = {sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{cookiecutter.project_slug}}",
+    "{{cookiecutter.project_name}}",
 ]}
 paths.source = [
     "src",
@@ -56,12 +58,13 @@ paths.source = [
 
 [tool.mypy]
 explicit_package_bases = true
-plugins = [
-    "numpy.typing.mypy_plugin",
-]
 
 [tool.pytest.ini_options]
-addopts = "--color=yes -v"
+addopts = """
+    --color=yes
+    --import-mode=importlib
+    --verbose
+"""
 testpaths = [
     "tests",
 ]
@@ -69,27 +72,26 @@ testpaths = [
 [tool.ruff]
 fix = true
 force-exclude = true
-ignore = [
-    "COM812", #  trailing commas (ruff-format recommended)
+lint.ignore = [
+    "COM812", # trailing commas (ruff-format recommended)
     "D203", # no-blank-line-before-class
     "D212", # multi-line-summary-first-line
     "D407", # removed dashes lines under sections
     "D417", # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-per-file-ignores = {"tests*" = [
-    "INP001",
-    "S101",
+lint.per-file-ignores = {"tests*" = [
+    "INP001", # File is part of an implicit namespace package.
+    "S101", # Use of `assert` detected
 ]}
-select = [
-    "ALL"
+lint.select = [
+    "ALL",
 ]
-target-version = "py{{cookiecutter.min_python_version | replace('.', '')}}"
-isort.known-first-party = [
-    "{{cookiecutter.project_slug | replace('-', '_')}}",
+lint.isort.known-first-party = [
+    "{{cookiecutter.project_name}}",
 ]
-mccabe.max-complexity = 18
-pep8-naming.classmethod-decorators = [
+lint.mccabe.max-complexity = 18
+lint.pep8-naming.classmethod-decorators = [
     "classmethod",
 ]
 
@@ -118,9 +120,8 @@ legacy_tox_ini = """
     [testenv]
     commands =
         pytest --cov --cov-report=xml
-    deps =
-        pytest
-        pytest-cov
+    extras =
+        test
 
     [tox]
     env_list =

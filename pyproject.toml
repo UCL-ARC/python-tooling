@@ -1,5 +1,9 @@
 [tool.pytest.ini_options]
-addopts = "--color=yes -vv"
+addopts = """
+    --color=yes
+    --import-mode=importlib
+    --verbose
+"""
 testpaths = [
     "tests",
 ]
@@ -7,7 +11,8 @@ testpaths = [
 [tool.ruff]
 fix = true
 force-exclude = true
-ignore = [
+target-version = "py39"
+lint.ignore = [
     "COM812", # trailing commas (ruff-format recommended)
     "D203", # no-blank-line-before-class
     "D212", # multi-line-summary-first-line
@@ -15,18 +20,17 @@ ignore = [
     "D417", # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-per-file-ignores = {"*tests*" = [
+lint.per-file-ignores = {"*tests*" = [
     "INP001",
     "S101",
 ], "hooks*" = [
     "INP001",
     "T201",
 ]}
-select = [
+lint.select = [
     "ALL",
 ]
-target-version = "py39"
-mccabe.max-complexity = 18
+lint.mccabe.max-complexity = 18
 
 [tool.tomlsort]
 all = true

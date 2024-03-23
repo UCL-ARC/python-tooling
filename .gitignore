@@ -5,3 +5,5 @@
 
 #default project path
 python-template
+
+*.DS_Store

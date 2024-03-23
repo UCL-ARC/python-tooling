@@ -1,6 +1,6 @@
 {%- if cookiecutter.license == "MIT" -%}
 
-# The MIT License (MIT)
+# MIT License
 
 Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}
 
@@ -649,4 +649,4 @@ what you want to do, use the GNU Lesser General Public License instead of this
 License. But first, please read
 &lt;<http://www.gnu.org/philosophy/why-not-lgpl.html>&gt;.
 
-{%- endif -%}
+{%- endif %}
