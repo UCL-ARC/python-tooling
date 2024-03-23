@@ -1,0 +1,35 @@
+---
+title: Parallel and asynchronous processing
+layout: default
+---
+
+Python has a good ecosystem of libraries for multiprocessing (threads and GPU
+parallelisation), as well as asynchronous processing. Here, we list those that
+we've found to be useful, particularly for research applications and previous
+ARC projects.
+
+🟠 tools in the following may be preferred over 🟢, if there are external
+reasons to use a specific interface or parallelisation scheme. Possibly due to
+the nature of the research problem, the high-performance computing resources
+available or simply due to pre-existing code using a library like [pandas].
+
+| Name              | Short description                                                                                                                                                                                            | 🚦  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-: |
+| [multiprocess]    | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this rather more simple to work with. | 🟢  |
+| [multiprocessing] | The standard library module for distributing tasks across multiple processes                                                                                                                                 | 🟠  |
+| [Cython]          | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                                                           | 🟠  |
+| [mpi4py]          | support for MPI based parallelism                                                                                                                                                                            | 🟠  |
+| [dask]            | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                      | 🟠  |
+| [numba]           | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                                                            | 🟠  |
+| [jax]             | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html).                                      | 🟠  |
+
+<!-- URLs for more a readable table and text above 👆 -->
+
+[multiprocess]: https://multiprocess.readthedocs.io/en/latest/
+[multiprocessing]: https://docs.python.org/3/library/multiprocessing.html
+[Cython]: https://cython.readthedocs.io/
+[mpi4py]: https://mpi4py.readthedocs.io/
+[pandas]: https://pandas.pydata.org/
+[dask]: https://docs.dask.org/
+[numba]: https://numba.pydata.org/
+[jax]: https://jax.readthedocs.io/
