@@ -5,7 +5,7 @@ layout: default
 
 # Utility libraries
 
-Useful packages for 'utility' functionality, normally we highlight these if
+Useful packages for _utility_ functionality, normally we highlight these if
 we've found a library that we prefer to Python's builtin. You probably don't
 want to write these yourself but might need logging or a command-line interface.
 
