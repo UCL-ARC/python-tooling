@@ -10,9 +10,10 @@ package?_". Where code to solve a research problem might be large and perform
 several tasks at once typically one should try to stick to a mantra of doing one
 thing well.
 The following questions can be helpful when trying to abide by this mantra:
+
 - What do I want my package to provide?
 - How will users interact with or use the code in my package?
-- Is everything I'm including in the package relevant or useful in supporting it's main purpose? 
+- Is everything I'm including in the package relevant or useful in supporting it's main purpose?
 
 In Python, a [package](https://docs.python.org/3/reference/import.html#packages)
 is a collection of one or more
