@@ -4,9 +4,7 @@ layout: default
 ---
 
 Python has a good ecosystem of libraries for multiprocessing (threads and GPU
-parallelisation), as well as asynchronous processing. Here, we list those that
-we've found to be useful, particularly for research applications and previous
-ARC projects.
+parallelisation), as well as asynchronous processing.
 
 🟠 tools in the following may be preferred over 🟢, if there are external
 reasons to use a specific interface or parallelisation scheme. Possibly due to
