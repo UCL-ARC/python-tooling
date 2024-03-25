@@ -37,6 +37,13 @@ simply due to pre-existing code using a library like [pandas].
 | [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                       | 🟠  |
 | [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
+## Asynchronous processing
+
+| Name                 | Short description                                                                                                                                 | 🚦  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [asyncio]            | The Python standard library for simple asynchronous processing. Useful for simple cases.                                                          | 🟠  |
+| [concurrent.futures] | Another Python standard library for more complex asynchrounous processing, comes with a bigger overhead but better suited to data analysis tasks. | 🟠  |
+
 <!-- URLs for more a readable tables and text above 👆 -->
 
 [multiprocess]: https://multiprocess.readthedocs.io/en/stable/
@@ -49,3 +56,5 @@ simply due to pre-existing code using a library like [pandas].
 [dask]: https://docs.dask.org/
 [numba]: https://numba.pydata.org/
 [jax]: https://jax.readthedocs.io/
+[asyncio]: https://docs.python.org/3/library/asyncio.html
+[concurrent.futures]: https://docs.python.org/3/library/concurrent.futures.html
