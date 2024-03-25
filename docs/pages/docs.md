@@ -6,9 +6,12 @@ layout: default
 # Documentation
 
 With Python, as with many other languages, it's very common to automatically
-create a web page with documentation built from [docstrings] in your package's
-_application programming interface_ (API). For your package to be easily reusable we recommend you build documentation
-pages and host them somewhere.
+create a web page with documentation. This can include reference for the API
+taken from your package's [docstrings], tutorials, examples, and more in depth
+explanation about how the package works. For an in-depth discussion of the
+different components of good documentation, see the [Diátaxis
+framework](https://diataxis.fr/). For your package to be easily reusable we
+recommend you build documentation pages and host them somewhere.
 
 If you're using GitHub, one option is to host your docs on [GitHub pages].
 [Here's how we've set this up][template-docs-dot-yaml] for [our template].
