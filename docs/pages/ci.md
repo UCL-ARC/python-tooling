@@ -5,12 +5,13 @@ layout: default
 
 # Continuous integration
 
-| Name                                                                                  | Short description                                                                 | 🚦  |
-| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | :-: |
-| [GitHub Actions](https://docs.github.com/en/actions)                                  | Continuous integration and continuous delivery platform (integrated with GitHub). | 🟢  |
-| [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                          | 🟠  |
-| [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform.                | 🟠  |
-| [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                          | 🟠  |
+| Name                                                                                  | Short description                                                                                                                                   | 🚦  |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [GitHub Actions](https://docs.github.com/en/actions)                                  | Continuous integration and continuous delivery platform (integrated with GitHub).                                                                   | 🟢  |
+| [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                                                                                            | 🟠  |
+| [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform.                                                                                  | 🟠  |
+| [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                                                                                            | 🟠  |
+| [pre-commmit.ci](https://pre-commit.ci/)                                              | A bot that adds a pre-commit job to your GitHub Actions CI, and can automatically fix most trivial linting failures. Free for open-source projects. | 🟢  |
 
 <details>
 <summary> 🟢 explanation</summary>
