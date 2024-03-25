@@ -39,7 +39,7 @@ simply due to pre-existing code using a library like [pandas].
 
 <!-- URLs for more a readable tables and text above 👆 -->
 
-[multiprocess]: https://multiprocess.readthedocs.io/en/latest/
+[multiprocess]: https://multiprocess.readthedocs.io/en/stable/
 [multiprocessing]: https://docs.python.org/3/library/multiprocessing.html
 [threading]: https://docs.python.org/3/library/threading.html
 [PEP703]: https://peps.python.org/pep-0703/
