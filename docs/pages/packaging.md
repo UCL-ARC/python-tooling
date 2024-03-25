@@ -3,7 +3,27 @@ title: Packaging
 layout: default
 ---
 
-# Packaging
+# General packaging
+
+A common question facing developers is "_How much code should go into a
+package?_". Where code to solve a research problem might be large and perform
+several tasks at once typically one should try to stick to a mantra of doing one
+thing well.
+The following questions can be helpful when trying to abide by this mantra:
+
+- What do I want my package to provide?
+- How will users interact with or use the code in my package?
+- Is everything I'm including in the package relevant or useful in supporting it's main purpose?
+
+In Python, a [package](https://docs.python.org/3/reference/import.html#packages)
+is a collection of one or more
+[modules](https://docs.python.org/3/glossary.html#term-module) to perform
+software tasks. Typically there is a separate git repository per package, and
+we recommend you stick to this. You can always add the packages as dependencies
+to a higher-level package which is effectively the same, but much easier to
+reuse.
+
+# Packaging tools
 
 | Name                                                                  | Short description                                                                                                           | 🚦  |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
