@@ -56,6 +56,9 @@ def test_package_generation(
         "tests",
         pathlib.Path(".github"),
         pathlib.Path(".github") / "workflows",
+        "mkdocs.yml",
+        pathlib.Path("docs") / "index.md",
+        pathlib.Path("docs") / "api.md",
     ]
     for f in expected_files:
         full_path = test_project_dir / f

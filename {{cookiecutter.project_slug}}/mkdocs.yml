@@ -1,0 +1,61 @@
+site_name: "{{cookiecutter.project_name}}"
+site_description: "Documentation website for {{cookiecutter.project_name}}"
+site_author: "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
+copyright: "Copyright © {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
+repo_url: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/"
+repo_name: "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+edit_uri: edit/main/docs/
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+theme:
+  name: "material"
+  features:
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Overview: index.md
+  - API reference: api.md
+  - License: LICENSE.md
+
+markdown_extensions:
+  - pymdownx.tasklist
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          docstring_style: google
+          import:
+            - "https://docs.python.org/3/objects.inv"
+          paths: [src]
+  - include-markdown:
+      opening_tag: "{!"
+      closing_tag: "!}"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://github.com/{{cookiecutter.github_username}}"
