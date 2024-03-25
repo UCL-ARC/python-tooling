@@ -10,7 +10,7 @@ create a web page with documentation built from [docstrings] in your package's
 _application programming interface_ (API). For your package to be easily reusable we recommend you build documentation
 pages and host them somewhere.
 
-If you're using GitHub, the simplest is to host your docs on [GitHub pages].
+If you're using GitHub, one option is to host your docs on [GitHub pages].
 [Here's how we've set this up][template-docs-dot-yaml] for [our template].
 
 <!-- URL used above in the blurb-->
