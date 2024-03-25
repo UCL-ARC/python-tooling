@@ -63,7 +63,7 @@ instead.
 
 | name                                                          | short description                            | 🚦  |
 | ------------------------------------------------------------- | -------------------------------------------- | :-: |
-| [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates api reference pages. | 🟢  |
+| [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates API reference pages. | 🟢  |
 
 ## Sphinx extensions
 
