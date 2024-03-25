@@ -5,22 +5,29 @@ layout: default
 
 # Parallel and asynchronous processing
 
-Python has a good ecosystem of libraries for multiprocessing (threads and GPU
-parallelisation), as well as asynchronous processing.
+Python has a good ecosystem of libraries for parallelising the processing of tasks,
+as well as asynchronous processing.
 
-🟠 tools in the following may be preferred over 🟢, if there are external
-reasons to use a specific interface or parallelisation scheme. Possibly due to
-the nature of the research problem, the high-performance computing resources
-available or simply due to pre-existing code using a library like [pandas].
+Parallelisation in Python is typically _process-based_ with code parallelised
+across multiple Python processes each with their own interpreter or makes use of
+tools which run the tasks to be parallelised outside of the Python interpreter,
+using for example Python wrappers around external code which uses thread-based
+parallelism.
 
-## Thread- and process-based parallelism
+🟠 tools in the following should be chosen, if there are external reasons to use
+a specific interface or parallelisation scheme. Possibly due to the nature of
+the research problem, the high-performance computing resources available or
+simply due to pre-existing code using a library like [pandas].
+
+## Process-based (and thread-based) parallelism
 
 | Name              | Short description                                                                                                                                                                                            | 🚦  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-: |
 | [multiprocess]    | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this rather more simple to work with. | 🟢  |
 | [dask]            | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                      | 🟠  |
-| [multiprocessing] | The standard library module for distributing tasks across multiple processes                                                                                                                                 | 🟠  |
-| [mpi4py]          | support for MPI based parallelism                                                                                                                                                                            | 🟠  |
+| [multiprocessing] | The standard library module for distributing tasks across multiple processes.                                                                                                                                | 🟠  |
+| [mpi4py]          | Support for MPI based parallelism.                                                                                                                                                                           | 🟠  |
+| [threading]       | The standard library module for multi-threading. Due to the _global interpreter lock_ [currently][PEP703] only one thread can execute Python code at a time.                                                 | 🔴  |
 
 ## Compiler-based parallelism
 
@@ -30,10 +37,12 @@ available or simply due to pre-existing code using a library like [pandas].
 | [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                       | 🟠  |
 | [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
-<!-- URLs for more a readable table and text above 👆 -->
+<!-- URLs for more a readable tables and text above 👆 -->
 
 [multiprocess]: https://multiprocess.readthedocs.io/en/latest/
 [multiprocessing]: https://docs.python.org/3/library/multiprocessing.html
+[threading]: https://docs.python.org/3/library/threading.html
+[PEP703]: https://peps.python.org/pep-0703/
 [Cython]: https://cython.readthedocs.io/
 [mpi4py]: https://mpi4py.readthedocs.io/
 [pandas]: https://pandas.pydata.org/
