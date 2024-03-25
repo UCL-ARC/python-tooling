@@ -41,8 +41,8 @@ simply due to pre-existing code using a library like [pandas].
 
 | Name                 | Short description                                                                                                                                 | 🚦  |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| [asyncio]            | The Python standard library for simple asynchronous processing. Useful for simple cases.                                                          | 🟠  |
-| [concurrent.futures] | Another Python standard library for more complex asynchrounous processing, comes with a bigger overhead but better suited to data analysis tasks. | 🟠  |
+| [asyncio]            | Python standard library for asynchronous programming with tasks run in a single-threaded event loop. Used for cooperative multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking).            | 🟠  |
+| [concurrent.futures] | Another Python standard library for asynchrounous processing. Provides a common interface for thread and process based concurrency as an alternative to using `multiprocess(ing)` or `threading` directly.  | 🟠  |
 
 <!-- URLs for more a readable tables and text above 👆 -->
 
