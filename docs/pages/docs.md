@@ -61,13 +61,13 @@ instead.
 
 ## MkDocs plugins
 
-| name                                                          | short description                            | 🚦  |
+| Name                                                          | Short description                            | 🚦  |
 | ------------------------------------------------------------- | -------------------------------------------- | :-: |
 | [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates API reference pages. | 🟢  |
 
 ## Sphinx extensions
 
-| name                                                                 | short description                                                | 🚦  |
+| Name                                                                 | Short description                                                | 🚦  |
 | -------------------------------------------------------------------- | ---------------------------------------------------------------- | :-: |
-| [sphinx-gallery](https://sphinx-gallery.github.io/stable/index.html) | Builds an html gallery of examples from a set of python scripts. | 🟢  |
-| [sphinx-autoapi](https://sphinx-autoapi.readthedocs.io/en/stable/)   | Automatically generates api reference pages.                     | 🟢  |
+| [sphinx-gallery](https://sphinx-gallery.github.io/stable/index.html) | Builds an HTML gallery of examples from a set of Python scripts. | 🟢  |
+| [sphinx-autoapi](https://sphinx-autoapi.readthedocs.io/en/stable/)   | Automatically generates API reference pages.                     | 🟢  |
