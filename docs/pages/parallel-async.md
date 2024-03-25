@@ -13,15 +13,22 @@ reasons to use a specific interface or parallelisation scheme. Possibly due to
 the nature of the research problem, the high-performance computing resources
 available or simply due to pre-existing code using a library like [pandas].
 
+## Thread- and process-based parallelism
+
 | Name              | Short description                                                                                                                                                                                            | 🚦  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-: |
 | [multiprocess]    | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this rather more simple to work with. | 🟢  |
-| [multiprocessing] | The standard library module for distributing tasks across multiple processes                                                                                                                                 | 🟠  |
-| [Cython]          | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                                                           | 🟠  |
-| [mpi4py]          | support for MPI based parallelism                                                                                                                                                                            | 🟠  |
 | [dask]            | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                      | 🟠  |
-| [numba]           | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                                                            | 🟠  |
-| [jax]             | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html).                                      | 🟠  |
+| [multiprocessing] | The standard library module for distributing tasks across multiple processes                                                                                                                                 | 🟠  |
+| [mpi4py]          | support for MPI based parallelism                                                                                                                                                                            | 🟠  |
+
+## Compiler-based parallelism
+
+| Name     | Short description                                                                                                                                                       | 🚦  |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [Cython] | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                      | 🟠  |
+| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                       | 🟠  |
+| [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
 <!-- URLs for more a readable table and text above 👆 -->
 
