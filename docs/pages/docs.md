@@ -36,8 +36,7 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 <summary>More details about Sphinx</summary>
 
 We marginally recommend [MkDocs] over [Sphinx] due to it's ease of use,
-preference for Markdown, and slightly better support of our preferred docstring
-style.
+preference for Markdown, and more support for a variety of docstring styles.
 
 However the [Sphinx] tool has long been the de-facto standard in the scientific Python ecosystem. It is widely
 used, customisable, and well tested. If you need a [Sphinx
