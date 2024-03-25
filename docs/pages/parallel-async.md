@@ -23,7 +23,7 @@ simply due to pre-existing code using a library like [pandas].
 
 | Name              | Short description                                                                                                                                                                                            | 🚦  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-: |
-| [multiprocess]    | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this rather more simple to work with. | 🟢  |
+| [multiprocess]    | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this easier to use than `multiprocessing`. | 🟢  |
 | [dask]            | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                      | 🟠  |
 | [multiprocessing] | The standard library module for distributing tasks across multiple processes.                                                                                                                                | 🟠  |
 | [mpi4py]          | Support for MPI based parallelism.                                                                                                                                                                           | 🟠  |
