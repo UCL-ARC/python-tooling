@@ -3,7 +3,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Tests status][tests-badge]][tests-link]
 [![Linting status][linting-badge]][linting-link]
-[![Documentation status][documentation-badge]][linting-link]
+[![Documentation status][documentation-badge]][documentation-link]
 [![License][license-badge]](./LICENSE.md)
 
 <!--
