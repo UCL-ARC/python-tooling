@@ -37,6 +37,12 @@ optional-dependencies = {dev = [
     "ruff",
     "tox",
     "twine",
+], docs = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python",
 ], test = [
     "pytest",
     "pytest-cov",
@@ -49,7 +55,7 @@ urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecut
 [tool.coverage]
 report = {sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{cookiecutter.project_name}}",
+    "{{cookiecutter.project_slug}}",
 ]}
 paths.source = [
     "src",
@@ -88,7 +94,7 @@ lint.select = [
     "ALL",
 ]
 lint.isort.known-first-party = [
-    "{{cookiecutter.project_name}}",
+    "{{cookiecutter.project_slug | replace('-', '_')}}",
 ]
 lint.mccabe.max-complexity = 18
 lint.pep8-naming.classmethod-decorators = [
@@ -122,6 +128,12 @@ legacy_tox_ini = """
         pytest --cov --cov-report=xml
     extras =
         test
+
+    [testenv:docs]
+    commands =
+        mkdocs build --strict
+    extras =
+        docs
 
     [tox]
     env_list =

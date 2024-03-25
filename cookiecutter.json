@@ -7,9 +7,13 @@
   "package_name": "{{cookiecutter.project_slug.replace('-', '_')}}",
   "project_short_description": "A cookiecutter template with ARC recommendations.",
   "initialise_git_repository": true,
+  "deploy_docs_to_github_pages": false,
   "github_username": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
   "min_python_version": ["3.9", "3.10", "3.11", "3.12"],
   "max_python_version": ["3.12", "3.11", "3.10", "3.9"],
   "license": ["MIT", "BSD-3", "GPL-3.0"],
-  "funder": "JBFC: The Joe Bloggs Funding Council"
+  "funder": "JBFC: The Joe Bloggs Funding Council",
+  "__prompts__": {
+    "deploy_docs_to_github_pages": "Enable automatically deploying HTML documentation to GitHub Pages website on pushes to main"
+  }
 }
