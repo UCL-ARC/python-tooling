@@ -3,6 +3,8 @@ title: Parallel and asynchronous processing
 layout: default
 ---
 
+# Parallel and asynchronous processing
+
 Python has a good ecosystem of libraries for multiprocessing (threads and GPU
 parallelisation), as well as asynchronous processing.
 
