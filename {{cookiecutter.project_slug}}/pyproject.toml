@@ -37,6 +37,12 @@ optional-dependencies = {dev = [
     "ruff",
     "tox",
     "twine",
+], docs = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python",
 ], test = [
     "pytest",
     "pytest-cov",
@@ -122,6 +128,12 @@ legacy_tox_ini = """
         pytest --cov --cov-report=xml
     extras =
         test
+
+    [testenv:docs]
+    commands =
+        mkdocs build --strict
+    extras =
+        docs
 
     [tox]
     env_list =
