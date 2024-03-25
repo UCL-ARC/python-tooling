@@ -7,7 +7,7 @@ layout: default
 
 With Python, as with many other languages, it's very common to automatically
 create a web page with documentation built from [docstrings] in your package's
-API. For your package to be easily reusable we recommend you build documentation
+_application programming interface_ (API). For your package to be easily reusable we recommend you build documentation
 pages and host them somewhere.
 
 If you're using GitHub, the simplest is to host your docs on [GitHub pages].
@@ -33,14 +33,14 @@ If you're using GitHub, the simplest is to host your docs on [GitHub pages].
 <summary>More details about Sphinx</summary>
 
 We marginally recommend [MkDocs] over [Sphinx] due to it's ease of use,
-preference for markdown, and slightly better support of our preferred docstring
+preference for Markdown, and slightly better support of our preferred docstring
 style.
 
-However the [Sphinx] tool has long been the de-facto standard, it is widely
+However the [Sphinx] tool has long been the de-facto standard in the scientific Python ecosystem. It is widely
 used, customisable, and well tested. If you need a [Sphinx
 extension](#sphinx-extensions) that does not have an equivalent [MkDocs
 plugin](https://github.com/mkdocs/catalog), or if you are part of a community
-that heavily uses [Sphinx] then, as with all tools, we recommend you use that
+that heavily uses [Sphinx] then we recommend you use that
 instead.
 
 ### See also
