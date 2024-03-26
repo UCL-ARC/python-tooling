@@ -1,0 +1,84 @@
+cff-version: "1.2.0"
+message: "If you use this template or the associated website, please cite it using these metadata."
+type: software
+title: "python-tooling: Python package template for new research software projects"
+repository-code: "https://github.com/UCL-ARC/python-tooling"
+url: "http://github-pages.arc.ucl.ac.uk/python-tooling/"
+keywords:
+  - python
+  - cookiecutter
+  - "python template"
+  - "research software"
+  - "research software engineering"
+license: MIT
+authors:
+  - affiliation: "University College London"
+    family-names: Roddy
+    given-names: "Patrick J."
+    orcid: "https://orcid.org/0000-0002-6271-1700"
+  - affiliation: "University College London"
+    family-names: Cunliffe
+    given-names: Sam
+    orcid: "https://orcid.org/0000-0003-0167-8641"
+  - affiliation: "University College London"
+    family-names: Stansby
+    given-names: David
+    orcid: "https://orcid.org/0000-0002-1365-1908"
+  - affiliation: "University College London"
+    family-names: Graham
+    given-names: "Matthew M."
+    orcid: "https://orcid.org/0000-0001-9104-7960"
+  - affiliation: "University College London"
+    family-names: "Miñano"
+    given-names: "Sofía"
+    orcid: "https://orcid.org/0000-0001-6363-1545"
+  - affiliation: "University College London"
+    family-names: Smith
+    given-names: Paul
+    orcid: "https://orcid.org/0000-0002-3676-5318"
+  - affiliation: "University College London"
+    family-names: Xochicale
+    given-names: Miguel
+    orcid: "https://orcid.org/0000-0002-8225-7517"
+  - affiliation: "University College London"
+    family-names: Gollifer
+    given-names: Ruaridh
+    orcid: "https://orcid.org/0000-0001-9319-936X"
+  - affiliation: "University College London"
+    family-names: Ozdemir
+    given-names: Idil
+  - affiliation: "University College London"
+    family-names: Giordano
+    given-names: "Mosè"
+    orcid: "https://orcid.org/0000-0002-7218-2873"
+  - affiliation: "University College London"
+    family-names: Young
+    given-names: Tom
+    orcid: "https://orcid.org/0000-0002-8432-7769"
+  - affiliation: "University College London"
+    family-names: Felder
+    given-names: Alessandro
+    orcid: "https://orcid.org/0000-0003-3510-9906"
+  - affiliation: "University College London"
+    family-names: Graham
+    given-names: William
+    orcid: "https://orcid.org/0000-0003-0058-263X"
+  - affiliation: "University College London"
+    family-names: Tyson
+    given-names: "Adam Luke"
+    orcid: "https://orcid.org/0000-0003-3225-1130"
+  - affiliation: "University College London"
+    family-names: "Nik Aznan"
+    given-names: "Nik Khadijah"
+    orcid: "https://orcid.org/0000-0002-9469-6306"
+  - affiliation: "University College London"
+    family-names: Vickerstaff
+    given-names: Robert
+    orcid: "https://orcid.org/0000-0002-6091-3907"
+  - affiliation: "University College London"
+    family-names: "Pérez-Suárez"
+    given-names: David
+    orcid: "https://orcid.org/0000-0003-0784-6909"
+  - affiliation: "University College London"
+    family-names: Buntic
+    given-names: Katie
