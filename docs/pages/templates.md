@@ -17,20 +17,20 @@ If you're making a package for a community that already has a template in
 general use (some examples are listed below) we recommend using their template
 instead.
 
-## Domain specific templates
+## Community-specific templates
 
-These templates are used by specific communities. If you're making a package
-within one of these communities, we recommend using their package template.
+If you're making a package within one of these communities, we recommend using
+their package template.
 
-| Name                                                               | Short description                                                                                      |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| [Napari](https://github.com/napari/cookiecutter-napari-plugin)     | Cookiecutter template for authoring (npe2-based) napari plugins.                                       |
-| [SciKit Surgery](https://github.com/SciKit-Surgery/PythonTemplate) | Cookiecutter template developed by the Wellcome EPSRC Centre for Interventional and Surgical Sciences. |
-| [SciKit HEP](https://github.com/scikit-hep/cookie)                 | Cookiecutter template developed by SciKit-HEP.                                                         |
+| Community                                                          | Short description                                                                                                                               |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Napari](https://github.com/napari/cookiecutter-napari-plugin)     | Cookiecutter template for authoring (npe2-based) napari plugins.                                                                                |
+| [SciKit-Surgery](https://github.com/SciKit-Surgery/PythonTemplate) | Cookiecutter template developed by the Wellcome EPSRC Centre for Interventional and Surgical Sciences.                                          |
+| [Scientific Python](https://github.com/scientific-python/cookie)   | Cookiecutter template developed by [SciKit-HEP](https://github.com/scikit-hep) but now adopted by the more general Scientific Python community. |
 
 ## Template engines
 
-These are tools that can be used for creating your own package template.
+Tools that can be used for creating your own package template.
 
 | Name                                                                                                                          | Short description                                                                                                            | 🚦  |
 | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | :-: |
