@@ -4,9 +4,6 @@ description: How Can We Improve the Documentation
 title: "What needs improving in the documentation?"
 labels:
   - documentation
-assignees:
-  - paddyroddy
-  - samcunliffe
 body:
   - id: section
     type: textarea

@@ -4,9 +4,6 @@ description: How Can We Improve the Website
 title: "Website Improvement:"
 labels:
   - website
-assignees:
-  - paddyroddy
-  - samcunliffe
 body:
   - id: section
     type: textarea
