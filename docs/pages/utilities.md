@@ -24,3 +24,9 @@ want to write these yourself but might need logging or a command-line interface.
 | --------------------------------------------------------- | -------------------------------------------------------------------- | :-: |
 | [loguru](https://loguru.readthedocs.io/)                  | Simple and user-friendly with many nice features enabled by default. | 🟢  |
 | [logging](https://docs.python.org/3/library/logging.html) | Python's builtin logging framework. Needs some configuration.        | 🟠  |
+
+## User interface
+
+| Name                                         | Short description       | 🚦  |
+| -------------------------------------------- | ----------------------- | :-: |
+| [tqdm](https://pypi.org/project/tqdm/2.2.3/) | Progress bar for loops. | 🟢  |
