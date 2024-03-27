@@ -27,6 +27,6 @@ want to write these yourself but might need logging or a command-line interface.
 
 ## User interface
 
-| Name                                         | Short description       | 🚦  |
-| -------------------------------------------- | ----------------------- | :-: |
-| [tqdm](https://pypi.org/project/tqdm/2.2.3/) | Progress bar for loops. | 🟢  |
+| Name                            | Short description       | 🚦  |
+| ------------------------------- | ----------------------- | :-: |
+| [tqdm](https://tqdm.github.io/) | Progress bar for loops. | 🟢  |
