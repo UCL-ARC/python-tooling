@@ -31,6 +31,12 @@ There is one exception: we've found that [black]'s own Jupyter extension works m
 | [pre-commit]     | Has cell output cleanup hooks (if desired). Also found to work well with [nbQA]. | 🟢  |
 | `nbqa black`     | [black] via [nbQA].                                                              | 🟠  |
 
+## Other
+
+| Name       | Short description                                                                                                                                         | 🚦  |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [jupytext] | Automatically convert notebooks to/from a plain text format that is more human readable and better for version control than the standard notebook format. | 🟢  |
+
 <!-- URLs for a more readable table & prose 👆 -->
 
 [black]: https://nbqa.readthedocs.io/en/latest/index.html
@@ -39,6 +45,7 @@ There is one exception: we've found that [black]'s own Jupyter extension works m
 [ruff]: https://github.com/charliermarsh/ruff
 [mypy]: https://mypy.readthedocs.io/en/stable
 [pre-commit]: https://github.com/kynan/nbstripout
+[jupytext]: https://jupytext.readthedocs.io/en/stable/
 
 <!-- TODO: more sections to consider>
 
