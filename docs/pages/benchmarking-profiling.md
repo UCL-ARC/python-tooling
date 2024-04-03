@@ -13,10 +13,10 @@ layout: default
 
 ## Time
 
-| Name                                                     | Short description                                                                                 | 🚦  |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | :-: |
-| [psutil](https://psutil.readthedocs.io/en/latest/)       | System monitoring, profiling, limiting process resources and the management of running processes. | 🟢  |
-| [line_profiler](https://pypi.org/project/line-profiler/) | A tool for line-by-line profiling of functions.                                                   | 🟠  |
+| Name                                                          | Short description                                                                                                                              | 🚦  |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [pyinstrument](https://pyinstrument.readthedocs.io/en/stable) | Python profiler. Tells you how long individual lines of code take to run, so you can focus on the slowest part of your program to speed it up. | 🟢  |
+| [line_profiler](https://pypi.org/project/line-profiler/)      | A tool for line-by-line profiling of functions.                                                                                                | 🟠  |
 
 ## Memory
 
