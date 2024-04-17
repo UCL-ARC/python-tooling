@@ -75,8 +75,8 @@ Centre for Advanced Research Computing, University College London
 We recommend installing in a project specific virtual environment created using
 a environment management tool such as
 [Conda](https://docs.conda.io/projects/conda/en/stable/). To install the latest
-development version of `{{cookiecutter.project_slug}}` using `pip` in the
-currently active environment run
+development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active
+environment run
 
 ```sh
 pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git

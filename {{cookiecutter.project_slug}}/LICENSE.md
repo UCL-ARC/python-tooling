@@ -2,8 +2,7 @@
 
 # MIT License
 
-Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}}
-{{cookiecutter.author_family_names}}
+Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
