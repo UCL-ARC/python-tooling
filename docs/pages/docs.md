@@ -9,9 +9,9 @@ With Python, as with many other languages, it's very common to automatically
 create a web page with documentation. This can include reference for the API
 taken from your package's [docstrings], tutorials, examples, and more in depth
 explanation about how the package works. For an in-depth discussion of the
-different components of good documentation, see the [Diátaxis
-framework](https://diataxis.fr/). For your package to be easily reusable we
-recommend you build documentation pages and host them somewhere.
+different components of good documentation, see the
+[Diátaxis framework](https://diataxis.fr/). For your package to be easily
+reusable we recommend you build documentation pages and host them somewhere.
 
 If you're using GitHub, one option is to host your docs on [GitHub pages].
 [Here's how we've set this up][template-docs-dot-yaml] for [our template].
@@ -20,8 +20,10 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 
 [docstrings]: https://peps.python.org/pep-0257/#what-is-a-docstring
 [GitHub pages]: https://docs.github.com/en/pages
-[our template]: https://github.com/UCL-ARC/python-tooling?tab=readme-ov-file#using-this-template
-[template-docs-dot-yaml]: https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/docs.yml
+[our template]:
+  https://github.com/UCL-ARC/python-tooling?tab=readme-ov-file#using-this-template
+[template-docs-dot-yaml]:
+  https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/docs.yml
 
 ## Documentation build tools
 
@@ -38,16 +40,17 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 We marginally recommend [MkDocs] over [Sphinx] due to it's ease of use,
 preference for Markdown, and more support for a variety of docstring styles.
 
-However the [Sphinx] tool has long been the de-facto standard in the scientific Python ecosystem. It is widely
-used, customisable, and well tested. If you need a [Sphinx
-extension](#sphinx-extensions) that does not have an equivalent [MkDocs
-plugin](https://github.com/mkdocs/catalog), or if you are part of a community
-that heavily uses [Sphinx] then we recommend you use that
-instead.
+However the [Sphinx] tool has long been the de-facto standard in the scientific
+Python ecosystem. It is widely used, customisable, and well tested. If you need
+a [Sphinx extension](#sphinx-extensions) that does not have an equivalent
+[MkDocs plugin](https://github.com/mkdocs/catalog), or if you are part of a
+community that heavily uses [Sphinx] then we recommend you use that instead.
 
 ### See also
 
-- Our internal discussions about which to recommend ([#16](https://github.com/UCL-ARC/python-tooling/issues/16) and [#187](https://github.com/UCL-ARC/python-tooling/issues/187)).
+- Our internal discussions about which to recommend
+  ([#16](https://github.com/UCL-ARC/python-tooling/issues/16) and
+  [#187](https://github.com/UCL-ARC/python-tooling/issues/187)).
 - [An interesting related discussion](https://github.com/encode/httpx/discussions/1220).
 
 </details>
