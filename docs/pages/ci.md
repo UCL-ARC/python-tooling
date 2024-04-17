@@ -20,9 +20,10 @@ We have many projects using GitHub CI and, it has good integration with GitHub i
 
 # Coverage monitoring
 
-These services report and track test code coverage over time.
-They render the code with highlighting to show which lines are not executed by tests.
-See [testing](testing) for our recommendations on packages to generate code coverage during tests.
+These services report and track test code coverage over time. They render the
+code with highlighting to show which lines are not executed by tests. See
+[testing](testing) for our recommendations on packages to generate code coverage
+during tests.
 
 | Name                                     | Short description                                                                                                                                                                                                                                                                      | 🚦  |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

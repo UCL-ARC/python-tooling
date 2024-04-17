@@ -33,8 +33,8 @@ body:
     attributes:
       label: Actual Behaviour
       description: >-
-        Be a specific and detailed as you can.
-        Paste any output or stack traces of errors you receive.
+        Be a specific and detailed as you can. Paste any output or stack traces
+        of errors you receive.
     validations:
       required: true
   # - id: version

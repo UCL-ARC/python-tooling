@@ -5,10 +5,11 @@ layout: default
 
 # Community building
 
-There are many platforms to build a community for users and developers.
-We recommend you choose one, and not more than one.
-If you are creating a new space, you should consider joining an existing community space.
-Common topics discussed in these communities can be developers meetings, ideas for new directions, and general help and support for users.
+There are many platforms to build a community for users and developers. We
+recommend you choose one, and not more than one. If you are creating a new
+space, you should consider joining an existing community space. Common topics
+discussed in these communities can be developers meetings, ideas for new
+directions, and general help and support for users.
 
 | Name                                                         | Short description                                                                                                                                                                                                                                                                                     | 🚦  |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

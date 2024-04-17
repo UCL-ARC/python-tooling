@@ -7,16 +7,15 @@ This repository collects the [UCL ARC] recommendations for a research software
 project in Python. It contains a template for new Python packages and a
 [website] documenting our recommendations. We've turned on
 [discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this
-repo, and we welcome questions there or in the `#helpme` channel on
-the [UCL research programming hub Slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
+repo, and we welcome questions there or in the `#helpme` channel on the
+[UCL research programming hub Slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
 
 🍪 Our template is a [cookiecutter] template which automatically creates new
 Python packages with our recommended tooling set up and ready to go.
 
-> **Note**
-> If you're making a package within a community that has an existing package
-> template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)), we
-> recommend using their template instead of this one.
+> **Note** If you're making a package within a community that has an existing
+> package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
+> we recommend using their template instead of this one.
 
 <!-- links here -->
 
@@ -28,8 +27,8 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
-1.  Install [cookiecutter] in a Conda or `venv` environment
-    (commented lines for Conda example).
+1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
+    Conda example).
 
     ```
     # conda create --channel conda-forge --name new-env-name
@@ -127,9 +126,8 @@ cd python-tooling
   conda remove -n ptoolingVE --all
   ```
 
-- To run template in the same path of this repo.
-  We do a test cookiecut of a dummy package and install it to ensure the
-  template setup works.
+- To run template in the same path of this repo. We do a test cookiecut of a
+  dummy package and install it to ensure the template setup works.
 
   ```
   cookiecutter .
@@ -159,11 +157,12 @@ sub-directory, and are written in markdown.
 To build the webpage locally (for testing)
 
 1.  [Install jekyll](https://jekyllrb.com/docs/installation)
-2.  Run `bundle install` from the `docs/` directory of this repository to install dependencies.
+2.  Run `bundle install` from the `docs/` directory of this repository to
+    install dependencies.
 3.  Run `bundle exec jekyll serve` from the root directory of this repository.
-    This should fire up a local web server and tell you its address. By default the
-    server will automatically refresh the HTML pages if any changes are made to the
-    markdown sources.
+    This should fire up a local web server and tell you its address. By default
+    the server will automatically refresh the HTML pages if any changes are made
+    to the markdown sources.
 
 See the [jekyll docs](https://jekyllrb.com/docs) for more info.
 
