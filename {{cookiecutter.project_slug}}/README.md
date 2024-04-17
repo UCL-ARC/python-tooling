@@ -35,7 +35,9 @@
 
 {{cookiecutter.project_short_description}}
 
-This project is developed in collaboration with the [Centre for Advanced Research Computing](https://ucl.ac.uk/arc), University College London.
+This project is developed in collaboration with the
+[Centre for Advanced Research Computing](https://ucl.ac.uk/arc), University
+College London.
 
 ## About
 
@@ -70,7 +72,11 @@ Centre for Advanced Research Computing, University College London
 
 <!-- How to build or install the application. -->
 
-We recommend installing in a project specific virtual environment created using a environment management tool such as [Conda](https://docs.conda.io/projects/conda/en/stable/). To install the latest development version of `{{cookiecutter.project_slug}}` using `pip` in the currently active environment run
+We recommend installing in a project specific virtual environment created using
+a environment management tool such as
+[Conda](https://docs.conda.io/projects/conda/en/stable/). To install the latest
+development version of `{{cookiecutter.project_slug}}` using `pip`
+in the currently active environment run
 
 ```sh
 pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
@@ -96,8 +102,8 @@ How to run the application on your local system.
 
 <!-- How to run tests on your local system. -->
 
-Tests can be run across all compatible Python versions in isolated environments using
-[`tox`](https://tox.wiki/en/latest/) by running
+Tests can be run across all compatible Python versions in isolated environments
+using [`tox`](https://tox.wiki/en/latest/) by running
 
 ```sh
 tox
@@ -122,8 +128,8 @@ tox -e docs
 from the root of the repository.
 The built documentation will be written to `site`.
 
-Alternatively to build and preview the documentation locally, in a Python environment
-with the optional `docs` dependencies installed, run
+Alternatively to build and preview the documentation locally, in a Python
+environment with the optional `docs` dependencies installed, run
 
 ```sh
 mkdocs serve
