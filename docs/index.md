@@ -30,9 +30,9 @@ makes it easier for others in the community to contribute to your package. Once
 _you_ get used to the structure makes it easier for you to contribute back to
 other packages.
 
-If you just want to get started with our recommendations, we have [our own
-Python package template](https://github.com/UCL-ARC/python-tooling#using-this-template) that
-lives in the same repository as these pages.
+If you just want to get started with our recommendations, we have
+[our own Python package template](https://github.com/UCL-ARC/python-tooling#using-this-template)
+that lives in the same repository as these pages.
 
 Otherwise, each page on this site highlights recommended packages or services
 for each area. These should not be taken as set in stone for every project, but

@@ -4,9 +4,6 @@ description: A Task to be Completed
 title: "Task: What needs to be done?"
 labels:
   - task
-assignees:
-  - paddyroddy
-  - samcunliffe
 body:
   - id: section
     type: textarea

@@ -11,7 +11,7 @@ layout: default
 | [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                                                                                            | 🟠  |
 | [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform.                                                                                  | 🟠  |
 | [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                                                                                            | 🟠  |
-| [pre-commmit.ci](https://pre-commit.ci/)                                              | A bot that adds a pre-commit job to your GitHub Actions CI, and can automatically fix most trivial linting failures. Free for open-source projects. | 🟢  |
+| [pre-commit.ci](https://pre-commit.ci/)                                               | A bot that adds a pre-commit job to your GitHub Actions CI, and can automatically fix most trivial linting failures. Free for open-source projects. | 🟢  |
 
 <details>
 <summary> 🟢 explanation</summary>
@@ -20,9 +20,10 @@ We have many projects using GitHub CI and, it has good integration with GitHub i
 
 # Coverage monitoring
 
-These services report and track test code coverage over time.
-They render the code with highlighting to show which lines are not executed by tests.
-See [testing](testing) for our recommendations on packages to generate code coverage during tests.
+These services report and track test code coverage over time. They render the
+code with highlighting to show which lines are not executed by tests. See
+[testing](testing) for our recommendations on packages to generate code coverage
+during tests.
 
 | Name                                     | Short description                                                                                                                                                                                                                                                                      | 🚦  |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

@@ -4,9 +4,6 @@ description: Suggest a Way to Improve This Project
 title: "Feature suggestion: What should be added?"
 labels:
   - enhancement
-assignees:
-  - paddyroddy
-  - samcunliffe
 body:
   - id: problem
     type: textarea
@@ -28,8 +25,8 @@ body:
     attributes:
       label: Describe Alternatives You've Considered
       description: >-
-        A clear and concise description of any alternative
-        solutions or features you've considered.
+        A clear and concise description of any alternative solutions or features
+        you've considered.
   - id: additional
     type: textarea
     attributes:

@@ -5,9 +5,11 @@ layout: default
 
 # Jupyter notebooks
 
-We generally recommend packaging reusable code components into Python modules where possible.
-However occasionally we support researchers who prefer a notebook environment or projects which want to provide examples and tutorials in notebook format.
-Notebooks can also be a valid alternative to Python scripts for running and recording the results of numerical experiments for example.
+We generally recommend packaging reusable code components into Python modules
+where possible. However occasionally we support researchers who prefer a
+notebook environment or projects which want to provide examples and tutorials in
+notebook format. Notebooks can also be a valid alternative to Python scripts for
+running and recording the results of numerical experiments for example.
 
 ## Live executable environments
 
@@ -19,10 +21,12 @@ Notebooks can also be a valid alternative to Python scripts for running and reco
 
 ## Linting
 
-Many of [our recommended linters](linting) don't work out-of-the box on Jupyter notebooks, however [nbQA] has been found to work well.
-This is a translation tool that can be used to run our recommended linters over notebooks.
+Many of [our recommended linters](linting) don't work out-of-the box on Jupyter
+notebooks, however [nbQA] has been found to work well. This is a translation
+tool that can be used to run our recommended linters over notebooks.
 
-There is one exception: we've found that [black]'s own Jupyter extension works more reliably than [black] via [nbQA].
+There is one exception: we've found that [black]'s own Jupyter extension works
+more reliably than [black] via [nbQA].
 
 | Name             | Short description                                                                | 🚦  |
 | ---------------- | -------------------------------------------------------------------------------- | :-: |
@@ -30,6 +34,12 @@ There is one exception: we've found that [black]'s own Jupyter extension works m
 | [nbQA]           | Recommended for all other linters ([ruff], [isort]) and [mypy].                  | 🟢  |
 | [pre-commit]     | Has cell output cleanup hooks (if desired). Also found to work well with [nbQA]. | 🟢  |
 | `nbqa black`     | [black] via [nbQA].                                                              | 🟠  |
+
+## Other
+
+| Name       | Short description                                                                                                                                         | 🚦  |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| [jupytext] | Automatically convert notebooks to/from a plain text format that is more human readable and better for version control than the standard notebook format. | 🟢  |
 
 <!-- URLs for a more readable table & prose 👆 -->
 
@@ -39,6 +49,7 @@ There is one exception: we've found that [black]'s own Jupyter extension works m
 [ruff]: https://github.com/charliermarsh/ruff
 [mypy]: https://mypy.readthedocs.io/en/stable
 [pre-commit]: https://github.com/kynan/nbstripout
+[jupytext]: https://jupytext.readthedocs.io/en/stable/
 
 <!-- TODO: more sections to consider>
 

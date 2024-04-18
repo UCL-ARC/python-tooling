@@ -1,7 +1,7 @@
 exclude: ^{{cookiecutter.project_slug}}/
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.15
+    rev: v0.3.5
     hooks:
       - id: ruff
         args:
@@ -10,7 +10,7 @@ repos:
         args:
           - --config=pyproject.toml
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.4
+    rev: v1.5.5
     hooks:
       - id: forbid-tabs
   - repo: https://github.com/pappasam/toml-sort
@@ -18,7 +18,7 @@ repos:
     hooks:
       - id: toml-sort-fix
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.8.0
+    rev: v1.9.0
     hooks:
       - id: mypy
         args:
@@ -29,6 +29,9 @@ repos:
     rev: v3.1.0
     hooks:
       - id: prettier
+        args:
+          - --prose-wrap=always
+          - --quote-props=as-needed
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -41,7 +44,7 @@ repos:
           - --fix=lf
       - id: trailing-whitespace
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.0
+    rev: 0.28.1
     hooks:
       # Schemas taken from https://www.schemastore.org/json/
       - id: check-jsonschema
