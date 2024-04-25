@@ -20,10 +20,8 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 
 [docstrings]: https://peps.python.org/pep-0257/#what-is-a-docstring
 [GitHub pages]: https://docs.github.com/en/pages
-[our template]:
-  https://github.com/UCL-ARC/python-tooling?tab=readme-ov-file#using-this-template
-[template-docs-dot-yaml]:
-  https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/docs.yml
+[our template]: https://github.com/UCL-ARC/python-tooling?tab=readme-ov-file#using-this-template
+[template-docs-dot-yaml]: https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/docs.yml
 
 ## Documentation build tools
 
