@@ -3,8 +3,7 @@ message:
   "If you use this template or the associated website, please cite it using
   these metadata."
 type: software
-title:
-  "python-tooling: Python package template for new research software projects"
+title: "python-tooling: Python package template for new research software projects"
 repository-code: "https://github.com/UCL-ARC/python-tooling"
 url: "http://github-pages.arc.ucl.ac.uk/python-tooling/"
 keywords:
