@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@c053181aa0c3d17606addfe97a9075a32723548a # v1.9.3
+        uses: lycheeverse/lychee-action@2b973e86fc7b1f6b36a93795fe2c9c6ae1118621 # v1.10.0
         with:
           # Exclude the image.sc forum (which works) but returns 403 from
           # github runners and exclude relative links to other pages. Ignore
