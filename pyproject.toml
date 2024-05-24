@@ -1,9 +1,9 @@
 [tool.pytest.ini_options]
-addopts = """
-    --color=yes
-    --import-mode=importlib
-    --verbose
-"""
+addopts = [
+    "--color=yes",
+    "--import-mode=importlib",
+    "--verbose",
+]
 testpaths = [
     "tests",
 ]
