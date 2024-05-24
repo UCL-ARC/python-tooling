@@ -25,6 +25,17 @@ Python packages with our recommended tooling set up and ready to go.
 [cookiecutter]: https://libraries.io/pypi/cookiecutter
 <!-- prettier-ignore-end -->
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## Using this template
 
 1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
