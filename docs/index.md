@@ -4,8 +4,6 @@ layout: home
 nav_order: 1
 ---
 
-TEST.
-
 This site documents common tooling we use in research software Python projects
 at the [Centre for Advanced Research Computing](https://www.ucl.ac.uk/arc/)
 (ARC) at [UCL](https://www.ucl.ac.uk).
