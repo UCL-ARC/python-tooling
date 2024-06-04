@@ -30,6 +30,13 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/p-j-smith"><img src="https://avatars.githubusercontent.com/u/29753790?v=4?s=100" width="100px;" alt="Paul Smith"/><br /><sub><b>Paul Smith</b></sub></a><br /><a href="#bug-p-j-smith" title="Bug reports">🐛</a> <a href="#code-p-j-smith" title="Code">💻</a> <a href="#content-p-j-smith" title="Content">🖋</a> <a href="#doc-p-j-smith" title="Documentation">📖</a> <a href="#question-p-j-smith" title="Answering Questions">💬</a> <a href="#review-p-j-smith" title="Reviewed Pull Requests">👀</a> <a href="#test-p-j-smith" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
