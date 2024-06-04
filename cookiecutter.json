@@ -27,6 +27,6 @@
     "min_python_version": "Minimum Python version supported by package",
     "max_python_version": "Maximum Python version supported by package",
     "license": "Which open-source license to release package under",
-    "funder": "Organisation(s) to acknowledge for funding of package development"
+    "funder": "Organisation(s) to acknowledge for funding of project"
   }
 }
