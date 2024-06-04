@@ -9,6 +9,25 @@
   "contributorsPerLine": 7,
   "contributors": [
     {
+      "login": "samcunliffe",
+      "name": "Sam Cunliffe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1836192?v=4",
+      "profile": "http://scnlf.me",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
       "login": "matt-graham",
       "name": "Matt Graham",
       "avatar_url": "https://avatars.githubusercontent.com/u/6746980?v=4",
