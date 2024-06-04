@@ -14,6 +14,19 @@
   "license": ["MIT", "BSD-3", "GPL-3.0"],
   "funder": "JBFC: The Joe Bloggs Funding Council",
   "__prompts__": {
-    "deploy_docs_to_github_pages": "Enable automatically deploying HTML documentation to GitHub Pages website on pushes to main"
+    "author_given_names": "Given name(s) of package author",
+    "author_family_names": "Family name(s) of package author",
+    "author_email": "Email address for package author - will be publicly accessible",
+    "project_name": "Name for project - may contain spaces",
+    "project_slug": "'Slugified' project name for use in URLs - recommended to be all lower case with hyphens as word separator",
+    "package_name": "Name for Python package - recommended to be all lowercase with underscores as word separator",
+    "project_short_description": "Short description of the project and package",
+    "initialise_git_repository": "Initialise generated package directory as a Git repository",
+    "deploy_docs_to_github_pages": "Enable automatically deploying HTML documentation to GitHub Pages website on pushes to main",
+    "github_username": "GitHub user or organization which will be owner of repository if deploying to GitHub",
+    "min_python_version": "Minimum Python version supported by package",
+    "max_python_version": "Maximum Python version supported by package",
+    "license": "Which open-source license to release package under",
+    "funder": "Any organisation(s) to acknowledge for contibruting to funding of package development"
   }
 }
