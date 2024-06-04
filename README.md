@@ -30,6 +30,13 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://scnlf.me"><img src="https://avatars.githubusercontent.com/u/1836192?v=4?s=100" width="100px;" alt="Sam Cunliffe"/><br /><sub><b>Sam Cunliffe</b></sub></a><br /><a href="#ideas-samcunliffe" title="Ideas, Planning, & Feedback">🤔</a> <a href="#bug-samcunliffe" title="Bug reports">🐛</a> <a href="#code-samcunliffe" title="Code">💻</a> <a href="#content-samcunliffe" title="Content">🖋</a> <a href="#doc-samcunliffe" title="Documentation">📖</a> <a href="#eventOrganizing-samcunliffe" title="Event Organizing">📋</a> <a href="#projectManagement-samcunliffe" title="Project Management">📆</a> <a href="#question-samcunliffe" title="Answering Questions">💬</a> <a href="#review-samcunliffe" title="Reviewed Pull Requests">👀</a> <a href="#talk-samcunliffe" title="Talks">📢</a> <a href="#test-samcunliffe" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
