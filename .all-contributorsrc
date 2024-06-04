@@ -1,4 +1,29 @@
 {
   "projectName": "python-tooling",
-  "projectOwner": "UCL-ARC"
+  "projectOwner": "UCL-ARC",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "matt-graham",
+      "name": "Matt Graham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6746980?v=4",
+      "profile": "http://matt-graham.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "design",
+        "eventOrganizing",
+        "review",
+        "talk",
+        "test"
+      ]
+    }
+  ]
 }
