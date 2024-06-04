@@ -30,6 +30,13 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.davidstansby.com"><img src="https://avatars.githubusercontent.com/u/6197628?v=4?s=100" width="100px;" alt="David Stansby"/><br /><sub><b>David Stansby</b></sub></a><br /><a href="#ideas-dstansby" title="Ideas, Planning, & Feedback">🤔</a> <a href="#bug-dstansby" title="Bug reports">🐛</a> <a href="#code-dstansby" title="Code">💻</a> <a href="#content-dstansby" title="Content">🖋</a> <a href="#doc-dstansby" title="Documentation">📖</a> <a href="#eventOrganizing-dstansby" title="Event Organizing">📋</a> <a href="#projectManagement-dstansby" title="Project Management">📆</a> <a href="#review-dstansby" title="Reviewed Pull Requests">👀</a> <a href="#test-dstansby" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
