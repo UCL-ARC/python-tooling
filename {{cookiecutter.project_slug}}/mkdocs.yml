@@ -50,6 +50,8 @@ plugins:
           docstring_style: google
           import:
             - "https://docs.python.org/3/objects.inv"
+          options:
+            show_submodules: true
           paths: [src]
   - include-markdown:
       opening_tag: "{!"
