@@ -30,6 +30,13 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://matt-graham.github.io"><img src="https://avatars.githubusercontent.com/u/6746980?v=4?s=100" width="100px;" alt="Matt Graham"/><br /><sub><b>Matt Graham</b></sub></a><br /><a href="#bug-matt-graham" title="Bug reports">🐛</a> <a href="#code-matt-graham" title="Code">💻</a> <a href="#content-matt-graham" title="Content">🖋</a> <a href="#doc-matt-graham" title="Documentation">📖</a> <a href="#design-matt-graham" title="Design">🎨</a> <a href="#eventOrganizing-matt-graham" title="Event Organizing">📋</a> <a href="#review-matt-graham" title="Reviewed Pull Requests">👀</a> <a href="#talk-matt-graham" title="Talks">📢</a> <a href="#test-matt-graham" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
