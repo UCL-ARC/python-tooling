@@ -1,4 +1,31 @@
 {
   "projectName": "python-tooling",
-  "projectOwner": "UCL-ARC"
+  "projectOwner": "UCL-ARC",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "paddyroddy",
+      "name": "Patrick J. Roddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15052188?v=4",
+      "profile": "https://paddyroddy.github.io",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    }
+  ]
 }
