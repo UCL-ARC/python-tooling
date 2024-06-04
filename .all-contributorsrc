@@ -7,7 +7,7 @@
   "commitType": "docs",
   "commitConvention": "angular",
   "contributorsPerLine": 7,
-  "contributors": [
+  "contributors":
     {
       "login": "p-j-smith",
       "name": "Paul Smith",
@@ -19,6 +19,36 @@
         "content",
         "doc",
         "question",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "matt-graham",
+      "name": "Matt Graham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6746980?v=4",
+      "profile": "http://matt-graham.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "design",
+        "eventOrganizing",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
+      "login": "sfmig",
+      "name": "sfmig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33267254?v=4",
+      "profile": "https://sfmig.github.io/",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
         "review",
         "test"
       ]
