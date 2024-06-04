@@ -30,6 +30,13 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://sfmig.github.io/"><img src="https://avatars.githubusercontent.com/u/33267254?v=4?s=100" width="100px;" alt="sfmig"/><br /><sub><b>sfmig</b></sub></a><br /><a href="#bug-sfmig" title="Bug reports">🐛</a> <a href="#code-sfmig" title="Code">💻</a> <a href="#content-sfmig" title="Content">🖋</a> <a href="#review-sfmig" title="Reviewed Pull Requests">👀</a> <a href="#test-sfmig" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
