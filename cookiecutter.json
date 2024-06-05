@@ -5,7 +5,7 @@
   "project_name": "Python Template",
   "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-')}}",
   "package_name": "{{cookiecutter.project_slug.replace('-', '_')}}",
-  "project_short_description": "A cookiecutter template with ARC recommendations.",
+  "project_short_description": "A cookiecutter package with UCL ARC recommendations.",
   "initialise_git_repository": true,
   "deploy_docs_to_github_pages": false,
   "github_username": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
@@ -14,6 +14,19 @@
   "license": ["MIT", "BSD-3", "GPL-3.0"],
   "funder": "JBFC: The Joe Bloggs Funding Council",
   "__prompts__": {
-    "deploy_docs_to_github_pages": "Enable automatically deploying HTML documentation to GitHub Pages website on pushes to main"
+    "author_given_names": "Given name(s) of package author",
+    "author_family_names": "Family name(s) of package author",
+    "author_email": "Email address for package author - will be part of package metadata.",
+    "project_name": "Name of project - may contain spaces",
+    "project_slug": "'Slugified' project name for use in URLs - dash-case recommended",
+    "package_name": "Name for Python package - snake_case recommended",
+    "project_short_description": "Short description of the project",
+    "initialise_git_repository": "Initialise project directory as a Git repository?",
+    "deploy_docs_to_github_pages": "Automatically deploy HTML docs to GitHub Pages on pushes to main?",
+    "github_username": "GitHub user or organization name which will be owner of repository",
+    "min_python_version": "Minimum Python version supported by package",
+    "max_python_version": "Maximum Python version supported by package",
+    "license": "Which open-source license to release package under",
+    "funder": "Organisation(s) to acknowledge for funding of project"
   }
 }
