@@ -7,7 +7,7 @@
   "commitType": "docs",
   "commitConvention": "angular",
   "contributorsPerLine": 7,
-  "contributors":
+  "contributors": [
     {
       "login": "paddyroddy",
       "name": "Patrick J. Roddy",
