@@ -203,6 +203,15 @@
         "content",
         "review"
       ]
+    },
+    {
+      "login": "nikk-nikaznan",
+      "name": "nikk-nikaznan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48319650?v=4",
+      "profile": "https://github.com/nikk-nikaznan",
+      "contributions": [
+        "content"
+      ]
     }
   ]
 }
