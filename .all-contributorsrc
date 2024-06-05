@@ -77,6 +77,21 @@
       ]
     },
     {
+      "login": "p-j-smith",
+      "name": "Paul Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29753790?v=4",
+      "profile": "https://github.com/p-j-smith",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "question",
+        "review",
+        "test"
+      ]
+    },
+    {
       "login": "renovatebot",
       "name": "Renovate Bot",
       "avatar_url": "https://avatars.githubusercontent.com/u/38656520?v=4",
