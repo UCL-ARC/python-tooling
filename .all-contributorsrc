@@ -47,6 +47,23 @@
       ]
     },
     {
+      "login": "dstansby",
+      "name": "David Stansby",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
+      "profile": "https://www.davidstansby.com",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "review",
+        "test"
+      ]
+    },
+    {
       "login": "matt-graham",
       "name": "Matt Graham",
       "avatar_url": "https://avatars.githubusercontent.com/u/6746980?v=4",
