@@ -43,6 +43,7 @@ Python packages with our recommended tooling set up and ready to go.
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ruaridhg"><img src="https://avatars.githubusercontent.com/u/32329546?v=4?s=100" width="100px;" alt="ruaridhg"/><br /><sub><b>ruaridhg</b></sub></a><br /><a href="#bug-ruaridhg" title="Bug reports">🐛</a> <a href="#code-ruaridhg" title="Code">💻</a> <a href="#content-ruaridhg" title="Content">🖋</a> <a href="#review-ruaridhg" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://mxochicale.github.io/"><img src="https://avatars.githubusercontent.com/u/11370681?v=4?s=100" width="100px;" alt="Miguel Xochicale, PhD"/><br /><sub><b>Miguel Xochicale, PhD</b></sub></a><br /><a href="#bug-mxochicale" title="Bug reports">🐛</a> <a href="#code-mxochicale" title="Code">💻</a> <a href="#content-mxochicale" title="Content">🖋</a> <a href="#design-mxochicale" title="Design">🎨</a> <a href="#doc-mxochicale" title="Documentation">📖</a> <a href="#review-mxochicale" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>

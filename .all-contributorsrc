@@ -128,6 +128,20 @@
         "content",
         "review"
       ]
+    },
+    {
+      "login": "mxochicale",
+      "name": "Miguel Xochicale, PhD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11370681?v=4",
+      "profile": "http://mxochicale.github.io/",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "design",
+        "doc",
+        "review"
+      ]
     }
   ]
 }
