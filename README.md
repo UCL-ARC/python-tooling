@@ -50,6 +50,9 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alessandrofelder"><img src="https://avatars.githubusercontent.com/u/10500965?v=4?s=100" width="100px;" alt="Alessandro Felder"/><br /><sub><b>Alessandro Felder</b></sub></a><br /><a href="#bug-alessandrofelder" title="Bug reports">🐛</a> <a href="#content-alessandrofelder" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://adamltyson.com"><img src="https://avatars.githubusercontent.com/u/13147259?v=4?s=100" width="100px;" alt="Adam Tyson"/><br /><sub><b>Adam Tyson</b></sub></a><br /><a href="#content-adamltyson" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://willgraham01.github.io/"><img src="https://avatars.githubusercontent.com/u/32364977?v=4?s=100" width="100px;" alt="Will Graham"/><br /><sub><b>Will Graham</b></sub></a><br /><a href="#content-willGraham01" title="Content">🖋</a> <a href="#review-willGraham01" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
