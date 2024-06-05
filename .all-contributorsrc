@@ -9,10 +9,10 @@
   "contributorsPerLine": 7,
   "contributors": [
     {
-      "login": "dstansby",
-      "name": "David Stansby",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
-      "profile": "https://www.davidstansby.com",
+      "login": "paddyroddy",
+      "name": "Patrick J. Roddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15052188?v=4",
+      "profile": "https://paddyroddy.github.io",
       "contributions": [
         "ideas",
         "bug",
@@ -21,7 +21,9 @@
         "doc",
         "eventOrganizing",
         "projectManagement",
+        "question",
         "review",
+        "talk",
         "test"
       ]
     },
@@ -41,6 +43,23 @@
         "question",
         "review",
         "talk",
+        "test"
+      ]
+    },
+    {
+      "login": "dstansby",
+      "name": "David Stansby",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
+      "profile": "https://www.davidstansby.com",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "review",
         "test"
       ]
     },
@@ -73,6 +92,7 @@
         "review",
         "test"
       ]
+    }
     }
   ]
 }
