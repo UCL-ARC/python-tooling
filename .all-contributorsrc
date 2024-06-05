@@ -9,6 +9,25 @@
   "contributorsPerLine": 7,
   "contributors": [
     {
+      "login": "paddyroddy",
+      "name": "Patrick J. Roddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15052188?v=4",
+      "profile": "https://paddyroddy.github.io",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
       "login": "samcunliffe",
       "name": "Sam Cunliffe",
       "avatar_url": "https://avatars.githubusercontent.com/u/1836192?v=4",
@@ -56,6 +75,7 @@
         "review",
         "test"
       ]
+    }
     }
   ]
 }
