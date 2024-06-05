@@ -116,6 +116,18 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "ruaridhg",
+      "name": "ruaridhg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32329546?v=4",
+      "profile": "https://github.com/ruaridhg",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "review"
+      ]
     }
   ]
 }

@@ -41,6 +41,9 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/p-j-smith"><img src="https://avatars.githubusercontent.com/u/29753790?v=4?s=100" width="100px;" alt="Paul Smith"/><br /><sub><b>Paul Smith</b></sub></a><br /><a href="#bug-p-j-smith" title="Bug reports">🐛</a> <a href="#code-p-j-smith" title="Code">💻</a> <a href="#content-p-j-smith" title="Content">🖋</a> <a href="#doc-p-j-smith" title="Documentation">📖</a> <a href="#question-p-j-smith" title="Answering Questions">💬</a> <a href="#review-p-j-smith" title="Reviewed Pull Requests">👀</a> <a href="#test-p-j-smith" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://renovatebot.com"><img src="https://avatars.githubusercontent.com/u/38656520?v=4?s=100" width="100px;" alt="Renovate Bot"/><br /><sub><b>Renovate Bot</b></sub></a><br /><a href="#maintenance-renovatebot" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ruaridhg"><img src="https://avatars.githubusercontent.com/u/32329546?v=4?s=100" width="100px;" alt="ruaridhg"/><br /><sub><b>ruaridhg</b></sub></a><br /><a href="#bug-ruaridhg" title="Bug reports">🐛</a> <a href="#code-ruaridhg" title="Code">💻</a> <a href="#content-ruaridhg" title="Content">🖋</a> <a href="#review-ruaridhg" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
