@@ -163,6 +163,17 @@
         "doc",
         "review"
       ]
+    },
+    {
+      "login": "t-young31",
+      "name": "Tom Young",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39765193?v=4",
+      "profile": "http://t-young31.github.io",
+      "contributions": [
+        "bug",
+        "content",
+        "review"
+      ]
     }
   ]
 }
