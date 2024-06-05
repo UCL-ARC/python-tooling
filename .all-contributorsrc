@@ -1,0 +1,245 @@
+{
+  "projectName": "python-tooling",
+  "projectOwner": "UCL-ARC",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "paddyroddy",
+      "name": "Patrick J. Roddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15052188?v=4",
+      "profile": "https://paddyroddy.github.io",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
+      "login": "samcunliffe",
+      "name": "Sam Cunliffe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1836192?v=4",
+      "profile": "http://scnlf.me",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
+      "login": "dstansby",
+      "name": "David Stansby",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
+      "profile": "https://www.davidstansby.com",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "matt-graham",
+      "name": "Matt Graham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6746980?v=4",
+      "profile": "http://matt-graham.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "design",
+        "eventOrganizing",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
+      "login": "sfmig",
+      "name": "sfmig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33267254?v=4",
+      "profile": "https://sfmig.github.io/",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "p-j-smith",
+      "name": "Paul Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29753790?v=4",
+      "profile": "https://github.com/p-j-smith",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "question",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "renovatebot",
+      "name": "Renovate Bot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38656520?v=4",
+      "profile": "https://renovatebot.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "ruaridhg",
+      "name": "ruaridhg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32329546?v=4",
+      "profile": "https://github.com/ruaridhg",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "review"
+      ]
+    },
+    {
+      "login": "mxochicale",
+      "name": "Miguel Xochicale, PhD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11370681?v=4",
+      "profile": "http://mxochicale.github.io/",
+      "contributions": [
+        "bug",
+        "code",
+        "content",
+        "design",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "yidilozdemir",
+      "name": "yidilozdemir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30597301?v=4",
+      "profile": "https://github.com/yidilozdemir",
+      "contributions": [
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "giordano",
+      "name": "Mosè Giordano",
+      "avatar_url": "https://avatars.githubusercontent.com/u/765740?v=4",
+      "profile": "https://giordano.github.io",
+      "contributions": [
+        "bug",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "t-young31",
+      "name": "Tom Young",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39765193?v=4",
+      "profile": "http://t-young31.github.io",
+      "contributions": [
+        "bug",
+        "content",
+        "review"
+      ]
+    },
+    {
+      "login": "alessandrofelder",
+      "name": "Alessandro Felder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10500965?v=4",
+      "profile": "https://github.com/alessandrofelder",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "adamltyson",
+      "name": "Adam Tyson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13147259?v=4",
+      "profile": "http://adamltyson.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "willGraham01",
+      "name": "Will Graham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32364977?v=4",
+      "profile": "https://willgraham01.github.io/",
+      "contributions": [
+        "content",
+        "review"
+      ]
+    },
+    {
+      "login": "nikk-nikaznan",
+      "name": "nikk-nikaznan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48319650?v=4",
+      "profile": "https://github.com/nikk-nikaznan",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "katiebuntic",
+      "name": "Katie Buntic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96536608?v=4",
+      "profile": "https://github.com/katiebuntic",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "robertvi",
+      "name": "Robert Vickerstaff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/456100?v=4",
+      "profile": "https://github.com/robertvi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dpshelio",
+      "name": "David Pérez-Suárez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/963242?v=4",
+      "profile": "http://dpshelio.github.io",
+      "contributions": [
+        "code",
+        "question"
+      ]
+    }
+  ]
+}
