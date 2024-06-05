@@ -52,6 +52,7 @@ Python packages with our recommended tooling set up and ready to go.
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://willgraham01.github.io/"><img src="https://avatars.githubusercontent.com/u/32364977?v=4?s=100" width="100px;" alt="Will Graham"/><br /><sub><b>Will Graham</b></sub></a><br /><a href="#content-willGraham01" title="Content">🖋</a> <a href="#review-willGraham01" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nikk-nikaznan"><img src="https://avatars.githubusercontent.com/u/48319650?v=4?s=100" width="100px;" alt="nikk-nikaznan"/><br /><sub><b>nikk-nikaznan</b></sub></a><br /><a href="#content-nikk-nikaznan" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
