@@ -24,6 +24,25 @@
       ]
     },
     {
+      "login": "paddyroddy",
+      "name": "Patrick J. Roddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15052188?v=4",
+      "profile": "https://paddyroddy.github.io",
+      "contributions": [
+        "ideas",
+        "bug",
+        "code",
+        "content",
+        "doc",
+        "eventOrganizing",
+        "projectManagement",
+        "question",
+        "review",
+        "talk",
+        "test"
+      ]
+    },
+    {
       "login": "samcunliffe",
       "name": "Sam Cunliffe",
       "avatar_url": "https://avatars.githubusercontent.com/u/1836192?v=4",
@@ -70,6 +89,15 @@
         "content",
         "review",
         "test"
+      ]
+    },
+    {
+      "login": "renovatebot",
+      "name": "Renovate Bot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38656520?v=4",
+      "profile": "https://renovatebot.com",
+      "contributions": [
+        "maintenance"
       ]
     }
   ]
