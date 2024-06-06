@@ -100,7 +100,7 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
             "{{cookiecutter.project_slug}}/settings/pages\n\n"
             "and under 'Built and deployment' selecting 'Deploy from a branch' for "
             "the 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, "
-            "leaving the branch path drop-down with its default value of '/ (root)."
+            "leaving the branch path drop-down with its default value of '/ (root)'."
         )
 
     return _EXIT_SUCCESS
