@@ -1,7 +1,7 @@
 {
   "author_given_names": "Eva Lu",
   "author_family_names": "Ator",
-  "author_email": "eva.lu.ator@ucl.ac.uk",
+  "author_email": "{{'.'.join(cookiecutter.author_given_names.lower().split() + cookiecutter.author_family_names.lower().split())}}@ucl.ac.uk",
   "project_name": "Python Template",
   "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-')}}",
   "package_name": "{{cookiecutter.project_slug.replace('-', '_')}}",
@@ -16,7 +16,7 @@
   "__prompts__": {
     "author_given_names": "Given name(s) of package author",
     "author_family_names": "Family name(s) of package author",
-    "author_email": "Email address for package author - will be part of package metadata.",
+    "author_email": "Email address for package author - will be part of package metadata",
     "project_name": "Name of project - may contain spaces",
     "project_slug": "'Slugified' project name for use in URLs - dash-case recommended",
     "package_name": "Name for Python package - snake_case recommended",
