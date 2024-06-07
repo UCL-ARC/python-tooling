@@ -142,6 +142,8 @@ mkdocs serve
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
 
+{% if cookiecutter.funder != '' %}
 ## Acknowledgements
 
-This work was funded by a grant from the {{cookiecutter.funder}}.
+This work was funded by {{cookiecutter.funder}}.
+{% endif %}
