@@ -13,12 +13,12 @@
 -->
 
 <!-- prettier-ignore-start -->
-[tests-badge]:              https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
-[tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
-[linting-badge]:            https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml/badge.svg
-[linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
-[documentation-badge]:      https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml/badge.svg
-[documentation-link]:       https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml
+[tests-badge]:              {{cookiecutter.__repo_url}}/actions/workflows/tests.yml/badge.svg
+[tests-link]:               {{cookiecutter.__repo_url}}/actions/workflows/tests.yml
+[linting-badge]:            {{cookiecutter.__repo_url}}/actions/workflows/linting.yml/badge.svg
+[linting-link]:             {{cookiecutter.__repo_url}}/actions/workflows/linting.yml
+[documentation-badge]:      {{cookiecutter.__repo_url}}/actions/workflows/docs.yml/badge.svg
+[documentation-link]:       {{cookiecutter.__repo_url}}/actions/workflows/docs.yml
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
 [conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
 [pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
@@ -79,13 +79,13 @@ development version of `{{cookiecutter.project_slug}}` using `pip` in the curren
 environment run
 
 ```sh
-pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+pip install git+{{cookiecutter.__repo_url}}.git
 ```
 
 Alternatively create a local clone of the repository with
 
 ```sh
-git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+git clone {{cookiecutter.__repo_url}}.git
 ```
 
 and then install in editable mode by running

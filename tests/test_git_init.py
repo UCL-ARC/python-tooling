@@ -34,7 +34,7 @@ def test_initialisation_of_git_repo(
             "--no-input",
             "--output-dir",
             f"{tmp_path}",
-            f"github_username={project_config['github_username']}",
+            f"github_owner={project_config['github_owner']}",
             f"project_name={project_config['project_name']}",
             f"project_short_description={project_config['project_short_description']}",
             git_init_cookiecutter_option,
@@ -75,7 +75,7 @@ def test_initialisation_of_git_repo(
             )
             assert (
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
-                f"gh repo create {project_config['github_username']}/"
+                f"gh repo create {project_config['github_owner']}/"
                 f"{project_config['expected_repo_name']} -d "
                 f"'{project_config['project_short_description']}' --public -r "
                 f"origin --source {project_config['expected_repo_name']}"
@@ -88,12 +88,12 @@ def test_initialisation_of_git_repo(
             assert (
                 "You now have a local git repository. To sync this to GitHub you "
                 "need to create an empty GitHub repo with the name "
-                f"{project_config['github_username']}/"
+                f"{project_config['github_owner']}/"
                 f"{project_config['expected_repo_name']} - DO NOT SELECT ANY "
                 "OTHER OPTION.\n\nSee this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo"
                 ".\n\nThen run:\n\ngit remote add origin git@github.com:"
-                f"{project_config['github_username']}/"
+                f"{project_config['github_owner']}/"
                 f"{project_config['expected_repo_name']}.git" in cookie.stdout
             )
     else:
