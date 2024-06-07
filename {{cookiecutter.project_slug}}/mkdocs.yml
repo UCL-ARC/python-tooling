@@ -2,8 +2,8 @@ site_name: "{{cookiecutter.project_name}}"
 site_description: "Documentation website for {{cookiecutter.project_name}}"
 site_author: "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
 copyright: "Copyright © {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"
-repo_url: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/"
-repo_name: "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+repo_url: "{{cookiecutter.__repo_url}}/"
+repo_name: "{{cookiecutter.__repo_name}}"
 edit_uri: edit/main/docs/
 
 validation:
@@ -60,4 +60,4 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: "https://github.com/{{cookiecutter.github_username}}"
+      link: "https://github.com/{{cookiecutter.github_owner}}"
