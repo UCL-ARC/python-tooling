@@ -77,7 +77,7 @@ def test_initialisation_of_git_repo(
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
                 f"gh repo create {project_config['github_username']}/"
                 f"{project_config['expected_repo_name']} -d "
-                f"'{project_config['project_short_description']}' --public -r "
+                f"\"{project_config['project_short_description']}\" --public -r "
                 f"origin --source {project_config['expected_repo_name']}"
                 in cookie.stdout
             )
