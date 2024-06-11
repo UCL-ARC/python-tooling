@@ -63,7 +63,7 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
                 "gh repo create "
                 "{{cookiecutter.github_username}}/{{cookiecutter.project_slug}} "
-                "-d '{{cookiecutter.project_short_description}}' "
+                '-d "{{cookiecutter.project_short_description}}" '
                 "--public "
                 "-r origin "
                 "--source {{cookiecutter.project_slug}}\n"
