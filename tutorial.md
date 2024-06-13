@@ -7,7 +7,6 @@ In this tutorial we will go through in detail the steps required to set-up a Pyt
 
 ## ⚙️ Setting up dependencies for using template
 
-
 <details><summary>Click to expand... </summary>
 
 To use the template you will need to have at least the following software tools installed,

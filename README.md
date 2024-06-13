@@ -68,7 +68,7 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
-Some quick instructions for using our template are below. 
+Some quick instructions for using our template are below.
 We also have detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
 The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
 and how to use the newly created package with some of the tools included.
