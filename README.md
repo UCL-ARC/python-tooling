@@ -69,7 +69,7 @@ Python packages with our recommended tooling set up and ready to go.
 ## Using this template
 
 The key steps required to use the template are given below. A more detailed
-[tutorial](TUTORIAL.md) which both describes using the template to create a package
+[tutorial](tutorial.md) which both describes using the template to create a package
 and how to use the newly created package with some of the included tools is
 also available.
 

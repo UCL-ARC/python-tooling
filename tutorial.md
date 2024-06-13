@@ -281,7 +281,7 @@ It can sometimes be useful when editing docstrings or adding additional pages in
 mkdocs serve
 ```
 
-from the root of the project repository and navigate to http://127.0.0.1:8000/ in your browser. The development server used here supports auto-reloading, meaning the content will be automatically refreshed in your browser if you make any edits to source.
+from the root of the project repository and navigate to `http://127.0.0.1:8000/` in your browser. The development server used here supports auto-reloading, meaning the content will be automatically refreshed in your browser if you make any edits to source.
 
 A `tox` environment `docs` to build the documentation is also available. This will be build the documentation in an isolated environment and is also used for building the documentation in the GitHub Actions _Documentation_ workflow so can be useful to run locally when debugging issues with the workflow - it can be executed by running
 
