@@ -7,6 +7,9 @@ In this tutorial we will go through in detail the steps required to set-up a Pyt
 
 ## ⚙️ Setting up dependencies for using template
 
+
+<details><summary>Click to expand... </summary>
+
 To use the template you will need to have at least the following software tools installed,
 
 - [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/),
@@ -73,6 +76,8 @@ An easy way to get all the software you need installed is using the tool [Conda]
    - `Login with a web browser` as the method to authenticate.
 
    Once you have selected all these options, a one-time code will be printed to the terminal. You need to copy this code and then hit the `Enter` key to open a page to complete the authentication in your default browser. Once you have entered and submitted the code in the authenticatication page, you should see a `Authentication complete` message appear in the terminal window.
+
+</details>
 
 ## 🍪 Creating a package using the template
 

@@ -68,10 +68,10 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
-The key steps required to use the template are given below. A more detailed
-[tutorial](tutorial.md) which both describes using the template to create a package
-and how to use the newly created package with some of the included tools is
-also available.
+Some quick instructions for using our template are below. 
+We also have detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
+The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
+and how to use the newly created package with some of the tools included.
 
 1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
     Conda example).
