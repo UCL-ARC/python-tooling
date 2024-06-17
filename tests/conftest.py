@@ -15,11 +15,11 @@ def _generate_package(
 
     Arguments:
     ---------
-    path: Path
-        Directory to create pacakge in.
-    project_config: dict
+    config: dict
         A dictionary with values for the cookiecutter template,
         as defined in the cookiecutter.json
+    path: Path
+        Directory to create package in.
 
     """
     args = [f"{key}={val}" for key, val in config.items()]
