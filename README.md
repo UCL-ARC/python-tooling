@@ -56,6 +56,7 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/katiebuntic"><img src="https://avatars.githubusercontent.com/u/96536608?v=4?s=100" width="100px;" alt="Katie Buntic"/><br /><sub><b>Katie Buntic</b></sub></a><br /><a href="#content-katiebuntic" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/robertvi"><img src="https://avatars.githubusercontent.com/u/456100?v=4?s=100" width="100px;" alt="Robert Vickerstaff"/><br /><sub><b>Robert Vickerstaff</b></sub></a><br /><a href="#doc-robertvi" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://dpshelio.github.io"><img src="https://avatars.githubusercontent.com/u/963242?v=4?s=100" width="100px;" alt="David Pérez-Suárez"/><br /><sub><b>David Pérez-Suárez</b></sub></a><br /><a href="#code-dpshelio" title="Code">💻</a> <a href="#question-dpshelio" title="Answering Questions">💬</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LLapira"><img src="https://avatars.githubusercontent.com/u/48060852?v=4?s=100" width="100px;" alt="llapira"/><br /><sub><b>llapira</b></sub></a><br /><a href="#bug-llapira" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

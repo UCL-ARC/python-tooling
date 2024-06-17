@@ -66,7 +66,7 @@ def test_initialisation_of_git_repo(
             "GitHub CLI detected, you can create a repo with the following:\n\n"
             f"gh repo create {test_config['github_username']}/"
             f"cookiecutter-test -d "
-            f"'{test_config['project_short_description']}' --public -r "
+            f"\"{test_config['project_short_description']}\" --public -r "
             f"origin --source cookiecutter-test" in result.stdout
         )
     except FileNotFoundError:
