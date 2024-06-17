@@ -2,21 +2,20 @@
 
 import pathlib
 import subprocess
-
-from .helpers import gen_package
+from typing import Callable
 
 
 def test_package_generation(
     tmp_path: pathlib.Path,
+    generate_package: Callable,
 ) -> None:
     """Test package generation."""
-    config = {
+    test_config = {
         "github_username": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
     }
-
-    gen_package(tmp_path, config)
+    generate_package(config=test_config, path=tmp_path)
 
     # Check project directory exists
     test_project_dir = tmp_path / "cookiecutter-test"

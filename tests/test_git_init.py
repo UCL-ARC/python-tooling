@@ -2,10 +2,9 @@
 
 import pathlib
 import subprocess
+from typing import Callable
 
 import pytest
-
-from .helpers import gen_package
 
 
 @pytest.mark.parametrize(
@@ -13,18 +12,19 @@ from .helpers import gen_package
     ["True", "False"],
 )
 def test_initialisation_of_git_repo(
+    generate_package: Callable,
     tmp_path: pathlib.Path,
     git_init_cookiecutter_option: str,
 ) -> None:
     """Checks to see if git was correctly initialised if desired."""
-    config = {
+    test_config = {
         "github_username": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
         "initialise_git_repository": git_init_cookiecutter_option,
     }
     # Run cookiecutter with initialise_git_repository
-    result = gen_package(tmp_path, config)
+    result = generate_package(config=test_config, path=tmp_path)
 
     test_project_dir = tmp_path / "cookiecutter-test"
 
@@ -57,9 +57,9 @@ def test_initialisation_of_git_repo(
             )
             assert (
                 "GitHub CLI detected, you can create a repo with the following:\n\n"
-                f"gh repo create {config['github_username']}/"
+                f"gh repo create {test_config['github_username']}/"
                 f"cookiecutter-test -d "
-                f"'{config['project_short_description']}' --public -r "
+                f"'{test_config['project_short_description']}' --public -r "
                 f"origin --source cookiecutter-test" in result.stdout
             )
         except FileNotFoundError:
@@ -69,12 +69,12 @@ def test_initialisation_of_git_repo(
             assert (
                 "You now have a local git repository. To sync this to GitHub you "
                 "need to create an empty GitHub repo with the name "
-                f"{config['github_username']}/"
+                f"{test_config['github_username']}/"
                 f"cookiecutter-test - DO NOT SELECT ANY "
                 "OTHER OPTION.\n\nSee this link for more detail "
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo"
                 ".\n\nThen run:\n\ngit remote add origin git@github.com:"
-                f"{config['github_username']}/"
+                f"{test_config['github_username']}/"
                 f"cookiecutter-test.git" in result.stdout
             )
     else:

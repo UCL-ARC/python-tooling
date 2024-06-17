@@ -1,14 +1,17 @@
-"""Checks that the cookiecutter works."""
+"""Fixtures for the cookiecutter template tests."""
 
 import pathlib
 import subprocess
+from typing import Callable
+
+import pytest
 
 
-def gen_package(
-    path: pathlib.Path, project_config: dict[str, str]
+def _generate_package(
+    config: dict[str, str], path: pathlib.Path
 ) -> subprocess.CompletedProcess[str]:
     """
-    Generate project from cookiecutter template.
+    Generate a project from the cookiecutter template.
 
     Arguments:
     ---------
@@ -19,7 +22,7 @@ def gen_package(
         as defined in the cookiecutter.json
 
     """
-    args = [f"{key}={val}" for key, val in project_config.items()]
+    args = [f"{key}={val}" for key, val in config.items()]
     cmd = ["cookiecutter", ".", "--no-input", "--output-dir", f"{path}"]
     return subprocess.run(
         cmd + args,
@@ -28,3 +31,9 @@ def gen_package(
         capture_output=True,
         text=True,
     )
+
+
+@pytest.fixture()
+def generate_package() -> Callable:
+    """Generate project from cookiecutter template."""
+    return _generate_package
