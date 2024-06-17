@@ -2,12 +2,12 @@
 
 import pathlib
 import subprocess
-from typing import Callable
+import typing
 
 
 def test_package_generation(
     tmp_path: pathlib.Path,
-    generate_package: Callable,
+    generate_package: typing.Callable,
 ) -> None:
     """Test package generation."""
     test_config = {

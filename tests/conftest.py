@@ -2,7 +2,7 @@
 
 import pathlib
 import subprocess
-from typing import Callable
+import typing
 
 import pytest
 
@@ -34,6 +34,6 @@ def _generate_package(
 
 
 @pytest.fixture()
-def generate_package() -> Callable:
+def generate_package() -> typing.Callable:
     """Generate project from cookiecutter template."""
     return _generate_package

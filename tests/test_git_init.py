@@ -2,7 +2,7 @@
 
 import pathlib
 import subprocess
-from typing import Callable
+import typing
 
 import pytest
 
@@ -12,7 +12,7 @@ import pytest
     [{"initialise_git_repository": True}, {"initialise_git_repository": False}],
 )
 def test_initialisation_of_git_repo(
-    generate_package: Callable,
+    generate_package: typing.Callable,
     tmp_path: pathlib.Path,
     git_init: dict[str, bool],
 ) -> None:
