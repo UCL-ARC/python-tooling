@@ -7,21 +7,18 @@ import typing
 import pytest
 
 
-@pytest.mark.parametrize(
-    "git_init",
-    [{"initialise_git_repository": True}, {"initialise_git_repository": False}],
-)
+@pytest.mark.parametrize("initialise_git_repository", [True, False])
 def test_initialisation_of_git_repo(
+    initialise_git_repository: bool,  # noqa: FBT001
     generate_package: typing.Callable,
     tmp_path: pathlib.Path,
-    git_init: dict[str, bool],
 ) -> None:
     """Checks to see if git was correctly initialised if desired."""
     test_config = {
         "github_username": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
-        **git_init,
+        "initialise_git_repository": initialise_git_repository,
     }
     # Run cookiecutter with initialise_git_repository
     result = generate_package(config=test_config, path=tmp_path)
@@ -41,7 +38,7 @@ def test_initialisation_of_git_repo(
         text=True,
     )
 
-    if not git_init["initialise_git_repository"]:
+    if not initialise_git_repository:
         # should not have found git
         assert (
             git_status.stderr
