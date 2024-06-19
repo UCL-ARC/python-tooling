@@ -68,6 +68,11 @@ Python packages with our recommended tooling set up and ready to go.
 
 ## Using this template
 
+Some quick instructions for using our template are below.
+We also have a detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
+The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
+and how to use the newly created package with some of the tools included.
+
 1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
     Conda example).
 
@@ -88,7 +93,7 @@ Python packages with our recommended tooling set up and ready to go.
     cookiecutter /path/to/your/checkout/of/python-tooling
     ```
 3.  A series of questions will pop up to configure the project. Type the answer
-    or hit return to use the default option (shown in square brackets).
+    or hit return to use the default option (shown in parenthesis).
 
     Note that these project variables are defined in the `cookiecutter.json`
     file.
@@ -100,6 +105,7 @@ Python packages with our recommended tooling set up and ready to go.
     ```
     project_name [Python Template]: PROJECT_NAME
     project_slug [python-template]: PROJECT_SLUG
+    package_name [python_template]: PACKAGE_NAME
     ```
 
     we will get a project folder named `PROJECT_SLUG`, structured like this:
@@ -110,8 +116,8 @@ Python packages with our recommended tooling set up and ready to go.
     ├── README.md
     ├── pyproject.toml
     ├── src
-    │   └── PROJECT_SLUG
-    │       └── PROJECT_SLUG.py
+    │   └── PACKAGE_NAME
+    │       └── __init__.py
     └── tests
         └── test_dummy.py
     ```
@@ -125,7 +131,7 @@ Python packages with our recommended tooling set up and ready to go.
     ...
     ```
 
-5.  To work on your project, initialise a git repository and _install_ it in
+5.  To work on your project, initialise a Git repository and _install_ it in
     editable mode.
     ```
     cd PROJECT_SLUG
