@@ -141,7 +141,7 @@ mkdocs serve
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
-{% if cookiecutter.funder != '' %}
+{%- if cookiecutter.funder != '' %}
 
 ## Acknowledgements
 
