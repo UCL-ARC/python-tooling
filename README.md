@@ -17,12 +17,26 @@ Python packages with our recommended tooling set up and ready to go.
 > package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
 > we recommend using their template instead of this one.
 
+## Scope and contributing
+
+This project was created by [research software engineers] at [UCL's Centre for Advanced Research Computing][UCL ARC].
+We made it with our own research software projects in mind - we don't explicitly support external users, but whoever you are, we hope you might find it useful!
+
+This repository is open to contributions from all, but they will need be reviewed by a member or associate member of ARC.
+We might be slow to approve new tool suggestions (since we'll probably want to discuss them first) but don't let that put you off creating an issue or opening a pull request.
+See [CONTRIBUTING.md] for more details on how to contribute.
+
+We also accept (and encourage!) suggestions and bug reports from anyone.
+Use the [discussions tab] of this repository to ask questions or [open an issue] if something seems like it's broken.
+
 <!-- links here -->
 
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
 [cookiecutter]: https://libraries.io/pypi/cookiecutter
+[open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
+[discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
 <!-- prettier-ignore-end -->
 
 ## Contributors

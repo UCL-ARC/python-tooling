@@ -1,17 +1,3 @@
-This template and our [recommendation pages][website] were made by [research
-software engineers] at [UCL's Centre for Advanced Research Computing][UCL ARC].
-We made it with research software projects in mind, but whoever you are, we hope
-you find this useful!
-
-We are actively encouraging users to ask questions and start discussions in the
-[discussions tab] of this repository. Does something seem like it's broken?
-Please go ahead and [open an issue]!
-
-The [website] pages are open to contributions but they will need to be reviewed
-by a member or associate member of ARC. We might be slow to approve new tool
-suggestions (since we'll probably want to discuss them first) but don't let that
-put you off creating an issue.
-
 ## Development workflow
 
 To contribute a change, please:
@@ -30,10 +16,5 @@ To contribute a change, please:
 <!-- links here -->
 
 <!-- prettier-ignore-start -->
-[website]: https://github-pages.arc.ucl.ac.uk/python-tooling
-[UCL ARC]: https://ucl.ac.uk/arc
-[open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
-[Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
-[Research software engineers]: https://society-rse.org/about/history
 [@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
 <!-- prettier-ignore-end -->
