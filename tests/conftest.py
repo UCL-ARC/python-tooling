@@ -24,10 +24,10 @@ def _generate_package(
     """
     args = [f"{key}={val}" for key, val in config.items()]
     cmd = ["cookiecutter", ".", "--no-input", "--output-dir", f"{path}"]
-    return subprocess.run(
+    return subprocess.run(  # noqa: S603
         cmd + args,
         check=False,
-        shell=False,  # noqa: S603
+        shell=False,
         capture_output=True,
         text=True,
     )
