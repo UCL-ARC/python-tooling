@@ -46,8 +46,8 @@ def test_package_generation(
         ), f"Expected file/folder: {full_path}, but didn't find it."
 
     # Check it's pip-installable
-    pipinstall = subprocess.run(
-        [  # noqa: S603,S607
+    pipinstall = subprocess.run(  # noqa: S603
+        [  # noqa: S607
             "python",
             "-m",
             "pip",
