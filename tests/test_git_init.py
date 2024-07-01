@@ -26,8 +26,8 @@ def test_initialisation_of_git_repo(
     test_project_dir = tmp_path / "cookiecutter-test"
 
     # check if git is initialised
-    git_status = subprocess.run(
-        [  # noqa: S603,S607
+    git_status = subprocess.run(  # noqa: S603
+        [  # noqa: S607
             "git",
             "-C",
             f"{test_project_dir}",
@@ -51,8 +51,8 @@ def test_initialisation_of_git_repo(
 
     try:
         # check for presence of GitHub CLI
-        subprocess.run(
-            [  # noqa: S603,S607
+        subprocess.run(  # noqa: S603
+            [  # noqa: S607
                 "gh",
                 "--version",
             ],

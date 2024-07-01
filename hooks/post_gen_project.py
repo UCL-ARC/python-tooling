@@ -22,16 +22,16 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
     if initialise_git_repository == "True":
         try:
             # initialise git repo
-            subprocess.run(
-                [  # noqa: S603,S607
+            subprocess.run(  # noqa: S603
+                [  # noqa: S607
                     "git",
                     "init",
                 ],
                 check=True,
             )
             # old versions of git still default to `master`
-            subprocess.run(
-                [  # noqa: S603,S607
+            subprocess.run(  # noqa: S603
+                [  # noqa: S607
                     "git",
                     "branch",
                     "-M",
@@ -51,8 +51,8 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
 
         try:
             # check for presence of GitHub CLI
-            subprocess.run(
-                [  # noqa: S603,S607
+            subprocess.run(  # noqa: S603
+                [  # noqa: S607
                     "gh",
                     "--version",
                 ],
