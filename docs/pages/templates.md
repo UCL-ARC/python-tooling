@@ -12,6 +12,9 @@ The [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling)
 repository contains our recommended package template for new ARC projects. It
 pre-configures the recommended tools listed in the other pages of this site. If
 you are working on a new project, our template should be a good starting point!
+We have a [tutorial](https://github.com/UCL-ARC/python-tooling/blob/main/tutorial.md)
+available with detailed instructions for creating a package using the template
+and how to use the newly created package with some of the tools included.
 
 If you're making a package for a community that already has a template in
 general use (some examples are listed below) we recommend using their template

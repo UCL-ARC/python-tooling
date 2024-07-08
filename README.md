@@ -56,6 +56,7 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/katiebuntic"><img src="https://avatars.githubusercontent.com/u/96536608?v=4?s=100" width="100px;" alt="Katie Buntic"/><br /><sub><b>Katie Buntic</b></sub></a><br /><a href="#content-katiebuntic" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/robertvi"><img src="https://avatars.githubusercontent.com/u/456100?v=4?s=100" width="100px;" alt="Robert Vickerstaff"/><br /><sub><b>Robert Vickerstaff</b></sub></a><br /><a href="#doc-robertvi" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://dpshelio.github.io"><img src="https://avatars.githubusercontent.com/u/963242?v=4?s=100" width="100px;" alt="David Pérez-Suárez"/><br /><sub><b>David Pérez-Suárez</b></sub></a><br /><a href="#code-dpshelio" title="Code">💻</a> <a href="#question-dpshelio" title="Answering Questions">💬</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LLapira"><img src="https://avatars.githubusercontent.com/u/48060852?v=4?s=100" width="100px;" alt="llapira"/><br /><sub><b>llapira</b></sub></a><br /><a href="#bug-llapira" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
@@ -66,6 +67,11 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Using this template
+
+Some quick instructions for using our template are below.
+We also have a detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
+The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
+and how to use the newly created package with some of the tools included.
 
 1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
     Conda example).
@@ -87,7 +93,7 @@ Python packages with our recommended tooling set up and ready to go.
     cookiecutter /path/to/your/checkout/of/python-tooling
     ```
 3.  A series of questions will pop up to configure the project. Type the answer
-    or hit return to use the default option (shown in square brackets).
+    or hit return to use the default option (shown in parenthesis).
 
     Note that these project variables are defined in the `cookiecutter.json`
     file.
@@ -99,6 +105,7 @@ Python packages with our recommended tooling set up and ready to go.
     ```
     project_name [Python Template]: PROJECT_NAME
     project_slug [python-template]: PROJECT_SLUG
+    package_name [python_template]: PACKAGE_NAME
     ```
 
     we will get a project folder named `PROJECT_SLUG`, structured like this:
@@ -109,8 +116,8 @@ Python packages with our recommended tooling set up and ready to go.
     ├── README.md
     ├── pyproject.toml
     ├── src
-    │   └── PROJECT_SLUG
-    │       └── PROJECT_SLUG.py
+    │   └── PACKAGE_NAME
+    │       └── __init__.py
     └── tests
         └── test_dummy.py
     ```
@@ -124,7 +131,7 @@ Python packages with our recommended tooling set up and ready to go.
     ...
     ```
 
-5.  To work on your project, initialise a git repository and _install_ it in
+5.  To work on your project, initialise a Git repository and _install_ it in
     editable mode.
     ```
     cd PROJECT_SLUG
