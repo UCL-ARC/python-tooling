@@ -36,53 +36,21 @@ def test_package_generation(
         "github_username": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
+        # Not having a git repo makes it easier to check in/out reference
+        # data files to the main python-tooling git repository
+        "initialise_git_repository": False,
     }
     generate_package(config=test_config, path=tmp_path)
 
+    expected_package_dir = (
+        pathlib.Path(__file__).parent / "data" / "test_package_generation"
+    )
     # Check project directory exists
     test_project_dir = tmp_path / "cookiecutter-test"
     assert test_project_dir.exists()
 
-    # Check main files and directories inside
-    expected_files: set[pathlib.Path] = {
-        pathlib.Path(),
-        pathlib.Path(".git"),
-        pathlib.Path(".github"),
-        pathlib.Path(".github/ISSUE_TEMPLATE"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/config.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/documentation.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/feature_request.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/question.yml"),
-        pathlib.Path(".github/workflows"),
-        pathlib.Path(".github/workflows/docs.yml"),
-        pathlib.Path(".github/workflows/linting.yml"),
-        pathlib.Path(".github/workflows/tests.yml"),
-        pathlib.Path(".gitignore"),
-        pathlib.Path(".pre-commit-config.yaml"),
-        pathlib.Path("CITATION.cff"),
-        pathlib.Path("LICENSE.md"),
-        pathlib.Path("README.md"),
-        pathlib.Path("docs"),
-        pathlib.Path("docs/LICENSE.md"),
-        pathlib.Path("docs/api.md"),
-        pathlib.Path("docs/index.md"),
-        pathlib.Path("mkdocs.yml"),
-        pathlib.Path("pyproject.toml"),
-        pathlib.Path("schemas"),
-        pathlib.Path("schemas/github-issue-forms.json"),
-        pathlib.Path("src"),
-        pathlib.Path("src/cookiecutter_test"),
-        pathlib.Path("src/cookiecutter_test/__init__.py"),
-        pathlib.Path("tests"),
-        pathlib.Path("tests/test_dummy.py"),
-    }
-
     actual_files = get_all_files_folders(test_project_dir)
-    # Filter out anything under .git/ to make comparison easier
-    actual_files = actual_files - {
-        a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
-    }
+    expected_files = get_all_files_folders(expected_package_dir)
 
     assert actual_files == expected_files
 
