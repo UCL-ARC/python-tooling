@@ -1,5 +1,6 @@
 """Checks that the cookiecutter works."""
 
+import os
 import pathlib
 import subprocess
 import typing
@@ -24,26 +25,56 @@ def test_package_generation(
     assert test_project_dir.exists()
 
     # Check main files and directories inside
-    expected_files: list[str | pathlib.Path] = [
-        "README.md",
-        ".pre-commit-config.yaml",
-        "LICENSE.md",
-        "pyproject.toml",
-        "src",
-        pathlib.Path("src") / "cookiecutter_test",
-        pathlib.Path("src") / "cookiecutter_test" / "__init__.py",
-        "tests",
+    expected_files: set[pathlib.Path] = {
+        pathlib.Path(),
+        pathlib.Path(".git"),
         pathlib.Path(".github"),
-        pathlib.Path(".github") / "workflows",
-        "mkdocs.yml",
-        pathlib.Path("docs") / "index.md",
-        pathlib.Path("docs") / "api.md",
-    ]
-    for f in expected_files:
-        full_path = test_project_dir / f
-        assert (
-            full_path.exists()
-        ), f"Expected file/folder: {full_path}, but didn't find it."
+        pathlib.Path(".github/ISSUE_TEMPLATE"),
+        pathlib.Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
+        pathlib.Path(".github/ISSUE_TEMPLATE/config.yml"),
+        pathlib.Path(".github/ISSUE_TEMPLATE/documentation.yml"),
+        pathlib.Path(".github/ISSUE_TEMPLATE/feature_request.yml"),
+        pathlib.Path(".github/ISSUE_TEMPLATE/question.yml"),
+        pathlib.Path(".github/workflows"),
+        pathlib.Path(".github/workflows/docs.yml"),
+        pathlib.Path(".github/workflows/linting.yml"),
+        pathlib.Path(".github/workflows/tests.yml"),
+        pathlib.Path(".gitignore"),
+        pathlib.Path(".pre-commit-config.yaml"),
+        pathlib.Path("CITATION.cff"),
+        pathlib.Path("LICENSE.md"),
+        pathlib.Path("README.md"),
+        pathlib.Path("docs"),
+        pathlib.Path("docs/LICENSE.md"),
+        pathlib.Path("docs/api.md"),
+        pathlib.Path("docs/index.md"),
+        pathlib.Path("mkdocs.yml"),
+        pathlib.Path("pyproject.toml"),
+        pathlib.Path("schemas"),
+        pathlib.Path("schemas/github-issue-forms.json"),
+        pathlib.Path("src"),
+        pathlib.Path("src/cookiecutter_test"),
+        pathlib.Path("src/cookiecutter_test/__init__.py"),
+        pathlib.Path("tests"),
+        pathlib.Path("tests/test_dummy.py"),
+    }
+
+    actual_files: set[pathlib.Path] = set()
+    for dirpath, _, filenames in os.walk(test_project_dir):
+        dirpath_path = pathlib.Path(dirpath).relative_to(test_project_dir)
+
+        # Add this directory
+        actual_files.update((dirpath_path,))
+        # Add any files in it
+        for filename in filenames:
+            actual_files.update((dirpath_path / filename,))
+
+    # Filter out anything under .git/ to make comparison easier
+    actual_files = actual_files - {
+        a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
+    }
+
+    assert sorted(actual_files) == sorted(expected_files)
 
     # Check it's pip-installable
     pipinstall = subprocess.run(  # noqa: S603
