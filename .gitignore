@@ -7,3 +7,5 @@
 python-template
 
 *.DS_Store
+
+pytest_output
