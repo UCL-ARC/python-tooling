@@ -8,6 +8,25 @@ import typing
 import pytest
 
 
+def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
+    """
+    Get all files and folders under a directory.
+
+    The paths are returned relative to the root path given.
+    """
+    file_set: set[pathlib.Path] = set()
+    for dirpath, _, filenames in os.walk(root_path):
+        dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
+
+        # Add this directory
+        file_set.update((dirpath_path,))
+        # Add any files in it
+        for filename in filenames:
+            file_set.update((dirpath_path / filename,))
+
+    return file_set
+
+
 def test_package_generation(
     tmp_path: pathlib.Path,
     generate_package: typing.Callable,
@@ -59,16 +78,7 @@ def test_package_generation(
         pathlib.Path("tests/test_dummy.py"),
     }
 
-    actual_files: set[pathlib.Path] = set()
-    for dirpath, _, filenames in os.walk(test_project_dir):
-        dirpath_path = pathlib.Path(dirpath).relative_to(test_project_dir)
-
-        # Add this directory
-        actual_files.update((dirpath_path,))
-        # Add any files in it
-        for filename in filenames:
-            actual_files.update((dirpath_path / filename,))
-
+    actual_files = get_all_files_folders(test_project_dir)
     # Filter out anything under .git/ to make comparison easier
     actual_files = actual_files - {
         a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
