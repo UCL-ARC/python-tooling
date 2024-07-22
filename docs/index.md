@@ -10,10 +10,10 @@ at the [Centre for Advanced Research Computing](https://www.ucl.ac.uk/arc/)
 
 These pages started as a forum to share knowledge across projects and have now
 grown into a list of our default recommendations. Each page contains a table of
-packages, tools, or services that are useful when building a Python package.
+packages, tools, or services that are useful when working on a Python project.
 Each entry has
 
-- a link to the package or service,
+- a link to the package, tool, or service,
 - a short summary of what it does,
 - and traffic light!
 
@@ -25,7 +25,7 @@ they recommend. For example, the [napari](https://napari.org/) community have a
 template and the
 [SciKit-Surgery](https://scikit-surgery.github.io/scikit-surgery/) community
 have [PythonTemplate](https://github.com/SciKit-Surgery/PythonTemplate), both
-used to create new Python-based libraries. Using common tooling and structure
+used to create new Python-based packages. Using common tooling and structure
 makes it easier for others in the community to contribute to your package. Once
 _you_ get used to the structure makes it easier for you to contribute back to
 other packages.
