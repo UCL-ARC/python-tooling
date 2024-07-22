@@ -1,6 +1,7 @@
 ---
 title: Parallel and asynchronous processing
 layout: default
+parent: Recommended libraries
 ---
 
 # Parallel and asynchronous processing

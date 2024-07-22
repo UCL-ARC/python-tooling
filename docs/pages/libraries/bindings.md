@@ -1,6 +1,7 @@
 ---
 title: Bindings
 layout: default
+parent: Recommended libraries
 ---
 
 # Bindings
