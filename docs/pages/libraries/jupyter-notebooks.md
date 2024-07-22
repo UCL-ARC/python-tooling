@@ -1,6 +1,7 @@
 ---
 title: Jupyter Notebooks
 layout: default
+parent: Recommended libraries
 ---
 
 # Jupyter notebooks

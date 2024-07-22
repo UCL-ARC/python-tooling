@@ -1,6 +1,7 @@
 ---
 title: Graphical user interface toolkits
 layout: default
+parent: Recommended libraries
 ---
 
 # Graphical user interface toolkits
