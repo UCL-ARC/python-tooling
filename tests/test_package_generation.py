@@ -84,7 +84,7 @@ def test_package_generation(
         a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
     }
 
-    assert sorted(actual_files) == sorted(expected_files)
+    assert actual_files == expected_files
 
     # Check it's pip-installable
     pipinstall = subprocess.run(  # noqa: S603
