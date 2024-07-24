@@ -1,5 +1,6 @@
 """Checks that the cookiecutter works."""
 
+import difflib
 import os
 import pathlib
 import subprocess
@@ -53,6 +54,34 @@ def test_package_generation(
     expected_files = get_all_files_folders(expected_package_dir)
 
     assert actual_files == expected_files
+
+    # Check diff between actual and expected file contents
+    diff = ""
+    for file in actual_files:
+        actual_file = test_project_dir / file
+        expected_file = expected_package_dir / file
+
+        if actual_file.is_dir():
+            continue
+
+        with open(actual_file) as f1:
+            with open(expected_file) as f2:
+                diff += "".join(
+                    difflib.unified_diff(
+                        f1.readlines(),
+                        f2.readlines(),
+                        fromfile=str(actual_file),
+                        tofile=str(expected_file),
+                    )
+                )
+
+    if diff:
+        raise RuntimeError(
+            "Non-zero diff between generated files and expected files.\n"
+            f"Generated files can be found in {test_project_dir}.\n"
+            "\n"
+            f"{diff}"
+        )
 
     # Check it's pip-installable
     pipinstall = subprocess.run(  # noqa: S603
