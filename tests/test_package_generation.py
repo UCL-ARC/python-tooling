@@ -67,23 +67,21 @@ def test_package_generation(
         if actual_file.is_dir():
             continue
 
-        with open(actual_file) as f1:
-            with open(expected_file) as f2:
-                diff += "".join(
-                    difflib.unified_diff(
-                        f1.readlines(),
-                        f2.readlines(),
-                        fromfile=str(actual_file),
-                        tofile=str(expected_file),
-                    )
+        with actual_file.open() as f1, expected_file.open() as f2:
+            diff += "".join(
+                difflib.unified_diff(
+                    f1.readlines(),
+                    f2.readlines(),
+                    fromfile=str(actual_file),
+                    tofile=str(expected_file),
                 )
+            )
 
     if diff:
         raise RuntimeError(
             "Non-zero diff between generated files and expected files.\n"
             f"Generated files can be found in {test_project_dir}.\n"
-            "\n"
-            f"{diff}"
+            "\n" + diff
         )
 
 
