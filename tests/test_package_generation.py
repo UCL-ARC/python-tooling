@@ -86,7 +86,21 @@ def test_package_generation(
             f"{diff}"
         )
 
-    # Check it's pip-installable
+
+def test_pip_installable(
+    tmp_path: pathlib.Path,
+    generate_package: typing.Callable,
+) -> None:
+    """Test generated package is pip installable."""
+    test_config = {
+        "github_username": "test-user",
+        "project_short_description": "description",
+        "project_name": "Cookiecutter Test",
+    }
+    generate_package(config=test_config, path=tmp_path)
+
+    # Check project directory exists
+    test_project_dir = tmp_path / "cookiecutter-test"
     pipinstall = subprocess.run(  # noqa: S603
         [  # noqa: S607
             "python",
