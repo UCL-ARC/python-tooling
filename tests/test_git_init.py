@@ -29,8 +29,7 @@ def test_initialisation_of_git_repo(
     git_status = subprocess.run(  # noqa: S603
         [  # noqa: S607
             "git",
-            "-C",
-            f"{test_project_dir}",
+            f"--git-dir={test_project_dir / '.git'}",
             "status",
         ],
         capture_output=True,
@@ -40,10 +39,7 @@ def test_initialisation_of_git_repo(
 
     if not initialise_git_repository:
         # should not have found git
-        assert (
-            git_status.stderr
-            == "fatal: not a git repository (or any of the parent directories): .git\n"
-        )
+        assert "fatal: not a git repository" in git_status.stderr
         return  # nothing more to test
 
     # git status should succeed
