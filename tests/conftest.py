@@ -33,7 +33,7 @@ def _generate_package(
     )
 
 
-@pytest.fixture()
+@pytest.fixture
 def generate_package() -> typing.Callable:
     """Generate project from cookiecutter template."""
     return _generate_package
