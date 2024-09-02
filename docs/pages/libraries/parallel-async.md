@@ -36,7 +36,7 @@ simply due to pre-existing code using a library like [pandas].
 | Name     | Short description                                                                                                                                                       | 🚦  |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [Cython] | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                      | 🟠  |
-| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.pydata.org/numba-doc/latest/user/parallel.html).                                                       | 🟠  |
+| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/numba-doc/latest/user/parallel.html).                                                   | 🟠  |
 | [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
 ## Asynchronous processing
@@ -62,7 +62,7 @@ simply due to pre-existing code using a library like [pandas].
 [mpi4py]: https://mpi4py.readthedocs.io/
 [pandas]: https://pandas.pydata.org/
 [dask]: https://docs.dask.org/
-[numba]: https://numba.pydata.org/
+[numba]: https://numba.readthedocs.io/
 [jax]: https://jax.readthedocs.io/
 [asyncio]: https://docs.python.org/3/library/asyncio.html
 [concurrent.futures]: https://docs.python.org/3/library/concurrent.futures.html
