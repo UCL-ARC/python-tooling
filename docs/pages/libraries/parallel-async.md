@@ -36,7 +36,7 @@ simply due to pre-existing code using a library like [pandas].
 | Name     | Short description                                                                                                                                                       | 🚦  |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [Cython] | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                      | 🟠  |
-| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/numba-doc/latest/user/parallel.html).                                                   | 🟠  |
+| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/en/stable/user/parallel.html).                                                          | 🟠  |
 | [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
 ## Asynchronous processing
