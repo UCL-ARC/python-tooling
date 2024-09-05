@@ -5,14 +5,14 @@ layout: default
 
 # Virtual environments
 
-| Name                    | Short description                                                                                                                                                                         | 🚦  |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| conda-forge [miniforge] | Installs, runs, and updates packages and their dependencies. A trusted sub-set of `conda` with the `conda-forge` channel.                                                                 | 🟢  |
-| [pipenv]                | Automatically creates and manages a virtualenv for your projects.                                                                                                                         | 🟠  |
-| [pyenv]                 | Lets you easily switch between multiple versions of Python.                                                                                                                               | 🟠  |
-| [virtualenv]            | Creates isolated Python environments, and offers more features than venv.                                                                                                                 | 🟠  |
+| Name                    | Short description                                                                                                                                                                                     | 🚦  |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
+| conda-forge [miniforge] | Installs, runs, and updates packages and their dependencies. Uses `conda`, but with community maintained packages from `conda-forge` channel instead of commercially maintained packages.             | 🟢  |
+| [pipenv]                | Automatically creates and manages a virtualenv for your projects.                                                                                                                                     | 🟠  |
+| [pyenv]                 | Lets you easily switch between multiple versions of Python.                                                                                                                                           | 🟠  |
+| [virtualenv]            | Creates isolated Python environments, and offers more features than venv.                                                                                                                             | 🟠  |
 | [anaconda]              | Due to recent [licensing ambiguity][anaconda-problems], we recommend avoiding anaconda and many of the default channels. We recommend installing miniforge and sticking to the `conda-forge` channel. | 🔴  |
-| [venv]                  | Creates isolated Python environments.                                                                                                                                                     | 🔴  |
+| [venv]                  | Creates isolated Python environments.                                                                                                                                                                 | 🔴  |
 
 <!-- links here for a more readable table -->
 
