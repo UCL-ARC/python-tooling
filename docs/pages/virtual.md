@@ -22,4 +22,4 @@ layout: default
 [virtualenv]: https://virtualenv.pypa.io/en/latest/
 [anaconda]: https://www.anaconda.com/
 [anaconda-problems]: https://www.theregister.com/2024/08/08/anaconda_puts_the_squeeze_on/
-[venv]: https://commons.wikimedia.org/wiki/File:Devops-toolchain.svg
+[venv]: https://docs.python.org/3/library/venv.html
