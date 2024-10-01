@@ -23,14 +23,14 @@ jobs:
         with:
           # Exclude the image.sc forum (which works) but returns 403 from
           # github runners and exclude relative links to other pages. Ignore
-          # http://www.gnu.org because it's often down but is still the right
-          # website to link to!
-          # 
+          # gnu.org and fsf.org because they're often down but are still the right
+          # websites to link to!
+          #
           # Ignore the whole of the project slug README since the links are
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
           args:
-            "--verbose --exclude https://forum.image.sc/ --exclude http://www.gnu.org --exclude docs/pages
+            "--verbose --exclude https://forum.image.sc/ --exclude http://www.gnu.org --exclude http://www.fsf.org --exclude docs/pages
             --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
           fail: true
           jobSummary: true
