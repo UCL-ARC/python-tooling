@@ -37,7 +37,7 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="http://scnlf.me"><img src="https://avatars.githubusercontent.com/u/1836192?v=4?s=100" width="100px;" alt="Sam Cunliffe"/><br /><sub><b>Sam Cunliffe</b></sub></a><br /><a href="#ideas-samcunliffe" title="Ideas, Planning, & Feedback">🤔</a> <a href="#bug-samcunliffe" title="Bug reports">🐛</a> <a href="#code-samcunliffe" title="Code">💻</a> <a href="#content-samcunliffe" title="Content">🖋</a> <a href="#doc-samcunliffe" title="Documentation">📖</a> <a href="#eventOrganizing-samcunliffe" title="Event Organizing">📋</a> <a href="#projectManagement-samcunliffe" title="Project Management">📆</a> <a href="#question-samcunliffe" title="Answering Questions">💬</a> <a href="#review-samcunliffe" title="Reviewed Pull Requests">👀</a> <a href="#talk-samcunliffe" title="Talks">📢</a> <a href="#test-samcunliffe" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.davidstansby.com"><img src="https://avatars.githubusercontent.com/u/6197628?v=4?s=100" width="100px;" alt="David Stansby"/><br /><sub><b>David Stansby</b></sub></a><br /><a href="#ideas-dstansby" title="Ideas, Planning, & Feedback">🤔</a> <a href="#bug-dstansby" title="Bug reports">🐛</a> <a href="#code-dstansby" title="Code">💻</a> <a href="#content-dstansby" title="Content">🖋</a> <a href="#doc-dstansby" title="Documentation">📖</a> <a href="#eventOrganizing-dstansby" title="Event Organizing">📋</a> <a href="#projectManagement-dstansby" title="Project Management">📆</a> <a href="#review-dstansby" title="Reviewed Pull Requests">👀</a> <a href="#test-dstansby" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://matt-graham.github.io"><img src="https://avatars.githubusercontent.com/u/6746980?v=4?s=100" width="100px;" alt="Matt Graham"/><br /><sub><b>Matt Graham</b></sub></a><br /><a href="#bug-matt-graham" title="Bug reports">🐛</a> <a href="#code-matt-graham" title="Code">💻</a> <a href="#content-matt-graham" title="Content">🖋</a> <a href="#doc-matt-graham" title="Documentation">📖</a> <a href="#design-matt-graham" title="Design">🎨</a> <a href="#eventOrganizing-matt-graham" title="Event Organizing">📋</a> <a href="#review-matt-graham" title="Reviewed Pull Requests">👀</a> <a href="#talk-matt-graham" title="Talks">📢</a> <a href="#test-matt-graham" title="Tests">⚠️</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://sfmig.github.io/"><img src="https://avatars.githubusercontent.com/u/33267254?v=4?s=100" width="100px;" alt="sfmig"/><br /><sub><b>sfmig</b></sub></a><br /><a href="#bug-sfmig" title="Bug reports">🐛</a> <a href="#code-sfmig" title="Code">💻</a> <a href="#content-sfmig" title="Content">🖋</a> <a href="#review-sfmig" title="Reviewed Pull Requests">👀</a> <a href="#test-sfmig" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sfmig"><img src="https://avatars.githubusercontent.com/u/33267254?v=4?s=100" width="100px;" alt="sfmig"/><br /><sub><b>sfmig</b></sub></a><br /><a href="#bug-sfmig" title="Bug reports">🐛</a> <a href="#code-sfmig" title="Code">💻</a> <a href="#content-sfmig" title="Content">🖋</a> <a href="#review-sfmig" title="Reviewed Pull Requests">👀</a> <a href="#test-sfmig" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/p-j-smith"><img src="https://avatars.githubusercontent.com/u/29753790?v=4?s=100" width="100px;" alt="Paul Smith"/><br /><sub><b>Paul Smith</b></sub></a><br /><a href="#bug-p-j-smith" title="Bug reports">🐛</a> <a href="#code-p-j-smith" title="Code">💻</a> <a href="#content-p-j-smith" title="Content">🖋</a> <a href="#doc-p-j-smith" title="Documentation">📖</a> <a href="#question-p-j-smith" title="Answering Questions">💬</a> <a href="#review-p-j-smith" title="Reviewed Pull Requests">👀</a> <a href="#test-p-j-smith" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://renovatebot.com"><img src="https://avatars.githubusercontent.com/u/38656520?v=4?s=100" width="100px;" alt="Renovate Bot"/><br /><sub><b>Renovate Bot</b></sub></a><br /><a href="#maintenance-renovatebot" title="Maintenance">🚧</a></td>
     </tr>
@@ -56,6 +56,7 @@ Python packages with our recommended tooling set up and ready to go.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/katiebuntic"><img src="https://avatars.githubusercontent.com/u/96536608?v=4?s=100" width="100px;" alt="Katie Buntic"/><br /><sub><b>Katie Buntic</b></sub></a><br /><a href="#content-katiebuntic" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/robertvi"><img src="https://avatars.githubusercontent.com/u/456100?v=4?s=100" width="100px;" alt="Robert Vickerstaff"/><br /><sub><b>Robert Vickerstaff</b></sub></a><br /><a href="#doc-robertvi" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://dpshelio.github.io"><img src="https://avatars.githubusercontent.com/u/963242?v=4?s=100" width="100px;" alt="David Pérez-Suárez"/><br /><sub><b>David Pérez-Suárez</b></sub></a><br /><a href="#code-dpshelio" title="Code">💻</a> <a href="#question-dpshelio" title="Answering Questions">💬</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LLapira"><img src="https://avatars.githubusercontent.com/u/48060852?v=4?s=100" width="100px;" alt="llapira"/><br /><sub><b>llapira</b></sub></a><br /><a href="#bug-llapira" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
@@ -66,6 +67,11 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Using this template
+
+Some quick instructions for using our template are below.
+We also have a detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
+The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
+and how to use the newly created package with some of the tools included.
 
 1.  Install [cookiecutter] in a Conda or `venv` environment (commented lines for
     Conda example).
@@ -87,7 +93,7 @@ Python packages with our recommended tooling set up and ready to go.
     cookiecutter /path/to/your/checkout/of/python-tooling
     ```
 3.  A series of questions will pop up to configure the project. Type the answer
-    or hit return to use the default option (shown in square brackets).
+    or hit return to use the default option (shown in parenthesis).
 
     Note that these project variables are defined in the `cookiecutter.json`
     file.
@@ -99,6 +105,7 @@ Python packages with our recommended tooling set up and ready to go.
     ```
     project_name [Python Template]: PROJECT_NAME
     project_slug [python-template]: PROJECT_SLUG
+    package_name [python_template]: PACKAGE_NAME
     ```
 
     we will get a project folder named `PROJECT_SLUG`, structured like this:
@@ -109,8 +116,8 @@ Python packages with our recommended tooling set up and ready to go.
     ├── README.md
     ├── pyproject.toml
     ├── src
-    │   └── PROJECT_SLUG
-    │       └── PROJECT_SLUG.py
+    │   └── PACKAGE_NAME
+    │       └── __init__.py
     └── tests
         └── test_dummy.py
     ```
@@ -124,7 +131,7 @@ Python packages with our recommended tooling set up and ready to go.
     ...
     ```
 
-5.  To work on your project, initialise a git repository and _install_ it in
+5.  To work on your project, initialise a Git repository and _install_ it in
     editable mode.
     ```
     cd PROJECT_SLUG
