@@ -43,9 +43,9 @@ overrides."tool.coverage.paths.source".inline_arrays = false
 legacy_tox_ini = """
     [gh-actions]
     python =
-        3.10: py310
         3.11: py311
         3.12: py312
+        3.13: py313
 
     [gh-actions:env]
     OS =
@@ -64,5 +64,5 @@ legacy_tox_ini = """
         pytest {posargs}
 
     [tox]
-    env_list = py3{9,10,11,12}-{linux,macos,windows}
+    env_list = py3{11,12,13}-{linux,macos,windows}
 """
