@@ -216,10 +216,10 @@ There are a variety of virtual environment management tools available for Python
 A Conda environment for the project can be created by running in a terminal the command
 
 ```
-conda create -y -n {project_slug} -c conda-forge python=3.12
+conda create -y -n {project_slug} -c conda-forge python
 ```
 
-This will create a new environment with name `{project_slug}` (which you should replace with the relevant project slug value for your project), installing Python 3.12 (the latest stable version as of the time of writing) using the package hosted on the [community driven `conda-forge` channel](https://conda-forge.org/). To make this Conda environment the current active environment run
+This will create a new environment with name `{project_slug}` (which you should replace with the relevant project slug value for your project), installing the latest version of Python using the package hosted on the [community driven `conda-forge` channel](https://conda-forge.org/). To make this Conda environment the current active environment run
 
 ```
 conda activate {project_slug}
