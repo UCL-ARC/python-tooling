@@ -1,5 +1,6 @@
 [tool.pytest.ini_options]
 addopts = [
+    "--basetemp=pytest_output",
     "--color=yes",
     "--import-mode=importlib",
     "--verbose",
