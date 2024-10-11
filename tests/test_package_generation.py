@@ -18,10 +18,6 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
     for dirpath, _, filenames in os.walk(root_path):
         dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
 
-        # Skip __pycache__ directories
-        if dirpath_path == "__pycache__":
-            continue
-
         # Add this directory
         file_set.update((dirpath_path,))
         # Add any files in it
@@ -83,9 +79,11 @@ def test_package_generation(
     }
 
     actual_files = get_all_files_folders(test_project_dir)
-    # Filter out anything under .git/ to make comparison easier
+    # Filter out anything under specific directories to make comparison easier
     actual_files = actual_files - {
-        a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
+        a
+        for a in actual_files
+        if len(a.parts) > 1 and a.parts[0] in (".git", "__pycache__")
     }
 
     assert actual_files == expected_files
