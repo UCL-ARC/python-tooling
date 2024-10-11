@@ -18,6 +18,10 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
     for dirpath, _, filenames in os.walk(root_path):
         dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
 
+        # Skip __pycache__ directories
+        if dirpath_path == "__pycache__":
+            continue
+
         # Add this directory
         file_set.update((dirpath_path,))
         # Add any files in it
@@ -76,8 +80,6 @@ def test_package_generation(
         pathlib.Path("src/cookiecutter_test/__init__.py"),
         pathlib.Path("tests"),
         pathlib.Path("tests/test_dummy.py"),
-        pathlib.Path("tests/__pycache__"),
-        pathlib.PosixPath("tests/__pycache__/test_dummy.cpython-*-pytest-*.pyc"),
     }
 
     actual_files = get_all_files_folders(test_project_dir)
