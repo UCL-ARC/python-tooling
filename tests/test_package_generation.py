@@ -76,6 +76,8 @@ def test_package_generation(
         pathlib.Path("src/cookiecutter_test/__init__.py"),
         pathlib.Path("tests"),
         pathlib.Path("tests/test_dummy.py"),
+        pathlib.Path("tests/__pycache__"),
+        pathlib.Path("tests/__pycache__/").glob("test_dummy.cpython-*-pytest-*.pyc"),
     }
 
     actual_files = get_all_files_folders(test_project_dir)
