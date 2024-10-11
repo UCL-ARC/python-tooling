@@ -44,7 +44,7 @@ def test_package_generation(
     assert test_project_dir.exists()
 
     # Check main files and directories inside
-    expected_files: set[pathlib.Path | pathlib.PurePath] = {
+    expected_files: set[pathlib.Path] = {
         pathlib.Path(),
         pathlib.Path(".git"),
         pathlib.Path(".github"),
@@ -77,7 +77,7 @@ def test_package_generation(
         pathlib.Path("tests"),
         pathlib.Path("tests/test_dummy.py"),
         pathlib.Path("tests/__pycache__"),
-        pathlib.PurePath("tests/__pycache__/test_dummy.cpython-*-pytest-*.pyc"),
+        pathlib.PosixPath("tests/__pycache__/test_dummy.cpython-*-pytest-*.pyc"),
     }
 
     actual_files = get_all_files_folders(test_project_dir)
