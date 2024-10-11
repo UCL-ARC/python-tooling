@@ -46,7 +46,6 @@ def test_package_generation(
     # Check main files and directories inside
     expected_files: set[pathlib.Path] = {
         pathlib.Path(),
-        pathlib.Path(".git"),
         pathlib.Path(".github"),
         pathlib.Path(".github/ISSUE_TEMPLATE"),
         pathlib.Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
