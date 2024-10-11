@@ -38,31 +38,27 @@ spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 overrides."project.classifiers".inline_arrays = false
 overrides."tool.coverage.paths.source".inline_arrays = false
+overrides."tool.tox.env_run_base.commands".inline_arrays = false
 
 [tool.tox]
-legacy_tox_ini = """
-    [gh-actions]
-    python =
-        3.11: py311
-        3.12: py312
-        3.13: py313
-
-    [gh-actions:env]
-    OS =
-        ubuntu-latest: linux
-        macos-latest: macos
-        windows-latest: windows
-
-    [testenv]
-    skip_install = true
-    description =
-        Test package creation
-    deps =
-        cookiecutter
-        pytest
-    commands =
-        pytest {posargs}
-
-    [tox]
-    env_list = py3{11,12,13}-{linux,macos,windows}
-"""
+env_list = [
+    "py311",
+    "py312",
+    "py313",
+]
+env_run_base = {commands = [
+    [
+        "pytest",
+        "{posargs}",
+    ],
+], deps = [
+    "cookiecutter",
+    "pytest",
+], description="Test package creation", skip_install=true}
+gh.python = {"3.11" = [
+    "py311",
+], "3.12" = [
+    "py312",
+], "3.13" = [
+    "py313",
+]}
