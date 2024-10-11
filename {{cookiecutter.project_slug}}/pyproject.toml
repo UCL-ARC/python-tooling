@@ -119,7 +119,7 @@ env_list = [
     cookiecutter.min_python_version | replace('3.', '') | int,
     cookiecutter.max_python_version | replace('3.', '') | int + 1
 ) %}
-    "py3{{python_version}}"
+    "py3{{python_version}}",
 {%- endfor %}
 ]
 env_run_base = {commands = [
