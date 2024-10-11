@@ -81,7 +81,9 @@ def test_package_generation(
     actual_files = get_all_files_folders(test_project_dir)
     # Filter out anything under specific directories to make comparison easier
     actual_files = actual_files - {
-        a for a in actual_files if a.parts[0] in (".git", "__pycache__")
+        a
+        for a in actual_files
+        if len(a.parts) > 0 and a.parts[0] in (".git", "__pycache__")
     }
 
     assert actual_files == expected_files
