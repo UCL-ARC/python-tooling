@@ -54,7 +54,7 @@ env_run_base = {commands = [
 ], deps = [
     "cookiecutter",
     "pytest",
-], description="Test package creation", skip_install=true}
+], description = "Test package creation", skip_install = true}
 gh.python = {"3.11" = [
     "py311",
 ], "3.12" = [

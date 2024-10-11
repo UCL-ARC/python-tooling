@@ -131,12 +131,6 @@ env_run_base = {commands = [
 ], extras = [
     "test",
 ]}
-{%- for python_version in range(
-    cookiecutter.min_python_version | replace('3.', '') | int,
-    cookiecutter.max_python_version | replace('3.', '') | int + 1
-) %}
-gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
-{%- endfor %}
 env.docs = {commands = [
     "mkdocs",
     "build",
@@ -144,3 +138,9 @@ env.docs = {commands = [
 ], extras = [
     "docs",
 ]}
+{%- for python_version in range(
+    cookiecutter.min_python_version | replace('3.', '') | int,
+    cookiecutter.max_python_version | replace('3.', '') | int + 1
+) %}
+gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
+{%- endfor %}
