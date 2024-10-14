@@ -39,7 +39,7 @@ jobs:
           cache-dependency-path: pyproject.toml
 
       - name: Install dependencies
-        run: python -m pip install tox tox-gh-actions
+        run: python -m pip install tox tox-gh
 
       - name: Test with tox
-        run: tox
+        run: tox run

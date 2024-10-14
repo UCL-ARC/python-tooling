@@ -46,7 +46,6 @@ def test_package_generation(
     # Check main files and directories inside
     expected_files: set[pathlib.Path] = {
         pathlib.Path(),
-        pathlib.Path(".git"),
         pathlib.Path(".github"),
         pathlib.Path(".github/ISSUE_TEMPLATE"),
         pathlib.Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
@@ -79,9 +78,11 @@ def test_package_generation(
     }
 
     actual_files = get_all_files_folders(test_project_dir)
-    # Filter out anything under .git/ to make comparison easier
-    actual_files = actual_files - {
-        a for a in actual_files if len(a.parts) > 1 and a.parts[0] == ".git"
+    # Filter out anything under specific directories to make comparison easier
+    actual_files = {
+        a
+        for a in actual_files
+        if not (a.parts and (a.parts[0] == ".git" or "__pycache__" in a.parts))
     }
 
     assert actual_files == expected_files
