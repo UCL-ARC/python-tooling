@@ -4,7 +4,7 @@ layout: default
 parent: Recommended libraries
 ---
 
-# Logging
+## Logging
 
 | Name                                                      | Short description                                                    | 🚦  |
 | --------------------------------------------------------- | -------------------------------------------------------------------- | :-: |

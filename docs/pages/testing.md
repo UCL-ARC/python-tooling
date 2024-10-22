@@ -3,9 +3,9 @@ title: Testing
 layout: default
 ---
 
-# Testing
+## Testing
 
-## Test runners
+### Test runners
 
 | Name                                                                          | Short description                                                                                                                                                                                  | 🚦  |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -13,7 +13,7 @@ layout: default
 | [tox](https://tox.wiki/en/latest/index.html)                                  | A framework that allows running tests and packaging in different environments.                                                                                                                     | 🟢  |
 | [unittest](https://docs.python.org/dev/library/unittest.html#module-unittest) | Python's built in framework for writing and running tests. Encourages use of classes as test fixtures.                                                                                             | 🟠  |
 
-## pytest plugins
+### pytest plugins
 
 | Name                                                                   | Short description                                                                                                                                                                                                                                        | 🚦  |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

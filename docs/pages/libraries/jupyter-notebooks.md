@@ -4,7 +4,7 @@ layout: default
 parent: Recommended libraries
 ---
 
-# Jupyter notebooks
+## Jupyter notebooks
 
 We generally recommend packaging reusable code components into Python modules
 where possible. However occasionally we support researchers who prefer a
@@ -12,7 +12,7 @@ notebook environment or projects which want to provide examples and tutorials in
 notebook format. Notebooks can also be a valid alternative to Python scripts for
 running and recording the results of numerical experiments for example.
 
-## Live executable environments
+### Live executable environments
 
 | Name                                                                                                                                                                                                  | Short description                                                                                                                                             | 🚦  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -20,7 +20,7 @@ running and recording the results of numerical experiments for example.
 | [Google Colab](https://colab.google/)                                                                                                                                                                 | Colab is a hosted Jupyter Notebook service that requires no setup to use and provides free access to computing resources, including GPUs and TPUs.            | 🟢  |
 | [GitHub codespaces with JupyterLab](https://docs.github.com/en/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning#opening-your-codespace-in-jupyterlab) | A codespace is a development environment that is hosted in the cloud and can run [Python and Jupyter notebooks](https://github.com/github/codespaces-jupyter) | 🟠  |
 
-## Linting
+### Linting
 
 Many of [our recommended linters](linting) don't work out-of-the box on Jupyter
 notebooks, however [nbQA] has been found to work well. This is a translation
@@ -36,7 +36,7 @@ more reliably than [black] via [nbQA].
 | [pre-commit]     | Has cell output cleanup hooks (if desired). Also found to work well with [nbQA]. | 🟢  |
 | `nbqa black`     | [black] via [nbQA].                                                              | 🟠  |
 
-## Other
+### Other
 
 | Name       | Short description                                                                                                                                         | 🚦  |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

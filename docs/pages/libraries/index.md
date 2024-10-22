@@ -4,7 +4,7 @@ layout: default
 has_children: true
 ---
 
-# Recommended libraries
+## Recommended libraries
 
 Python has a large ecosystem of packages and modules beyond what is built in to Python.
 Here is a list of libraries and toolkits that we've used in our projects, and can recommend (or might recommend that you avoid!).

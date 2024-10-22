@@ -4,7 +4,7 @@ layout: default
 parent: Recommended libraries
 ---
 
-# Parallel and asynchronous processing
+## Parallel and asynchronous processing
 
 Python has a good ecosystem of libraries for parallelising the processing of
 tasks, as well as asynchronous processing.
@@ -20,7 +20,7 @@ a specific interface or parallelisation scheme. Possibly due to the nature of
 the research problem, the high-performance computing resources available or
 simply due to pre-existing code using a library like [pandas].
 
-## Process-based (and thread-based) parallelism
+### Process-based (and thread-based) parallelism
 
 | Name                 | Short description                                                                                                                                                                                                 | 🚦  |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -31,7 +31,7 @@ simply due to pre-existing code using a library like [pandas].
 | [mpi4py]             | Support for MPI based parallelism.                                                                                                                                                                                | 🟠  |
 | [threading]          | The standard library module for multi-threading. Due to the _global interpreter lock_ [currently][PEP703] only one thread can execute Python code at a time.                                                      | 🔴  |
 
-## Compiler-based parallelism
+### Compiler-based parallelism
 
 | Name     | Short description                                                                                                                                                       | 🚦  |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -39,14 +39,14 @@ simply due to pre-existing code using a library like [pandas].
 | [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/en/stable/user/parallel.html).                                                          | 🟠  |
 | [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
 
-## Asynchronous processing
+### Asynchronous processing
 
 | Name                 | Short description                                                                                                                                                                                         | 🚦  |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
 | [asyncio]            | Python standard library for asynchronous programming with tasks run in a single-threaded event loop. Used for [cooperative multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking).         | 🟠  |
 | [concurrent.futures] | Another Python standard library for asynchronous processing. Provides a common interface for thread and process based concurrency as an alternative to using `multiprocess(ing)` or `threading` directly. | 🟠  |
 
-## See also
+### See also
 
 - This [Stack Overflow post](https://stackoverflow.com/a/61360215) is a nice
   summary of what each of [threading], [multiprocessing], [asyncio] and
