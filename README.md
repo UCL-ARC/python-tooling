@@ -75,14 +75,13 @@ We also have a detailed [tutorial](tutorial.md) that has been given in a couple 
 The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
 and how to use the newly created package with some of the tools included.
 
-1. Install [cookiecutter] in a Conda or `venv` environment (commented lines for
-   Conda example).
+1. Install [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
+   `uv venv` example).
 
    ```sh
-   # conda create --channel conda-forge --name new-env-name
-   # conda activate new-env-name
-   # conda install pip
-   pip install cookiecutter
+   # uv venv  # creates a .venv directory wherever you are
+   # source ./.venv/bin/activate
+   uv pip install cookiecutter
    ```
 
 2. Run cookiecutter in the desired directory
@@ -114,36 +113,13 @@ and how to use the newly created package with some of the tools included.
    package_name [python_template]: PACKAGE_NAME
    ```
 
-   we will get a project folder named `PROJECT_SLUG`, structured like this:
-
-   ```sh
-   PROJECT_SLUG
-   ├── ...
-   ├── README.md
-   ├── pyproject.toml
-   ├── src
-   │   └── PACKAGE_NAME
-   │       └── __init__.py
-   └── tests
-       └── test_dummy.py
-   ```
-
-   And the `PROJECT_NAME` will appear in the README.md as the human-readable
-   name of the project.
-
-   ```sh
-   cat PROJECT_SLUG/README.md
-   # PROJECT_NAME
-   ...
-   ```
-
 5. To work on your project, initialise a Git repository and _install_ it in
    editable mode.
 
    ```sh
    cd PROJECT_SLUG
    git init
-   python -m pip install -e ".[dev]"
+   uv pip install -e ".[dev]"
    ```
 
 6. Build your package
@@ -175,10 +151,10 @@ cd python-tooling
 - To create and remove your virtual environment
 
   ```sh
-  conda create -n ptoolingVE pip -c conda-forge
-  conda activate ptoolingVE
-  conda deactivate ptoolingVE
-  conda remove -n ptoolingVE --all
+  uv venv
+  source .venv/bin/activate
+  # do your work
+  deactivate
   ```
 
 - To run template in the same path of this repo. We do a test cookiecut of a
@@ -188,7 +164,7 @@ cd python-tooling
   cookiecutter .
   cd python-template
   git init
-  python -m pip install -e ".[dev]"
+  uv pip install -e ".[dev]"
   ```
 
 - To run cookiecutter using a specific branch of the template:
