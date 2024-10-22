@@ -113,7 +113,7 @@ and how to use the newly created package with some of the tools included.
    package_name [python_template]: PACKAGE_NAME
    ```
 
-5. work on your project, initialise a Git repository and _install_ it in
+5. To work on your project, initialise a Git repository and _install_ it in
    editable mode.
 
    ```sh
