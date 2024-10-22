@@ -20,3 +20,9 @@ layout: default
 | [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/index.html)   | A framework to generate coverage reports that plays nicely with `pytest`.                                                                                                                                                                                | 🟢  |
 | [pytest-mock](https://pytest-mock.readthedocs.io/en/latest/index.html) | A framework to mock/patch objects that plays nicely with `pytest`.                                                                                                                                                                                       | 🟢  |
 | [pyfakefs](https://pytest-pyfakefs.readthedocs.io/en/latest/)          | A plugin to create a full fake file system, for situations where you need something more complicated than the built in [`tmp_path` fixture](https://docs.pytest.org/en/stable/how-to/tmp_path.html#how-to-use-temporary-directories-and-files-in-tests). | 🟢  |
+
+## Property based testing
+
+| Name                                                                      | Short description                                                        | 🚦  |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ | :-: |
+| [Hypothesis](https://hypothesis.readthedocs.io/en/latest/quickstart.html) | Allows one to easily test multiple inputs for a given function with ease | 🟢  |
