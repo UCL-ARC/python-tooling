@@ -75,7 +75,7 @@ We also have a detailed [tutorial](tutorial.md) that has been given in a couple 
 The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
 and how to use the newly created package with some of the tools included.
 
-1. stall [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
+1. Install [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
    `uv venv` example).
 
    ```sh
