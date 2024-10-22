@@ -58,6 +58,7 @@ def test_package_generation(
         pathlib.Path(".github/workflows/linting.yml"),
         pathlib.Path(".github/workflows/tests.yml"),
         pathlib.Path(".gitignore"),
+        pathlib.Path(".markdownlint.yaml"),
         pathlib.Path(".pre-commit-config.yaml"),
         pathlib.Path("CITATION.cff"),
         pathlib.Path("LICENSE.md"),
