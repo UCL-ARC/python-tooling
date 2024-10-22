@@ -3,13 +3,13 @@ title: Linting
 layout: default
 ---
 
-# Linting
+## Linting
 
 See
 [here for an example configuration](https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.pre-commit-config.yaml)
 for some of these.
 
-## Code formatting
+### Code formatting
 
 | Name                                                     | Short description                                                                                                                                                                                     | 🚦  |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -27,7 +27,7 @@ for some of these.
 | [yapf](https://github.com/google/yapf)                   | Google formatter.                                                                                                                                                                                     | 🟠  |
 | [flake8](https://flake8.pycqa.org/en/latest/)            | Linter which complains if code doesn't follow a rule. Does not support modern `pyproject.toml` configuration.                                                                                         | 🔴  |
 
-## Type checking
+### Type checking
 
 | Name                                           | Short description                                                             | 🚦  |
 | ---------------------------------------------- | ----------------------------------------------------------------------------- | :-: |

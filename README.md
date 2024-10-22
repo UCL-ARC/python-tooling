@@ -1,7 +1,9 @@
+<!-- markdownlint-disable MD033 MD041 -->
 <div style="text-align: center;" align="center">
   <img src="https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg" alt="UCL ARC Python tooling logo" width="120"/>
   <h1> UCL ARC Python Recommendations</h1>
 </div>
+<!-- markdownlint-restore -->
 
 This repository collects the [UCL ARC] recommendations for a research software
 project in Python. It contains a template for new Python packages and a
@@ -73,79 +75,62 @@ We also have a detailed [tutorial](tutorial.md) that has been given in a couple 
 The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
 and how to use the newly created package with some of the tools included.
 
-1.  Install [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
-    `uv venv` example).
+1. stall [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
+   `uv venv` example).
 
-    ```
-    # uv venv  # creates a .venv directory wherever you are
-    # source ./.venv/bin/activate
-    uv pip install cookiecutter
-    ```
+   ```sh
+   # uv venv  # creates a .venv directory wherever you are
+   # source ./.venv/bin/activate
+   uv pip install cookiecutter
+   ```
 
-2.  Run cookiecutter in the desired directory
-    ```
-    cookiecutter gh:ucl-arc/python-tooling
-    ```
-    If you have this repo locally (this may be the case if you are developing),
-    you can run the following:
-    ```
-    cookiecutter /path/to/your/checkout/of/python-tooling
-    ```
-3.  A series of questions will pop up to configure the project. Type the answer
-    or hit return to use the default option (shown in parenthesis).
+2. Run cookiecutter in the desired directory
 
-    Note that these project variables are defined in the `cookiecutter.json`
-    file.
+   ```sh
+   cookiecutter gh:ucl-arc/python-tooling
+   ```
 
-4.  This will create a specific directory structure.
+   If you have this repo locally (this may be the case if you are developing),
+   you can run the following:
 
-    For example, for a project with the following variables:
+   ```sh
+   cookiecutter /path/to/your/checkout/of/python-tooling
+   ```
 
-    ```
-    project_name [Python Template]: PROJECT_NAME
-    project_slug [python-template]: PROJECT_SLUG
-    package_name [python_template]: PACKAGE_NAME
-    ```
+3. A series of questions will pop up to configure the project. Type the answer
+   or hit return to use the default option (shown in parenthesis).
 
-    we will get a project folder named `PROJECT_SLUG`, structured like this:
+   Note that these project variables are defined in the `cookiecutter.json`
+   file.
 
-    ```
-    PROJECT_SLUG
-    ├── ...
-    ├── README.md
-    ├── pyproject.toml
-    ├── src
-    │   └── PACKAGE_NAME
-    │       └── __init__.py
-    └── tests
-        └── test_dummy.py
-    ```
+4. This will create a specific directory structure.
 
-    And the `PROJECT_NAME` will appear in the README.md as the human-readable
-    name of the project.
+   For example, for a project with the following variables:
 
-    ```
-    cat PROJECT_SLUG/README.md
-    # PROJECT_NAME
-    ...
-    ```
+   ```yaml
+   project_name [Python Template]: PROJECT_NAME
+   project_slug [python-template]: PROJECT_SLUG
+   package_name [python_template]: PACKAGE_NAME
+   ```
 
-5.  To work on your project, initialise a Git repository and _install_ it in
-    editable mode.
-    ```
-    cd PROJECT_SLUG
-    git init
-    uv pip install -e ".[dev]"
-    ```
-6.  Build your package
-    ```
-    python -m build
-    ```
+5. work on your project, initialise a Git repository and _install_ it in
+   editable mode.
+
+   ```sh
+   cd PROJECT_SLUG
+   git init
+   uv pip install -e ".[dev]"
+   ```
+
+6. ild your package
+
+   ```sh
+   python -m build
+   ```
 
 ## Notes for developers
 
-<details>
-<summary>Click to expand...</summary>
+<details><summary>Click to expand...</summary> <!-- markdownlint-disable-line MD033 -->
 
 First, clone repository
 
@@ -156,7 +141,7 @@ First, clone repository
 - Clone the repository by typing (or copying) the following line in a terminal
   at your selected path in your machine:
 
-```
+```sh
 git clone git@github.com:UCL-ARC/python-tooling.git
 cd python-tooling
 ```
@@ -165,7 +150,7 @@ cd python-tooling
 
 - To create and remove your virtual environment
 
-  ```
+  ```sh
   uv venv
   source .venv/bin/activate
   # do your work
@@ -175,7 +160,7 @@ cd python-tooling
 - To run template in the same path of this repo. We do a test cookiecut of a
   dummy package and install it to ensure the template setup works.
 
-  ```
+  ```sh
   cookiecutter .
   cd python-template
   git init
@@ -184,13 +169,13 @@ cd python-tooling
 
 - To run cookiecutter using a specific branch of the template:
 
-  ```
+  ```sh
   cookiecutter https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
   ```
 
 - To run the tests locally:
 
-  ```
+  ```sh
   pytest -s
   ```
 
@@ -202,13 +187,13 @@ sub-directory, and are written in markdown.
 
 To build the webpage locally (for testing)
 
-1.  [Install jekyll](https://jekyllrb.com/docs/installation)
-2.  Run `bundle install` from the `docs/` directory of this repository to
-    install dependencies.
-3.  Run `bundle exec jekyll serve` from the root directory of this repository.
-    This should fire up a local web server and tell you its address. By default
-    the server will automatically refresh the HTML pages if any changes are made
-    to the markdown sources.
+1. [Install jekyll](https://jekyllrb.com/docs/installation)
+2. Run `bundle install` from the `docs/` directory of this repository to
+   install dependencies.
+3. Run `bundle exec jekyll serve` from the root directory of this repository.
+   This should fire up a local web server and tell you its address. By default
+   the server will automatically refresh the HTML pages if any changes are made
+   to the markdown sources.
 
 See the [jekyll docs](https://jekyllrb.com/docs) for more info.
 

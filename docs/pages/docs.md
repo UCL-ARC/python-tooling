@@ -3,7 +3,7 @@ title: Documentation
 layout: default
 ---
 
-# Documentation
+## Documentation
 
 With Python, as with many other languages, it's very common to automatically
 create a web page with documentation. This can include reference for the API
@@ -23,7 +23,7 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 [our template]: https://github.com/UCL-ARC/python-tooling?tab=readme-ov-file#using-this-template
 [template-docs-dot-yaml]: https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/docs.yml
 
-## Documentation build tools
+### Documentation build tools
 
 | Name      | Short description                                                                                                                                               | 🚦  |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
@@ -32,8 +32,7 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 | [gitbook] | General documentation builder; integrates with GitHub.                                                                                                          | 🟠  |
 | [pdoc]    | Auto-generates API documentation from docstrings, beginner friendly but with less of a plugin ecosystem than others.                                            | 🟠  |
 
-<details markdown="block">
-<summary>More details about Sphinx</summary>
+<details markdown="block"><summary>More details about Sphinx</summary><!-- markdownlint-disable-line MD033 -->
 
 We marginally recommend [MkDocs] over [Sphinx] due to it's ease of use,
 preference for Markdown, and more support for a variety of docstring styles.
@@ -44,7 +43,7 @@ a [Sphinx extension](#sphinx-extensions) that does not have an equivalent
 [MkDocs plugin](https://github.com/mkdocs/catalog), or if you are part of a
 community that heavily uses [Sphinx] then we recommend you use that instead.
 
-### See also
+#### See also
 
 - Our internal discussions about which to recommend
   ([#16](https://github.com/UCL-ARC/python-tooling/issues/16) and
@@ -60,13 +59,13 @@ community that heavily uses [Sphinx] then we recommend you use that instead.
 [gitbook]: https://www.gitbook.com/
 [pdoc]: https://pdoc.dev/
 
-## MkDocs plugins
+### MkDocs plugins
 
 | Name                                                          | Short description                            | 🚦  |
 | ------------------------------------------------------------- | -------------------------------------------- | :-: |
 | [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates API reference pages. | 🟢  |
 
-## Sphinx extensions
+### Sphinx extensions
 
 | Name                                                                 | Short description                                                | 🚦  |
 | -------------------------------------------------------------------- | ---------------------------------------------------------------- | :-: |

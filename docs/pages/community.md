@@ -3,7 +3,7 @@ title: Community
 layout: default
 ---
 
-# Community building
+## Community building
 
 There are many platforms to build a community for users and developers. We
 recommend you choose one, and not more than one. If you are creating a new
