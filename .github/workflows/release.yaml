@@ -1,0 +1,28 @@
+---
+name: Update Tag
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  TAG_NAME: latest
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Update latest tag
+        run: |-
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git tag --force ${{ env.TAG_NAME }} ${{ github.sha }}
+          git push origin ${{ env.TAG_NAME }} --force
