@@ -122,7 +122,7 @@ and how to use the newly created package with some of the tools included.
    uv pip install -e ".[dev]"
    ```
 
-6. ild your package
+6. Build your package
 
    ```sh
    python -m build
