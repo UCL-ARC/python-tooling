@@ -108,7 +108,7 @@ We will first go through the steps for creating a new package using the `UCL-ARC
 4. To begin creating the package run
 
    ```sh
-   cookiecutter gh:ucl-arc/python-tooling
+   cookiecutter gh:ucl-arc/python-tooling --checkout latest
    ```
 
    You will then be shown a series of prompts at the command line asking for details of the project and package. You can choose to use the default placeholder value (shown in parenthesis `()` in prompt) for any question by hitting `Enter`. If you already have a specific project in mind you want to set up a package for using the template you can use this project's details, otherwise you can just use the placeholder values. You should choose `Y` (yes) to the questions on whether to initialise Git repository and automatically deploy HTML documentation to GitHub Pages to allow you to complete the follow on exercises which rely on these options being enabled. For the prompt asking for the GitHub user or organization name to be owner of repository you should supply your GitHub user name.
