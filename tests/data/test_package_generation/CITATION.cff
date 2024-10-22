@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Ator"
+    given-names: "Eva Lu"
+    email: "eva.lu.ator@ucl.ac.uk"
+repository-code: "https://github.com/test-user/cookiecutter-test"
+title: "Cookiecutter Test: description"
+license: "MIT"
