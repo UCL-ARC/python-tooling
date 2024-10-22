@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
 
       - name: Link Checker
         id: lychee
@@ -23,11 +23,14 @@ jobs:
         with:
           # Exclude the image.sc forum (which works) but returns 403 from
           # github runners and exclude relative links to other pages. Ignore
-          # the whole of the project slug README since the links are
+          # gnu.org and fsf.org because they're often down but are still the right
+          # websites to link to!
+          #
+          # Ignore the whole of the project slug README since the links are
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
           args:
-            "--verbose --exclude https://forum.image.sc/ --exclude docs/pages
+            "--verbose --exclude https://forum.image.sc/ --exclude http://www.gnu.org --exclude http://fsf.org --exclude docs/pages
             --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
           fail: true
           jobSummary: true

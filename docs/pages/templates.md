@@ -4,20 +4,23 @@ layout: default
 nav_order: 2
 ---
 
-# Package templates
+## Package templates
 
-## Recommended ARC template
+### Recommended ARC template
 
 The [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling)
 repository contains our recommended package template for new ARC projects. It
 pre-configures the recommended tools listed in the other pages of this site. If
 you are working on a new project, our template should be a good starting point!
+We have a [tutorial](https://github.com/UCL-ARC/python-tooling/blob/main/tutorial.md)
+available with detailed instructions for creating a package using the template
+and how to use the newly created package with some of the tools included.
 
 If you're making a package for a community that already has a template in
 general use (some examples are listed below) we recommend using their template
 instead.
 
-## Community-specific templates
+### Community-specific templates
 
 If you're making a package within one of these communities, we recommend using
 their package template.
@@ -28,7 +31,7 @@ their package template.
 | [SciKit-Surgery](https://github.com/SciKit-Surgery/PythonTemplate) | Cookiecutter template developed by the Wellcome EPSRC Centre for Interventional and Surgical Sciences.                                          |
 | [Scientific Python](https://github.com/scientific-python/cookie)   | Cookiecutter template developed by [SciKit-HEP](https://github.com/scikit-hep) but now adopted by the more general Scientific Python community. |
 
-## Template engines
+### Template engines
 
 Tools that can be used for creating your own package template.
 

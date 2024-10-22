@@ -1,24 +1,24 @@
 {
   "author_given_names": "Eva Lu",
   "author_family_names": "Ator",
-  "author_email": "eva.lu.ator@ucl.ac.uk",
+  "author_email": "{{'.'.join(cookiecutter.author_given_names.lower().split() + cookiecutter.author_family_names.lower().split())}}@ucl.ac.uk",
   "project_name": "Python Template",
   "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-')}}",
   "package_name": "{{cookiecutter.project_slug.replace('-', '_')}}",
   "project_short_description": "A cookiecutter package with UCL ARC recommendations.",
   "initialise_git_repository": true,
-  "deploy_docs_to_github_pages": false,
+  "deploy_docs_to_github_pages": true,
   "github_owner": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
-  "min_python_version": ["3.10", "3.11", "3.12"],
-  "max_python_version": ["3.12", "3.11", "3.10"],
+  "min_python_version": ["3.11", "3.12", "3.13"],
+  "max_python_version": ["3.13", "3.12", "3.11"],
   "license": ["MIT", "BSD-3", "GPL-3.0"],
-  "funder": "JBFC: The Joe Bloggs Funding Council",
+  "funder": "",
   "__repo_name": "{{cookiecutter.github_owner}}/{{cookiecutter.project_slug}}",
   "__repo_url": "https://github.com/{{cookiecutter.__repo_name}}",
   "__prompts__": {
     "author_given_names": "Given name(s) of package author",
     "author_family_names": "Family name(s) of package author",
-    "author_email": "Email address for package author - will be part of package metadata.",
+    "author_email": "Email address for package author - will be part of package metadata",
     "project_name": "Name of project - may contain spaces",
     "project_slug": "'Slugified' project name for use in URLs - dash-case recommended",
     "package_name": "Name for Python package - snake_case recommended",
@@ -29,6 +29,6 @@
     "min_python_version": "Minimum Python version supported by package",
     "max_python_version": "Maximum Python version supported by package",
     "license": "Which open-source license to release package under",
-    "funder": "Organisation(s) to acknowledge for funding of project"
+    "funder": "Organisation(s) to acknowledge for funding of project (optional)"
   }
 }

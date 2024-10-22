@@ -1,15 +1,10 @@
 ---
-title: Utility libraries
+title: Command-line interfaces
 layout: default
+parent: Recommended libraries
 ---
 
-# Utility libraries
-
-Useful packages for _utility_ functionality, normally we highlight these if
-we've found a library that we prefer to Python's builtin. You probably don't
-want to write these yourself but might need logging or a command-line interface.
-
-## Command-line interface
+## Command-line interfaces
 
 | Name                                                        | Short description                                                              | 🚦  |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------ | :-: |
@@ -18,14 +13,7 @@ want to write these yourself but might need logging or a command-line interface.
 | [argparse](https://docs.python.org/3/library/argparse.html) | Python's builtin CLI system uses object configuration.                         | 🟠  |
 | [optparse](https://docs.python.org/3/library/optparse.html) | A now-deprecated CLI system built into Python.                                 | 🔴  |
 
-## Logging
-
-| Name                                                      | Short description                                                    | 🚦  |
-| --------------------------------------------------------- | -------------------------------------------------------------------- | :-: |
-| [loguru](https://loguru.readthedocs.io/)                  | Simple and user-friendly with many nice features enabled by default. | 🟢  |
-| [logging](https://docs.python.org/3/library/logging.html) | Python's builtin logging framework. Needs some configuration.        | 🟠  |
-
-## User interface
+### Other useful tools for CLIs
 
 | Name                            | Short description       | 🚦  |
 | ------------------------------- | ----------------------- | :-: |

@@ -111,36 +111,37 @@ spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 overrides."project.classifiers".inline_arrays = false
 overrides."tool.coverage.paths.source".inline_arrays = false
+overrides."tool.tox.env.docs.commands".inline_arrays = false
+overrides."tool.tox.env_run_base.commands".inline_arrays = false
 
 [tool.tox]
-legacy_tox_ini = """
-    [gh-actions]
-    python =
-    {%- for python_version in range(
-        cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int + 1
-    ) %}
-        3.{{python_version}}: py3{{python_version}}
-    {%- endfor %}
-
-    [testenv]
-    commands =
-        pytest --cov --cov-report=xml
-    extras =
-        test
-
-    [testenv:docs]
-    commands =
-        mkdocs build --strict
-    extras =
-        docs
-
-    [tox]
-    env_list =
-    {%- for python_version in range(
-        cookiecutter.min_python_version | replace('3.', '') | int,
-        cookiecutter.max_python_version | replace('3.', '') | int + 1
-    ) %}
-        py3{{python_version}}
-    {%- endfor %}
-"""
+env_list = [
+{%- for python_version in range(
+    cookiecutter.min_python_version | replace('3.', '') | int,
+    cookiecutter.max_python_version | replace('3.', '') | int + 1
+) %}
+    "py3{{python_version}}",
+{%- endfor %}
+]
+env_run_base = {commands = [
+    [
+        "pytest",
+        "--cov",
+        "--cov-report=xml",
+    ],
+], extras = [
+    "test",
+]}
+env.docs = {commands = [
+    "mkdocs",
+    "build",
+    "--strict",
+], extras = [
+    "docs",
+]}
+{%- for python_version in range(
+    cookiecutter.min_python_version | replace('3.', '') | int,
+    cookiecutter.max_python_version | replace('3.', '') | int + 1
+) %}
+gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
+{%- endfor %}

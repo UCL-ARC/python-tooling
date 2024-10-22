@@ -6,12 +6,6 @@
 [![Documentation status][documentation-badge]][documentation-link]
 [![License][license-badge]](./LICENSE.md)
 
-<!--
-[![PyPI version][pypi-version]][pypi-link]
-[![Conda-Forge][conda-badge]][conda-link]
-[![PyPI platforms][pypi-platforms]][pypi-link]
--->
-
 <!-- prettier-ignore-start -->
 [tests-badge]:              {{cookiecutter.__repo_url}}/actions/workflows/tests.yml/badge.svg
 [tests-link]:               {{cookiecutter.__repo_url}}/actions/workflows/tests.yml
@@ -19,18 +13,13 @@
 [linting-link]:             {{cookiecutter.__repo_url}}/actions/workflows/linting.yml
 [documentation-badge]:      {{cookiecutter.__repo_url}}/actions/workflows/docs.yml/badge.svg
 [documentation-link]:       {{cookiecutter.__repo_url}}/actions/workflows/docs.yml
-[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
-[conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
-[pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
-[pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
-[pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
-{% if cookiecutter.license == "MIT" -%}
+{%- if cookiecutter.license == "MIT" %}
 [license-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
-{%- elif cookiecutter.license == "BSD-3" -%}
+{%- elif cookiecutter.license == "BSD-3" %}
 [license-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
-{%- elif cookiecutter.license == "GPL-3.0" -%}
+{%- elif cookiecutter.license == "GPL-3.0" %}
 [license-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
-{% endif %}
+{%- endif %}
 <!-- prettier-ignore-end -->
 
 {{cookiecutter.project_short_description}}
@@ -141,7 +130,9 @@ mkdocs serve
 - [ ] Minimum viable product <-- You are Here
 - [ ] Alpha Release
 - [ ] Feature-Complete Release
+{%- if cookiecutter.funder != '' %}
 
 ## Acknowledgements
 
-This work was funded by a grant from the {{cookiecutter.funder}}.
+This work was funded by {{cookiecutter.funder}}.
+{%- endif %}

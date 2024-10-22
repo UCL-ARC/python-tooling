@@ -3,7 +3,7 @@ title: Packaging
 layout: default
 ---
 
-# General packaging
+## General packaging
 
 A common question facing developers is "_How much code should go into a
 package?_". Where code to solve a research problem might be large and perform
@@ -23,7 +23,7 @@ software tasks. Typically there is a separate git repository per package, and we
 recommend you stick to this. You can always add the packages as dependencies to
 a higher-level package which is effectively the same, but much easier to reuse.
 
-# Packaging tools
+## Packaging tools
 
 | Name                                                                  | Short description                                                                                                           | 🚦  |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -34,14 +34,14 @@ a higher-level package which is effectively the same, but much easier to reuse.
 | [bump2version](https://pypi.org/project/bump2version/)                | Tool for version-bumping your software. No longer maintained                                                                | 🔴  |
 | [bump-my-version](https://github.com/callowayproject/bump-my-version) | Tool for version-bumping your software. Superseded by setuptools_scm                                                        | 🔴  |
 
-# Building
+## Building
 
 | Name                                                  | Short description                                                                                         | 🚦  |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --- |
 | [build](https://pypa-build.readthedocs.io/en/stable/) | Straightforward tool to build a Python package.                                                           | 🟢  |
 | [cibuildwheel](https://cibuildwheel.readthedocs.io)   | Builds python wheels for the main operating systems on continuous integration runs (e.g. GitHub actions). | 🟠  |
 
-## Package configuration file
+### Package configuration file
 
 | Name                                                                                               | Short description                                                                                                                                                  | 🚦  |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
@@ -49,7 +49,7 @@ a higher-level package which is effectively the same, but much easier to reuse.
 | [setup.py](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/)  | Strongly coupled with setuptools and therefore not recommended.                                                                                                    | 🟠  |
 | [setup.cfg](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/) | An ini file that contains defaults for setup.py commands.                                                                                                          | 🟠  |
 
-## Conda
+### Conda
 
 These tools are helpful if you're looking to publish your package on
 [conda-forge](https://conda-forge.org/), so users can install it through the

@@ -1,3 +1,5 @@
+# Contributing Guide
+
 This template and our [recommendation pages][website] were made by [research
 software engineers] at [UCL's Centre for Advanced Research Computing][UCL ARC].
 We made it with research software projects in mind, but whoever you are, we hope
