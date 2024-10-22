@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+
 {%- if cookiecutter.license == "MIT" -%}
 
 # MIT License
