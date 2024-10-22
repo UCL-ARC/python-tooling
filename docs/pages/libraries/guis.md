@@ -4,7 +4,7 @@ layout: default
 parent: Recommended libraries
 ---
 
-# Graphical user interface toolkits
+## Graphical user interface toolkits
 
 | Name      | Short description                                                                                                                                                                           | 🚦  |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |

@@ -6,12 +6,6 @@
 [![Documentation status][documentation-badge]][documentation-link]
 [![License][license-badge]](./LICENSE.md)
 
-<!--
-[![PyPI version][pypi-version]][pypi-link]
-[![Conda-Forge][conda-badge]][conda-link]
-[![PyPI platforms][pypi-platforms]][pypi-link]
--->
-
 <!-- prettier-ignore-start -->
 [tests-badge]:              https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml/badge.svg
 [tests-link]:               https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/tests.yml
@@ -19,11 +13,6 @@
 [linting-link]:             https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/linting.yml
 [documentation-badge]:      https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml/badge.svg
 [documentation-link]:       https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions/workflows/docs.yml
-[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/{{cookiecutter.project_slug}}
-[conda-link]:               https://github.com/conda-forge/{{cookiecutter.project_slug}}-feedstock
-[pypi-link]:                https://pypi.org/project/{{cookiecutter.project_slug}}/
-[pypi-platforms]:           https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}
-[pypi-version]:             https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}
 {%- if cookiecutter.license == "MIT" %}
 [license-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
 {%- elif cookiecutter.license == "BSD-3" %}
