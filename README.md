@@ -94,7 +94,7 @@ and how to use the newly created package with some of the tools included.
    you can run the following:
 
    ```sh
-   cookiecutter /path/to/your/checkout/of/python-tooling
+   cookiecutter /path/to/your/checkout/of/python-tooling --checkout latest
    ```
 
 3. A series of questions will pop up to configure the project. Type the answer
