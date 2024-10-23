@@ -9,10 +9,16 @@ We are actively encouraging users to ask questions and start discussions in the
 [discussions tab] of this repository. Does something seem like it's broken?
 Please go ahead and [open an issue]!
 
-The [website] pages are open to contributions but they will need to be reviewed
-by a member or associate member of ARC. We might be slow to approve new tool
-suggestions (since we'll probably want to discuss them first) but don't let that
-put you off creating an issue.
+The template and [website] pages are open to contributions! But they will need
+to be reviewed by a member or associate member of ARC.
+
+We will probably be slow to approve new tool suggestions (since we'll probably
+want to discuss them first) but don't let that put you off creating an issue!
+
+Any controversial changes should be approved by at least two reviewers who are
+members or associate members of ARC. Pull-request authors are trusted to add two
+reviewers to anything that they think might be controversial. If a reviewer adds
+a second reviewer, please wait for both to approve before merging.
 
 ## Development workflow
 
