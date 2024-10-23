@@ -87,14 +87,14 @@ and how to use the newly created package with some of the tools included.
 2. Run cookiecutter in the desired directory
 
    ```sh
-   cookiecutter gh:ucl-arc/python-tooling
+   cookiecutter gh:ucl-arc/python-tooling --checkout latest
    ```
 
    If you have this repo locally (this may be the case if you are developing),
    you can run the following:
 
    ```sh
-   cookiecutter /path/to/your/checkout/of/python-tooling
+   cookiecutter /path/to/your/checkout/of/python-tooling --checkout latest
    ```
 
 3. A series of questions will pop up to configure the project. Type the answer
