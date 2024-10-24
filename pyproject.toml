@@ -1,8 +1,3 @@
-[tool.mypy]
-exclude = [
-    'tests\/data\/test_package_generation\/src\/cookiecutter_test\/__init__\.py',
-]
-
 [tool.pytest.ini_options]
 addopts = [
     "--color=yes",
