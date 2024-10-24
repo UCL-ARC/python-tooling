@@ -1,7 +1,9 @@
 """Checks that the cookiecutter works."""
 
+import difflib
 import os
 import pathlib
+import shutil
 import subprocess
 import typing
 
@@ -13,15 +15,20 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
     Get all files and folders under a directory.
 
     The paths are returned relative to the root path given.
+    __pycache__ directories and .DS_Store files are ignored.
     """
     file_set: set[pathlib.Path] = set()
     for dirpath, _, filenames in os.walk(root_path):
         dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
+        if dirpath_path.name in ["__pycache__"]:
+            continue
 
         # Add this directory
         file_set.update((dirpath_path,))
         # Add any files in it
         for filename in filenames:
+            if filename in [".DS_Store"]:
+                continue
             file_set.update((dirpath_path / filename,))
 
     return file_set
@@ -36,59 +43,69 @@ def test_package_generation(
         "github_username": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
+        # Not having a git repo makes it easier to check in/out reference
+        # data files to the main python-tooling git repository
+        "initialise_git_repository": False,
+    }
+    generate_package(config=test_config, path=tmp_path)
+
+    expected_package_dir = (
+        pathlib.Path(__file__).parent / "data" / "test_package_generation"
+    )
+    # Check project directory exists
+    test_project_dir = tmp_path / "cookiecutter-test"
+    assert test_project_dir.exists()
+
+    actual_files = get_all_files_folders(test_project_dir)
+    expected_files = get_all_files_folders(expected_package_dir)
+
+    assert actual_files == expected_files
+
+    # Check diff between actual and expected file contents
+    diff = ""
+    for file in actual_files:
+        actual_file = test_project_dir / file
+        expected_file = expected_package_dir / file
+
+        if actual_file.is_dir():
+            continue
+
+        with actual_file.open() as f1, expected_file.open() as f2:
+            diff += "".join(
+                difflib.unified_diff(
+                    f1.readlines(),
+                    f2.readlines(),
+                    fromfile=str(actual_file),
+                    tofile=str(expected_file),
+                )
+            )
+
+    if diff:
+        shutil.rmtree(expected_package_dir)
+        shutil.move(test_project_dir, expected_package_dir)
+        msg = (
+            "Non-zero diff between generated files and expected files.\n"
+            "Test data files have been modified with new content.\n"
+            "Diff is:\n"
+            f"{diff}"
+        )
+        raise RuntimeError(msg)
+
+
+def test_pip_installable(
+    tmp_path: pathlib.Path,
+    generate_package: typing.Callable,
+) -> None:
+    """Test generated package is pip installable."""
+    test_config = {
+        "github_username": "test-user",
+        "project_short_description": "description",
+        "project_name": "Cookiecutter Test",
     }
     generate_package(config=test_config, path=tmp_path)
 
     # Check project directory exists
     test_project_dir = tmp_path / "cookiecutter-test"
-    assert test_project_dir.exists()
-
-    # Check main files and directories inside
-    expected_files: set[pathlib.Path] = {
-        pathlib.Path(),
-        pathlib.Path(".github"),
-        pathlib.Path(".github/ISSUE_TEMPLATE"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/config.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/documentation.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/feature_request.yml"),
-        pathlib.Path(".github/ISSUE_TEMPLATE/question.yml"),
-        pathlib.Path(".github/workflows"),
-        pathlib.Path(".github/workflows/docs.yml"),
-        pathlib.Path(".github/workflows/linting.yml"),
-        pathlib.Path(".github/workflows/tests.yml"),
-        pathlib.Path(".gitignore"),
-        pathlib.Path(".markdownlint.yaml"),
-        pathlib.Path(".pre-commit-config.yaml"),
-        pathlib.Path("CITATION.cff"),
-        pathlib.Path("LICENSE.md"),
-        pathlib.Path("README.md"),
-        pathlib.Path("docs"),
-        pathlib.Path("docs/LICENSE.md"),
-        pathlib.Path("docs/api.md"),
-        pathlib.Path("docs/index.md"),
-        pathlib.Path("mkdocs.yml"),
-        pathlib.Path("pyproject.toml"),
-        pathlib.Path("schemas"),
-        pathlib.Path("schemas/github-issue-forms.json"),
-        pathlib.Path("src"),
-        pathlib.Path("src/cookiecutter_test"),
-        pathlib.Path("src/cookiecutter_test/__init__.py"),
-        pathlib.Path("tests"),
-        pathlib.Path("tests/test_dummy.py"),
-    }
-
-    actual_files = get_all_files_folders(test_project_dir)
-    # Filter out anything under specific directories to make comparison easier
-    actual_files = {
-        a
-        for a in actual_files
-        if not (a.parts and (a.parts[0] == ".git" or "__pycache__" in a.parts))
-    }
-
-    assert actual_files == expected_files
-
-    # Check it's pip-installable
     pipinstall = subprocess.run(  # noqa: S603
         [  # noqa: S607
             "python",

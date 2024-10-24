@@ -7,29 +7,26 @@ requires = [
 
 [project]
 authors = [
-    {email = "{{cookiecutter.author_email}}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
+    {email = "eva.lu.ator@ucl.ac.uk", name = "Eva Lu Ator"},
 ]
 classifiers = [
     "Operating System :: POSIX",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    {%- for python_version in range(
-       cookiecutter.min_python_version | replace('3.', '') | int,
-       cookiecutter.max_python_version | replace('3.', '') | int + 1
-    ) %}
-    "Programming Language :: Python :: 3.{{python_version}}",
-    {%- endfor %}
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
 ]
 dependencies = [
 ]
-description = "{{cookiecutter.project_short_description}}"
+description = "description"
 dynamic = [
     "version",
 ]
 keywords = [
 ]
-name = "{{cookiecutter.project_slug}}"
+name = "cookiecutter-test"
 optional-dependencies = {dev = [
     "build",
     "mypy",
@@ -48,14 +45,14 @@ optional-dependencies = {dev = [
     "pytest-cov",
 ]}
 readme = "README.md"
-requires-python = ">={{cookiecutter.min_python_version}}"
+requires-python = ">=3.11"
 license.file = "LICENSE.md"
-urls.homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+urls.homepage = "https://github.com/test-user/cookiecutter-test"
 
 [tool.coverage]
 report = {sort = "cover"}
 run = {branch = true, parallel = true, source = [
-    "{{cookiecutter.project_slug}}",
+    "cookiecutter-test",
 ]}
 paths.source = [
     "src",
@@ -94,7 +91,7 @@ lint.select = [
     "ALL",
 ]
 lint.isort.known-first-party = [
-    "{{cookiecutter.project_slug | replace('-', '_')}}",
+    "cookiecutter_test",
 ]
 lint.mccabe.max-complexity = 18
 lint.pep8-naming.classmethod-decorators = [
@@ -103,7 +100,7 @@ lint.pep8-naming.classmethod-decorators = [
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
-write_to = "src/{{cookiecutter.package_name}}/_version.py"
+write_to = "src/cookiecutter_test/_version.py"
 
 [tool.tomlsort]
 all = true
@@ -116,12 +113,9 @@ overrides."tool.tox.env_run_base.commands".inline_arrays = false
 
 [tool.tox]
 env_list = [
-{%- for python_version in range(
-    cookiecutter.min_python_version | replace('3.', '') | int,
-    cookiecutter.max_python_version | replace('3.', '') | int + 1
-) %}
-    "py3{{python_version}}",
-{%- endfor %}
+    "py311",
+    "py312",
+    "py313",
 ]
 env_run_base = {commands = [
     [
@@ -139,9 +133,6 @@ env.docs = {commands = [
 ], extras = [
     "docs",
 ]}
-{%- for python_version in range(
-    cookiecutter.min_python_version | replace('3.', '') | int,
-    cookiecutter.max_python_version | replace('3.', '') | int + 1
-) %}
-gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
-{%- endfor %}
+gh.python."3.11" = ["py311"]
+gh.python."3.12" = ["py312"]
+gh.python."3.13" = ["py313"]

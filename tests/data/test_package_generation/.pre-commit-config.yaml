@@ -1,14 +1,9 @@
-exclude: "^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/src/cookiecutter_test/__init__.py"
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.8
     hooks:
       - id: ruff
-        args:
-          - --config=pyproject.toml
       - id: ruff-format
-        args:
-          - --config=pyproject.toml
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.42.0
     hooks:
@@ -27,10 +22,6 @@ repos:
     rev: v1.11.2
     hooks:
       - id: mypy
-        args:
-          - --config-file=pyproject.toml
-        additional_dependencies:
-          - pytest
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v3.1.0
     hooks:
@@ -43,6 +34,7 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-merge-conflict
+      - id: check-toml
       - id: end-of-file-fixer
       - id: mixed-line-ending
         args:
