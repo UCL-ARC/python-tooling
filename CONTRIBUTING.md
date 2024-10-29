@@ -29,67 +29,29 @@ To contribute a change, please:
 6. If changes are requested, the PR author should address the comments, and then
    ask for review again.
 
-<!-- links here -->
-
-<!-- prettier-ignore-start -->
-[website]: https://github-pages.arc.ucl.ac.uk/python-tooling
-[UCL ARC]: https://ucl.ac.uk/arc
-[open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
-[Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
-[Research software engineers]: https://society-rse.org/about/history
-[@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
-<!-- prettier-ignore-end -->
-
-## Notes for developers
-
-<details><summary>Click to expand...</summary> <!-- markdownlint-disable-line MD033 -->
-
-First, clone repository
-
-- (Optional) Generate your SSH keys as suggested
-  [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- (Optional) GitHub CLI as suggested
-  [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
-- Clone the repository by typing (or copying) the following line in a terminal
-  at your selected path in your machine:
-
-```sh
-git clone git@github.com:UCL-ARC/python-tooling.git
-cd python-tooling
-```
-
 ### Developing the cookiecutter template
 
-- To create and remove your virtual environment
+We quite like installing cookiecutter as a uv tool:
 
-  ```sh
-  uv venv
-  source .venv/bin/activate
-  # do your work
-  deactivate
-  ```
+```sh
+uv tool install cookiecutter
+```
 
-- To run template in the same path of this repo. We do a test cookiecut of a
-  dummy package and install it to ensure the template setup works.
+To run cookiecutter using a specific branch of the template:
 
-  ```sh
-  cookiecutter .
-  cd python-template
-  git init
-  uv pip install -e ".[dev]"
-  ```
+```sh
+cookiecutter gh:UCL-ARC/python-tooling --checkout <branch-name>
+```
 
-- To run cookiecutter using a specific branch of the template:
+If you have this repo locally (presumably the case if you're developing), you
+can run the following:
 
-  ```sh
-  cookiecutter https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
-  ```
+```sh
+cookiecutter /path/to/your/checkout/of/python-tooling --checkout <branch-name>
+```
 
-- To run the tests locally:
-
-  ```sh
-  pytest -s
-  ```
+Perhaps obvious, you can omit the `--checkout` option if you're already on the
+branch you want to test.
 
 ### Developing the recommended tooling pages
 
@@ -99,7 +61,7 @@ sub-directory, and are written in markdown.
 
 To build the webpage locally (for testing)
 
-1. [Install jekyll](https://jekyllrb.com/docs/installation)
+1. [Install jekyll]
 2. Run `bundle install` from the `docs/` directory of this repository to
    install dependencies.
 3. Run `bundle exec jekyll serve` from the root directory of this repository.
@@ -107,13 +69,17 @@ To build the webpage locally (for testing)
    the server will automatically refresh the HTML pages if any changes are made
    to the markdown sources.
 
-See the [jekyll docs](https://jekyllrb.com/docs) for more info.
+See the [jekyll docs] for more info.
 
-</details>
+<!-- links here -->
 
-If you have this repo locally (this may be the case if you are developing),
-you can run the following:
-
-```sh
-cookiecutter /path/to/your/checkout/of/python-tooling --checkout latest
-```
+<!-- prettier-ignore-start -->
+[website]: https://github-pages.arc.ucl.ac.uk/python-tooling
+[UCL ARC]: https://ucl.ac.uk/arc
+[open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
+[Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
+[Research software engineers]: https://society-rse.org/about/history
+[@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
+[Install jekyll]: https://jekyllrb.com/docs/installation
+[jekyll docs]: https://jekyllrb.com/docs
+<!-- prettier-ignore-end -->
