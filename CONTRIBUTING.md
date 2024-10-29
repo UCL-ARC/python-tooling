@@ -39,3 +39,81 @@ To contribute a change, please:
 [Research software engineers]: https://society-rse.org/about/history
 [@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
 <!-- prettier-ignore-end -->
+
+## Notes for developers
+
+<details><summary>Click to expand...</summary> <!-- markdownlint-disable-line MD033 -->
+
+First, clone repository
+
+- (Optional) Generate your SSH keys as suggested
+  [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- (Optional) GitHub CLI as suggested
+  [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
+- Clone the repository by typing (or copying) the following line in a terminal
+  at your selected path in your machine:
+
+```sh
+git clone git@github.com:UCL-ARC/python-tooling.git
+cd python-tooling
+```
+
+### Developing the cookiecutter template
+
+- To create and remove your virtual environment
+
+  ```sh
+  uv venv
+  source .venv/bin/activate
+  # do your work
+  deactivate
+  ```
+
+- To run template in the same path of this repo. We do a test cookiecut of a
+  dummy package and install it to ensure the template setup works.
+
+  ```sh
+  cookiecutter .
+  cd python-template
+  git init
+  uv pip install -e ".[dev]"
+  ```
+
+- To run cookiecutter using a specific branch of the template:
+
+  ```sh
+  cookiecutter https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
+  ```
+
+- To run the tests locally:
+
+  ```sh
+  pytest -s
+  ```
+
+### Developing the recommended tooling pages
+
+Pages all live in the
+[docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages)
+sub-directory, and are written in markdown.
+
+To build the webpage locally (for testing)
+
+1. [Install jekyll](https://jekyllrb.com/docs/installation)
+2. Run `bundle install` from the `docs/` directory of this repository to
+   install dependencies.
+3. Run `bundle exec jekyll serve` from the root directory of this repository.
+   This should fire up a local web server and tell you its address. By default
+   the server will automatically refresh the HTML pages if any changes are made
+   to the markdown sources.
+
+See the [jekyll docs](https://jekyllrb.com/docs) for more info.
+
+</details>
+
+If you have this repo locally (this may be the case if you are developing),
+you can run the following:
+
+```sh
+cookiecutter /path/to/your/checkout/of/python-tooling --checkout latest
+```
