@@ -1,0 +1,27 @@
+---
+name: Documentation
+description: How Can We Improve the Documentation
+labels:
+  - documentation
+body:
+  - id: section
+    type: textarea
+    attributes:
+      label: Which Section of the Documentation Needs Improving?
+      description: Please provide a link (if it is a specific page).
+    validations:
+      required: true
+  - id: problem
+    type: textarea
+    attributes:
+      label: What Can be Improved About This Section
+      description: Is it incomplete, incorrect or difficult to understand?
+    validations:
+      required: true
+  - id: suggestions
+    type: textarea
+    attributes:
+      label: How to Improve This Section
+      description: >-
+        Do you have any specific suggestions we could take to improve the
+        documentation?
