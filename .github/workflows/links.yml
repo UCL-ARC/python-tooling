@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Link Checker
         id: lychee
@@ -29,9 +29,14 @@ jobs:
           # Ignore the whole of the project slug README since the links are
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
-          args:
-            "--verbose --exclude https://forum.image.sc/ --exclude http://www.gnu.org --exclude http://fsf.org --exclude docs/pages
-            --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
+          args: "--verbose
+            --exclude https://forum.image.sc/
+            --exclude http://www.gnu.org
+            --exclude http://fsf.org
+            --exclude docs/pages
+            --exclude-path '{{cookiecutter.project_slug}}/README.md'
+            --exclude-path 'tests/data'
+            -- ."
           fail: true
           jobSummary: true
         env:
