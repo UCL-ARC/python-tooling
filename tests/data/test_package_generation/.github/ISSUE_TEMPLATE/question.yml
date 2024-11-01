@@ -1,0 +1,24 @@
+---
+name: Question
+description: General Questions About Using Cookiecutter Test
+labels:
+  - question
+body:
+  - id: topic
+    type: dropdown
+    attributes:
+      label: What is the Topic of Your Question
+      description: Please indicate the topic in the title of your question.
+      options:
+        - Documentation
+        - Installation
+        - Usage
+        - Other
+    validations:
+      required: true
+  - id: question
+    type: textarea
+    attributes:
+      label: Add Your Question Below
+    validations:
+      required: true
