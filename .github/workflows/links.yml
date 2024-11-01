@@ -29,9 +29,14 @@ jobs:
           # Ignore the whole of the project slug README since the links are
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
-          args:
-            "--verbose --exclude https://forum.image.sc/ --exclude http://www.gnu.org --exclude http://fsf.org --exclude docs/pages
-            --exclude-path '{{cookiecutter.project_slug}}/README.md'  -- ."
+          args: "--verbose
+            --exclude https://forum.image.sc/
+            --exclude http://www.gnu.org
+            --exclude http://fsf.org
+            --exclude docs/pages
+            --exclude-path '{{cookiecutter.project_slug}}/README.md'
+            --exclude-path 'tests/data'
+            -- ."
           fail: true
           jobSummary: true
         env:
