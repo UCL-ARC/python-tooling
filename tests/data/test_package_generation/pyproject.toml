@@ -1,0 +1,138 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools",
+    "setuptools-scm",
+]
+
+[project]
+authors = [
+    {email = "eva.lu.ator@ucl.ac.uk", name = "Eva Lu Ator"},
+]
+classifiers = [
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+]
+description = "description"
+dynamic = [
+    "version",
+]
+keywords = [
+]
+name = "cookiecutter-test"
+optional-dependencies = {dev = [
+    "build",
+    "mypy",
+    "pre-commit",
+    "ruff",
+    "tox",
+    "twine",
+], docs = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python",
+], test = [
+    "pytest",
+    "pytest-cov",
+]}
+readme = "README.md"
+requires-python = ">=3.11"
+license.file = "LICENSE.md"
+urls.homepage = "https://github.com/test-user/cookiecutter-test"
+
+[tool.coverage]
+report = {sort = "cover"}
+run = {branch = true, parallel = true, source = [
+    "cookiecutter-test",
+]}
+paths.source = [
+    "src",
+    ".tox*/*/lib/python*/site-packages",
+]
+
+[tool.mypy]
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+addopts = [
+    "--color=yes",
+    "--import-mode=importlib",
+    "--verbose",
+]
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+fix = true
+force-exclude = true
+lint.ignore = [
+    "COM812", # trailing commas (ruff-format recommended)
+    "D203", # no-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D407", # removed dashes lines under sections
+    "D417", # argument description in docstring (unreliable)
+    "ISC001", # simplify implicit str concatenation (ruff-format recommended)
+]
+lint.per-file-ignores = {"tests*" = [
+    "INP001", # File is part of an implicit namespace package.
+    "S101", # Use of `assert` detected
+]}
+lint.select = [
+    "ALL",
+]
+lint.isort.known-first-party = [
+    "cookiecutter_test",
+]
+lint.mccabe.max-complexity = 18
+lint.pep8-naming.classmethod-decorators = [
+    "classmethod",
+]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/cookiecutter_test/_version.py"
+
+[tool.tomlsort]
+all = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+overrides."project.classifiers".inline_arrays = false
+overrides."tool.coverage.paths.source".inline_arrays = false
+overrides."tool.tox.env.docs.commands".inline_arrays = false
+overrides."tool.tox.env_run_base.commands".inline_arrays = false
+
+[tool.tox]
+env_list = [
+    "py311",
+    "py312",
+    "py313",
+]
+env_run_base = {commands = [
+    [
+        "pytest",
+        "--cov",
+        "--cov-report=xml",
+    ],
+], extras = [
+    "test",
+]}
+env.docs = {commands = [
+    "mkdocs",
+    "build",
+    "--strict",
+], extras = [
+    "docs",
+]}
+gh.python."3.11" = ["py311"]
+gh.python."3.12" = ["py312"]
+gh.python."3.13" = ["py313"]
