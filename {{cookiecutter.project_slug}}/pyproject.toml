@@ -133,9 +133,9 @@ env_run_base = {commands = [
     "test",
 ]}
 env.docs = {commands = [
-    "--strict",
-    "build",
     "mkdocs",
+    "build",
+    "--strict",
 ], extras = [
     "docs",
 ]}
