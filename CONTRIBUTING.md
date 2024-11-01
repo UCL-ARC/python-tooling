@@ -31,7 +31,7 @@ To contribute a change, please:
 
 ### Developing the cookiecutter template
 
-We quite like installing cookiecutter as a uv tool:
+We quite like installing cookiecutter as a [uv tool](https://docs.astral.sh/uv/guides/tools/), so it's available globally:
 
 ```sh
 uv tool install cookiecutter
@@ -44,19 +44,19 @@ cookiecutter gh:UCL-ARC/python-tooling --checkout <branch-name>
 ```
 
 If you have this repo locally (presumably the case if you're developing), you
-can run the following:
+can instead run the following:
 
 ```sh
 cookiecutter /path/to/your/checkout/of/python-tooling --checkout <branch-name>
 ```
 
-Perhaps obvious, you can omit the `--checkout` option if you're already on the
+You can omit the `--checkout` option if you're already on the
 branch you want to test.
 
 ### Developing the recommended tooling pages
 
 Pages all live in the
-[docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages)
+`docs/pages`
 sub-directory, and are written in markdown.
 
 To build the webpage locally (for testing)
