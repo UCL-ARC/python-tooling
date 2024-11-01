@@ -1,4 +1,4 @@
-exclude: ^{{cookiecutter.project_slug}}/
+exclude: ^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.8
