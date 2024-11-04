@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD041 -->
+<!-- markdownlint-disable MD041 -->
 <div style="text-align: center;" align="center">
   <img src="https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg" alt="UCL ARC Python tooling logo" width="120"/>
   <h1> UCL ARC Python Recommendations</h1>
@@ -19,12 +19,61 @@ Python packages with our recommended tooling set up and ready to go.
 > package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
 > we recommend using their template instead of this one.
 
+## Tutorial
+
+Some quick instructions for using our template are below.
+We also have a [tutorial](./tutorial.md) that has been presented in a couple of workshops aimed at researchers at UCL.
+
+## Using our template
+
+If you have [uv] installed, you can use our template with the following one-liner:
+
+```sh
+uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
+```
+
+Alternatively you can [install cookiecutter] (following the recommended instructions).
+Do this if you don't use [uv], or if you're likely to want to use cookiecutter again.
+
+Then you'll need to run cookiecutter with our template:
+
+```sh
+cookiecutter gh:ucl-arc/python-tooling --checkout latest
+```
+
+When [cookiecutter] runs, it will ask you a series of questions to configure your project.
+Type the answer or hit return without typing anything to use the default option (shown in parenthesis).
+At the end, it will print some more follow-up information in the terminal for things like creating a remote repository and making a website for your package.
+
+It will have created a directory for your project.
+You can see the structure with the `tree` command.
+In our example we've called our project `example-research-software-project`:
+
+```sh
+ls -ltr | tail -n1 # Shows the last directory that was created
+tree example-research-software-project
+```
+
+To work on your project, initialise a `git` repository and _install_ your new package editable mode.
+You probably want to do this in a [virtual environment](./docs/pages/virtual.md).
+The comments show how to do this in [uv] with `uv venv`:
+
+```sh
+cd example-research-software-project
+git init
+# uv venv
+# source .venv/bin/activate
+uv pip install -e ".[dev]"
+```
+
 <!-- links here -->
 
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
-[cookiecutter]: https://libraries.io/pypi/cookiecutter
+[cookiecutter]: https://cookiecutter.readthedocs.io/en/stable
+[install cookiecutter]: https://cookiecutter.readthedocs.io/en/stable/README.html#installation
+[uv]: https://docs.astral.sh/uv
 <!-- prettier-ignore-end -->
 
 ## Contributors
@@ -68,134 +117,3 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-## Using this template
-
-Some quick instructions for using our template are below.
-We also have a detailed [tutorial](tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
-The tutorial goes into much more pedagogical detail, it both describes using the template to create a package
-and how to use the newly created package with some of the tools included.
-
-1. Install [cookiecutter] in a `uv venv` or `conda` environment (commented lines for
-   `uv venv` example).
-
-   ```sh
-   # uv venv  # creates a .venv directory wherever you are
-   # source ./.venv/bin/activate
-   uv pip install cookiecutter
-   ```
-
-2. Run cookiecutter in the desired directory
-
-   ```sh
-   cookiecutter gh:ucl-arc/python-tooling --checkout latest
-   ```
-
-   If you have this repo locally (this may be the case if you are developing),
-   you can run the following:
-
-   ```sh
-   cookiecutter /path/to/your/checkout/of/python-tooling --checkout latest
-   ```
-
-3. A series of questions will pop up to configure the project. Type the answer
-   or hit return to use the default option (shown in parenthesis).
-
-   Note that these project variables are defined in the `cookiecutter.json`
-   file.
-
-4. This will create a specific directory structure.
-
-   For example, for a project with the following variables:
-
-   ```yaml
-   project_name [Python Template]: PROJECT_NAME
-   project_slug [python-template]: PROJECT_SLUG
-   package_name [python_template]: PACKAGE_NAME
-   ```
-
-5. To work on your project, initialise a Git repository and _install_ it in
-   editable mode.
-
-   ```sh
-   cd PROJECT_SLUG
-   git init
-   uv pip install -e ".[dev]"
-   ```
-
-6. Build your package
-
-   ```sh
-   python -m build
-   ```
-
-## Notes for developers
-
-<details><summary>Click to expand...</summary> <!-- markdownlint-disable-line MD033 -->
-
-First, clone repository
-
-- (Optional) Generate your SSH keys as suggested
-  [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- (Optional) GitHub CLI as suggested
-  [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=cli)
-- Clone the repository by typing (or copying) the following line in a terminal
-  at your selected path in your machine:
-
-```sh
-git clone git@github.com:UCL-ARC/python-tooling.git
-cd python-tooling
-```
-
-### Developing the cookiecutter template
-
-- To create and remove your virtual environment
-
-  ```sh
-  uv venv
-  source .venv/bin/activate
-  # do your work
-  deactivate
-  ```
-
-- To run template in the same path of this repo. We do a test cookiecut of a
-  dummy package and install it to ensure the template setup works.
-
-  ```sh
-  cookiecutter .
-  cd python-template
-  git init
-  uv pip install -e ".[dev]"
-  ```
-
-- To run cookiecutter using a specific branch of the template:
-
-  ```sh
-  cookiecutter https://github.com/UCL-ARC/python-tooling --checkout <branch-name>
-  ```
-
-- To run the tests locally:
-
-  ```sh
-  pytest -s
-  ```
-
-### Developing the recommended tooling pages
-
-Pages all live in the
-[docs/pages](https://github.com/UCL-ARC/python-tooling/tree/main/docs/pages)
-sub-directory, and are written in markdown.
-
-To build the webpage locally (for testing)
-
-1. [Install jekyll](https://jekyllrb.com/docs/installation)
-2. Run `bundle install` from the `docs/` directory of this repository to
-   install dependencies.
-3. Run `bundle exec jekyll serve` from the root directory of this repository.
-   This should fire up a local web server and tell you its address. By default
-   the server will automatically refresh the HTML pages if any changes are made
-   to the markdown sources.
-
-See the [jekyll docs](https://jekyllrb.com/docs) for more info.
-
-</details>
