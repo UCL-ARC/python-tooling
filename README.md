@@ -22,7 +22,7 @@ Python packages with our recommended tooling set up and ready to go.
 ## Tutorial
 
 Some quick instructions for using our template are below.
-We also have a pedagogical [tutorial](./tutorial.md) that has been given in a couple of workshops geared towards researchers at UCL.
+We also have a [tutorial](./tutorial.md) that has been presented in a couple of workshops aimed at researchers at UCL.
 
 ## Using our template
 
