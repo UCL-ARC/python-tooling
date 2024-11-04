@@ -1,2 +1,4 @@
 ---
-MD013: false
+# Markdown linting rules to ignore.
+MD013: false #  line-length
+MD033: false #  no-inline-html
