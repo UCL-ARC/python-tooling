@@ -40,7 +40,7 @@ def test_package_generation(
 ) -> None:
     """Test package generation."""
     test_config = {
-        "github_username": "test-user",
+        "github_owner": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
         # Not having a git repo makes it easier to check in/out reference
@@ -98,7 +98,7 @@ def test_pip_installable(
 ) -> None:
     """Test generated package is pip installable."""
     test_config = {
-        "github_username": "test-user",
+        "github_owner": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
     }
@@ -129,7 +129,7 @@ def test_optional_funder(
 ) -> None:
     """Test package generation."""
     config = {
-        "github_username": "test-user",
+        "github_owner": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
         "funder": funder,
