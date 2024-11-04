@@ -20,7 +20,7 @@ To contribute a change, please:
 
 1. Create a new branch (or fork if you're not in [@UCL-ARC/collaborations]).
 2. Modify an existing page, create a new one, or tweak the template. a. Run
-   [pre-commit](https://pre-commit.com) which will lint your changes. b. Check
+   [pre-commit] which will lint your changes. b. Check
    the tests pass if you modified the template (`pytest -s`).
 3. Open a _pull request_ (PR) with changes.
 4. Ask someone who did not contribute to the PR from [@UCL-ARC/collaborations]
@@ -31,7 +31,7 @@ To contribute a change, please:
 
 ### Developing the cookiecutter template
 
-We quite like installing cookiecutter as a [uv tool](https://docs.astral.sh/uv/guides/tools/), so it's available globally:
+We quite like installing cookiecutter as a [uv tool], so it's available globally:
 
 ```sh
 uv tool install cookiecutter
@@ -55,9 +55,7 @@ branch you want to test.
 
 ### Developing the recommended tooling pages
 
-Pages all live in the
-`docs/pages`
-sub-directory, and are written in markdown.
+Pages all live in the `docs/pages` sub-directory, and are written in markdown.
 
 To build the webpage locally (for testing)
 
@@ -79,7 +77,9 @@ See the [jekyll docs] for more info.
 [open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
 [Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
 [Research software engineers]: https://society-rse.org/about/history
+[pre-commit]: https://pre-commit.com
 [@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
+[uv tool]: https://docs.astral.sh/uv/guides/tools
 [Install jekyll]: https://jekyllrb.com/docs/installation
 [jekyll docs]: https://jekyllrb.com/docs
 <!-- prettier-ignore-end -->
