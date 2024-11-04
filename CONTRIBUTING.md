@@ -30,8 +30,9 @@ To contribute a change, please:
    the tests pass if you modified the template (`pytest -s`).
 3. Open a _pull request_ (PR) with changes.
 4. Ask someone who did not contribute to the PR from [@UCL-ARC/collaborations]
-   to review it.
-5. If approved with no comments, then the reviewer will merge the PR.
+   to review it. If it should have two reviewers, you can also request a review
+   from [@UCL-ARC/collaborations-python-tooling] and add the `needs-2-reviewers` label.
+5. If approved with no comments, then the last approving reviewer should merge the PR.
 6. If changes are requested, the PR author should address the comments, and then
    ask for review again.
 
@@ -85,6 +86,7 @@ See the [jekyll docs] for more info.
 [Research software engineers]: https://society-rse.org/about/history
 [pre-commit]: https://pre-commit.com
 [@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
+[@UCL-ARC/collaborations-python-tooling]: https://github.com/orgs/UCL-ARC/teams/collaborations-python-tooling
 [uv tool]: https://docs.astral.sh/uv/guides/tools
 [Install jekyll]: https://jekyllrb.com/docs/installation
 [jekyll docs]: https://jekyllrb.com/docs
