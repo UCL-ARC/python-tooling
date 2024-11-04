@@ -45,96 +45,14 @@ When [cookiecutter] runs, it will ask you a series of questions to configure you
 Type the answer or hit return without typing anything to use the default option (shown in parenthesis).
 At the end, it will print some more follow-up information in the terminal for things like creating a remote repository and making a website for your package.
 
-Here's an example run through
-
-<details><summary>Click to expand...</summary>
-
-```sh
-uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
-  [1/14] Given name(s) of package author (Eva Lu): Grace
-  [2/14] Family name(s) of package author (Ator): Hopper
-  [3/14] Email address for package author - will be part of package metadata
-(grace.hopper@ucl.ac.uk):
-  [4/14] Name of project - may contain spaces (Python Template): Example Research Software Project
-  [5/14] 'Slugified' project name for use in URLs - dash-case recommended
-(example-research-software-project):
-  [6/14] Name for Python package - snake_case recommended
-(example_research_software_project): ersp
-  [7/14] Short description of the project (A cookiecutter package with UCL ARC
-recommendations.): An example project.
-  [8/14] Initialise project directory as a Git repository? [y/n] (y): y
-  [9/14] Automatically deploy HTML docs to GitHub Pages on pushes to main? [y/n]
-(y): y
-  [10/14] GitHub user or organization name which will be owner of repository
-(grace-hopper): UCL-ARC
-  [11/14] Minimum Python version supported by package
-    1 - 3.11
-    2 - 3.12
-    3 - 3.13
-    Choose from [1/2/3] (1):
-  [12/14] Maximum Python version supported by package
-    1 - 3.13
-    2 - 3.12
-    3 - 3.11
-    Choose from [1/2/3] (1):
-  [13/14] Which open-source license to release package under
-    1 - MIT
-    2 - BSD-3
-    3 - GPL-3.0
-    Choose from [1/2/3] (1): 1
-  [14/14] Organisation(s) to acknowledge for funding of project (optional) ():
-Initialized empty Git repository in /Users/scnlf/example-research-software-project/.git/
-GitHub CLI detected, you can create a repo with the following:
-
-gh repo create UCL-ARC/example-research-software-project -d "An example project." --public -r origin --source example-research-software-project
-
-The 'Documentation' GitHub Actions workflow has been set up to push the built HTML documentation to a branch gh-pages on pushes to main for deploying as a GitHub Pages website. To allow the GitHub Actions bot to push to the gh-pages branch you need to enable 'Read and write permissions' under 'Workflow permissions' at
-
-https://github.com/UCL-ARC/example-research-software-project/settings/actions
-
-After the 'Documentation' workflow has successfully completed at least once you will also need to configure the repository to deploy a GitHub pages site from the content on the gh-pages branch by going to
-
-https://github.com/UCL-ARC/example-research-software-project/settings/pages
-
-and under 'Built and deployment' selecting 'Deploy from a branch' for the 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, leaving the branch path drop-down with its default value of '/ (root)'.
-```
-
-</details>
-
-<br/>
-
-This will create a project directory structure.
-
-<details><summary>Click to expand...</summary>
+It will have created a directory for your project.
+You can see the structure with the `tree` command.
+In our example we've called our project `example-research-software-project`:
 
 ```sh
+ls -ltr | tail -n1 # Shows the last directory that was created
 tree example-research-software-project
-example-research-software-project
-├── CITATION.cff
-├── LICENSE.md
-├── README.md
-├── docs
-│   ├── LICENSE.md
-│   ├── api.md
-│   └── index.md
-├── mkdocs.yml
-├── pyproject.toml
-├── schemas
-│   └── github-issue-forms.json
-├── src
-│   └── ersp
-│       └── __init__.py
-└── tests
-    └── test_dummy.py
-
-6 directories, 11 files
 ```
-
-</details>
-
-<br/>
-
-<!-- markdownlint-restore -->
 
 To work on your project, initialise a `git` repository and _install_ your new package editable mode.
 You probably want to do this in a [virtual environment](./docs/pages/virtual.md).
