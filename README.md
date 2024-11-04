@@ -32,13 +32,8 @@ If you have [uv] installed, you can use our template with the following one-line
 uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-Alternatively you can [install cookiecutter].
+Alternatively you can [install cookiecutter] (following the recommended instructions).
 Do this if you don't use [uv], or if you're likely to want to use cookiecutter again.
-Here's the way we install it:
-
-```sh
-uv tool install cookiecutter
-```
 
 Then you'll need to run cookiecutter with our template:
 
