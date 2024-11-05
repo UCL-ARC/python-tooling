@@ -15,7 +15,7 @@ def test_initialisation_of_git_repo(
 ) -> None:
     """Checks to see if git was correctly initialised if desired."""
     test_config = {
-        "github_username": "test-user",
+        "github_owner": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
         "initialise_git_repository": initialise_git_repository,
@@ -57,7 +57,7 @@ def test_initialisation_of_git_repo(
         )
         assert (
             "GitHub CLI detected, you can create a repo with the following:\n\n"
-            f"gh repo create {test_config['github_username']}/"
+            f"gh repo create {test_config['github_owner']}/"
             f"cookiecutter-test -d "
             f"\"{test_config['project_short_description']}\" --public -r "
             f"origin --source cookiecutter-test" in result.stdout
@@ -69,11 +69,11 @@ def test_initialisation_of_git_repo(
         assert (
             "You now have a local git repository. To sync this to GitHub you "
             "need to create an empty GitHub repo with the name "
-            f"{test_config['github_username']}/"
+            f"{test_config['github_owner']}/"
             f"cookiecutter-test - DO NOT SELECT ANY "
             "OTHER OPTION.\n\nSee this link for more detail "
             "https://docs.github.com/en/get-started/quickstart/create-a-repo"
             ".\n\nThen run:\n\ngit remote add origin git@github.com:"
-            f"{test_config['github_username']}/"
+            f"{test_config['github_owner']}/"
             f"cookiecutter-test.git" in result.stdout
         )

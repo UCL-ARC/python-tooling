@@ -153,19 +153,19 @@ When you completed setting up the package using the `cookiecutter` command you s
 ```sh
 GitHub CLI detected, you can create a repo with the following:
 
-gh repo create {github_user}/{project_slug} -d "{project_description}" --public -r origin --source {project_slug}
+gh repo create {github_owner}/{project_slug} -d "{project_description}" --public -r origin --source {project_slug}
 ```
 
-where `{github_user}`, `{project_slug}` and `{project_description}` are replaced with the relevant GitHub user name, project slug and description that you entered when setting up the package using `cookiecutter`. You should now copy-paste and run the `gh repo create ...` command that was printed out in the message - if you no longer have access to the message you can use the example above, being careful to subsitute the placeholders in braces `{}` with the relevant values.
+where `{github_owner}`, `{project_slug}` and `{project_description}` are replaced with the relevant GitHub repository owner (user name), project slug and description that you entered when setting up the package using `cookiecutter`. You should now copy-paste and run the `gh repo create ...` command that was printed out in the message - if you no longer have access to the message you can use the example above, being careful to subsitute the placeholders in braces `{}` with the relevant values.
 
 If you get an error message at this point it may be because you have not installed the GitHub CLI or set up the authorisation for the GitHub CLI as [described in the setup instructions above](#%EF%B8%8F-setting-up-dependencies-for-using-template).
 
 If the command runs successfully you should see a message of the form
 
 ```sh
-✓ Created repository {github_user}/{project_slug} on GitHub
-  https://github.com/{github_user}/{project_slug}
-✓ Added remote https://github.com/{github_user}/{project_slug}.git
+✓ Created repository {github_owner}/{project_slug} on GitHub
+  https://github.com/{github_owner}/{project_slug}
+✓ Added remote https://github.com/{github_owner}/{project_slug}.git
 ```
 
 A repository should have been created at the printed URL which you should be able to navigate to in your browser (either copy-paste in to browser or depending on terminal application you may be able to hold `Ctrl` and click on URL directly). Currently both the remote and local repositories are empty as we have not made any commits.
@@ -181,7 +181,7 @@ git push --set-upstream origin main
 
 If you now navigate to the GitHub repository URL in your browser you should see the package files present, with the content of the top-level `README.md` being displayed as the repository landing page.
 
-The push of the initial commit to the default `main` branch will have also triggered runs of the GitHub Actions workflows set up in the repository. You can view the status of the workflow job runs by opening the `Actions` pane from the top navigation bar on the repository landing page, or going to the URL `https://github.com/{github_user}/{project_slug}/actions`.
+The push of the initial commit to the default `main` branch will have also triggered runs of the GitHub Actions workflows set up in the repository. You can view the status of the workflow job runs by opening the `Actions` pane from the top navigation bar on the repository landing page, or going to the URL `https://github.com/{github_owner}/{project_slug}/actions`.
 
 Depending on your account settings, you may find that the `Documentation` workflow shows as failed (❌). If this is the case this is likely because the repository has been set by default to only allow GitHub Actions workflows read permissions on the repository, which prevents the step in the `Documentation` workflow which pushes the built HTML documentation to a branch `gh-pages` from completing. In the next section we will look at how to configure the repository to ensure the permissions are set correctly and have the HTML documentation deployed to a GitHub Pages website.
 
@@ -196,27 +196,27 @@ GitHub Pages website. To allow the GitHub Actions bot to push to the gh-pages
 branch you need to enable 'Read and write permissions' under 'Workflow
 permissions' at
 
-https://github.com/{github_user}/{project_slug}/settings/actions
+https://github.com/{github_owner}/{project_slug}/settings/actions
 
 After the 'Documentation' workflow has successfully completed at least once
 you will also need to configure the repository to deploy a GitHub pages site
 from the content on the gh-pages branch by going to
 
-https://github.com/{github_user}/{project_slug}/settings/pages
+https://github.com/{github_owner}/{project_slug}/settings/pages
 
 and under 'Built and deployment' selecting 'Deploy from a branch' for the
 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, leaving the
 branch path drop-down with its default value of '/ (root)'.
 ```
 
-where as before `{github_user}` and `{project_slug}` are replaced with the relevant GitHub user name and project slug that you entered when setting up the package.
+where as before `{github_owner}` and `{project_slug}` are replaced with the relevant GitHub repository owner and project slug that you entered when setting up the package.
 
-The first part of the instructions gives details of how to set the permissions for GitHub Actions workflows in the repository to allow the GitHub Actions bot to push the built HTML documentation to a branch `gh-pages` on updates to the default `main` branch on the repository, so that the documentation is automatically updated whenever changes are merged in to `main`. After going to the Actions settings page at the URL indicated (which can also be reached by going to the `Settings` tab in the top navigation bar of the repository and then selecting `Action > General` in the left hand navigation menu) and ensuring `Workflow permissions` is set to allow `Read and write permissions`, if you have changed the permissions you will also need to re-run the documentation workflow with the updated permissions. This can be done by going to the Actions pane in the repository (accessible from top navigation bar or by going to `https://github.com/{github_user}/{project_slug}/actions`), clicking on the (top / latest if there are multiple) entry for the _Documentation_ workflow, which should be showing as failing, and then from the resulting page click the `Re-run all jobs` button.
+The first part of the instructions gives details of how to set the permissions for GitHub Actions workflows in the repository to allow the GitHub Actions bot to push the built HTML documentation to a branch `gh-pages` on updates to the default `main` branch on the repository, so that the documentation is automatically updated whenever changes are merged in to `main`. After going to the Actions settings page at the URL indicated (which can also be reached by going to the `Settings` tab in the top navigation bar of the repository and then selecting `Action > General` in the left hand navigation menu) and ensuring `Workflow permissions` is set to allow `Read and write permissions`, if you have changed the permissions you will also need to re-run the documentation workflow with the updated permissions. This can be done by going to the Actions pane in the repository (accessible from top navigation bar or by going to `https://github.com/{github_owner}/{project_slug}/actions`), clicking on the (top / latest if there are multiple) entry for the _Documentation_ workflow, which should be showing as failing, and then from the resulting page click the `Re-run all jobs` button.
 
-Once the _Documentation_ workflow has successfully completed, a new branch `gh-pages` should have been created in the repository containing the HTML documentation. The second part of the instructions printed in the message output by the `cookiecutter` command indicate to go to a URL `https://github.com/{github_user}/{project_slug}/settings/pages` to set this branch as the source for a GitHub Pages website for the repository. If you now follow those instructions, setting the `Source` to `Deploy from branch` and `Branch` to `gh-pages`, the a new Actions workflow `pages-build-deployment` will be automatically triggered. Once this workflow has completed, you should be able to view the HTML documentation for the repository at a URL
+Once the _Documentation_ workflow has successfully completed, a new branch `gh-pages` should have been created in the repository containing the HTML documentation. The second part of the instructions printed in the message output by the `cookiecutter` command indicate to go to a URL `https://github.com/{github_owner}/{project_slug}/settings/pages` to set this branch as the source for a GitHub Pages website for the repository. If you now follow those instructions, setting the `Source` to `Deploy from branch` and `Branch` to `gh-pages`, the a new Actions workflow `pages-build-deployment` will be automatically triggered. Once this workflow has completed, you should be able to view the HTML documentation for the repository at a URL
 
 ```sh
-https://{github_user}.github.io/{project_slug}
+https://{github_owner}.github.io/{project_slug}
 ```
 
 The index page of the documentation reproduces the content from the repository README file. The documentation site also importantly includes _application programming interface_ (API) reference documentation built from the [docstrings](https://peps.python.org/pep-0257/#what-is-a-docstring) in the package source code; this API documentation is accessible from the `API reference` link in the navigation.
