@@ -5,6 +5,6 @@ authors:
   - family-names: "{{cookiecutter.author_family_names }}"
     given-names: "{{ cookiecutter.author_given_names }}"
     email: "{{ cookiecutter.author_email }}"
-repository-code: "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+repository-code: "{{ cookiecutter.__repo_url }}"
 title: "{{ cookiecutter.project_name }}: {{ cookiecutter.project_short_description }}"
 license: "{{ cookiecutter.license }}"
