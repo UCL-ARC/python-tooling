@@ -58,7 +58,7 @@ branch you want to test.
 [![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
 
 We follow Scientific Python's [SPEC0](https://scientific-python.org/specs/spec-0000/) policy.
-Notably this means our template will support [Python versions for three years after their release](https://scientific-python.org/specs/spec-0000/#support-window), and changes to the template are equired to pass tests in all such python versions.
+Notably this means our template will support [Python versions for three years after their release](https://scientific-python.org/specs/spec-0000/#support-window), and changes to the template are required to pass tests in all such python versions.
 (See [the CI checks](./.github/workflows/test.yml) for precise details.)
 
 ### Developing the recommended tooling pages
