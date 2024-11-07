@@ -36,17 +36,17 @@ body:
         of errors you receive.
     validations:
       required: true
-  # - id: version
-  #   type: input
-  #   attributes:
-  #     label: Version In Use
-  #     description: |-
-  #       Can be found by
-  #       ```sh
-  #       python -c "import sleplet; print(sleplet.__version__)"
-  #       ```
-  #   validations:
-  #     required: true
+  - id: version
+    type: input
+    attributes:
+      label: Version In Use
+      description: |-
+        Can be found by
+        ```sh
+        git -C "$HOME/.cookiecutters/python-tooling" describe --match "v*" --tags --candidates 1
+        ```
+    validations:
+      required: true
   - id: additional
     type: textarea
     attributes:
