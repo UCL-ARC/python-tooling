@@ -43,7 +43,7 @@ body:
       description: |-
         Can be found by
         ```sh
-        git -C "$HOME/.cookiecutters/python-tooling" describe --tags --abbrev=0
+        git -C "$HOME/.cookiecutters/python-tooling" describe --match "v*" --tags --candidates 1
         ```
     validations:
       required: true
