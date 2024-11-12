@@ -18,4 +18,4 @@ parent: Recommended libraries
 | Name                                                     | Short description                                              | 🚦  |
 | -------------------------------------------------------- | -------------------------------------------------------------- | :-: |
 | [tqdm](https://tqdm.github.io/)                          | Progress bar for loops.                                        | 🟢  |
-| [inquirer] (<https://github.com/magmax/python-inquirer>) | Collection of common interactive command line user interfaces. | 🟢  |
+| [inquirer](https://github.com/magmax/python-inquirer) | Collection of common interactive command line user interfaces. | 🟢  |
