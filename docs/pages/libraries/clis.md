@@ -15,6 +15,7 @@ parent: Recommended libraries
 
 ### Other useful tools for CLIs
 
-| Name                            | Short description       | 🚦  |
-| ------------------------------- | ----------------------- | :-: |
-| [tqdm](https://tqdm.github.io/) | Progress bar for loops. | 🟢  |
+| Name                                                  | Short description                                              | 🚦  |
+| ----------------------------------------------------- | -------------------------------------------------------------- | :-: |
+| [tqdm](https://tqdm.github.io/)                       | Progress bar for loops.                                        | 🟢  |
+| [inquirer](https://github.com/magmax/python-inquirer) | Collection of common interactive command line user interfaces. | 🟢  |
