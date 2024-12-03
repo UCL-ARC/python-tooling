@@ -5,4 +5,5 @@
     ":assignAndReview(team:collaborations-python-tooling)",
     ":maintainLockFilesMonthly",
   ],
+  ignorePaths: [],
 }
