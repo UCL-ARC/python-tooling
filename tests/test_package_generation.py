@@ -3,6 +3,7 @@
 import difflib
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import typing
@@ -71,14 +72,21 @@ def test_package_generation(
             continue
 
         with actual_file.open() as f1, expected_file.open() as f2:
-            diff += "".join(
-                difflib.unified_diff(
-                    f1.readlines(),
-                    f2.readlines(),
-                    fromfile=str(actual_file),
-                    tofile=str(expected_file),
-                )
+            f1_content = f1.read()
+            f2_content = f2.read()
+
+        exclude_version_numbers = r"v(\d+\.)?(\d+\.)?(\*|\d+)$"
+        f1_content = re.sub(exclude_version_numbers, "", f1_content)
+        f2_content = re.sub(exclude_version_numbers, "", f2_content)
+
+        diff += "".join(
+            difflib.unified_diff(
+                f1_content,
+                f2_content,
+                fromfile=str(actual_file),
+                tofile=str(expected_file),
             )
+        )
 
     if diff:
         shutil.rmtree(expected_package_dir)
