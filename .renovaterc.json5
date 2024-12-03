@@ -5,4 +5,7 @@
     ":assignAndReview(team:collaborations-python-tooling)",
     ":maintainLockFilesMonthly",
   ],
+  "pre-commit": {
+    fileMatch: ["tests/data/test_package_generation/.pre-commit-config.yaml"],
+  },
 }
