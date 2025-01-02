@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2023-2024 UCL Centre for Advanced Research Computing
+Copyright (c) 2023-2025 UCL Centre for Advanced Research Computing
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
