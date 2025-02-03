@@ -118,9 +118,9 @@ def test_pip_installable(
         capture_output=True,
         check=False,
     )
-    assert (
-        pipinstall.returncode == 0
-    ), f"Something went wrong with installation: {pipinstall.stderr!r}"
+    assert pipinstall.returncode == 0, (
+        f"Something went wrong with installation: {pipinstall.stderr!r}"
+    )
 
 
 @pytest.mark.parametrize("funder", ["", "STFC"])
