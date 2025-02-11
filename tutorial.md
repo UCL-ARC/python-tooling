@@ -9,22 +9,22 @@ In this tutorial we will go through in detail the steps required to set-up a Pyt
 
 <details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
 
-To start using the template you will need at least the following software tools installed:
+To use the template you will need at least the following software tools installed
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 Additionally, [the GitHub command line interface (CLI)](https://cli.github.com/), [pre-commit](https://pre-commit.com/), and [tox](https://tox.wiki) are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
-An easy way to install the software you need is by using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below:
+An easy way to install the software you need is by using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
 
-1. Open a terminal window:
+1. Open a terminal window
 
    - On Windows: open the Start menu from the taskbar, type `cmd` in the search field, then click [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) from the results.
    - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
    - On Linux: open the default terminal application installed in your distribution.
 
-2. In the opened terminal window, use:
+2. In the terminal window, use
 
    ```sh
    uv tool install cookiecutter gh pre-commit tox
@@ -32,7 +32,7 @@ An easy way to install the software you need is by using `uv`, which can create 
 
    to install the "tools" necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
 
-3. To check that all the dependencies have installed correctly, run each of the following commands in turn, one at a time,
+3. To check that all the dependencies have installed correctly, run each of the following commands in turn, one at a time
 
    ```sh
    cookiecutter --version
@@ -71,7 +71,7 @@ An easy way to install the software you need is by using `uv`, which can create 
 
 We will first go through the steps for creating a new package using the `UCL-ARC/python-tooling` cookiecutter template.
 
-1. Open a new terminal/command prompt window and change the working directory to the path you wish to create the package in using the `cd` (change directory) command.
+1. Open a new terminal/command prompt window and change the working directory to the path you wish to create the package in using the `cd` (change directory) command
 
    ```sh
    cd path/to/directory
