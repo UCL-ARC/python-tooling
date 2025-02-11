@@ -9,49 +9,30 @@ In this tutorial we will go through in detail the steps required to set-up a Pyt
 
 <details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
 
-To use the template you will need to have at least the following software tools installed,
+To start using the template you will need at least the following software tools installed:
 
-- [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/),
-- [Git](https://git-scm.com/),
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-and ideally also,
+Additionally, [the GitHub command line interface (CLI)](https://cli.github.com/), [pre-commit](https://pre-commit.com/), and [tox](https://tox.wiki) are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
-- [the GitHub command line interface (CLI)](https://cli.github.com/),
-- [pre-commit](https://pre-commit.com/),
-- [tox](https://tox.wiki).
+An easy way to install the software you need is by using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below:
 
-These additional three tools are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
+1. Open a terminal window:
 
-An easy way to get all the software you need installed is using the tool [Conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) to create a dedicated environment with the necessary packages installed by following the step by step instructions below:
-
-1. Download and install [Miniconda](https://docs.anaconda.com/free/miniconda/) following the operating system specific instructions at either
-
-   - <https://docs.anaconda.com/free/miniconda/miniconda-install> for a graphical installer
-   - or <https://docs.anaconda.com/free/miniconda/#quick-command-line-install> for installation via the command line.
-
-   If you already have Miniconda (or Anaconda) installed you can skip this step.
-
-2. Once Miniconda is installed, you need to open a terminal window:
-
-   - On Windows: open the Start menu from the taskbar, type `miniconda` in the search field, then click `Anaconda Prompt (miniconda3)` from the results (or `Anaconda Prompt (anaconda3)` if using a previous Anaconda installation).
+   - On Windows: open the Start menu from the taskbar, type `cmd` in the search field, then click [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) from the results.
    - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
    - On Linux: open the default terminal application installed in your distribution.
 
-3. Once you have a terminal window open you should see text `(base)` as part of your [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) if Minconda has been installed and set up correctly, indicating you currently have the default `base` environment active. If this is the case you should run
+2. In the opened terminal window, use:
 
    ```sh
-   conda create -y -n python-tooling -c conda-forge cookiecutter git gh pre-commit tox
+   uv tool install cookiecutter gh pre-commit tox
    ```
 
-   to create a new environment named `python-tooling` in to which will be installed the packages necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
+   to install the "tools" necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
 
-4. To check that all the dependencies have installed correctly in the new environment first activate the environment by running
-
-   ```sh
-   conda activate python-tooling
-   ```
-
-   at which point you should see `(base)` in the command prompt change to `(python-tooling)`, Then try running each of the following commands in turn, one at a time,
+3. To check that all the dependencies have installed correctly, run each of the following commands in turn, one at a time,
 
    ```sh
    cookiecutter --version
@@ -63,10 +44,10 @@ An easy way to get all the software you need installed is using the tool [Conda]
 
    For each command you should see some text outputted to the terminal giving details of the installed versions of the applications - the output itself is not important as long as you do not see any error messages.
 
-5. If you also want to try out creating a GitHub repository for the package you will need to [sign-up for a free GitHub account](https://github.com/join) if you don't already have one. Once you have a GitHub account, open a terminal window - you can either use the same one as previously if you still have it open, or open a new terminal window as described in step 2 and then activate the `python-tooling` Conda environment by running
+4. If you also want to try out creating a GitHub repository for the package you will need to [sign-up for a free GitHub account](https://github.com/join) if you don't already have one. Once you have a GitHub account, open a terminal window - you can either use the same one as previously if you still have it open, or open a new terminal window as described in step 2 and then activate the `python-tooling` Conda environment by running
 
    ```sh
-   conda activate python-tooling
+   source .venv/bin/activate
    ```
 
    Once you have a terminal window with the `python-tooling` environment active (you should see `(python-tooling)` in your command prompt) run
@@ -90,22 +71,13 @@ An easy way to get all the software you need installed is using the tool [Conda]
 
 We will first go through the steps for creating a new package using the `UCL-ARC/python-tooling` cookiecutter template.
 
-1. Open a terminal window:
-
-   - On Windows: open the Start menu from the taskbar, type `miniconda` in the search field, then click `Anaconda Prompt (miniconda3)` from the results.
-   - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
-   - On Linux: open the default terminal application installed in your distribution.
-
-2. In the opened terminal window change the working directory to the path you wish to create the package in using the `cd` (change directory) command.
-3. Activate the `python-tooling` Conda environment you previously created ([see instructions above](#%EF%B8%8F-setting-up-dependencies-for-using-template)) by running
+1. Open a new terminal/command prompt window and change the working directory to the path you wish to create the package in using the `cd` (change directory) command.
 
    ```sh
-   conda activate python-tooling
+   cd path/to/directory
    ```
 
-   You should now see the text `(python-tooling)` in your [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt). If you installed, or already had installed, the tools listed above in the set up instructions at a system level you can skip this step.
-
-4. To begin creating the package run
+2. To begin creating the package run
 
    ```sh
    cookiecutter gh:ucl-arc/python-tooling --checkout latest
@@ -113,7 +85,7 @@ We will first go through the steps for creating a new package using the `UCL-ARC
 
    You will then be shown a series of prompts at the command line asking for details of the project and package. You can choose to use the default placeholder value (shown in parenthesis `()` in prompt) for any question by hitting `Enter`. If you already have a specific project in mind you want to set up a package for using the template you can use this project's details, otherwise you can just use the placeholder values. You should choose `Y` (yes) to the questions on whether to initialise Git repository and automatically deploy HTML documentation to GitHub Pages to allow you to complete the follow on exercises which rely on these options being enabled. For the prompt asking for the GitHub user or organization name to be owner of repository you should supply your GitHub user name.
 
-5. Once you have completed all the cookiecutter prompts some additional instructions will be printed to screen (which we will come back to in the next sections) and your new package will be generated in a directory named `{project_slug}` in the current working directory (where `{project_slug}` is the value entered for the `'Slugified' project name...`[^slug] prompt, this will be `python-template` if you used the default placeholder values). You can see the directory tree of files generated by running (if on Linux or MacOS)
+3. Once you have completed all the cookiecutter prompts some additional instructions will be printed to screen (which we will come back to in the next sections) and your new package will be generated in a directory named `{project_slug}` in the current working directory (where `{project_slug}` is the value entered for the `'Slugified' project name...`[^slug] prompt, this will be `python-template` if you used the default placeholder values). You can see the directory tree of files generated by running (if on Linux or MacOS)
 
    ```sh
    tree {project_slug}
@@ -223,25 +195,41 @@ The index page of the documentation reproduces the content from the repository R
 
 ## 🐍 Setting up a virtual environment for project
 
-Whenever you are working on a Python project we would recommend setting up a project-specific [virtual environment](https://docs.python.org/3/tutorial/venv.html). This allows you to install the versions of third-party packages the project requires without conflicting with the requirements of other projects you are developing.
+It is recommended to set up a project-specific [virtual environment](https://docs.python.org/3/tutorial/venv.html) whenever working on Python project. This allows you to install the versions of third-party packages the project requires without conflicting with the requirements of other projects you are developing.
 
-There are a variety of virtual environment management tools available for Python. One option is [Conda](https://conda.io/projects/conda/en/latest/index.html), which you will have installed if you followed our detailed set-up instructions above, or may already have installed previously. Conda can install both Python packages and other tools - for example in the set-up instructions we recommended using it to install Git. Compared to other Python virtual environment options, Conda has the advantage that it can also be used to install different versions of Python itself, which can be useful to set up environments to test across multiple Python versions rather than having to use the Python versions installed at a system level or using a separate tool like [pyenv](https://github.com/pyenv/pyenv) to manage multiple Python versions.
+There are a variety of virtual environment management tools available for Python. One option is [uv](https://docs.astral.sh/uv), which you will have installed if you followed our detailed set-up instructions above, or may already have installed previously. `uv` is an extremely fast Python package and virtual environment manager that has API compatiblility with `pip` and the built-in virtual environment manager - [`venv`](https://docs.python.org/3/library/venv.html).
 
-A Conda environment for the project can be created by running in a terminal the command
-
-```sh
-conda create -y -n {project_slug} -c conda-forge python
-```
-
-This will create a new environment with name `{project_slug}` (which you should replace with the relevant project slug value for your project), installing the latest version of Python using the package hosted on the [community driven `conda-forge` channel](https://conda-forge.org/). To make this Conda environment the current active environment run
+A virtual environment for the project can be created by running the following in a terminal/command prompt window
 
 ```sh
-conda activate {project_slug}
+uv venv .venv
 ```
 
-again replacing `{project_slug}` with the relevant project slug for your package.
+This will create a new environment with name `.venv`, which can be activated for installing packages using
 
-An alternative to Conda is the [`venv` module](https://docs.python.org/3/library/venv.html) built-in to the Python standard library. This has the advantage of being available in any Python (3.3+) environment, but unlike Conda will not by itself allow you to use a different Python version from the system level install. In contrast to Conda which by default creates all environments in a shared user-level directory (if using Miniconda, by default in a directory `miniconda3/envs` in your user or home directory), the `venv` module requires being passed a path in which to create the directory containing the files associated with the virtual environment. A common pattern is to store the virtual environment files in a directory `.venv` within the root directory of the project repository. This can be achieved by running
+```sh
+source .venv/bin/activate
+```
+
+or if on Windows
+
+```sh
+.venv\Scripts\activate
+```
+
+Once you have activated the environment you can use the following command to install any packages within the `.venv` environment
+
+```sh
+uv pip install numpy
+```
+
+You can even use an arbitrary Python version to create `uv` environments, and `uv` will fetch that Python version if it is not available locally
+
+```sh
+uv venv --python 3.11.6
+```
+
+Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower, has less features, and is not developed rapidly when compared to `uv`, but is built-in to the Python standard library. Similar to `uv`, a virtual environment can be created using
 
 ```sh
 python -m venv .venv
