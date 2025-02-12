@@ -17,7 +17,7 @@ To use the template you will need to install the following software tools
 
 The instructions for installing these tools can be accessed by clicking the individual links above.
 
-Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be required to generate your package from them template, which can be installed using the instructions below. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
+Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be required to generate your package from the template, which can be installed using the instructions below. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
 An easy way to install and manage Python packages is using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
 
