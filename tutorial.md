@@ -25,7 +25,7 @@ An easy way to install the software you need is by using `uv`, which can create 
    - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
    - On Linux: open the default terminal application installed in your distribution.
 
-2. In the terminal window, use
+2. In the terminal window, type
 
    ```sh
    uv tool install cookiecutter
@@ -238,7 +238,7 @@ You can even use an arbitrary Python version to create `uv` environments, and `u
 uv venv --python 3.11.6
 ```
 
-Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower, has less features, and is not developed rapidly when compared to `uv`, but is built-in to the Python standard library. Similar to `uv`, a virtual environment can be created using
+Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower, has fewer features, and is not developed rapidly when compared to `uv`, but is built-in to the Python standard library. Similar to `uv`, a virtual environment can be created using
 
 ```sh
 python -m venv .venv
