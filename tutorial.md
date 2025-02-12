@@ -9,11 +9,13 @@ In this tutorial we will go through in detail the steps required to set-up a Pyt
 
 <details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
 
-To use the template you will need at least the following software tools installed
+To use the template you will need to install the following software tools
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [the GitHub command line interface (CLI)](https://github.com/cli/cli?tab=readme-ov-file#installation)
+
+The instructions for installing these tools can be accessed by clicking the individual links above.
 
 Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be required to generate your package from them template, which can be installed using the instructions below. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
