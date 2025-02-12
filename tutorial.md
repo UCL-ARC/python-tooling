@@ -13,8 +13,9 @@ To use the template you will need at least the following software tools installe
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- [the GitHub command line interface (CLI)](https://github.com/cli/cli?tab=readme-ov-file#installation)
 
-Additionally, [the GitHub command line interface (CLI)](https://cli.github.com/), [pre-commit](https://pre-commit.com/), and [tox](https://tox.wiki) are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
+Additionally, [pre-commit](https://pre-commit.com/) and [tox](https://tox.wiki) are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
 An easy way to install the software you need is by using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
 
@@ -27,7 +28,9 @@ An easy way to install the software you need is by using `uv`, which can create 
 2. In the terminal window, use
 
    ```sh
-   uv tool install cookiecutter gh pre-commit tox
+   uv tool install cookiecutter
+   uv tool install pre-commit
+   uv tool install tox
    ```
 
    to install the "tools" necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
@@ -44,13 +47,7 @@ An easy way to install the software you need is by using `uv`, which can create 
 
    For each command you should see some text outputted to the terminal giving details of the installed versions of the applications - the output itself is not important as long as you do not see any error messages.
 
-4. If you also want to try out creating a GitHub repository for the package you will need to [sign-up for a free GitHub account](https://github.com/join) if you don't already have one. Once you have a GitHub account, open a terminal window - you can either use the same one as previously if you still have it open, or open a new terminal window as described in step 2 and then activate the `python-tooling` Conda environment by running
-
-   ```sh
-   source .venv/bin/activate
-   ```
-
-   Once you have a terminal window with the `python-tooling` environment active (you should see `(python-tooling)` in your command prompt) run
+4. If you also want to try out creating a GitHub repository for the package you will need to [sign-up for a free GitHub account](https://github.com/join) if you don't already have one. Once you have a GitHub account, open a terminal window - you can either use the same one as previously if you still have it open, or open a new terminal window as described in step 2 and then run
 
    ```sh
    gh auth login
@@ -199,7 +196,7 @@ It is recommended to set up a project-specific [virtual environment](https://doc
 
 There are a variety of virtual environment management tools available for Python. One option is [uv](https://docs.astral.sh/uv), which you will have installed if you followed our detailed set-up instructions above, or may already have installed previously. `uv` is an extremely fast Python package and virtual environment manager that has API compatiblility with `pip` and the built-in virtual environment manager - [`venv`](https://docs.python.org/3/library/venv.html).
 
-A virtual environment for the project can be created by running the following in a terminal/command prompt window
+Once you are in your `{project_slug}` directory, a virtual environment can be created by running the following in a terminal/command prompt window
 
 ```sh
 uv venv .venv
@@ -217,10 +214,16 @@ or if on Windows
 .venv\Scripts\activate
 ```
 
-Once you have activated the environment you can use the following command to install any packages within the `.venv` environment
+You should see `(.venv)` on the left of your terminal window. Once you have activated the environment you can use the following command to install any packages within the `.venv` environment
 
 ```sh
 uv pip install numpy
+```
+
+The environment can be deactivated using
+
+```sh
+deactivate
 ```
 
 You can even use an arbitrary Python version to create `uv` environments, and `uv` will fetch that Python version if it is not available locally
