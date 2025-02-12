@@ -15,9 +15,9 @@ To use the template you will need at least the following software tools installe
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [the GitHub command line interface (CLI)](https://github.com/cli/cli?tab=readme-ov-file#installation)
 
-Additionally, [pre-commit](https://pre-commit.com/) and [tox](https://tox.wiki) are required to complete some of the follow on steps for using the package generated with the template, so while they are not strictly needed, you will get more out of the tutorial if you have them installed. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
+Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be required to generate your package from them template, which can be installed using the instructions below. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
 
-An easy way to install the software you need is by using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
+An easy way to install and manage Python packages is using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
 
 1. Open a terminal window
 
@@ -29,8 +29,6 @@ An easy way to install the software you need is by using `uv`, which can create 
 
    ```sh
    uv tool install cookiecutter
-   uv tool install pre-commit
-   uv tool install tox
    ```
 
    to install the "tools" necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
@@ -41,8 +39,6 @@ An easy way to install the software you need is by using `uv`, which can create 
    cookiecutter --version
    gh --version
    git --version
-   pre-commit --version
-   tox --version
    ```
 
    For each command you should see some text outputted to the terminal giving details of the installed versions of the applications - the output itself is not important as long as you do not see any error messages.
@@ -238,7 +234,7 @@ You can even use an arbitrary Python version to create `uv` environments, and `u
 uv venv --python 3.11.6
 ```
 
-Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower, has fewer features, and is not developed rapidly when compared to `uv`, but is built-in to the Python standard library. Similar to `uv`, a virtual environment can be created using
+Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower and has fewer features, when compared to `uv`, but is built-in to the Python standard library. `venv` has the advantage of being available in any Python (3.3+) environment, but unlike `uv` will not by itself allow you to use a different Python version from the system level install. A common pattern is to store the virtual environment files in a directory `.venv` within the root directory of the project repository. This can be achieved by running
 
 ```sh
 python -m venv .venv
