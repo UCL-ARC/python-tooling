@@ -5,6 +5,7 @@ import os
 import pathlib
 import shutil
 import subprocess
+import sys
 import typing
 
 import pytest
@@ -103,12 +104,16 @@ def test_pip_installable(
         "project_name": "Cookiecutter Test",
     }
     generate_package(config=test_config, path=tmp_path)
-
-    # Check project directory exists
     test_project_dir = tmp_path / "cookiecutter-test"
+    venv_path = test_project_dir / ".venv"
+    # Create temporary virtual environment
+    subprocess.run(  # noqa: S603
+        [sys.executable, "-m", "venv", str(venv_path)], check=True
+    )
+    # Try to install package in virtual environment with pip
     pipinstall = subprocess.run(  # noqa: S603
-        [  # noqa: S607
-            "python",
+        [
+            str(venv_path / "bin" / "python"),
             "-m",
             "pip",
             "install",
