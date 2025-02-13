@@ -110,10 +110,15 @@ def test_pip_installable(
     subprocess.run(  # noqa: S603
         [sys.executable, "-m", "venv", str(venv_path)], check=True
     )
+    # Location of virtual environment Python executable is OS dependent
+    if sys.platform == "win32":
+        venv_python = str(venv_path / "Scripts" / "python.exe")
+    else:
+        venv_python = str(venv_path / "bin" / "python")
     # Try to install package in virtual environment with pip
     pipinstall = subprocess.run(  # noqa: S603
         [
-            str(venv_path / "bin" / "python"),
+            venv_python,
             "-m",
             "pip",
             "install",
