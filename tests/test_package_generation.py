@@ -5,10 +5,10 @@ import os
 import pathlib
 import shutil
 import subprocess
-import sys
 import typing
 
 import pytest
+import pytest_venv
 
 
 def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
@@ -95,6 +95,7 @@ def test_package_generation(
 
 def test_pip_installable(
     tmp_path: pathlib.Path,
+    venv: pytest_venv.VirtualEnvironment,
     generate_package: typing.Callable,
 ) -> None:
     """Test generated package is pip installable."""
@@ -105,20 +106,10 @@ def test_pip_installable(
     }
     generate_package(config=test_config, path=tmp_path)
     test_project_dir = tmp_path / "cookiecutter-test"
-    venv_path = test_project_dir / ".venv"
-    # Create temporary virtual environment
-    subprocess.run(  # noqa: S603
-        [sys.executable, "-m", "venv", str(venv_path)], check=True
-    )
-    # Location of virtual environment Python executable is OS dependent
-    if sys.platform == "win32":
-        venv_python = str(venv_path / "Scripts" / "python.exe")
-    else:
-        venv_python = str(venv_path / "bin" / "python")
     # Try to install package in virtual environment with pip
     pipinstall = subprocess.run(  # noqa: S603
         [
-            venv_python,
+            venv.python,
             "-m",
             "pip",
             "install",
