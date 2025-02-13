@@ -236,6 +236,8 @@ You can even use an arbitrary Python version to create `uv` environments, and `u
 uv venv --python 3.11.6
 ```
 
+<details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
+
 Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower and has fewer features, when compared to `uv`, but is built-in to the Python standard library. `venv` has the advantage of being available in any Python (3.3+) environment, but unlike `uv` will not by itself allow you to use a different Python version from the system level install. A common pattern is to store the virtual environment files in a directory `.venv` within the root directory of the project repository. This can be achieved by running
 
 ```sh
@@ -264,6 +266,14 @@ Once you have created and activated a virtual environment for the project, you c
 
 ```sh
 python -m pip install --editable ".[dev,docs,test]"
+```
+
+</details>
+
+Once you have created and activated a virtual environment for the project, you can install the package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html), along with both its required dependencies and optional sets of dependencies for development (`dev`), documentation (`docs`) and testing (`test`) by running
+
+```sh
+uv pip install --editable ".[dev,docs,test]"
 ```
 
 from the root of the project repository.
