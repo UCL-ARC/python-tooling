@@ -47,10 +47,10 @@ plugins:
       default_handler: python
       handlers:
         python:
-          docstring_style: google
-          import:
+          inventories:
             - "https://docs.python.org/3/objects.inv"
           options:
+            docstring_style: google
             show_submodules: true
           paths: [src]
   - include-markdown:
