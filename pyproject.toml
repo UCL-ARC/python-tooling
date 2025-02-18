@@ -1,3 +1,7 @@
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["pytest_venv"]
+
 [tool.pytest.ini_options]
 addopts = [
     "--color=yes",
@@ -54,6 +58,7 @@ env_run_base = {commands = [
 ], deps = [
     "cookiecutter",
     "pytest",
+    "pytest-venv",
 ], description = "Test package creation", skip_install = true}
 gh.python = {"3.11" = [
     "py311",
