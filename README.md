@@ -111,6 +111,9 @@ uv pip install -e ".[dev]"
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/LLapira"><img src="https://avatars.githubusercontent.com/u/48060852?v=4?s=100" width="100px;" alt="llapira"/><br /><sub><b>llapira</b></sub></a><br /><a href="#bug-llapira" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://pre-commit.ci"><img src="https://avatars.githubusercontent.com/u/64617429?v=4?s=100" width="100px;" alt="pre-commit.ci"/><br /><sub><b>pre-commit.ci</b></sub></a><br /><a href="#maintenance-pre-commit-ci" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://saransh-cpp.github.io/"><img src="https://avatars.githubusercontent.com/u/74055102?v=4?s=100" width="100px;" alt="Saransh Chopra"/><br /><sub><b>Saransh Chopra</b></sub></a><br /><a href="#doc-Saransh-cpp" title="Documentation">📖</a> <a href="#content-Saransh-cpp" title="Content">🖋</a> <a href="#maintenance-Saransh-cpp" title="Maintenance">🚧</a> <a href="#review-Saransh-cpp" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
