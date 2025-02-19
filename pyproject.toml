@@ -1,7 +1,3 @@
-[[tool.mypy.overrides]]
-ignore_missing_imports = true
-module = ["pytest_venv"]
-
 [tool.pytest.ini_options]
 addopts = [
     "--color=yes",
