@@ -128,7 +128,6 @@ def test_pip_installable(
 def test_optional_funder(
     tmp_path: pathlib.Path, generate_package: typing.Callable, funder: str
 ) -> None:
-    """Test package generation."""
     """Test specifying funder or not in package generation."""
     config = {
         "github_owner": "test-user",
