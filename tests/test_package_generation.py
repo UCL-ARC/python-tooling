@@ -8,7 +8,7 @@ import subprocess
 import typing
 
 import pytest
-import pytest_venv
+import pytest_venv  # type: ignore[import-not-found]
 
 
 def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
