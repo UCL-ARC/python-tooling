@@ -8,6 +8,7 @@ import subprocess
 import typing
 
 import pytest
+import pytest_venv  # type: ignore[import-not-found]
 
 
 def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
@@ -94,6 +95,7 @@ def test_package_generation(
 
 def test_pip_installable(
     tmp_path: pathlib.Path,
+    venv: pytest_venv.VirtualEnvironment,
     generate_package: typing.Callable,
 ) -> None:
     """Test generated package is pip installable."""
@@ -103,12 +105,11 @@ def test_pip_installable(
         "project_name": "Cookiecutter Test",
     }
     generate_package(config=test_config, path=tmp_path)
-
-    # Check project directory exists
     test_project_dir = tmp_path / "cookiecutter-test"
+    # Try to install package in virtual environment with pip
     pipinstall = subprocess.run(  # noqa: S603
-        [  # noqa: S607
-            "python",
+        [
+            venv.python,
             "-m",
             "pip",
             "install",
