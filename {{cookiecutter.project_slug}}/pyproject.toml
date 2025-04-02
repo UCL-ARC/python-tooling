@@ -29,6 +29,7 @@ dynamic = [
 ]
 keywords = [
 ]
+license = "{{cookiecutter.license}}"
 license-files = [
     "LICENSE.md",
 ]
