@@ -11,7 +11,7 @@
   "github_owner": "{{cookiecutter.author_given_names.lower().replace(' ', '-')}}-{{cookiecutter.author_family_names.lower().replace(' ', '-')}}",
   "min_python_version": ["3.11", "3.12", "3.13"],
   "max_python_version": ["3.13", "3.12", "3.11"],
-  "license": ["MIT", "BSD-3", "GPL-3.0"],
+  "license": ["MIT", "BSD-3-Clause", "GPL-3.0"],
   "funder": "",
   "__repo_name": "{{cookiecutter.github_owner}}/{{cookiecutter.project_slug}}",
   "__repo_url": "https://github.com/{{cookiecutter.__repo_name}}",
