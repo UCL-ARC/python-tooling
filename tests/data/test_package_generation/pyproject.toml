@@ -26,6 +26,7 @@ dynamic = [
 ]
 keywords = [
 ]
+license = "MIT"
 license-files = [
     "LICENSE.md",
 ]
