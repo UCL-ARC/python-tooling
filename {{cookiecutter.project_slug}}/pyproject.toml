@@ -29,6 +29,9 @@ dynamic = [
 ]
 keywords = [
 ]
+license-files = [
+    "LICENSE.md",
+]
 name = "{{cookiecutter.project_slug}}"
 optional-dependencies = {dev = [
     "build",
@@ -49,7 +52,6 @@ optional-dependencies = {dev = [
 ]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
-license.file = "LICENSE.md"
 urls.homepage = "{{cookiecutter.__repo_url}}"
 
 [tool.coverage]
