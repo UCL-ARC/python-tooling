@@ -26,6 +26,10 @@ dynamic = [
 ]
 keywords = [
 ]
+license = "MIT"
+license-files = [
+    "LICENSE.md",
+]
 name = "cookiecutter-test"
 optional-dependencies = {dev = [
     "build",
@@ -46,7 +50,6 @@ optional-dependencies = {dev = [
 ]}
 readme = "README.md"
 requires-python = ">=3.11"
-license.file = "LICENSE.md"
 urls.homepage = "https://github.com/test-user/cookiecutter-test"
 
 [tool.coverage]

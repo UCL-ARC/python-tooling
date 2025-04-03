@@ -23,7 +23,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-{%- elif cookiecutter.license == "BSD-3" -%}
+{%- elif cookiecutter.license == "BSD-3-Clause" -%}
 
 Copyright (c) {% now 'utc', '%Y' %}, {{cookiecutter.author_given_names}}
 {{cookiecutter.author_family_names}} All rights reserved.

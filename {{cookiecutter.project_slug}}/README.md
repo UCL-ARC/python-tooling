@@ -15,7 +15,7 @@
 [documentation-link]:       {{cookiecutter.__repo_url}}/actions/workflows/docs.yml
 {%- if cookiecutter.license == "MIT" %}
 [license-badge]:            https://img.shields.io/badge/License-MIT-yellow.svg
-{%- elif cookiecutter.license == "BSD-3" %}
+{%- elif cookiecutter.license == "BSD-3-Clause" %}
 [license-badge]:            https://img.shields.io/badge/License-BSD_3--Clause-blue.svg
 {%- elif cookiecutter.license == "GPL-3.0" %}
 [license-badge]:            https://img.shields.io/badge/License-GPLv3-blue.svg
