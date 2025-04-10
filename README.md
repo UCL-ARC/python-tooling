@@ -113,6 +113,7 @@ uv pip install -e ".[dev]"
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://saransh-cpp.github.io/"><img src="https://avatars.githubusercontent.com/u/74055102?v=4?s=100" width="100px;" alt="Saransh Chopra"/><br /><sub><b>Saransh Chopra</b></sub></a><br /><a href="#doc-Saransh-cpp" title="Documentation">📖</a> <a href="#content-Saransh-cpp" title="Content">🖋</a> <a href="#maintenance-Saransh-cpp" title="Maintenance">🚧</a> <a href="#review-Saransh-cpp" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://drandrewmitchell.com"><img src="https://avatars.githubusercontent.com/u/22335636?v=4?s=100" width="100px;" alt="Andrew Mitchell"/><br /><sub><b>Andrew Mitchell</b></sub></a><br /><a href="#bug-MitchellAcoustics" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
