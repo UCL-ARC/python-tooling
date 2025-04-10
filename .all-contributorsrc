@@ -270,6 +270,15 @@
         "maintenance",
         "review"
       ]
+    },
+    {
+      "login": "MitchellAcoustics",
+      "name": "Andrew Mitchell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22335636?v=4",
+      "profile": "http://drandrewmitchell.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
