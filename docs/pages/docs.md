@@ -25,12 +25,12 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 
 ### Documentation build tools
 
-| Name      | Short description                                                                                                                                               | 🚦  |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| [MkDocs]  | Generates documentation from Markdown files, with a plugin to generate API documentation. A good plugin ecosystem and balance of usability and customisability. | 🟢  |
-| [Sphinx]  | Generates documentation from reStructuredText or Markdown files, long been the de-facto standard and very widely used. Mature plugin ecosystem.                 | 🟠  |
-| [gitbook] | General documentation builder; integrates with GitHub.                                                                                                          | 🟠  |
-| [pdoc]    | Auto-generates API documentation from docstrings, beginner friendly but with less of a plugin ecosystem than others.                                            | 🟠  |
+| Name      | Short description                                                                                                                                               |                      🚦                      |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
+| [MkDocs]  | Generates documentation from Markdown files, with a plugin to generate API documentation. A good plugin ecosystem and balance of usability and customisability. | <span class="label label-green">Best</span>  |
+| [Sphinx]  | Generates documentation from reStructuredText or Markdown files, long been the de-facto standard and very widely used. Mature plugin ecosystem.                 | <span class="label label-yellow">Good</span> |
+| [gitbook] | General documentation builder; integrates with GitHub.                                                                                                          | <span class="label label-yellow">Good</span> |
+| [pdoc]    | Auto-generates API documentation from docstrings, beginner friendly but with less of a plugin ecosystem than others.                                            | <span class="label label-yellow">Good</span> |
 
 <details markdown="block"><summary>More details about Sphinx</summary><!-- markdownlint-disable-line MD033 -->
 
@@ -61,13 +61,13 @@ community that heavily uses [Sphinx] then we recommend you use that instead.
 
 ### MkDocs plugins
 
-| Name                                                          | Short description                            | 🚦  |
-| ------------------------------------------------------------- | -------------------------------------------- | :-: |
-| [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates API reference pages. | 🟢  |
+| Name                                                          | Short description                            |                     🚦                      |
+| ------------------------------------------------------------- | -------------------------------------------- | :-----------------------------------------: |
+| [mkdocstrings-python](https://mkdocstrings.github.io/python/) | Automatically generates API reference pages. | <span class="label label-green">Best</span> |
 
 ### Sphinx extensions
 
-| Name                                                                 | Short description                                                | 🚦  |
-| -------------------------------------------------------------------- | ---------------------------------------------------------------- | :-: |
-| [sphinx-gallery](https://sphinx-gallery.github.io/stable/index.html) | Builds an HTML gallery of examples from a set of Python scripts. | 🟢  |
-| [sphinx-autoapi](https://sphinx-autoapi.readthedocs.io/en/stable/)   | Automatically generates API reference pages.                     | 🟢  |
+| Name                                                                 | Short description                                                |                     🚦                      |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------- | :-----------------------------------------: |
+| [sphinx-gallery](https://sphinx-gallery.github.io/stable/index.html) | Builds an HTML gallery of examples from a set of Python scripts. | <span class="label label-green">Best</span> |
+| [sphinx-autoapi](https://sphinx-autoapi.readthedocs.io/en/stable/)   | Automatically generates API reference pages.                     | <span class="label label-green">Best</span> |
