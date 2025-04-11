@@ -40,13 +40,12 @@ are a good place to start.
 
 ### Traffic lights
 
-Each item has an (opinionated) traffic light. The meaning of these is:
+Each item has an (opinionated) traffic light label. The meaning of these is:
 
-- <span class="label label-green">Best</span> At least one person in ARC uses this. We actively recommend using it above
+- <span class="label label-green">Best</span>: At least one person in ARC uses this. We actively recommend using it above
   other tools. It is the single recommended tool for a given purpose.
-- <span class="label label-yellow">Good</span> We don't discourage using this, but it may duplicate functionality of a
-  green tool.
-- <span class="label label-red">Avoid</span> We actively discourage using this. This could be because it's no longer
+- <span class="label label-yellow">Good</span>: We don't discourage using this, but it may duplicate functionality of the <span class="label label-green">Best</span> tool.
+- <span class="label label-red">Avoid</span>: We actively discourage using this. This could be because it's no longer
   maintained, not open source, or difficult to use. Consider moving to
   alternatives if you're currently using something that's red. A reason for not
   using this is given.
