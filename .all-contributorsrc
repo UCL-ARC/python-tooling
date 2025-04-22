@@ -279,6 +279,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "K-Meech",
+      "name": "Kimberly Meechan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24316371?v=4",
+      "profile": "https://www.ucl.ac.uk/advanced-research-computing/advanced-research-computing-centre",
+      "contributions": [
+        "bug",
+        "a11y",
+        "review"
+      ]
     }
   ]
 }
