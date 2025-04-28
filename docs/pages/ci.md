@@ -11,7 +11,7 @@ layout: default
 | [AppVeyor](https://www.appveyor.com/docs/)                                            | Continuous integration and continuous delivery platform.                                                                                            | <span class="label label-yellow">Good</span> |
 | [Bamboo](https://confluence.atlassian.com/bamboo/bamboo-documentation-289276551.html) | Atlassian continuous integration and continuous delivery platform.                                                                                  | <span class="label label-yellow">Good</span> |
 | [Travis CI](https://docs.travis-ci.com/)                                              | Continuous integration and continuous delivery platform.                                                                                            | <span class="label label-yellow">Good</span> |
-| [pre-commit.ci](https://pre-commit.ci/)                                               | A bot that adds a pre-commit job to your GitHub Actions CI, and can automatically fix most trivial linting failures. Free for open-source projects. |  <span class="label label-red">Avoid</span>  |
+| [pre-commit.ci](https://pre-commit.ci/)                                               | A bot that adds a pre-commit job to your GitHub Actions CI, and can automatically fix most trivial linting failures. Free for open-source projects. |  <span class="label label-green">Best</span>  |
 
 <details><summary> <span class="label label-green">Best</span>  explanation</summary><!-- markdownlint-disable-line MD033 -->
 We have many projects using GitHub CI and, it has good integration with GitHub itself, and is free for public repositories (with limited free monthly minutes for private repositories).

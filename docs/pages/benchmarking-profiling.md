@@ -30,4 +30,4 @@ layout: default
 | Name                                               | Short description                                                                                 |                      🚦                      |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- | :------------------------------------------: |
 | [psutil](https://psutil.readthedocs.io/en/latest/) | System monitoring, profiling, limiting process resources and the management of running processes. | <span class="label label-green">Best</span>  |
-| [snakeviz](https://jiffyclub.github.io/snakeviz/)  | Browser based graphical viewer for the output of Python’s cProfile module.                        | <span class="label label-yellow">Good</span> |
+| [snakeviz](https://jiffyclub.github.io/snakeviz/)  | Browser based graphical viewer for the output of Python’s cProfile module.                        | <span class="label label-green">Best</span> |
