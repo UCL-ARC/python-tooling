@@ -15,36 +15,36 @@ tools which run the tasks to be parallelised outside of the Python interpreter,
 using for example Python wrappers around external code which uses thread-based
 parallelism.
 
-🟠 tools in the following should be chosen, if there are external reasons to use
+<span class="label label-yellow">Good</span> tools in the following should be chosen, if there are external reasons to use
 a specific interface or parallelisation scheme. Possibly due to the nature of
 the research problem, the high-performance computing resources available or
 simply due to pre-existing code using a library like [pandas].
 
 ### Process-based (and thread-based) parallelism
 
-| Name                 | Short description                                                                                                                                                                                                 | 🚦  |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| [multiprocess]       | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this easier to use than `multiprocessing`. | 🟢  |
-| [concurrent.futures] | [See the table below](#asynchronous-processing).                                                                                                                                                                  | 🟠  |
-| [dask]               | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                           | 🟠  |
-| [multiprocessing]    | The standard library module for distributing tasks across multiple processes.                                                                                                                                     | 🟠  |
-| [mpi4py]             | Support for MPI based parallelism.                                                                                                                                                                                | 🟠  |
-| [threading]          | The standard library module for multi-threading. Due to the _global interpreter lock_ [currently][PEP703] only one thread can execute Python code at a time.                                                      | 🔴  |
+| Name                 | Short description                                                                                                                                                                                                 |                      🚦                      |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
+| [multiprocess]       | A fork of [multiprocessing] which uses `dill` instead of `pickle` to allow serializing wider range of object types including nested / anonymous functions. We've found this easier to use than `multiprocessing`. | <span class="label label-green">Best</span>  |
+| [concurrent.futures] | [See the table below](#asynchronous-processing).                                                                                                                                                                  | <span class="label label-yellow">Good</span> |
+| [dask]               | Aims to make scaling existing code in familiar libraries (`numpy`, [pandas], `scikit-learn`, ...) easy.                                                                                                           | <span class="label label-yellow">Good</span> |
+| [multiprocessing]    | The standard library module for distributing tasks across multiple processes.                                                                                                                                     | <span class="label label-yellow">Good</span> |
+| [mpi4py]             | Support for MPI based parallelism.                                                                                                                                                                                | <span class="label label-yellow">Good</span> |
+| [threading]          | The standard library module for multi-threading. Due to the _global interpreter lock_ [currently][PEP703] only one thread can execute Python code at a time.                                                      |  <span class="label label-red">Avoid</span>  |
 
 ### Compiler-based parallelism
 
-| Name     | Short description                                                                                                                                                       | 🚦  |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| [Cython] | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                      | 🟠  |
-| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/en/stable/user/parallel.html).                                                          | 🟠  |
-| [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | 🟠  |
+| Name     | Short description                                                                                                                                                       |                      🚦                      |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
+| [Cython] | Has [support for OpenMP based parallelism](https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html)                                                      | <span class="label label-yellow">Good</span> |
+| [numba]  | [Support for parallelism via `jit(parallel=True)`](https://numba.readthedocs.io/en/stable/user/parallel.html).                                                          | <span class="label label-yellow">Good</span> |
+| [jax]    | [Support for parallelising NumPy / scientific computing like operations using functional transforms](https://jax.readthedocs.io/en/latest/jax-101/06-parallelism.html). | <span class="label label-yellow">Good</span> |
 
 ### Asynchronous processing
 
-| Name                 | Short description                                                                                                                                                                                         | 🚦  |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: |
-| [asyncio]            | Python standard library for asynchronous programming with tasks run in a single-threaded event loop. Used for [cooperative multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking).         | 🟠  |
-| [concurrent.futures] | Another Python standard library for asynchronous processing. Provides a common interface for thread and process based concurrency as an alternative to using `multiprocess(ing)` or `threading` directly. | 🟠  |
+| Name                 | Short description                                                                                                                                                                                         |                      🚦                      |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
+| [asyncio]            | Python standard library for asynchronous programming with tasks run in a single-threaded event loop. Used for [cooperative multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking).         | <span class="label label-yellow">Good</span> |
+| [concurrent.futures] | Another Python standard library for asynchronous processing. Provides a common interface for thread and process based concurrency as an alternative to using `multiprocess(ing)` or `threading` directly. | <span class="label label-yellow">Good</span> |
 
 ### See also
 
