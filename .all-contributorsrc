@@ -290,6 +290,16 @@
         "a11y",
         "review"
       ]
+    },
+    {
+      "login": "jamesprime",
+      "name": "James Prime",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17751241?v=4",
+      "profile": "https://github.com/jamesprime",
+      "contributions": [
+        "a11y",
+        "ideas"
+      ]
     }
   ]
 }
