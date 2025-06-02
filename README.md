@@ -18,12 +18,11 @@ Python packages with our recommended tooling set up and ready to go.
 <!-- vale proselint.Annotations = NO -->
 
 > [!NOTE]
-
-<!-- vale proselint.Annotations = YES -->
-
 > If you're making a package within a community that has an existing
 > package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
 > we recommend using their template instead of this one.
+
+<!-- vale proselint.Annotations = YES -->
 
 ## Tutorial
 
