@@ -21,7 +21,7 @@ body:
       value: |-
         import {{cookiecutter.package_name}}
 
-        ...
+        …
       render: Python
     validations:
       required: true

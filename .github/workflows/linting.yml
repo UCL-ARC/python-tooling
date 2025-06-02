@@ -59,3 +59,19 @@ jobs:
           git add .
           pre-commit run --all-files --color always --verbose
         working-directory: cookie-template/python-template
+
+  lint-prose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Run Vale
+        uses: errata-ai/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          fail_on_error: true
+          filter_mode: nofilter
+          reporter: github-check
+          vale_flags: --glob='!.github/styles/*'

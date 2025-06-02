@@ -1,0 +1,119 @@
+---
+# This style is taken from the official GitLab style and updated to use British spelling instead of US spelling
+# Error: livewyer.British
+#
+# Checks that British spelling is used instead of US spelling.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: substitution
+message: "Use the British spelling '%s' instead of the US '%s'."
+link: https://docs.gitlab.com/ee/development/documentation/styleguide/index.html#language
+level: error
+ignorecase: true
+swap:
+  eon: aeon
+  airplane: aeroplane
+  aging: ageing
+  aluminum: aluminium
+  anemia: anaemia
+  minimize: minimise
+  anesthesia: anaesthesia
+  analyze: analyse
+  annex: annexe
+  apologize: apologise
+  authorize: authorise
+  authorized: authorised
+  authorization: authorisation
+  authorizing: authorising
+  behavior: behaviour
+  buses: busses
+  caliber: calibre
+  categorize: categorise
+  categorized: categorised
+  categorizes: categorises
+  categorizing: categorising
+  center: centre
+  civilization: civilisation
+  civilize: civilise
+  color: colour
+  cozy: cosy
+  cipher: cypher
+  dependent: dependant
+  defense: defence
+  distill: distil
+  draft: draught
+  encyclopedia: encyclopaedia
+  inquiry: enquiry
+  enroll: enrol
+  enrollment: enrolment
+  enthrall: enthral
+  favorite: favourite
+  fiber: fibre
+  filet: fillet
+  flavor: flavour
+  furor: furore
+  fulfill: fulfil
+  jail: gaol
+  gray: grey
+  humor: humour
+  honor: honour
+  initialed: initialled
+  initialing: initialling
+  instill: instil
+  jewelry: jewellery
+  labeling: labelling
+  labeled: labelled
+  labor: labour
+  libelous: libellous
+  license: licence
+  likable: likeable
+  livable: liveable
+  luster: lustre
+  maneuver: manoeuvre
+  marvelous: marvellous
+  matte: matt
+  meager: meagre
+  meter: metre
+  modeling: modelling
+  mustache: moustache
+  neighbor: neighbour
+  normalize: normalise
+  offense: offence
+  optimize: optimise
+  optimized: optimised
+  optimizing: optimising
+  organize: organise
+  oriented: orientated
+  paralyze: paralyse
+  plow: plough
+  pretense: pretence
+  pajamas: pyjamas
+  ratable: rateable
+  realize: realise
+  recognize: recognise
+  reconnoiter: reconnoitre
+  rumor: rumour
+  saber: sabre
+  salable: saleable
+  saltpeter: saltpetre
+  skeptic: sceptic
+  sepulcher: sepulchre
+  signaling: signalling
+  sizable: sizeable
+  skillful: skilful
+  somber: sombre
+  smolder: smoulder
+  specialty: speciality
+  specter: spectre
+  splendor: splendour
+  standardize: standardise
+  standardized: standardised
+  sulfur: sulphur
+  theater: theatre
+  traveled: travelled
+  traveler: traveller
+  traveling: travelling
+  unshakable: unshakeable
+  willful: wilful
+  yogurt: yoghurt
+  authorizer: authoriser

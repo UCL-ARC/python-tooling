@@ -5,7 +5,7 @@ layout: default
 
 ## Documentation
 
-With Python, as with many other languages, it's very common to automatically
+With Python, as with many other languages, it's common to automatically
 create a web page with documentation. This can include reference for the API
 taken from your package's [docstrings], tutorials, examples, and more in depth
 explanation about how the package works. For an in-depth discussion of the
@@ -28,7 +28,7 @@ If you're using GitHub, one option is to host your docs on [GitHub pages].
 | Name      | Short description                                                                                                                                               |                      🚦                      |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
 | [MkDocs]  | Generates documentation from Markdown files, with a plugin to generate API documentation. A good plugin ecosystem and balance of usability and customisability. | <span class="label label-green">Best</span>  |
-| [Sphinx]  | Generates documentation from reStructuredText or Markdown files, long been the de-facto standard and very widely used. Mature plugin ecosystem.                 | <span class="label label-yellow">Good</span> |
+| [Sphinx]  | Generates documentation from reStructuredText or Markdown files, long been the de-facto standard and widely used. Mature plugin ecosystem.                      | <span class="label label-yellow">Good</span> |
 | [gitbook] | General documentation builder; integrates with GitHub.                                                                                                          | <span class="label label-yellow">Good</span> |
 | [pdoc]    | Auto-generates API documentation from docstrings, beginner friendly but with less of a plugin ecosystem than others.                                            | <span class="label label-yellow">Good</span> |
 
