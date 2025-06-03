@@ -1,4 +1,6 @@
-<button class="btn js-toggle-dark-mode">☼</button>
+<button class="btn js-toggle-dark-mode" aria-label="Switch to light mode">
+  ☼
+</button>
 
 <script>
   const toggleDarkMode = document.querySelector(".js-toggle-dark-mode");
@@ -6,10 +8,12 @@
     if (jtd.getTheme() === "light") {
       jtd.setTheme("dark");
       toggleDarkMode.textContent = "☼";
+      toggleDarkMode.ariaLabel = "Switch to light mode";
       localStorage.setItem("theme", "dark");
     } else {
       jtd.setTheme("light");
       toggleDarkMode.textContent = "☾";
+      toggleDarkMode.ariaLabel = "Switch to dark mode";
       localStorage.setItem("theme", "light");
     }
   });
