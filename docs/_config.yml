@@ -6,8 +6,17 @@ url: https://UCL-ARC.github.io/python-tooling
 
 color_scheme: dark
 
+layouts_dir: _layouts
+
 aux_links:
   Source repository: https://github.com/UCL-ARC/python-tooling
 aux_links_new_tab: true
 
 logo: "https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg"
+
+# defaults:
+#   -
+#     scope:
+#       path: "" # Means apply to all files
+#     values:
+#       layout: "default-custom" # Name of your custom layout
