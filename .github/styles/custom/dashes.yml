@@ -1,6 +1,5 @@
 extends: existence
-message: "Don't put a space before or after a dash."
-link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#dashes"
+message: Don't put a space before or after a dash.
 nonword: true
 level: warning
 action:

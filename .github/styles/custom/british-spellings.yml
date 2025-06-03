@@ -1,119 +1,151 @@
 ---
-# This style is taken from the official GitLab style and updated to use British spelling instead of US spelling
-# Error: livewyer.British
-#
-# Checks that British spelling is used instead of US spelling.
-#
-# For a list of all options, see https://vale.sh/docs/topics/styles/
 extends: substitution
-message: "Use the British spelling '%s' instead of the US '%s'."
-link: https://docs.gitlab.com/ee/development/documentation/styleguide/index.html#language
+message: Use the British spelling '%s' instead of the US '%s'.
 level: error
 ignorecase: true
 swap:
-  eon: aeon
-  airplane: aeroplane
-  aging: ageing
-  aluminum: aluminium
-  anemia: anaemia
-  minimize: minimise
-  anesthesia: anaesthesia
-  analyze: analyse
-  annex: annexe
-  apologize: apologise
-  authorize: authorise
-  authorized: authorised
-  authorization: authorisation
-  authorizing: authorising
-  behavior: behaviour
-  buses: busses
-  caliber: calibre
-  categorize: categorise
-  categorized: categorised
-  categorizes: categorises
-  categorizing: categorising
-  center: centre
-  civilization: civilisation
-  civilize: civilise
+  # -our vs. -or
+  ardor: ardour
+  candor: candour
   color: colour
-  cozy: cosy
-  cipher: cypher
-  dependent: dependant
-  defense: defence
+  demeanor: demeanour
+  endeavor: endeavour
+  favour: favour
+  fervor: fervour
+  flavor: flavour
+  harbor: harbour
+  honor: honour
+  humor: humour
+  labor: labour
+  neighbor: neighbour
+  odor: odour
+  pavor: pavour
+  rancor: rancour
+  rigor: rigour
+  rumor: rumour
+  savor: savour
+  splendor: splendour
+  succor: succour
+  valour: valour
+  vapor: vapour
+  vigor: vigour
+  # and their derivatives
+  colored: coloured
+  coloring: colouring
+  colors: colours
+  endeavored: endeavoured
+  endeavoring: endeavouring
+  flavored: flavoured
+  flavoring: flavouring
+  honored: honoured
+  honoring: honouring
+  honors: honours
+  humors: humours
+  labored: laboured
+  laboring: labouring
+  labors: labours
+  neighbors: neighbours
+  rumors: rumours
+  splendors: splendours
+  # -re vs. -er
+  caliber: calibre
+  center: centre
+  fiber: fibre
+  luster: lustre
+  meager: meagre
+  meter: metre
+  saber: sabre
+  saltpeter: saltpetre
+  sepulcher: sepulchre
+  theater: theatre
+  # and their derivatives
+  calibers: calibres
+  centers: centres
+  fibers: fibres
+  lusters: lustres
+  meters: metres
+  theaters: theatres
+  # -ise vs. -ize
+  '(\w+)ization\b': "$1isation"
+  '(\w+)ize\b': "$1ise"
+  '(\w+)ized\b': "$1ised"
+  '(\w+)izing\b': "$1ising"
+  # add other common forms:
+  '(\w+)izable\b': "$1isable"
+  # -yse vs. -yze
+  '(\w+)yze\b': "$1yse"
+  '(\w+)yzed\b': "$1ysed"
+  '(\w+)yzing\b': "$1ysing"
+  # double L vs. Single L
   distill: distil
-  draft: draught
-  encyclopedia: encyclopaedia
-  inquiry: enquiry
   enroll: enrol
   enrollment: enrolment
   enthrall: enthral
-  favorite: favourite
-  fiber: fibre
-  filet: fillet
-  flavor: flavour
-  furor: furore
   fulfill: fulfil
-  jail: gaol
-  gray: grey
-  humor: humour
-  honor: honour
   initialed: initialled
   initialing: initialling
   instill: instil
-  jewelry: jewellery
-  labeling: labelling
   labeled: labelled
-  labor: labour
+  labeling: labelling
   libelous: libellous
+  modeling: modelling
+  signaling: signalling
+  traveler: traveller
+  traveling: travelling
+  travelled: traveled
+  # -ogue vs. -og
+  analog: analogue
+  catalog: catalogue
+  demagog: demagogue
+  dialog: dialogue
+  monolog: monologue
+  pedagog: pedagogue
+  prolog: prologue
+  # ae/oe vs. e
+  airplane: aeroplane
+  anemia: anaemia
+  anesthesia: anaesthesia
+  encyclopedia: encyclopaedia
+  eon: aeon
+  fetus: foetus
+  pediatric: paediatric
+  # -ce vs. -se
+  defense: defence
   license: licence
+  offense: offence
+  pretense: pretence
+  # miscellaneous specific words
+  aging: ageing
+  aluminum: aluminium
+  authorizer: authoriser
+  buses: busses
+  cipher: cypher
+  cozy: cosy
+  dependent: dependant
+  draft: draught
+  furor: furore
+  gray: grey
+  inquiry: enquiry
+  jail: gaol
+  jewelry: jewellery
   likable: likeable
   livable: liveable
-  luster: lustre
   maneuver: manoeuvre
   marvelous: marvellous
   matte: matt
-  meager: meagre
-  meter: metre
-  modeling: modelling
   mustache: moustache
-  neighbor: neighbour
-  normalize: normalise
-  offense: offence
-  optimize: optimise
-  optimized: optimised
-  optimizing: optimising
-  organize: organise
-  oriented: orientated
-  paralyze: paralyse
-  plow: plough
-  pretense: pretence
   pajamas: pyjamas
+  plow: plough
+  programme: program
   ratable: rateable
-  realize: realise
-  recognize: recognise
   reconnoiter: reconnoitre
-  rumor: rumour
-  saber: sabre
-  salable: saleable
-  saltpeter: saltpetre
-  skeptic: sceptic
-  sepulcher: sepulchre
-  signaling: signalling
   sizable: sizeable
   skillful: skilful
-  somber: sombre
   smolder: smoulder
+  somber: sombre
   specialty: speciality
   specter: spectre
-  splendor: splendour
-  standardize: standardise
-  standardized: standardised
   sulfur: sulphur
-  theater: theatre
-  traveled: travelled
-  traveler: traveller
-  traveling: travelling
   unshakable: unshakeable
   willful: wilful
   yogurt: yoghurt
-  authorizer: authoriser
