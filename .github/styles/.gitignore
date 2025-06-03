@@ -1,0 +1,4 @@
+# only track the custom Vale rules
+/*
+!.gitignore
+!custom/
