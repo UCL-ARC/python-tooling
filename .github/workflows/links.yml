@@ -30,12 +30,12 @@ jobs:
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
           args: "--verbose
-            --exclude \\{\\{.*\\}\\}
             --exclude https://forum.image.sc/
             --exclude https://stackoverflow.com
             --exclude http://www.gnu.org
             --exclude http://fsf.org
             --exclude docs/pages
+            --exclude docs/_includes
             --exclude-path '{{cookiecutter.project_slug}}/README.md'
             --exclude-path 'tests/data'
             -- ."
