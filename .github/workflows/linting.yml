@@ -72,4 +72,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           filter_mode: nofilter
-          reporter: github-pr-review
+          reporter: github-check
