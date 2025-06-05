@@ -70,6 +70,7 @@ jobs:
         uses: errata-ai/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           fail_on_error: true
           filter_mode: nofilter
