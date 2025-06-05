@@ -4,7 +4,7 @@
 
 # MIT License
 
-Copyright © {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}
+Copyright (c) {% now 'utc', '%Y' %} {{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -25,7 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 {%- elif cookiecutter.license == "BSD-3-Clause" -%}
 
-Copyright © {% now 'utc', '%Y' %}, {{cookiecutter.author_given_names}}
+Copyright (c) {% now 'utc', '%Y' %}, {{cookiecutter.author_given_names}}
 {{cookiecutter.author_family_names}} All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -629,7 +629,7 @@ warranty; and each file should have at least the “copyright” line and a poin
 to where the full notice is found.
 
     <one line to give the program's name and a brief idea of what it does.>
-    Copyright © <year>  <name of author>
+    Copyright (C) <year>  <name of author>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -649,14 +649,14 @@ Also add information on how to contact you by electronic and paper mail.
 If the program does terminal interaction, make it output a short notice like
 this when it starts in an interactive mode:
 
-    <program>  Copyright © <year>  <name of author>
+    <program>  Copyright (C) <year>  <name of author>
     This program comes with ABSOLUTELY NO WARRANTY; for details type 'show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type 'show c' for details.
 
 The hypothetical commands `show w` and `show c` should show the appropriate
 parts of the General Public License. Of course, your program's commands might be
-different; for a GUI, you would use an “about box”.
+different; for a GUI interface, you would use an “about box”.
 
 You should also get your employer (if you work as a programmer) or school, if
 any, to sign a “copyright disclaimer” for the program, if necessary. For more

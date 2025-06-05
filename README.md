@@ -15,14 +15,10 @@ repo, and we welcome questions there or in the `#helpme` channel on the
 🍪 Our template is a [cookiecutter] template which automatically creates new
 Python packages with our recommended tooling set up and ready to go.
 
-<!-- vale proselint.Annotations = NO -->
-
 > [!NOTE]
 > If you're making a package within a community that has an existing
 > package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
 > we recommend using their template instead of this one.
-
-<!-- vale proselint.Annotations = YES -->
 
 ## Tutorial
 
