@@ -35,6 +35,7 @@ jobs:
             --exclude http://www.gnu.org
             --exclude http://fsf.org
             --exclude docs/pages
+            --exclude docs/_includes
             --exclude-path '{{cookiecutter.project_slug}}/README.md'
             --exclude-path 'tests/data'
             -- ."

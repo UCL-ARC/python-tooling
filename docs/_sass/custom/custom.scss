@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 div.site-header {
   max-height: 15em;
   height: 15em;
@@ -5,4 +11,20 @@ div.site-header {
 
 div.site-logo {
   background-position: center center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main-content-wrap {
+  flex: 1;
+}
+
+.site-footer {
+  position: static;
+  width: 100%;
+  color: $body-text-color;
 }
