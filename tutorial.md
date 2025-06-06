@@ -270,7 +270,7 @@ Once you have activated the environment you should make sure the version of the 
 python -m pip install --upgrade pip
 ```
 
-Similar to `uv`, once the the environment is active, you can install the package in editable mode, along with both its required dependencies and optional sets of dependencies by running
+Similar to `uv`, once the environment is active, you can install the package in editable mode, along with both its required dependencies and optional sets of dependencies by running
 
 ```sh
 python -m pip install --editable ".[dev,docs,test]"
