@@ -4,14 +4,21 @@
 
 <script>
   const toggleDarkMode = document.querySelector(".js-toggle-dark-mode");
+
+  const setHtmlThemeAttr = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
   jtd.addEvent(toggleDarkMode, "click", function () {
     if (jtd.getTheme() === "light") {
       jtd.setTheme("dark");
+      setHtmlThemeAttr("dark");
       toggleDarkMode.textContent = "☼";
       toggleDarkMode.ariaLabel = "Switch to light mode";
       localStorage.setItem("theme", "dark");
     } else {
       jtd.setTheme("light");
+      setHtmlThemeAttr("light");
       toggleDarkMode.textContent = "☾";
       toggleDarkMode.ariaLabel = "Switch to dark mode";
       localStorage.setItem("theme", "light");
@@ -22,12 +29,9 @@
    * Meanwhile, we check each time if there is a theme written to local storage and obey it.
    */
   window.addEventListener("DOMContentLoaded", function () {
-    if (localStorage.getItem("theme") === "dark") {
-      jtd.setTheme("dark");
-      toggleDarkMode.textContent = "☼";
-    } else {
-      jtd.setTheme("light");
-      toggleDarkMode.textContent = "☾";
-    }
+    const theme = localStorage.getItem("theme") === "dark" ? "dark" : "light";
+    jtd.setTheme(theme);
+    setHtmlThemeAttr(theme);
+    toggleDarkMode.textContent = theme === "dark" ? "☼" : "☾";
   });
 </script>

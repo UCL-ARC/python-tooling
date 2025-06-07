@@ -28,3 +28,41 @@ div.site-logo {
   width: 100%;
   color: $body-text-color;
 }
+
+/* Dark mode link styles */
+html[data-theme="dark"] {
+  .main-header a,
+  .main-header button,
+  .side-bar a {
+    color: $link-color-dark;
+  }
+
+  main a,
+  footer a {
+    color: $link-color-dark;
+    text-decoration: underline;
+    text-decoration-color: $link-color-dark;
+    text-decoration-thickness: 1px;
+    transition:
+      text-decoration-thickness 0.2s ease-in-out,
+      text-underline-offset 0.2s ease-in-out;
+  }
+
+  main a:hover,
+  footer a:hover {
+    text-decoration-color: $link-color-dark;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* Label colors */
+main {
+  .label-green {
+    background-color: $label-success-bg;
+  }
+
+  .label-red {
+    background-color: $label-error-bg;
+  }
+}
