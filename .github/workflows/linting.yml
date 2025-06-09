@@ -71,5 +71,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filter_mode: nofilter
+          filter_mode: diff_context
           reporter: github-check
