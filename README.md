@@ -8,16 +8,7 @@
 > [!CAUTION]
 > This is Sam's dev fork.
 
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
+This is quite a weasly sentence, I'm fairly sure that this might work.
 
 This repository collects the [UCL ARC] recommendations for a research software
 project in Python. It contains a template for new Python packages and a
