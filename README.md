@@ -5,8 +5,6 @@
 </div>
 <!-- markdownlint-restore -->
 
-This is quite a weasly sentence, I'm fairly sure that this might maybe work, maybe.
-
 This repository collects the [UCL ARC] recommendations for a research software
 project in Python. It contains a template for new Python packages and a
 [website] documenting our recommendations. We've turned on
