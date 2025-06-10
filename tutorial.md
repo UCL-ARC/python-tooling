@@ -1,41 +1,50 @@
 # Tutorial: creating a package using template
 
-In this tutorial we will go through in detail the steps required to set-up a Python package using the `UCL-ARC/python-tooling` 🍪 cookiecutter template as well as some follow on steps illustrating how to use the newly created package with some of the included tools.
+In this tutorial we will go through the steps to set-up a Python package using the `UCL-ARC/python-tooling` 🍪 cookiecutter template.
+We'll also show you how to use your new package with some of the tools included.
 
 > [!TIP]
-> Some of the commands and URLs in the instructions contain placeholders within curly braces such as `{project_slug}`. You will need to replace these placeholders (including the curly braces) with the relevant values for your particular package / project - the text should give details of what should be subsituted for each placeholder.
+> Some of the commands and URLs in this tutorial contain placeholders in curly braces like: `{project_slug}`.
+> You'll need to replace these placeholders (including the curly braces) with the relevant values for your package or project.
+> We'll always explain what should be subsituted for each placeholder.
 
-## ⚙️ Setting up dependencies for using template
+## ⚙️ Prerequisites for using the template
 
 <details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
 
-To use the template you will need to install the following software tools
+To use the template you'll need the following software:
 
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-- [the GitHub command line interface (CLI)](https://github.com/cli/cli?tab=readme-ov-file#installation)
+- A terminal;
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git);
+- [`uv`](https://docs.astral.sh/uv/getting-started/installation/);
+- and the official GitHub command line interface (CLI): [`gh`](https://github.com/cli/cli?tab=readme-ov-file#installation).
 
-The instructions for installing these tools can be accessed by clicking the individual links above.
+The instructions for installing these tools are at the individual links, above.
 
-Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be required to generate your package from the template, which can be installed using the instructions below. For the follow on exercises you will also need an [account set up on GitHub](https://github.com/join) if you don't already have one.
+You'll also need [cookiecutter] to generate your package from the template.
+If you don't have [cookiecutter], don't worry, we'll install it with `uv` in the next steps.
+For the later part of the tutorial, you'll need an [account on GitHub](https://github.com/join), if you don't already have one.
 
-An easy way to install and manage Python packages is using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
+[cookiecutter]: https://cookiecutter.readthedocs.io
 
-1. Open a terminal window
+An easy way to install and manage Python packages is using `uv`.
+We'll use `uv` to install [cookiecutter] in the following steps, skip step 2 if you've already got [cookiecutter].
+
+1. Open a terminal
 
    - On Windows: open the Start menu from the taskbar, type `cmd` in the search field, then click [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) from the results.
-   - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
-   - On Linux: open the default terminal application installed in your distribution.
+   - On MacOS: click the Launchpad icon in the Dock, type `terminal` in the search field, then click `Terminal` from the results.
+   - On Linux: open the default terminal application installed in your distribution. You can usually do this with `<ctrl><alt>t`.
 
-2. In the terminal window, type
+2. In the terminal, type
 
    ```sh
    uv tool install cookiecutter
    ```
 
-   to install the "tools" necessary for creating and using a package using the `UCL-ARC/python-tooling` cookiecutter template.
+   and press enter, to install [cookiecutter] as a [`uv` tool](https://docs.astral.sh/uv/concepts/tools/) on your computer.
 
-3. To check that all the dependencies have installed correctly, run each of the following commands in turn, one at a time
+3. To check that everything was installed correctly, run each of the following commands, one at a time
 
    ```sh
    cookiecutter --version
@@ -43,44 +52,55 @@ An easy way to install and manage Python packages is using `uv`, which can creat
    git --version
    ```
 
-   For each command you should see some text outputted to the terminal giving details of the installed versions of the applications - the output itself is not important as long as you do not see any error messages.
+   For each command you should see some text in the terminal giving each of the versions installed.
+   The output itself isn't important, as long as you don't see any error messages.
 
-4. If you also want to try out creating a GitHub repository for the package you will need to [sign-up for a free GitHub account](https://github.com/join) if you don't already have one. Once you have a GitHub account, open a terminal window - you can either use the same one as previously if you still have it open, or open a new terminal window as described in step 2 and then run
+4. If you have a GitHub account then run
 
    ```sh
    gh auth login
    ```
 
-   to authenticate the GitHub command line interface tool `gh` with your GitHub account credentials. The tool will ask you a series of question, for most of which you can select the default options by just hitting the `Enter` key. Specifically select:
+   to authenticate the GitHub CLI with your GitHub account.
+   The tool will ask you some questions, for most these you can select the default options by just hitting the `Enter` key.
+
+   Specifically, make sure you choose:
 
    - `GitHub.com` for account to log into,
    - `HTTPS` for preferred protocol,
    - `Y` to authenticate Git with your GitHub credentials,
    - `Login with a web browser` as the method to authenticate.
 
-   Once you have selected all these options, a one-time code will be printed to the terminal. You need to copy this code and then hit the `Enter` key to open a page to complete the authentication in your default browser. Once you have entered and submitted the code in the authenticatication page, you should see a `Authentication complete` message appear in the terminal window.
+   Once you've done this, a one-time code will be printed to the terminal.
+   Copy this code and then hit the `Enter` key to open a web browser and complete the authentication.
+   Once you've finished in the browser window, you should see an `Authentication complete` message appear in the terminal window.
 
 </details>
 
 ## 🍪 Creating a package using the template
 
-We will first go through the steps for creating a new package using the `UCL-ARC/python-tooling` cookiecutter template.
+We'll first go through creating a new package using the `UCL-ARC/python-tooling` template.
 
-1. Open a new terminal/command prompt window and change the working directory to the path you wish to create the package in using the `cd` (change directory) command
+1. Open a new terminal and change the working directory to where you want to create the package.
 
    ```sh
    cd path/to/directory
    ```
 
-2. To begin creating the package run
+2. To create the package run
 
    ```sh
    cookiecutter gh:ucl-arc/python-tooling --checkout latest
    ```
 
-   You will then be shown a series of prompts at the command line asking for details of the project and package. You can choose to use the default placeholder value (shown in parenthesis `()` in prompt) for any question by hitting `Enter`. If you already have a specific project in mind you want to set up a package for using the template you can use this project's details, otherwise you can just use the placeholder values. You should choose `Y` (yes) to the questions on whether to initialise Git repository and automatically deploy HTML documentation to GitHub Pages to allow you to complete the follow on exercises which rely on these options being enabled. For the prompt asking for the GitHub user or organization name to be owner of repository you should supply your GitHub user name.
+   You will be shown a series of prompts asking for details of the project and package.
+   You can choose to use the default value (shown in parenthesis `()` in prompt) for any question by hitting `Enter`.
+   If you already have a specific project in mind you can use this project's details, otherwise use the placeholder values.
+   You should choose `Y` (yes) to the questions on whether to initialise a Git repository and automatically deploy HTML documentation to GitHub Pages (this is used in a later section).
+   When you're asked for the `GitHub user or organisation ...` type your GitHub username.
 
-3. Once you have completed all the cookiecutter prompts some additional instructions will be printed to screen (which we will come back to in the next sections) and your new package will be generated in a directory named `{project_slug}` in the current working directory (where `{project_slug}` is the value entered for the `'Slugified' project name...`[^slug] prompt, this will be `python-template` if you used the default placeholder values). You can see the directory tree of files generated by running
+3. Once you have answered all of the questions, some additional instructions will be printed to screen (we will come back to these later).
+   Your new package is in a directory named `{project_slug}` in the current working directory (where `{project_slug}` is the value entered for the `'Slugified' project name...`[^slug] prompt, this will be `python-template` if you used the default placeholder values). You can see the directory tree of files generated by running
 
    ```sh
    tree {project_slug}
@@ -121,7 +141,9 @@ We will first go through the steps for creating a new package using the `UCL-ARC
 
 The package you created in the previous section will have been initialised locally as a Git repository (providing you answered 'Y' to the relevant prompt!) to allow keeping the package under version control, but some extra steps are required to have the local repository synchronised to a remote repository on [GitHub](https://github.com/). The advantages of doing this are that makes it easy for other people to both download and use the package but also contribute to your project. The package has also been set up to take advantage of GitHub's continuous integration and deployment service [GitHub Actions](https://docs.github.com/en/actions) (which is free to use for public repositories) with workflows included for automatically running the package tests, performing [linting checks](<https://en.wikipedia.org/wiki/Lint_(software)>) and building the project documentation, on every [pull-request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and on updates to the default `main` [branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) for the repository.
 
-When you completed setting up the package using the `cookiecutter` command you should have seen some additional instructions printed to screen including, providing you have the [GitHub CLI](https://cli.github.com/) `gh` installed, a message of the form
+When you've finished answering questions the you should see some additional instructions printed to screen.
+
+If you have the [GitHub CLI](https://cli.github.com/) `gh` installed, you should see:
 
 ```sh
 GitHub CLI detected, you can create a repo with the following:
@@ -129,11 +151,14 @@ GitHub CLI detected, you can create a repo with the following:
 gh repo create {github_owner}/{project_slug} -d "{project_description}" --public -r origin --source {project_slug}
 ```
 
-where `{github_owner}`, `{project_slug}` and `{project_description}` are replaced with the relevant GitHub repository owner (user name), project slug and description that you entered when setting up the package using `cookiecutter`. You should now copy-paste and run the `gh repo create ...` command that was printed out in the message - if you no longer have access to the message you can use the example above, being careful to subsitute the placeholders in braces `{}` with the relevant values.
+where `{github_owner}`, `{project_slug}` and `{project_description}` are replaced with your username and your project name.
+package.
+You should copy-paste and run the `gh repo create ...` command,
+If you closed your terminal or longer have access to the message for some reason, you can use the example above being careful to subsitute the placeholders in braces `{}`.
 
-If you get an error message at this point it may be because you have not installed the GitHub CLI or set up the authorisation for the GitHub CLI as [described in the setup instructions above](#%EF%B8%8F-setting-up-dependencies-for-using-template).
+If you get an error message at this point it may be because you have not installed `gh` or set up authorisation as [described in the setup instructions above](#️-prerequisites-for-using-the-template).
 
-If the command runs successfully you should see a message of the form
+If the command worked you should see a message something like:
 
 ```sh
 ✓ Created repository {github_owner}/{project_slug} on GitHub
@@ -141,9 +166,17 @@ If the command runs successfully you should see a message of the form
 ✓ Added remote https://github.com/{github_owner}/{project_slug}.git
 ```
 
-A repository should have been created at the printed URL which you should be able to navigate to in your browser (either copy-paste in to browser or depending on terminal application you may be able to hold `Ctrl` and click on URL directly). Currently both the remote and local repositories are empty as we have not made any commits.
+A repository will have been created at the URL (the one which doesn't end in `.git`).
+You should be able to go there in your browser (either copy-paste into a browser or --depending on your terminal-- you may be able to hold `Ctrl` and click on URL directly).
+Keep the browser window open for now, but return to the terminal.
 
-To commit the package files generated by `cookiecutter` locally on the default `main` branch and also push this commit to the repository on GitHub, run each of the commands below in turn, replacing the `{project_slug}` placeholder with the relevant value you used when creating package (`python-template` if you used default)
+> [!TIP]
+> Your computer has a _*local*_ copy of this repository and GitHub has a _*remote*_ copy.
+
+At the moment, both the remote and local repositories are empty as we have not made any commits.
+
+To commit the package files generated by `cookiecutter`, and also push this commit to the repository on GitHub, run each of the commands below in turn.
+You'll need to replace `{project_slug}` with your package name.
 
 ```sh
 cd {project_slug}
@@ -152,7 +185,8 @@ git commit -m "Initial commit"
 git push --set-upstream origin main
 ```
 
-If you now navigate to the GitHub repository URL in your browser you should see the package files present, with the content of the top-level `README.md` being displayed as the repository landing page.
+If you go back to your browser and refresh, you should see the package files appear.
+You should also see the top-level `README.md` displayed as the repository landing page.
 
 The push of the initial commit to the default `main` branch will have also triggered runs of the GitHub Actions workflows set up in the repository. You can view the status of the workflow job runs by opening the `Actions` pane from the top navigation bar on the repository landing page, or going to the URL `https://github.com/{github_owner}/{project_slug}/actions`.
 
@@ -198,7 +232,7 @@ The index page of the documentation reproduces the content from the repository R
 
 It is recommended to set up a project-specific [virtual environment](https://docs.python.org/3/tutorial/venv.html) whenever working on Python project. This allows you to install the versions of third-party packages the project requires without conflicting with the requirements of other projects you are developing.
 
-There are a variety of virtual environment management tools available for Python. One option is [uv](https://docs.astral.sh/uv), which you will have installed if you followed our detailed set-up instructions above, or may already have installed previously. `uv` is an extremely fast Python package and virtual environment manager that has API compatiblility with `pip` and the built-in virtual environment manager - [`venv`](https://docs.python.org/3/library/venv.html).
+There are a lot of virtual environment management tools available for Python. One option is [uv](https://docs.astral.sh/uv), which you will have installed if you followed our detailed set-up instructions above, or may already have installed previously. `uv` is an extremely fast Python package and virtual environment manager that has API compatiblility with `pip` and the built-in virtual environment manager - [`venv`](https://docs.python.org/3/library/venv.html).
 
 Once you are in your `{project_slug}` directory, a virtual environment can be created by running the following in a terminal/command prompt window
 
