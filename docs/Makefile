@@ -1,4 +1,5 @@
 SHELL := /bin/bash
+.PHONY: help serve build install clean check
 
 help: ## Show this help
 	@echo
