@@ -1,3 +1,11 @@
+:root {
+  --outline-color: #{$outline-color-light};
+}
+
+[data-theme="dark"] {
+  --outline-color: #{$outline-color-dark};
+}
+
 html,
 body {
   height: 100%;
@@ -29,7 +37,7 @@ div.site-logo {
   color: $body-text-color;
 }
 
-//Dark mode link styles
+// Dark mode link styles
 html[data-theme="dark"] {
   .main-header a,
   .main-header button,
@@ -56,7 +64,7 @@ html[data-theme="dark"] {
   }
 }
 
-//Label colors
+// Label colors
 main {
   .label-green {
     background-color: $label-success-bg;
@@ -65,4 +73,34 @@ main {
   .label-red {
     background-color: $label-error-bg;
   }
+}
+
+// Outline styles
+.search:focus-within,
+.btn:focus,
+.btn:active,
+.btn:focus:hover,
+a:focus-visible,
+summary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--outline-color);
+  border-radius: 2px;
+  transition: box-shadow 0.2s ease;
+}
+
+.aux-nav .aux-nav-list-item {
+  padding: 5px;
+}
+
+.nav-list-item {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.js-toggle-dark-mode {
+  height: 100%;
+}
+
+.js-toggle-dark-mode-wrapper {
+  padding: 5px;
 }
