@@ -37,7 +37,7 @@ div.site-logo {
   color: $body-text-color;
 }
 
-//Dark mode link styles
+// Dark mode link styles
 html[data-theme="dark"] {
   .main-header a,
   .main-header button,
@@ -64,7 +64,7 @@ html[data-theme="dark"] {
   }
 }
 
-//Label colors
+// Label colors
 main {
   .label-green {
     background-color: $label-success-bg;
@@ -75,7 +75,7 @@ main {
   }
 }
 
-//Outline styles
+// Outline styles
 .search:focus-within,
 .btn:focus,
 .btn:active,
