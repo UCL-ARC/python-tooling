@@ -22,7 +22,6 @@ Additionally, [cookiecutter](https://cookiecutter.readthedocs.io) will be requir
 An easy way to install and manage Python packages is using `uv`, which can create a dedicated environment with the necessary packages installed using the step by step instructions below
 
 1. Open a terminal window
-
    - On Windows: open the Start menu from the taskbar, type `cmd` in the search field, then click [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) from the results.
    - On MacOS: click the Launchpad icon in the Dock, type `Terminal` in the search field, then click `Terminal` from the results.
    - On Linux: open the default terminal application installed in your distribution.
@@ -52,7 +51,6 @@ An easy way to install and manage Python packages is using `uv`, which can creat
    ```
 
    to authenticate the GitHub command line interface tool `gh` with your GitHub account credentials. The tool will ask you a series of question, for most of which you can select the default options by just hitting the `Enter` key. Specifically select:
-
    - `GitHub.com` for account to log into,
    - `HTTPS` for preferred protocol,
    - `Y` to authenticate Git with your GitHub credentials,
@@ -94,7 +92,6 @@ We will first go through the steps for creating a new package using the `UCL-ARC
 
    in both cases replacing `{project_slug}` with the relevant value you used (`python-template` if you used the default values).
    Some of the key files and directories are
-
    - The `README.md` file which is a Markdown file describing the project and acting as a landing page for first-time users.
    - The `LICENSE.md` file which contains the terms of the open-source license the code is released under.
    - The `src` directory which will contain the Python package source code.
