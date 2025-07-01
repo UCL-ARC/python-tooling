@@ -47,7 +47,7 @@ def test_initialisation_of_git_repo(
 
     try:
         # check for presence of GitHub CLI
-        subprocess.run(  # noqa: S603
+        subprocess.run(
             [  # noqa: S607
                 "gh",
                 "--version",
