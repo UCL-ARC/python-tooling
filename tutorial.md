@@ -252,7 +252,7 @@ https://{github_owner}.github.io/{project_slug}
 🎉
 
 You should see that the homepage of the documentation site is the same as the repository README file.
-Importantly, the documentation website inclides the [_application programming interface_ (API](https://en.wikipedia.org/wiki/API) reference documentation.
+Importantly, the documentation website includes the [_application programming interface_ (API](https://en.wikipedia.org/wiki/API) reference documentation.
 The API documentation is generated from [docstrings](https://peps.python.org/pep-0257/#what-is-a-docstring) in the source code.
 
 ## 🐍 Setting up a virtual environment for project
@@ -283,7 +283,7 @@ or on Windows:
 .venv\Scripts\activate
 ```
 
-So activate your environment and you should see braces `( )` with your project slug on the left of your terminal window.
+Activate your environment, and you should see braces `( )` with your project slug on the left of your terminal window.
 This might be slightly different depending on your terminal setup.
 
 Once you have activated the environment you can use the following command to install any packages within the `.venv` environment
@@ -379,7 +379,7 @@ It's sometimes useful to be able to render the HTML documentation pages locally.
 For example if you're editing docstrings or adding additional pages, and you want to check everything worked.
 The package is set up to use [MkDocs](https://www.mkdocs.org/) to build the documentation website.
 The API documentation is generated using the [`mkdocstrings` plug-in](https://mkdocstrings.github.io/).
-Mkdocks and `mkdocstrings` will have been installed in your local development environment, because you installed the package with the `docs` dependencies.
+MkDocs and `mkdocstrings` will have been installed in your local development environment, because you installed the package with the `docs` dependencies.
 
 To build and serve the documentation locally run:
 
