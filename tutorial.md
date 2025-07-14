@@ -31,7 +31,6 @@ An easy way to install and manage Python packages is using `uv`.
 We'll use `uv` to install [cookiecutter] in the following steps, skip step 2 if you've already got [cookiecutter].
 
 1. Open a terminal
-
    - On Windows: open the Start menu from the taskbar, type `cmd` in the search field, then click [command prompt](https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt) from the results.
    - On MacOS: click the Launchpad icon in the Dock, type `terminal` in the search field, then click `Terminal` from the results.
    - On Linux: open the default terminal application installed in your distribution. You can usually do this with `<ctrl><alt>t`.
@@ -65,7 +64,6 @@ We'll use `uv` to install [cookiecutter] in the following steps, skip step 2 if 
    The tool will ask you some questions, for most these you can select the default options by just hitting the `Enter` key.
 
    Specifically, make sure you choose:
-
    - `GitHub.com` for account to log into,
    - `HTTPS` for preferred protocol,
    - `Y` to authenticate Git with your GitHub credentials,
@@ -114,7 +112,6 @@ We'll first go through creating a new package using the `UCL-ARC/python-tooling`
 
    in both cases, replacing `{project_slug}` with the name you used (`python-template` if you used the default).
    Some of the key files and directories are:
-
    - The `README.md` file is a Markdown file describing the project and acting as a landing page for first-time users.
    - The `LICENSE.md` file contains the terms of the open-source license the code is released under.
    - The `src` directory, which will contain the Python package source code.
