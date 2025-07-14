@@ -197,7 +197,7 @@ For now, have a browse around the GitHub web interface.
 ## 📄 Configuring repository to host docs on GitHub Pages
 
 Now that your repository is on GitHub, you need to do a few more steps to set up your project's documentation website.
-The HTML documentation will be built using the `Documentation` workflow (that we're going to fix) and hosted on [GitHub Pages](pages.github.com/).
+The HTML documentation will be built using the `Documentation` workflow (that we're going to fix) and hosted on [GitHub Pages](https://pages.github.com/).
 
 If you scroll back in your terminal to the end of the [cookiecutter] questions, you should be able to find a message like:
 
