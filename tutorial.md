@@ -10,7 +10,7 @@ We'll also show you how to use your new package with some of the tools included.
 
 ## ⚙️ Prerequisites for using the template
 
-<details><summary>Click to expand... </summary> <!-- markdownlint-disable-line MD033 -->
+<details><summary>Click to expand… </summary> <!-- markdownlint-disable-line MD033 -->
 
 To use the template you'll need the following software:
 
