@@ -1,3 +1,11 @@
+:root {
+  --outline-color: #{$outline-color-light};
+}
+
+[data-theme="dark"] {
+  --outline-color: #{$outline-color-dark};
+}
+
 html,
 body {
   height: 100%;
@@ -27,4 +35,72 @@ div.site-logo {
   position: static;
   width: 100%;
   color: $body-text-color;
+}
+
+// Dark mode link styles
+html[data-theme="dark"] {
+  .main-header a,
+  .main-header button,
+  .side-bar a {
+    color: $link-color-dark;
+  }
+
+  main a,
+  footer a {
+    color: $link-color-dark;
+    text-decoration: underline;
+    text-decoration-color: $link-color-dark;
+    text-decoration-thickness: 1px;
+    transition:
+      text-decoration-thickness 0.2s ease-in-out,
+      text-underline-offset 0.2s ease-in-out;
+  }
+
+  main a:hover,
+  footer a:hover {
+    text-decoration-color: $link-color-dark;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+// Label colors
+main {
+  .label-green {
+    background-color: $label-success-bg;
+  }
+
+  .label-red {
+    background-color: $label-error-bg;
+  }
+}
+
+// Outline styles
+.search:focus-within,
+.btn:focus,
+.btn:active,
+.btn:focus:hover,
+a:focus-visible,
+summary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--outline-color);
+  border-radius: 2px;
+  transition: box-shadow 0.2s ease;
+}
+
+.aux-nav .aux-nav-list-item {
+  padding: 5px;
+}
+
+.nav-list-item {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.js-toggle-dark-mode {
+  height: 100%;
+}
+
+.js-toggle-dark-mode-wrapper {
+  padding: 5px;
 }

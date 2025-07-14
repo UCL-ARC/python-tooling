@@ -75,11 +75,9 @@ Pages all live in the `docs/pages` sub-directory, and are written in markdown.
 To build the webpage locally (for testing)
 
 1. [Install jekyll]
-2. Run `bundle install` from the `docs/` directory of this repository to
-   install dependencies.
-3. Run `bundle exec jekyll serve` from the root directory of this repository.
-   This should fire up a local web server and tell you its address. By default
-   the server will automatically refresh the HTML pages if any changes are made
+2. Run `make serve` from the `docs/` directory of this repository to
+   install dependencies and start a local web server.
+   The server will automatically refresh the HTML pages if any changes are made
    to the markdown sources.
 
 See the [jekyll docs] for more info.

@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.12
+    rev: v0.12.1
     hooks:
       - id: ruff
       - id: ruff-format
@@ -19,11 +19,11 @@ repos:
     hooks:
       - id: toml-sort-fix
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.16.0
+    rev: v1.16.1
     hooks:
       - id: mypy
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.5.3
+    rev: v3.6.2
     hooks:
       - id: prettier
         args:
@@ -41,7 +41,7 @@ repos:
           - --fix=lf
       - id: trailing-whitespace
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.0
+    rev: 0.33.1
     hooks:
       # Schemas taken from https://www.schemastore.org/json/
       - id: check-jsonschema
