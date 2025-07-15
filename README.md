@@ -27,20 +27,13 @@ We also have a [tutorial](./tutorial.md) that has been presented in a couple of 
 
 ## Using our template
 
-If you have [uv] installed, you can use our template with the following one-liner:
+If you have [uv] installed, you can use our template with the following command:
 
 ```sh
 uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-Alternatively you can [install cookiecutter] (following the recommended instructions).
-Do this if you don't use [uv], or if you're likely to want to use cookiecutter again.
-
-Then you'll need to run cookiecutter with our template:
-
-```sh
-cookiecutter gh:ucl-arc/python-tooling --checkout latest
-```
+If you don't want to use uv you can [install cookiecutter] using pip, and run the above command without the leading `uvx`.
 
 When [cookiecutter] runs, it will ask you a series of questions to configure your project.
 Type the answer or hit return without typing anything to use the default option (shown in parenthesis).
@@ -73,7 +66,6 @@ uv pip install -e ".[dev]"
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/stable
-[install cookiecutter]: https://cookiecutter.readthedocs.io/en/stable/README.html#installation
 [uv]: https://docs.astral.sh/uv
 <!-- prettier-ignore-end -->
 
