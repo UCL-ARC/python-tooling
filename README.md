@@ -20,12 +20,10 @@ Python packages with our recommended tooling set up and ready to go.
 > package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
 > we recommend using their template instead of this one.
 
-## Tutorial
+## Using our Python package template
 
 Some quick instructions for using our template are below.
-We also have a [tutorial](./tutorial.md) that has been presented in a couple of workshops aimed at researchers at UCL.
-
-## Using our template
+We also have a longer [tutorial](./tutorial.md) that has been presented in workshops for researchers at UCL.
 
 If you have [uv] installed, you can use our template with the following one-liner:
 
