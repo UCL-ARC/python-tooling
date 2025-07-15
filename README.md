@@ -66,6 +66,7 @@ uv pip install -e ".[dev]"
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/stable
+[install cookiecutter]: https://cookiecutter.readthedocs.io/en/stable/README.html#installation
 [uv]: https://docs.astral.sh/uv
 <!-- prettier-ignore-end -->
 
