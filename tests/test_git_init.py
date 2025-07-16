@@ -1,29 +1,23 @@
 """Checks that the git repo initialisation works."""
 
-import pathlib
 import subprocess
 import typing
 
 import pytest
+
+from .helpers import DEFAULT_CONFIG  # type: ignore[import-not-found]
 
 
 @pytest.mark.parametrize("initialise_git_repository", [True, False])
 def test_initialisation_of_git_repo(
     initialise_git_repository: bool,  # noqa: FBT001
     generate_package: typing.Callable,
-    tmp_path: pathlib.Path,
 ) -> None:
     """Checks to see if git was correctly initialised if desired."""
-    test_config = {
-        "github_owner": "test-user",
-        "project_short_description": "description",
-        "project_name": "Cookiecutter Test",
-        "initialise_git_repository": initialise_git_repository,
-    }
+    test_config = DEFAULT_CONFIG.copy()
+    test_config["initialise_git_repository"] = str(initialise_git_repository)
     # Run cookiecutter with initialise_git_repository
-    result = generate_package(config=test_config, path=tmp_path)
-
-    test_project_dir = tmp_path / "cookiecutter-test"
+    result, test_project_dir = generate_package(config=test_config)
 
     # check if git is initialised
     git_status = subprocess.run(  # noqa: S603
