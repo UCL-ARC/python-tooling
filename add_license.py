@@ -1,6 +1,6 @@
 import os
 
-LICENSE = '''# Copyright 2024 University College London
+LICENSE = """# Copyright 2024 University College London
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@ LICENSE = '''# Copyright 2024 University College London
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-'''
+"""
 
 FILES = [
     "./tests/test_package_generation.py",
@@ -25,7 +25,7 @@ FILES = [
 
 for filepath in FILES:
     if os.path.exists(filepath):
-        with open(filepath, "r") as f:
+        with open(filepath) as f:
             content = f.read()
         if "University College London" not in content:
             with open(filepath, "w") as f:
