@@ -93,7 +93,9 @@ def test_package_generation(
         raise RuntimeError(msg)
 
 
+@pytest.mark.parametrize("initialise_git_repository", [True, False])
 def test_pip_installable(
+    initialise_git_repository: bool,  # noqa: FBT001
     tmp_path: pathlib.Path,
     venv: pytest_venv.VirtualEnvironment,
     generate_package: typing.Callable,
@@ -103,6 +105,7 @@ def test_pip_installable(
         "github_owner": "test-user",
         "project_short_description": "description",
         "project_name": "Cookiecutter Test",
+        "initialise_git_repository": initialise_git_repository,
     }
     generate_package(config=test_config, path=tmp_path)
     test_project_dir = tmp_path / "cookiecutter-test"
