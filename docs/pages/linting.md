@@ -17,7 +17,6 @@ for some of these.
 | [ruff-format](https://github.com/astral-sh/ruff)        | A drop-in replacement for `black` (and also super fast). A nice "no-need to think" code formatter. If you have your own opinions about code style, you might not like this.                           | <span class="label label-green">Best</span>  |
 | [ruff](https://github.com/astral-sh/ruff)               | A fast linter which incorporates a range of other linters. Notably [isort](https://pycqa.github.io/isort/) can be included as a [ruff rule](https://docs.astral.sh/ruff/rules/) (which we recommend). | <span class="label label-green">Best</span>  |
 | [toml-sort](https://github.com/pappasam/toml-sort)      | Sorts TOML files which are now part of PEP 8.                                                                                                                                                         | <span class="label label-green">Best</span>  |
-| [fawltydeps](https://tweag.github.io/FawltyDeps/)       | Linter which aims to find unused dependencies and undeclared dependencies.                                                                                                                            | <span class="label label-green">Best</span>  |
 | [autopep8](https://github.com/hhatto/autopep8)          | Formatter which conforms to PEP 8.                                                                                                                                                                    | <span class="label label-yellow">Good</span> |
 | [black](https://black.readthedocs.io/en/stable/)        | Opinionated formatter, defaults to 88 characters per line. Widely used, but we now recommend `ruff-format` in its place.                                                                              | <span class="label label-yellow">Good</span> |
 | [isort](https://pycqa.github.io/isort/)                 | Sorts imports alphabetically, splits into first/third party, works on python & cython code. We recommend this, but it can be included in `ruff`, which is simpler.                                    | <span class="label label-yellow">Good</span> |
@@ -33,3 +32,11 @@ for some of these.
 | Name                                           | Short description                                                             |                     🚦                      |
 | ---------------------------------------------- | ----------------------------------------------------------------------------- | :-----------------------------------------: |
 | [mypy](https://mypy.readthedocs.io/en/stable/) | Static type checker, won't fail if no typing but will if typing is incorrect. | <span class="label label-green">Best</span> |
+
+### Dependency checking
+
+| Name                                                              | Short description                                                |                      🚦                      |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------- | :------------------------------------------: |
+| [deptry](https://deptry.com/)                                     | Checks for unused dependencies and undeclared dependencies.      | <span class="label label-yellow">Good</span> |
+| [fawltydeps](https://tweag.github.io/FawltyDeps/)                 | Checks for unused dependencies and undeclared dependencies.      | <span class="label label-yellow">Good</span> |
+| [pip-check-reqs](https://github.com/adamtheturtle/pip-check-reqs) | Checks requirements file (requires converting `pyproject.toml`). | <span class="label label-yellow">Good</span> |
