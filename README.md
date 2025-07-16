@@ -17,7 +17,7 @@ Python packages with our recommended tooling set up and ready to go.
 
 > [!NOTE]
 > If you're making a package within a community that has an existing
-> package template (e.g., [`scikit-hep`](https://github.com/scikit-hep/cookie)),
+> package template (e.g., [`SciKit-Surgery`](https://github.com/SciKit-Surgery/PythonTemplate)),
 > we recommend using their template instead of this one.
 
 ## Using our Python package template
