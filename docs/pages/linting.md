@@ -32,3 +32,11 @@ for some of these.
 | Name                                           | Short description                                                             |                     🚦                      |
 | ---------------------------------------------- | ----------------------------------------------------------------------------- | :-----------------------------------------: |
 | [mypy](https://mypy.readthedocs.io/en/stable/) | Static type checker, won't fail if no typing but will if typing is incorrect. | <span class="label label-green">Best</span> |
+
+### Dependency checking
+
+| Name                                                              | Short description                                                |                      🚦                      |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------- | :------------------------------------------: |
+| [deptry](https://deptry.com/)                                     | Checks for unused dependencies and undeclared dependencies.      | <span class="label label-yellow">Good</span> |
+| [fawltydeps](https://tweag.github.io/FawltyDeps/)                 | Checks for unused dependencies and undeclared dependencies.      | <span class="label label-yellow">Good</span> |
+| [pip-check-reqs](https://github.com/adamtheturtle/pip-check-reqs) | Checks requirements file (requires converting `pyproject.toml`). | <span class="label label-yellow">Good</span> |
