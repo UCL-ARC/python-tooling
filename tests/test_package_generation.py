@@ -1,6 +1,7 @@
 """Checks that the cookiecutter works."""
 
 import difflib
+import os
 import pathlib
 import shutil
 import subprocess
@@ -9,19 +10,39 @@ import typing
 import pytest
 import pytest_venv  # type: ignore[import-not-found]
 
-from .helpers import (  # type: ignore[import-not-found]
-    DEFAULT_CONFIG,
-    get_all_files_folders,
-)
+
+def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
+    """
+    Get all files and folders under a directory.
+
+    The paths are returned relative to the root path given.
+    __pycache__ directories and .DS_Store files are ignored.
+    """
+    file_set: set[pathlib.Path] = set()
+    for dirpath, _, filenames in os.walk(root_path):
+        dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
+        if dirpath_path.name in ["__pycache__"]:
+            continue
+
+        # Add this directory
+        file_set.update((dirpath_path,))
+        # Add any files in it
+        for filename in filenames:
+            if filename in [".DS_Store"]:
+                continue
+            file_set.update((dirpath_path / filename,))
+
+    return file_set
 
 
-def test_package_generation(generate_package: typing.Callable) -> None:
+def test_package_generation(
+    default_config_with: typing.Callable, generate_package: typing.Callable
+) -> None:
     """Test package generation."""
-    test_config = DEFAULT_CONFIG.copy()
     # Not having a git repo makes it easier to check in/out reference
     # data files to the main python-tooling git repository
-    test_config["initialise_git_repository"] = "False"
-    _, test_project_dir = generate_package(config=test_config)
+    config = default_config_with("initialise_git_repository", "False")
+    _, test_project_dir = generate_package(config=config)
 
     expected_package_dir = (
         pathlib.Path(__file__).parent / "data" / "test_package_generation"
@@ -89,10 +110,11 @@ def test_pip_installable(
 
 
 @pytest.mark.parametrize("funder", ["", "STFC", "UKRI", "Wellcome Trust"])
-def test_optional_funder(generate_package: typing.Callable, funder: str) -> None:
+def test_optional_funder(
+    funder: str, default_config_with: typing.Callable, generate_package: typing.Callable
+) -> None:
     """Test specifying funder or not in package generation."""
-    config = DEFAULT_CONFIG.copy()
-    config["funder"] = funder
+    config = default_config_with("funder", funder)
     _, test_project_dir = generate_package(config)
 
     with (test_project_dir / "README.md").open() as f:
@@ -102,8 +124,7 @@ def test_optional_funder(generate_package: typing.Callable, funder: str) -> None
         assert "## Acknowledgements" not in readme_text
     else:
         assert (
-            f"## Acknowledgements\n\nThis work was funded by {config['funder']}."
-            in readme_text
+            f"## Acknowledgements\n\nThis work was funded by {funder}." in readme_text
         ), readme_text
 
 
