@@ -26,7 +26,7 @@ def _generate_package(
     path
         Directory to create package in.
 
-    Returns:
+    Returns
     -------
     subprocess.CompletedProcess, pathlib.Path
         The result of the cookiecutter command and the path to the generated package.
