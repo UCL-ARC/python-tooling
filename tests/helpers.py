@@ -18,12 +18,12 @@ def _generate_package(
     """
     Generate a project from the cookiecutter template.
 
-    Arguments:
-    ---------
-    config: dict
+    Parameters
+    ----------
+    config
         A dictionary with values for the cookiecutter template,
         as defined in the cookiecutter.json
-    path: Path
+    path
         Directory to create package in.
 
     Returns:
