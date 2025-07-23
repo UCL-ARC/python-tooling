@@ -37,8 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: site
-
-{%- if cookiecutter.deploy_docs_to_github_pages %}
+{% if cookiecutter.deploy_docs_to_github_pages %}
   deploy:
     environment:
       name: github-pages
