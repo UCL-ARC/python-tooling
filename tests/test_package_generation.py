@@ -42,7 +42,7 @@ def test_package_generation(
     """Test package generation."""
     # Not having a git repo makes it easier to check in/out reference
     # data files to the main python-tooling git repository
-    config = default_config_with("initialise_git_repository", "False")
+    config = default_config_with(initialise_git_repository="False")
     _, test_project_dir = generate_package(config=config)
 
     expected_package_dir = (
@@ -117,7 +117,7 @@ def test_optional_funder(
     generate_package: typing.Callable,
 ) -> None:
     """Test specifying funder or not in package generation."""
-    config = default_config_with("funder", funder)
+    config = default_config_with(funder=funder)
     _, test_project_dir = generate_package(config)
 
     with (test_project_dir / "README.md").open() as f:

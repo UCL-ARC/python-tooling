@@ -26,9 +26,8 @@ def default_config() -> dict[str, str]:
 def default_config_with(default_config: dict[str, str]) -> typing.Callable:
     """Extend or modify the default configuration with one additional value."""
 
-    def _wrapped_with(key: str, value: str) -> dict[str, str]:
-        default_config[key] = value
-        return default_config
+    def _wrapped_with(**kwargs: str) -> dict[str, str]:
+        return default_config | kwargs
 
     return _wrapped_with
 

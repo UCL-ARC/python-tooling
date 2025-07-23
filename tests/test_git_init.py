@@ -14,7 +14,7 @@ def test_initialisation_of_git_repo(
 ) -> None:
     """Checks to see if git was correctly initialised if desired."""
     # Run cookiecutter with initialise_git_repository
-    config = default_config_with("initialise_git_repository", str(init))
+    config = default_config_with(initialise_git_repository=str(init))
     result, test_project_dir = generate_package(config=config)
 
     # check if git is initialised
