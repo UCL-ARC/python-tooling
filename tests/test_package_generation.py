@@ -36,7 +36,8 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
 
 
 def test_package_generation(
-    default_config_with: typing.Callable, generate_package: typing.Callable
+    default_config_with: typing.Callable,
+    generate_package: typing.Callable,
 ) -> None:
     """Test package generation."""
     # Not having a git repo makes it easier to check in/out reference
@@ -111,7 +112,8 @@ def test_pip_installable(
 
 @pytest.mark.parametrize("funder", ["", "STFC", "UKRI", "Wellcome Trust"])
 def test_optional_funder(
-    funder: str, default_config_with: typing.Callable, generate_package: typing.Callable
+    funder: str, default_config_with: typing.Callable,
+    generate_package: typing.Callable
 ) -> None:
     """Test specifying funder or not in package generation."""
     config = default_config_with("funder", funder)
