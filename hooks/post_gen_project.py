@@ -86,19 +86,12 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
             return _EXIT_FAILURE
     if deploy_docs_to_github_pages == "True":
         print(
-            "The 'Documentation' GitHub Actions workflow has been set up to push the "
-            "built HTML documentation to a branch gh-pages on pushes to main for "
-            "deploying as a GitHub Pages website. To allow the GitHub Actions bot to "
-            "push to the gh-pages branch you need to enable 'Read and write "
-            "permissions' under 'Workflow permissions' at\n\n"
-            "{{cookiecutter.__repo_url}}/settings/actions\n\n"
-            "After the 'Documentation' workflow has successfully completed at least "
-            "once you will also need to configure the repository to deploy a GitHub "
-            "pages site from the content on the gh-pages branch by going to\n\n"
+            "The 'Documentation' GitHub Actions workflow has been set up to deploy the "
+            "built HTML documentation to a GitHub Pages website on pushes to main. \n\n"
+            "You will need to configure the repository to deploy a GitHub pages site "
+            "using GitHub Actions by going to\n\n"
             "{{cookiecutter.__repo_url}}/settings/pages\n\n"
-            "and under 'Built and deployment' selecting 'Deploy from a branch' for "
-            "the 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, "
-            "leaving the branch path drop-down with its default value of '/ (root)'."
+            "and under 'Build and deployment' selecting 'GitHub Actions' for 'Source'."
         )
 
     return _EXIT_SUCCESS
