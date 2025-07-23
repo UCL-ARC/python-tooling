@@ -7,12 +7,13 @@ _EXIT_FAILURE = 1
 _EXIT_SUCCESS = 0
 
 
-def main(initialise_git_repository: str) -> int:
+def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> int:
     """
     Create a git repository on generation of the project.
 
     Args:
         initialise_git_repository: Whether to initialise the repo
+        deploy_docs_to_github_pages: Whether to deploy built docs to GitHub Pages
 
     Returns:
         The return code of the process
@@ -83,8 +84,30 @@ def main(initialise_git_repository: str) -> int:
             # some other error
             print(f"There was an error with the GitHub CLI: {e.returncode}\n{e.stderr}")
             return _EXIT_FAILURE
+    if deploy_docs_to_github_pages == "True":
+        print(
+            "The 'Documentation' GitHub Actions workflow has been set up to push the "
+            "built HTML documentation to a branch gh-pages on pushes to main for "
+            "deploying as a GitHub Pages website. To allow the GitHub Actions bot to "
+            "push to the gh-pages branch you need to enable 'Read and write "
+            "permissions' under 'Workflow permissions' at\n\n"
+            "{{cookiecutter.__repo_url}}/settings/actions\n\n"
+            "After the 'Documentation' workflow has successfully completed at least "
+            "once you will also need to configure the repository to deploy a GitHub "
+            "pages site from the content on the gh-pages branch by going to\n\n"
+            "{{cookiecutter.__repo_url}}/settings/pages\n\n"
+            "and under 'Built and deployment' selecting 'Deploy from a branch' for "
+            "the 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, "
+            "leaving the branch path drop-down with its default value of '/ (root)'."
+        )
+
     return _EXIT_SUCCESS
 
 
 if __name__ == "__main__":
-    sys.exit(main("{{ cookiecutter.initialise_git_repository }}"))
+    sys.exit(
+        main(
+            "{{ cookiecutter.initialise_git_repository }}",
+            "{{ cookiecutter.deploy_docs_to_github_pages }}",
+        )
+    )
