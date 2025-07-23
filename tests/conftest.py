@@ -7,7 +7,7 @@ import typing
 import pytest
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")  # noqa: PT003
 def default_config() -> dict[str, str]:
     """
     Get the minimal default configuration for cutting a cookie in tests.
@@ -22,7 +22,7 @@ def default_config() -> dict[str, str]:
     }
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")  # noqa: PT003
 def default_config_with(default_config: dict[str, str]) -> typing.Callable:
     """Extend or modify the default configuration with one additional value."""
 
@@ -33,8 +33,7 @@ def default_config_with(default_config: dict[str, str]) -> typing.Callable:
 
 
 def _generate_package(
-    config: dict[str, str],
-    path: pathlib.Path,
+    config: dict[str, str], path: pathlib.Path
 ) -> tuple[subprocess.CompletedProcess[str], pathlib.Path]:
     """
     Generate a project from the cookiecutter template.
@@ -66,8 +65,7 @@ def _generate_package(
 
 @pytest.fixture
 def generate_package(
-    default_config: dict[str, str],
-    tmp_path: pathlib.Path,
+    default_config: dict[str, str], tmp_path: pathlib.Path
 ) -> typing.Callable:
     """Generate project from cookiecutter template."""
 
