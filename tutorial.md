@@ -210,7 +210,7 @@ GitHub Actions by going to
 
 https://github.com/{github_owner}/{project_slug}/settings/pages
 
-and under 'Built and deployment' selecting 'GitHub Actions' for 'Source'.
+and under 'Build and deployment' selecting 'GitHub Actions' for 'Source'.
 ```
 
 As before replace `{github_owner}` and `{project_slug}` with the relevant GitHub repository owner and project slug that you chose at the start.
