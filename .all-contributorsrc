@@ -269,7 +269,10 @@
         "doc",
         "content",
         "maintenance",
-        "review"
+        "review",
+        "talk",
+        "tutorial",
+        "eventOrganizing"
       ]
     },
     {
