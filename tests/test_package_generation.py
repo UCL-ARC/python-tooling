@@ -112,8 +112,7 @@ def test_pip_installable(
 
 @pytest.mark.parametrize("funder", ["", "STFC", "UKRI", "Wellcome Trust"])
 def test_optional_funder(
-    funder: str, default_config_with: typing.Callable,
-    generate_package: typing.Callable
+    funder: str, default_config_with: typing.Callable, generate_package: typing.Callable
 ) -> None:
     """Test specifying funder or not in package generation."""
     config = default_config_with("funder", funder)
