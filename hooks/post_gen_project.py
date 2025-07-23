@@ -66,7 +66,7 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
                 '-d "{{cookiecutter.project_short_description}}" '
                 "--public "
                 "-r origin "
-                "--source {{cookiecutter.project_slug}}\n"
+                "--source {{cookiecutter.project_slug}}\n",
             )
         except FileNotFoundError:
             # GitHub CLI isn't installed
@@ -78,7 +78,7 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
                 "https://docs.github.com/en/get-started/quickstart/create-a-repo.\n\n"
                 "Then run:\n\n"
                 "git remote add origin git@github.com:"
-                "{{cookiecutter.__repo_name}}.git\n"
+                "{{cookiecutter.__repo_name}}.git\n",
             )
         except subprocess.CalledProcessError as e:
             # some other error
@@ -98,7 +98,7 @@ def main(initialise_git_repository: str, deploy_docs_to_github_pages: str) -> in
             "{{cookiecutter.__repo_url}}/settings/pages\n\n"
             "and under 'Built and deployment' selecting 'Deploy from a branch' for "
             "the 'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, "
-            "leaving the branch path drop-down with its default value of '/ (root)'."
+            "leaving the branch path drop-down with its default value of '/ (root)'.",
         )
 
     return _EXIT_SUCCESS
@@ -109,5 +109,5 @@ if __name__ == "__main__":
         main(
             "{{ cookiecutter.initialise_git_repository }}",
             "{{ cookiecutter.deploy_docs_to_github_pages }}",
-        )
+        ),
     )
