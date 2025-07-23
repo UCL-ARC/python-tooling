@@ -310,6 +310,15 @@
         "a11y",
         "code"
       ]
+    },
+    {
+      "login": "jamesbriant",
+      "name": "James Briant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6298711?v=4",
+      "profile": "http://james.briant.co.uk",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
