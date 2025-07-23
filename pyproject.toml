@@ -13,7 +13,6 @@ fix = true
 force-exclude = true
 target-version = "py311"
 lint.ignore = [
-    "COM812", # trailing commas (ruff-format recommended)
     "D203", # no-blank-line-before-class
     "D212", # multi-line-summary-first-line
     "D407", # removed dashes lines under sections
