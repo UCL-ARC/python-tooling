@@ -55,7 +55,7 @@ cd example-research-software-project
 git init
 # uv venv
 # source .venv/bin/activate
-uv pip install -e ".[dev]"
+uv pip install -e . --group dev
 ```
 
 <!-- links here -->
