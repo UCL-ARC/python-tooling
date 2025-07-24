@@ -312,7 +312,7 @@ Once you have created and activated a virtual environment for the project, you c
 uv pip install --editable . --group dev --group docs --group test
 ```
 
-from the root of the project repository.
+from the root of the project repository. Note that `uv>=0.6.7` is required to use the `--group` option.
 
 <details><summary>Using venv as an alternative to uv </summary> <!-- markdownlint-disable-line MD033 -->
 

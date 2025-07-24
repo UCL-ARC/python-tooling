@@ -58,6 +58,8 @@ git init
 uv pip install -e . --group dev
 ```
 
+Note that `uv>=0.6.7` is required to use the `--group` option.
+
 <!-- links here -->
 
 <!-- prettier-ignore-start -->
