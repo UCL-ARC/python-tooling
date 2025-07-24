@@ -309,7 +309,7 @@ uv venv --python 3.11.6
 Once you have created and activated a virtual environment for the project, you can install the package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html), along with both its required dependencies and optional sets of dependencies for development (`dev`), documentation (`docs`) and testing (`test`) by running
 
 ```sh
-uv pip install --editable . --group dev --group docs --group test
+uv sync --all-groups
 ```
 
 from the root of the project repository. Note that `uv>=0.6.7` is required to use the `--group` option.
