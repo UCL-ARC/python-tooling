@@ -43,7 +43,8 @@
         "question",
         "review",
         "talk",
-        "test"
+        "test",
+        "tutorial"
       ]
     },
     {
@@ -77,7 +78,8 @@
         "eventOrganizing",
         "review",
         "talk",
-        "test"
+        "test",
+        "tutorial"
       ]
     },
     {
@@ -105,7 +107,8 @@
         "doc",
         "question",
         "review",
-        "test"
+        "test",
+        "tutorial"
       ]
     },
     {
@@ -268,7 +271,10 @@
         "doc",
         "content",
         "maintenance",
-        "review"
+        "review",
+        "talk",
+        "tutorial",
+        "eventOrganizing"
       ]
     },
     {
@@ -288,7 +294,8 @@
       "contributions": [
         "bug",
         "a11y",
-        "review"
+        "review",
+        "tutorial"
       ]
     },
     {
@@ -309,6 +316,15 @@
       "contributions": [
         "a11y",
         "code"
+      ]
+    },
+    {
+      "login": "jamesbriant",
+      "name": "James Briant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6298711?v=4",
+      "profile": "http://james.briant.co.uk",
+      "contributions": [
+        "bug"
       ]
     }
   ]

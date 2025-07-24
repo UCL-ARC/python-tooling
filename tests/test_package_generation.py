@@ -36,26 +36,19 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
 
 
 def test_package_generation(
-    tmp_path: pathlib.Path,
+    default_config_with: typing.Callable,
     generate_package: typing.Callable,
 ) -> None:
     """Test package generation."""
-    test_config = {
-        "github_owner": "test-user",
-        "project_short_description": "description",
-        "project_name": "Cookiecutter Test",
-        # Not having a git repo makes it easier to check in/out reference
-        # data files to the main python-tooling git repository
-        "initialise_git_repository": False,
-    }
-    generate_package(config=test_config, path=tmp_path)
+    # Not having a git repo makes it easier to check in/out reference
+    # data files to the main python-tooling git repository
+    config = default_config_with(initialise_git_repository="False")
+    _, test_project_dir = generate_package(config=config)
 
     expected_package_dir = (
         pathlib.Path(__file__).parent / "data" / "test_package_generation"
     )
-    # Check project directory exists
-    test_project_dir = tmp_path / "cookiecutter-test"
-    assert test_project_dir.exists()
+    assert test_project_dir.exists(), "Project directory does not exist."
 
     actual_files = get_all_files_folders(test_project_dir)
     expected_files = get_all_files_folders(expected_package_dir)
@@ -78,7 +71,7 @@ def test_package_generation(
                     f2.readlines(),
                     fromfile=str(actual_file),
                     tofile=str(expected_file),
-                )
+                ),
             )
 
     if diff:
@@ -94,18 +87,11 @@ def test_package_generation(
 
 
 def test_pip_installable(
-    tmp_path: pathlib.Path,
     venv: pytest_venv.VirtualEnvironment,
     generate_package: typing.Callable,
 ) -> None:
     """Test generated package is pip installable."""
-    test_config = {
-        "github_owner": "test-user",
-        "project_short_description": "description",
-        "project_name": "Cookiecutter Test",
-    }
-    generate_package(config=test_config, path=tmp_path)
-    test_project_dir = tmp_path / "cookiecutter-test"
+    _, test_project_dir = generate_package()
     # Try to install package in virtual environment with pip
     pipinstall = subprocess.run(  # noqa: S603
         [
@@ -124,21 +110,16 @@ def test_pip_installable(
     )
 
 
-@pytest.mark.parametrize("funder", ["", "STFC"])
+@pytest.mark.parametrize("funder", ["", "STFC", "UKRI", "Wellcome Trust"])
 def test_optional_funder(
-    tmp_path: pathlib.Path, generate_package: typing.Callable, funder: str
+    funder: str,
+    default_config_with: typing.Callable,
+    generate_package: typing.Callable,
 ) -> None:
     """Test specifying funder or not in package generation."""
-    config = {
-        "github_owner": "test-user",
-        "project_short_description": "description",
-        "project_name": "Cookiecutter Test",
-        "funder": funder,
-    }
+    config = default_config_with(funder=funder)
+    _, test_project_dir = generate_package(config)
 
-    generate_package(config, tmp_path)
-
-    test_project_dir = tmp_path / "cookiecutter-test"
     with (test_project_dir / "README.md").open() as f:
         readme_text = "".join(f.readlines())
 
@@ -146,24 +127,16 @@ def test_optional_funder(
         assert "## Acknowledgements" not in readme_text
     else:
         assert (
-            f"## Acknowledgements\n\nThis work was funded by {config['funder']}."
-            in readme_text
+            f"## Acknowledgements\n\nThis work was funded by {funder}." in readme_text
         ), readme_text
 
 
 def test_docs_build(
-    tmp_path: pathlib.Path,
     venv: pytest_venv.VirtualEnvironment,
     generate_package: typing.Callable,
 ) -> None:
     """Test documentation build from package created from template."""
-    config = {
-        "github_owner": "test-user",
-        "project_short_description": "description",
-        "project_name": "Cookiecutter Test",
-    }
-    generate_package(config, tmp_path)
-    test_project_dir = tmp_path / "cookiecutter-test"
+    _, test_project_dir = generate_package()
     venv.install("tox")
     tox_docs_process = subprocess.run(  # noqa: S603
         [

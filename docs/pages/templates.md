@@ -29,7 +29,7 @@ their package template.
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Napari](https://github.com/napari/cookiecutter-napari-plugin)     | Cookiecutter template for authoring (npe2-based) napari plugins.                                                                                |
 | [SciKit-Surgery](https://github.com/SciKit-Surgery/PythonTemplate) | Cookiecutter template developed by the Wellcome EPSRC Centre for Interventional and Surgical Sciences.                                          |
-| [Scientific Python](https://github.com/scientific-python/cookie)   | Cookiecutter template developed by [SciKit-HEP](https://github.com/scikit-hep) but now adopted by the more general Scientific Python community. |
+| [Scientific Python](https://github.com/scientific-python/cookie)   | Cookiecutter template developed by [Scikit-HEP](https://github.com/scikit-hep) but now adopted by the more general Scientific Python community. |
 
 ### Template engines
 
