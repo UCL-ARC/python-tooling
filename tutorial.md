@@ -346,6 +346,8 @@ Similar to `uv`, once the environment is active, you can install the package in 
 python -m pip install --editable . --group dev --group docs --group test
 ```
 
+Note that `pip>=25.1` is required to use the `--group` option.
+
 </details>
 
 ## 🧪 Running package tests locally
