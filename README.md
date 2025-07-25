@@ -55,8 +55,10 @@ cd example-research-software-project
 git init
 # uv venv
 # source .venv/bin/activate
-uv pip install -e ".[dev]"
+uv sync
 ```
+
+Note that `uv>=0.6.7` is required to use the `--group` option.
 
 <!-- links here -->
 

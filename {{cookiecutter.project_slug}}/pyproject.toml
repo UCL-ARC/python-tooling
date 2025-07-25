@@ -5,6 +5,27 @@ requires = [
     "setuptools-scm",
 ]
 
+[dependency-groups]
+dev = [
+    "build",
+    "mypy",
+    "pre-commit",
+    "ruff",
+    "tox",
+    "twine",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
 [project]
 authors = [
     {email = "{{cookiecutter.author_email}}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
@@ -34,23 +55,6 @@ license-files = [
     "LICENSE.md",
 ]
 name = "{{cookiecutter.project_slug}}"
-optional-dependencies = {dev = [
-    "build",
-    "mypy",
-    "pre-commit",
-    "ruff",
-    "tox",
-    "twine",
-], docs = [
-    "mkdocs",
-    "mkdocs-include-markdown-plugin",
-    "mkdocs-material",
-    "mkdocstrings",
-    "mkdocstrings-python",
-], test = [
-    "pytest",
-    "pytest-cov",
-]}
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
 urls.homepage = "{{cookiecutter.__repo_url}}"
@@ -132,7 +136,7 @@ env_run_base = {commands = [
         "--cov",
         "--cov-report=xml",
     ],
-], extras = [
+], dependency_groups = [
     "test",
 ]}
 env.docs = {commands = [
@@ -141,7 +145,7 @@ env.docs = {commands = [
         "build",
         "--strict",
     ],
-], extras = [
+], dependency_groups = [
     "docs",
 ]}
 {%- for python_version in range(
