@@ -189,60 +189,44 @@ When you pushed to `main` you will have triggered runs of the [GitHub actions](h
 You can view the status of the workflow jobs by browsing the `Actions` button at the top bar of the repository homepage, which takes you to `https://github.com/{github_owner}/{project_slug}/actions`.
 
 Depending on your account settings, you may find that the `Documentation` workflow shows as failed (❌).
-If you see this it's probably because of the repository permissions settings for GitHub Actions.
+If you see this it's probably because of the repository setting specifying the source for deploying a GitHub pages site from.
 We'll fix this in the next section.
 
 For now, have a browse around the GitHub web interface.
 
 ## 📄 Configuring repository to host docs on GitHub Pages
 
-Now that your repository is on GitHub, you need to do a few more steps to set up your project's documentation website.
+Now that your repository is on GitHub, you need to do one more step to set up your project's documentation website.
 The HTML documentation will be built using the `Documentation` workflow (that we're going to fix) and hosted on [GitHub Pages](https://pages.github.com/).
 
 If you scroll back in your terminal to the end of the [cookiecutter] questions, you should be able to find a message like:
 
 ```sh
-The 'Documentation' GitHub Actions workflow has been set up to push the built
-HTML documentation to a branch gh-pages on pushes to main for deploying as a
-GitHub Pages website. To allow the GitHub Actions bot to push to the gh-pages
-branch you need to enable 'Read and write permissions' under 'Workflow
-permissions' at
+The 'Documentation' GitHub Actions workflow has been set up to deploy the built
+HTML documentation to a GitHub Pages website on pushes to main.
 
-https://github.com/{github_owner}/{project_slug}/settings/actions
-
-After the 'Documentation' workflow has successfully completed at least once
-you will also need to configure the repository to deploy a GitHub pages site
-from the content on the gh-pages branch by going to
+You will need to configure the repository to deploy a GitHub pages site using
+GitHub Actions by going to
 
 https://github.com/{github_owner}/{project_slug}/settings/pages
 
-and under 'Built and deployment' selecting 'Deploy from a branch' for the
-'Source' drop-down and 'gh-pages' for the 'Branch' drop-down, leaving the
-branch path drop-down with its default value of '/ (root)'.
+and under 'Build and deployment' selecting 'GitHub Actions' for 'Source'.
 ```
 
 As before replace `{github_owner}` and `{project_slug}` with the relevant GitHub repository owner and project slug that you chose at the start.
 
-The first part of the instructions explains how to set the permissions for GitHub Actions.
-This lets the Actions bot push the built HTML documentation to a branch `gh-pages` when you update the default `main` branch.
+Following tha instructions printed to the terminal, go to `https://github.com/{github_owner}/{project_slug}/settings/pages` and set GitHub Actions as the source for GitHub Pages.
 
-- Go to the Actions settings page at the URL above (or via the repository `Settings` tab, then `Actions > General`).
-- Set `Workflow permissions` to `Read and write permissions`.
+- Set `Source` to `GitHub Actions`.
 
-Now that the permissions have changed, we need to re-run the `Documentation` workflow.
+Now that the source settings has been changed, we need to re-run the `deploy` job in the `Documentation` workflow.
 
 - Go back to the Actions page. Select the Actions button (in the top bar), or visit
   `https://github.com/{github_owner}/{project_slug}/actions`.
 - Click on the failing entry for the `Documentation` workflow.
-- Click on the `Re-run all jobs` button (top right of the page).
+- Click on the drop down ▼ symbol next to `Re-run jobs` button (top right of the page) and click `Re-run failed jobs`.
+- Click `Re-run jobs` button in dialogue box which appears which should list the `deploy` job as the failed job to re-run.
 
-After the `Documentation` workflow finishes, a new `gh-pages` branch will be created containing only the HTML docs.
-
-Following tha instructions printed to the terminal, go to `https://github.com/{github_owner}/{project_slug}/settings/pages` and set this branch as the source for GitHub Pages.
-
-- Set `Source` to `Deploy from branch` and `Branch` to `gh-pages`.
-
-This will start another new workflow called `pages-build-deployment` (in the Actions page).
 When it finishes, you can view your HTML docs at:
 
 ```sh
@@ -309,10 +293,10 @@ uv venv --python 3.11.6
 Once you have created and activated a virtual environment for the project, you can install the package in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html), along with both its required dependencies and optional sets of dependencies for development (`dev`), documentation (`docs`) and testing (`test`) by running
 
 ```sh
-uv pip install --editable ".[dev,docs,test]"
+uv sync --all-groups
 ```
 
-from the root of the project repository.
+from the root of the project repository. Note that `uv>=0.6.7` is required to use the `--group` option.
 
 <details><summary>Using venv as an alternative to uv </summary> <!-- markdownlint-disable-line MD033 -->
 
@@ -343,8 +327,10 @@ python -m pip install --upgrade pip
 Similar to `uv`, once the environment is active, you can install the package in editable mode as well as all dependencies:
 
 ```sh
-python -m pip install --editable ".[dev,docs,test]"
+python -m pip install --editable . --group dev --group docs --group test
 ```
+
+Note that `pip>=25.1` is required to use the `--group` option.
 
 </details>
 
