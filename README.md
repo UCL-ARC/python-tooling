@@ -5,44 +5,45 @@
 </div>
 <!-- markdownlint-restore -->
 
-This repository collects the [UCL ARC] recommendations for a research software
-project in Python. It contains a template for new Python packages and a
-[website] documenting our recommendations. We've turned on
-[discussions](https://github.com/UCL-ARC/python-tooling/discussions) for this
-repo, and we welcome questions there or in the `#helpme` channel on the
-[UCL research programming hub Slack](https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub).
+This repository collects the [UCL ARC] recommendations for a research software project in Python.
+It contains a template for new Python packages and a [website] documenting our recommendations.
 
-🍪 Our template is a [cookiecutter] template which automatically creates new
-Python packages with our recommended tooling set up and ready to go.
+🍪 Our template uses [cookiecutter] to can create new Python packages with our preferred tools set up and ready to go.
 
 > [!NOTE]
-> If you're making a package within a community that has an existing
-> package template (e.g., [`SciKit-Surgery`](https://github.com/SciKit-Surgery/PythonTemplate)),
-> we recommend using their template instead of this one.
+> If you're making a package within a community that has an existing template we recommend using their template instead!
 
 ## Using our Python package template
 
-Some quick instructions for using our template are below.
+Here are some brief instructions if you're familiar with the command line.
 We also have a longer [tutorial](./tutorial.md) that has been presented in workshops for researchers at UCL.
 
-If you have [uv] installed, you can use our template with the following command:
+If you have [uv] installed, you can run the following one-liner:
 
 ```sh
 uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-If you don't want to use uv you can [install cookiecutter] using pip, and run the above command without the leading `uvx`.
+If you don't want to use uv you can [install cookiecutter], and run:
 
-When [cookiecutter] runs, it will ask you a series of questions to configure your project.
-Type the answer or hit return without typing anything to use the default option (shown in parenthesis).
-At the end, it will print some more follow-up information in the terminal for things like creating a remote repository and making a website for your package.
+```sh
+cookiecutter gh:ucl-arc/python-tooling --checkout latest
+```
+
+(The same as above without the `uvx`.)
+
+[Cookiecutter] will ask you a series of questions to configure your project.
+Type the answer, or hit return without typing anything to use the default option (shown in parenthesis).
+
+At the end, it prints some follow-up information to the terminal.
+These are tips for things like creating a repository and making a website for your package.
 
 It will have created a directory for your project.
 You can see the structure with the `tree` command.
 In our example we've called our project `example-research-software-project`:
 
 ```sh
-ls -ltr | tail -n1 # Shows the last directory that was created
+ls -ltr | tail -n1 # Show the last directory that was created
 tree example-research-software-project
 ```
 
@@ -58,7 +59,9 @@ git init
 uv sync
 ```
 
-Note that `uv>=0.6.7` is required to use the `--group` option.
+## Need help?
+
+We've turned on [discussions] for this repository, and we welcome questions there or in the `#helpme` channel on UCL's [Research Programming Hub Slack](.
 
 <!-- links here -->
 
@@ -68,6 +71,8 @@ Note that `uv>=0.6.7` is required to use the `--group` option.
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/stable
 [install cookiecutter]: https://cookiecutter.readthedocs.io/en/stable/README.html#installation
 [uv]: https://docs.astral.sh/uv
+[discussions]: https://github.com/UCL-ARC/python-tooling/discussions
+[Research Programming Hub Slack]: https://www.ucl.ac.uk/advanced-research-computing/community/ucl-research-programming-hub
 <!-- prettier-ignore-end -->
 
 ## Contributors
