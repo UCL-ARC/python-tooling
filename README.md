@@ -5,49 +5,56 @@
 </div>
 <!-- markdownlint-restore -->
 
-This repository collects the [UCL ARC] recommendations for a research software project in Python.
-It contains a template for new Python packages and a [website] documenting our recommendations.
+This repository collects our recommendations for a research software project in Python.
+We have a [website], if you just need some advice, and a template if you're starting from scratch.
 
-🍪 Our template uses [cookiecutter] to can create new Python packages with our preferred tools set up and ready to go.
+🍪 Our template uses [cookiecutter] to set up a new package with our preferred tools ready to go.
 
 > [!NOTE]
-> If you're making a package within a community that has an existing template we recommend using their template instead!
+> If you're making a package in research community that already has a template, use theirs instead!
 
-## Using our Python package template
+## How to use our template
 
-Here are some brief instructions if you're familiar with the command line.
-We also have a longer [tutorial](./tutorial.md) that has been presented in workshops for researchers at UCL.
+If you're comfortable with the command line, here are some quick start steps.
+We also have a more detailed [tutorial](./tutorial.md) that has been presented in workshops for researchers at UCL.
 
-If you have [uv] installed, you can run the following one-liner:
+If you have [uv] installed, run:
 
 ```sh
 uvx cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-If you don't want to use uv you can [install cookiecutter], and run:
+If you don't want to use uv you can [install cookiecutter], then run without `uvx`:
 
 ```sh
 cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-(The same as above without the `uvx`.)
+[Cookiecutter] will ask you questions to set up your project.
+Type your answer, or hit return without typing anything to use the defaults.
 
-[Cookiecutter] will ask you a series of questions to configure your project.
-Type the answer, or hit return without typing anything to use the default option (shown in parenthesis).
+When finished, it prints some information to the terminal.
+These are tips for next steps like creating a repository and making a website for your package.
 
-At the end, it prints some follow-up information to the terminal.
-These are tips for things like creating a repository and making a website for your package.
+It will have created a directory for your project:
 
-It will have created a directory for your project.
+```sh
+ls -ltr | tail -n1 # Show the last directory that was created
+```
+
 You can see the structure with the `tree` command.
 In our example we've called our project `example-research-software-project`:
 
 ```sh
-ls -ltr | tail -n1 # Show the last directory that was created
 tree example-research-software-project
 ```
 
-To work on your project, initialise a `git` repository and _install_ your new package editable mode.
+To start working on your project:
+
+- change directory to your project directory,
+- initialise a `git` repository,
+- and _install_ your new package editable mode.
+
 You probably want to do this in a [virtual environment](./docs/pages/virtual.md).
 The comments show how to do this in [uv] with `uv venv`:
 
@@ -61,13 +68,12 @@ uv sync
 
 ## Need help?
 
-We've turned on [discussions] for this repository, and we welcome questions there or in the `#helpme` channel on UCL's [Research Programming Hub Slack](.
+You can ask questions in [discussions] or in the `#helpme` channel on UCL's [Research Programming Hub Slack].
 
 <!-- links here -->
 
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
-[UCL ARC]: https://ucl.ac.uk/arc
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/stable
 [install cookiecutter]: https://cookiecutter.readthedocs.io/en/stable/README.html#installation
 [uv]: https://docs.astral.sh/uv
