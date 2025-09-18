@@ -6,12 +6,12 @@
 <!-- markdownlint-restore -->
 
 This repository collects our recommendations for a research software project in Python.
-We have a [website], if you just need some advice, and a template if you're starting from scratch.
+We have a [website] if you need some advice, and a template if you're starting from scratch.
 
 🍪 Our template uses [cookiecutter] to set up a new package with our preferred tools ready to go.
 
 > [!NOTE]
-> If you're making a package in research community that already has a template, use theirs instead!
+> If you're making a package in a research community that already has a template, use theirs instead!
 
 ## How to use our template
 
