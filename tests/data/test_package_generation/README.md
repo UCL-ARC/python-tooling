@@ -49,7 +49,7 @@ Centre for Advanced Research Computing, University College London
 
 <!-- Any tools or versions of languages needed to run code. For example specific Python or Node versions. Minimum hardware requirements also go here. -->
 
-`cookiecutter-test` requires Python 3.11&ndash;3.13.
+`cookiecutter-test` requires Python 3.11&ndash;3.14.
 
 ### Installation
 
