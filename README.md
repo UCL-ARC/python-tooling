@@ -39,7 +39,7 @@ These are tips for next steps like creating a repository and making a website fo
 It will have created a directory for your project:
 
 ```sh
-ls -ltr | tail -n1 # Show the last directory that was created
+ls -ltr | tail -n1  # Show the last directory that was created
 ```
 
 You can see the structure with the `tree` command.
