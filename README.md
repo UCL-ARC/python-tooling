@@ -30,7 +30,7 @@ If you don't want to use uv you can [install cookiecutter], then run without `uv
 cookiecutter gh:ucl-arc/python-tooling --checkout latest
 ```
 
-[Cookiecutter] will ask you questions to set up your project.
+[cookiecutter] will ask you questions to set up your project.
 Type your answer, or hit return without typing anything to use the defaults.
 
 When finished, it prints some information to the terminal.
