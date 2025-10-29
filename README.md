@@ -111,6 +111,7 @@ Note that `uv>=0.6.7` is required to use the `--group` option.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jamesprime"><img src="https://avatars.githubusercontent.com/u/17751241?v=4?s=100" width="100px;" alt="James Prime"/><br /><sub><b>James Prime</b></sub></a><br /><a href="#a11y-jamesprime" title="Accessibility">️️️️♿️</a> <a href="#ideas-jamesprime" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cuteshaun"><img src="https://avatars.githubusercontent.com/u/28014041?v=4?s=100" width="100px;" alt="Andrii Tsapko"/><br /><sub><b>Andrii Tsapko</b></sub></a><br /><a href="#a11y-cuteshaun" title="Accessibility">️️️️♿️</a> <a href="#code-cuteshaun" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://james.briant.co.uk"><img src="https://avatars.githubusercontent.com/u/6298711?v=4?s=100" width="100px;" alt="James Briant"/><br /><sub><b>James Briant</b></sub></a><br /><a href="#bug-jamesbriant" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/stellaprins"><img src="https://avatars.githubusercontent.com/u/30465823?v=4?s=100" width="100px;" alt="Stella Prins"/><br /><sub><b>Stella Prins</b></sub></a><br /><a href="#bug-stellaprins" title="Bug reports">🐛</a> <a href="#doc-stellaprins" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
