@@ -1,7 +1,7 @@
 exclude: ^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.2
+    rev: v0.14.3
     hooks:
       - id: ruff
         args:
