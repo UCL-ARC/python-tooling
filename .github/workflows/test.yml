@@ -7,7 +7,7 @@ on:
       - "renovate/**"
   pull_request:
   schedule:
-    - cron: "0 0 15 * *" # Run at 00:00 on the 15th of every month.
+    - cron: "0 11 2 1 *" # Run at 11 am on the 2nd January
 
 jobs:
   test-template:
