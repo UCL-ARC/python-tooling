@@ -336,6 +336,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "connoraird",
+      "name": "Connor Aird",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61978554?v=4",
+      "profile": "https://github.com/connoraird",
+      "contributions": [
+        "review"
+      ]
     }
   ]
 }
