@@ -113,6 +113,9 @@ Note that `uv>=0.6.7` is required to use the `--group` option.
       <td align="center" valign="top" width="14.28%"><a href="http://james.briant.co.uk"><img src="https://avatars.githubusercontent.com/u/6298711?v=4?s=100" width="100px;" alt="James Briant"/><br /><sub><b>James Briant</b></sub></a><br /><a href="#bug-jamesbriant" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/stellaprins"><img src="https://avatars.githubusercontent.com/u/30465823?v=4?s=100" width="100px;" alt="Stella Prins"/><br /><sub><b>Stella Prins</b></sub></a><br /><a href="#bug-stellaprins" title="Bug reports">🐛</a> <a href="#doc-stellaprins" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/connoraird"><img src="https://avatars.githubusercontent.com/u/61978554?v=4?s=100" width="100px;" alt="Connor Aird"/><br /><sub><b>Connor Aird</b></sub></a><br /><a href="#review-connoraird" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
