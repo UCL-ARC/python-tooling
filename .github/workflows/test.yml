@@ -10,7 +10,7 @@ on:
     # Run at 11 am on the 2nd January each year to make sure
     # dates in package regression test data get updated
     # See https://github.com/UCL-ARC/python-tooling/pull/597
-    - cron: "0 11 2 1 *" 
+    - cron: "0 11 2 1 *"
 
 jobs:
   test-template:
