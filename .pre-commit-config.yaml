@@ -56,4 +56,9 @@ repos:
         name: "Validate GitHub issue templates"
         files: ^\.github/ISSUE_TEMPLATE/.*\.yml$
         exclude: ^\.github/ISSUE_TEMPLATE/config\.yml$
-        args: ["--verbose", "--schemafile", "schemas/github-issue-forms.json"]
+        args:
+          [
+            "--verbose",
+            "--schemafile",
+            ".github/schemas/github-issue-forms.json",
+          ]
