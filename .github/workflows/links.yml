@@ -34,6 +34,7 @@ jobs:
             --exclude https://stackoverflow.com
             --exclude http://www.gnu.org
             --exclude http://fsf.org
+            --exclude https://labs.quansight.org
             --exclude docs/pages
             --exclude docs/_includes
             --exclude-path '\\{\\{cookiecutter.project_slug\\}\\}/README.md'
