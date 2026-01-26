@@ -1,12 +1,6 @@
 [tool.pytest.ini_options]
-addopts = [
-    "--color=yes",
-    "--import-mode=importlib",
-    "--verbose",
-]
-testpaths = [
-    "tests",
-]
+addopts = ["--color=yes", "--import-mode=importlib", "--verbose"]
+testpaths = ["tests"]
 
 [tool.ruff]
 fix = true
@@ -14,22 +8,20 @@ force-exclude = true
 target-version = "py311"
 lint.ignore = [
     "COM812", # trailing commas (ruff-format recommended)
-    "D203", # no-blank-line-before-class
-    "D212", # multi-line-summary-first-line
-    "D407", # removed dashes lines under sections
-    "D417", # argument description in docstring (unreliable)
+    "D203",   # no-blank-line-before-class
+    "D212",   # multi-line-summary-first-line
+    "D407",   # removed dashes lines under sections
+    "D417",   # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-lint.per-file-ignores = {"*tests*" = [
+lint.per-file-ignores = { "*tests*" = [
     "INP001",
     "S101",
 ], "hooks*" = [
     "INP001",
     "T201",
-]}
-lint.select = [
-    "ALL",
-]
+] }
+lint.select = ["ALL"]
 lint.mccabe.max-complexity = 18
 
 [tool.tomlsort]
@@ -38,31 +30,3 @@ spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 overrides."project.classifiers".inline_arrays = false
 overrides."tool.coverage.paths.source".inline_arrays = false
-overrides."tool.tox.env_run_base.commands".inline_arrays = false
-
-[tool.tox]
-env_list = [
-    "py311",
-    "py312",
-    "py313",
-    "py314",
-]
-env_run_base = {commands = [
-    [
-        "pytest",
-        "{posargs}",
-    ],
-], deps = [
-    "cookiecutter",
-    "pytest",
-    "pytest-venv",
-], description = "Test package creation", skip_install = true}
-gh.python = {"3.11" = [
-    "py311",
-], "3.12" = [
-    "py312",
-], "3.13" = [
-    "py313",
-], "3.14" = [
-    "py314",
-]}

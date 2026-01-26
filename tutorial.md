@@ -347,18 +347,6 @@ pytest
 
 from the root of the project repository.
 
-The package template also sets up [`tox`](https://tox.wiki).
-`tox` is a tool which allows you to easily run tests in isolated environments under different Python versions.
-These tests don't interfere with the virtual environment that you use for developing the code.
-
-You can run the tests across _all compatible Python versions currently installed_ using `tox` by running
-
-```sh
-tox
-```
-
-from the root of the project repository.
-
 ## 📖 Building documentation locally
 
 It's sometimes useful to be able to render the HTML documentation pages locally.
@@ -375,20 +363,6 @@ mkdocs serve
 
 from the root of the project repository and navigate to `http://127.0.0.1:8000/` in your browser.
 The development server supports _auto-reloading_, meaning the content will be automatically refreshed in your browser if you make any edits to the docstrings or README.md.
-
-There's also a `tox` environment called `docs`.
-This is another way to build the documentation but in an isolated environment.
-It is the command that is run in GitHub actions to build and publish the on the web (in the `Documentation` workflow).
-This might be useful if debugging the Actions build, or if you didn't install the `docs` dependencies into your virtual environment.
-
-Run:
-
-```sh
-tox -e docs
-```
-
-from the root of the project repository.
-The built documentation will be output to a directory `site`.
 
 ## ✅ Using `pre-commit` to run checks when committing
 

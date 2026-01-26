@@ -1,19 +1,9 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = [
-    "setuptools",
-    "setuptools-scm",
-]
+requires = ["setuptools", "setuptools-scm"]
 
 [dependency-groups]
-dev = [
-    "build",
-    "mypy",
-    "pre-commit",
-    "ruff",
-    "tox",
-    "twine",
-]
+dev = ["build", "mypy", "pre-commit", "ruff", "twine"]
 docs = [
     "mkdocs",
     "mkdocs-include-markdown-plugin",
@@ -21,15 +11,9 @@ docs = [
     "mkdocstrings",
     "mkdocstrings-python",
 ]
-test = [
-    "pytest",
-    "pytest-cov",
-]
+test = ["pytest", "pytest-cov"]
 
 [project]
-authors = [
-    {email = "{{cookiecutter.author_email}}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}"},
-]
 classifiers = [
     "Operating System :: POSIX",
     "Programming Language :: Python :: 3",
@@ -41,72 +25,55 @@ classifiers = [
     "Programming Language :: Python :: 3.{{python_version}}",
     {%- endfor %}
     "Typing :: Typed",
+]authors = [
+    { email = "{{cookiecutter.author_email}}", name = "{{cookiecutter.author_given_names}} {{cookiecutter.author_family_names}}" },
 ]
-dependencies = [
-]
+dependencies = []
 description = "{{cookiecutter.project_short_description}}"
-dynamic = [
-    "version",
-]
-keywords = [
-]
+dynamic = ["version"]
+keywords = []
 license = "{{cookiecutter.license}}"
-license-files = [
-    "LICENSE.md",
-]
+license-files = ["LICENSE.md"]
 name = "{{cookiecutter.project_slug}}"
 readme = "README.md"
 requires-python = ">={{cookiecutter.min_python_version}}"
 urls.homepage = "{{cookiecutter.__repo_url}}"
 
 [tool.coverage]
-report = {sort = "cover"}
-run = {branch = true, parallel = true, source = [
+report = { sort = "cover" }
+run = { branch = true, parallel = true, source = [
     "{{cookiecutter.project_slug}}",
-]}
-paths.source = [
-    "src",
-    ".tox*/*/lib/python*/site-packages",
-]
+] }
+paths.source = ["src"]
 
 [tool.mypy]
 explicit_package_bases = true
 
 [tool.pytest.ini_options]
-addopts = [
-    "--color=yes",
-    "--import-mode=importlib",
-    "--verbose",
-]
-testpaths = [
-    "tests",
-]
+addopts = ["--color=yes", "--import-mode=importlib", "--verbose"]
+testpaths = ["tests"]
 
 [tool.ruff]
 fix = true
 force-exclude = true
 lint.ignore = [
     "COM812", # trailing commas (ruff-format recommended)
-    "D203", # no-blank-line-before-class
-    "D212", # multi-line-summary-first-line
-    "D407", # removed dashes lines under sections
-    "D417", # argument description in docstring (unreliable)
+    "D203",   # no-blank-line-before-class
+    "D212",   # multi-line-summary-first-line
+    "D407",   # removed dashes lines under sections
+    "D417",   # argument description in docstring (unreliable)
     "ISC001", # simplify implicit str concatenation (ruff-format recommended)
 ]
-lint.per-file-ignores = {"tests*" = [
+lint.per-file-ignores = { "tests*" = [
     "INP001", # File is part of an implicit namespace package.
-    "S101", # Use of `assert` detected
-]}
-lint.select = [
-    "ALL",
-]
+    "S101",   # Use of `assert` detected
+] }
+lint.select = ["ALL"]
 lint.isort.known-first-party = [
     "{{cookiecutter.project_slug | replace('-', '_')}}",
 ]
 lint.mccabe.max-complexity = 18
-lint.pep8-naming.classmethod-decorators = [
-    "classmethod",
-]
+lint.pep8-naming.classmethod-decorators = ["classmethod"]
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
@@ -118,39 +85,3 @@ spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 overrides."project.classifiers".inline_arrays = false
 overrides."tool.coverage.paths.source".inline_arrays = false
-overrides."tool.tox.env.docs.commands".inline_arrays = false
-overrides."tool.tox.env_run_base.commands".inline_arrays = false
-
-[tool.tox]
-env_list = [
-{%- for python_version in range(
-    cookiecutter.min_python_version | replace('3.', '') | int,
-    cookiecutter.max_python_version | replace('3.', '') | int + 1
-) %}
-    "py3{{python_version}}",
-{%- endfor %}
-]
-env_run_base = {commands = [
-    [
-        "pytest",
-        "--cov",
-        "--cov-report=xml",
-    ],
-], dependency_groups = [
-    "test",
-]}
-env.docs = {commands = [
-    [
-        "mkdocs",
-        "build",
-        "--strict",
-    ],
-], dependency_groups = [
-    "docs",
-]}
-{%- for python_version in range(
-    cookiecutter.min_python_version | replace('3.', '') | int,
-    cookiecutter.max_python_version | replace('3.', '') | int + 1
-) %}
-gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
-{%- endfor %}
