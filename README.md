@@ -23,7 +23,7 @@ Python packages with our recommended tooling set up and ready to go.
 ## Using our Python package template
 
 Some quick instructions for using our template are below.
-We also have a longer [tutorial](./tutorial.md) that has been presented in workshops for researchers at UCL.
+We also have a longer [tutorial](docs/pages/tutorial.md) that has been presented in workshops for researchers at UCL.
 
 If you have [uv] installed, you can use our template with the following command:
 
