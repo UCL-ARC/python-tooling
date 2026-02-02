@@ -1,4 +1,10 @@
-# Tutorial: creating a package using our template
+---
+title: Template tutorial
+layout: default
+nav_order: 2
+---
+
+## Tutorial: creating a package using our template
 
 In this tutorial, we will go through the steps to set up a Python package using the `UCL-ARC/python-tooling` 🍪 cookiecutter template.
 We'll also show you how to use your new package with some of the tools included.
@@ -10,7 +16,7 @@ We'll also show you how to use your new package with some of the tools included.
 
 ## ⚙️ Prerequisites for using the template
 
-<details><summary>Click to expand… </summary> <!-- markdownlint-disable-line MD033 -->
+<details markdown="1"><summary markdown="span">Click to expand… </summary> <!-- markdownlint-disable-line MD033 -->
 
 To use the template you'll need the following software:
 
@@ -298,7 +304,7 @@ uv sync --all-groups
 
 from the root of the project repository. Note that `uv>=0.6.7` is required to use the `--group` option.
 
-<details><summary>Using venv as an alternative to uv </summary> <!-- markdownlint-disable-line MD033 -->
+<details markdown="1"><summary markdown="span">Using venv as an alternative to uv </summary> <!-- markdownlint-disable-line MD033 -->
 
 Alternatively, you can use the [`venv` module](https://docs.python.org/3/library/venv.html), which is slower and has fewer features, when compared to `uv`, but is built-in to the Python standard library. `venv` has the advantage of being available in any Python (3.3+) environment, but unlike `uv` will not by itself allow you to use a different Python version from the system level install. A common pattern is to store the virtual environment files in a directory `.venv` within the root directory of the project repository. This can be achieved by running
 
