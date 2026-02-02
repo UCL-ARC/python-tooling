@@ -13,3 +13,6 @@ aux_links:
 aux_links_new_tab: true
 
 logo: "https://raw.githubusercontent.com/UCL-ARC/python-tooling/main/images/logo.svg"
+
+plugins:
+  - jekyll-gfm-admonitions
