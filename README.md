@@ -23,7 +23,9 @@ Python packages with our recommended tooling set up and ready to go.
 ## Using our Python package template
 
 Some quick instructions for using our template are below.
-We also have a longer [tutorial](docs/pages/tutorial.md) that has been presented in workshops for researchers at UCL.
+We also have a longer [tutorial](./docs/pages/tutorial.md) that has been presented in workshops for researchers at UCL.
+Slides from presentations we have given on the project are available in the
+[`python-tooling-presentations` repository](https://github.com/ucl-arc/python-tooling-presentations).
 
 If you have [uv] installed, you can use our template with the following command:
 
