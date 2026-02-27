@@ -151,3 +151,30 @@ def test_docs_build(
     assert tox_docs_process.returncode == 0, (
         f"Something went wrong with building docs: {tox_docs_process.stderr!r}"
     )
+
+
+def test_package_tests_tox(
+    venv: pytest_venv.VirtualEnvironment,
+    generate_package: typing.Callable,
+) -> None:
+    """
+    Test that the package tests pass in all tox environments.
+
+    ...and that no warnings are raised (e.g. coverage).
+    """
+    _, test_project_dir = generate_package()
+    venv.install("tox")
+
+    tox_multienv_test_process = subprocess.run(  # noqa: S603
+        [pathlib.Path(venv.bin) / "tox"],
+        check=False,
+        cwd=test_project_dir,
+        capture_output=True,
+    )
+
+    tests_pass = tox_multienv_test_process.returncode == 0
+    assert tests_pass, "Template tests failed in one or more tox environments."
+
+    return
+    output = tox_multienv_test_process.stdout.decode()
+    assert "WARNING:" not in output, f"Warnings raised during tests: {output}"
