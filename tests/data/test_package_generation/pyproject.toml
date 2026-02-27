@@ -15,9 +15,9 @@ dev = [
     "twine",
 ]
 docs = [
-    "mkdocs",
     "mkdocs-include-markdown-plugin",
     "mkdocs-material",
+    "mkdocs<2",
     "mkdocstrings",
     "mkdocstrings-python",
 ]
