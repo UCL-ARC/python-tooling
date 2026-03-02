@@ -1,9 +1,9 @@
 exclude: ^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.14
+    rev: v0.15.4
     hooks:
-      - id: ruff
+      - id: ruff-check
         args:
           - --config=pyproject.toml
       - id: ruff-format
