@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Run Vale
-        uses: errata-ai/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2
+        uses: vale-cli/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
