@@ -73,3 +73,4 @@ jobs:
         with:
           filter_mode: diff_context
           reporter: github-check
+          version: 3.14.1
