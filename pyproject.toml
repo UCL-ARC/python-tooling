@@ -72,3 +72,9 @@ gh.python = {"3.11" = [
 ], "3.14" = [
     "py314",
 ]}
+
+[[tool.ty.overrides]]
+include = [
+    "**/src/*/__init__.py",
+]
+rules.unresolved-import = "ignore"
