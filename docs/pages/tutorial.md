@@ -404,7 +404,7 @@ There is a `.pre-commit-config.yaml` configuration file which you can take a loo
 With this setup `pre-commit` will run a series of fast linters, checks and formatters on the repository on every commit.
 
 The main tools we recommend are [ruff](https://docs.astral.sh/ruff/), [ty](https://docs.astral.sh/ty/) and [prettier](https://prettier.io/).
-These Git hook scripts can installed locally by running
+These Git hook scripts can be installed locally by running
 
 ```sh
 pre-commit install
