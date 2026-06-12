@@ -1,3 +1,9 @@
+[dependency-groups]
+typechecking = [
+    "pytest",
+    "pytest-venv",
+]
+
 [tool.pytest.ini_options]
 addopts = [
     "--color=yes",

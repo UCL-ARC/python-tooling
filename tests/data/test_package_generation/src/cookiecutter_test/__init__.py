@@ -1,6 +1,6 @@
 """cookiecutter_test package."""
 
-from ._version import __version__  # noqa: F401
+from ._version import __version__  # noqa: F401  # ty: ignore[unresolved-import]
 
 
 def example_function(argument: str, keyword_argument: str = "default") -> str:
