@@ -18,10 +18,14 @@ repos:
     rev: v0.24.4
     hooks:
       - id: toml-sort-fix
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.20.2
+  - repo: https://github.com/astral-sh/ty-pre-commit
+    rev: v0.0.49
     hooks:
-      - id: mypy
+      - id: ty
+        args:
+          - --group=typechecking
+          - --isolated
+          - --no-default-groups
   - repo: https://github.com/rbubley/mirrors-prettier
     rev: v3.8.3
     hooks:

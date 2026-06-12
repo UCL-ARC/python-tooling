@@ -8,11 +8,11 @@ requires = [
 [dependency-groups]
 dev = [
     "build",
-    "mypy",
     "pre-commit",
     "ruff",
     "tox",
     "twine",
+    "ty",
 ]
 docs = [
     "mkdocs-include-markdown-plugin",
@@ -24,6 +24,9 @@ docs = [
 test = [
     "pytest",
     "pytest-cov",
+]
+typechecking = [
+    "pytest",
 ]
 
 [project]
@@ -68,9 +71,6 @@ paths.source = [
     "src",
     ".tox*/*/lib/python*/site-packages",
 ]
-
-[tool.mypy]
-explicit_package_bases = true
 
 [tool.pytest.ini_options]
 addopts = [
@@ -154,3 +154,7 @@ env.docs = {commands = [
 ) %}
 gh.python."3.{{python_version}}" = ["py3{{python_version}}"]
 {%- endfor %}
+
+[tool.ty]
+analysis.respect-type-ignore-comments = false
+terminal.error-on-warning = true
