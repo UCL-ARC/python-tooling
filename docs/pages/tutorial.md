@@ -403,8 +403,8 @@ The package is set-up to use [pre-commit](https://pre-commit.com/), a framework 
 There is a `.pre-commit-config.yaml` configuration file which you can take a look at.
 With this setup `pre-commit` will run a series of fast linters, checks and formatters on the repository on every commit.
 
-The main tools we recommend are [ruff](https://docs.astral.sh/ruff/), [mypy](https://mypy.readthedocs.io/en/stable/) and [prettier](https://prettier.io/).
-These Git hook scripts can installed locally by running
+The main tools we recommend are [ruff](https://docs.astral.sh/ruff/), [ty](https://docs.astral.sh/ty/) and [prettier](https://prettier.io/).
+These Git hook scripts can be installed locally by running
 
 ```sh
 pre-commit install
