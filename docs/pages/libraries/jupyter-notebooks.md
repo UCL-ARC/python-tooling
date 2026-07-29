@@ -32,7 +32,7 @@ more reliably than [black] via [nbQA].
 | Name             | Short description                                                                |                      🚦                      |
 | ---------------- | -------------------------------------------------------------------------------- | :------------------------------------------: |
 | `black[jupyter]` | (also `black-jupyter`) [black] with the optional Jupyter extension.              | <span class="label label-green">Best</span>  |
-| [nbQA]           | Recommended for all other linters ([ruff], [isort]) and [mypy].                  | <span class="label label-green">Best</span>  |
+| [nbQA]           | Recommended for all other linters ([ruff], [isort]) and [ty].                    | <span class="label label-green">Best</span>  |
 | [pre-commit]     | Has cell output cleanup hooks (if desired). Also found to work well with [nbQA]. | <span class="label label-green">Best</span>  |
 | `nbqa black`     | [black] via [nbQA].                                                              | <span class="label label-yellow">Good</span> |
 
@@ -48,7 +48,7 @@ more reliably than [black] via [nbQA].
 [nbQA]: https://nbqa.readthedocs.io/en/latest/index.html
 [isort]: https://pycqa.github.io/isort
 [ruff]: https://github.com/charliermarsh/ruff
-[mypy]: https://mypy.readthedocs.io/en/stable
+[ty]: https://docs.astral.sh/ty/
 [pre-commit]: https://github.com/kynan/nbstripout
 [jupytext]: https://jupytext.readthedocs.io/en/stable/
 

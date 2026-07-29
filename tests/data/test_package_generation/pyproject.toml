@@ -8,11 +8,11 @@ requires = [
 [dependency-groups]
 dev = [
     "build",
-    "mypy",
     "pre-commit",
     "ruff",
     "tox",
     "twine",
+    "ty",
 ]
 docs = [
     "mkdocs-include-markdown-plugin",
@@ -24,6 +24,9 @@ docs = [
 test = [
     "pytest",
     "pytest-cov",
+]
+typechecking = [
+    "pytest",
 ]
 
 [project]
@@ -66,9 +69,6 @@ paths.source = [
     "src",
     ".tox*/*/lib/python*/site-packages",
 ]
-
-[tool.mypy]
-explicit_package_bases = true
 
 [tool.pytest.ini_options]
 addopts = [
@@ -148,3 +148,7 @@ gh.python."3.11" = ["py311"]
 gh.python."3.12" = ["py312"]
 gh.python."3.13" = ["py313"]
 gh.python."3.14" = ["py314"]
+
+[tool.ty]
+analysis.respect-type-ignore-comments = false
+terminal.error-on-warning = true
