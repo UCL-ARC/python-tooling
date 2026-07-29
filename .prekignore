@@ -1,1 +1,2 @@
+# Prevent prek trying to run hooks in package generation test data
 tests/data/
