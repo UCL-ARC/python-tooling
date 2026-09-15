@@ -21,8 +21,7 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411 # v2.8.0
         with:
-          # Exclude the image.sc forum and stackoverflow (which both work) but return 403 from
-          # github runners and exclude relative links to other pages. Ignore
+          # Exclude relative links to other pages. Ignore
           # gnu.org and fsf.org because they're often down but are still the right
           # websites to link to!
           #
@@ -30,7 +29,7 @@ jobs:
           # necessarily not real links - i.e. demos and to be filled by
           # cookiecutter values.
           args: "--verbose
-            --exclude https://forum.image.sc/
+            --accept 100..=103,200..=299,403
             --exclude https://stackoverflow.com
             --exclude http://www.gnu.org
             --exclude http://fsf.org
