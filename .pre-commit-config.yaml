@@ -10,7 +10,7 @@ repos:
         args:
           - --config=pyproject.toml
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.49.0
+    rev: v0.49.1
     hooks:
       - id: markdownlint-fix
         args:
@@ -24,7 +24,7 @@ repos:
     hooks:
       - id: toml-sort-fix
   - repo: https://github.com/astral-sh/ty-pre-commit
-    rev: v0.0.49
+    rev: v0.0.79
     hooks:
       - id: ty
         args:
@@ -49,7 +49,7 @@ repos:
           - --fix=lf
       - id: trailing-whitespace
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.3
+    rev: 0.38.0
     hooks:
       # Schemas taken from https://www.schemastore.org/json/
       - id: check-jsonschema
