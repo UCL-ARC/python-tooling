@@ -16,7 +16,7 @@ We have a [website] if you need some advice for what tools to use, and a templat
 ## How to use our template
 
 Here are some quick start steps.
-We also have a more detailed [tutorial](./tutorial.md) and some [talks](https://github.com/ucl-arc/python-tooling-presentations) about this that have been presented in workshops for researchers at UCL.
+We also have a more detailed [tutorial](./docs/pages/tutorial.md) and some [talks](https://github.com/ucl-arc/python-tooling-presentations) about this that have been presented in workshops for researchers at UCL.
 
 If you have [uv] installed, run:
 
