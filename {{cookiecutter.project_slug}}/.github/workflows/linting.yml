@@ -13,11 +13,11 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Cache pre-commit
+      - name: Cache prek
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: ~/.cache/pre-commit
-          key: pre-commit-${{ '{{' }} hashFiles('.pre-commit-config.yaml') {{ '}}' }}
+          path: ~/.cache/prek
+          key: prek-${{ '{{' }} hashFiles('.pre-commit-config.yaml') {{ '}}' }}
 
       - name: Set up python
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
@@ -27,7 +27,7 @@ jobs:
           cache-dependency-path: pyproject.toml
 
       - name: Install dependencies
-        run: python -m pip install pre-commit
+        run: python -m pip install prek
 
-      - name: Run pre-commit
-        run: pre-commit run --all-files --color always --verbose
+      - name: Run prek
+        run: prek run --all-files --color always --verbose

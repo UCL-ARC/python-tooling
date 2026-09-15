@@ -26,8 +26,8 @@ To contribute a change, please:
 
 1. Create a new branch (or fork if you're not in [@UCL-ARC/collaborations]).
 2. Modify an existing page, create a new one, or tweak the template. a. Run
-   [pre-commit] which will lint your changes. b. Check
-   the tests pass if you modified the template (`pytest -s`).
+   [prek] which will lint your changes. b. Check the tests pass if you modified
+   the template (`pytest -s`).
 3. Open a _pull request_ (PR) with changes.
 4. Ask someone who did not contribute to the PR from [@UCL-ARC/collaborations]
    to review it. If it should have two reviewers, you can also request a review
@@ -90,7 +90,7 @@ See the [jekyll docs] for more info.
 [open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
 [Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
 [Research software engineers]: https://society-rse.org/about/history
-[pre-commit]: https://pre-commit.com
+[prek]: https://prek.j178.dev
 [@UCL-ARC/collaborations]: https://github.com/orgs/UCL-ARC/teams/collaborations
 [@UCL-ARC/collaborations-python-tooling]: https://github.com/orgs/UCL-ARC/teams/collaborations-python-tooling
 [uv tool]: https://docs.astral.sh/uv/guides/tools
