@@ -15,7 +15,7 @@ We have a [website] if you need some advice, and a template if you're starting f
 
 ## How to use our template
 
-If you're comfortable with the command line, here are some quick start steps.
+Here are some quick start steps.
 We also have a more detailed [tutorial](./tutorial.md) and some [talks](https://github.com/ucl-arc/python-tooling-presentations) about this that have been presented in workshops for researchers at UCL.
 
 If you have [uv] installed, run:
@@ -39,7 +39,7 @@ These are tips for next steps like creating a repository and making a website fo
 It will have created a directory for your project:
 
 ```sh
-ls -ltr | tail -n1  # Show the last directory that was created
+ls -lt --reverse | tail --lines=1  # Show the last directory that was created
 ```
 
 You can see the structure with the `tree` command.
@@ -51,9 +51,9 @@ tree example-research-software-project
 
 To start working on your project:
 
-- change directory to your project directory,
-- initialise a `git` repository,
-- and _install_ your new package editable mode.
+1. change directory to your project directory,
+2. initialise a `git` repository,
+3. and _install_ your new package editable mode.
 
 You probably want to do this in a [virtual environment](./docs/pages/virtual.md).
 The comments show how to do this in [uv] with `uv venv`:
