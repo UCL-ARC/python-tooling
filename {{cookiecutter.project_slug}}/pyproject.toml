@@ -8,7 +8,7 @@ requires = [
 [dependency-groups]
 dev = [
     "build",
-    "pre-commit",
+    "prek",
     "ruff",
     "tox",
     "twine",

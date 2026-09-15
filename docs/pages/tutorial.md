@@ -396,18 +396,18 @@ tox -e docs
 from the root of the project repository.
 The built documentation will be output to a directory `site`.
 
-## ✅ Using `pre-commit` to run checks when committing
+## ✅ Using `prek` to run checks when committing
 
-The package is set-up to use [pre-commit](https://pre-commit.com/), a framework for running [Git hook scripts](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) on each commit to the repository.
+The package is set-up to use [prek](https://prek.j178.dev/), a framework for running [Git hook scripts](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) on each commit to the repository.
 
 There is a `.pre-commit-config.yaml` configuration file which you can take a look at.
-With this setup `pre-commit` will run a series of fast linters, checks and formatters on the repository on every commit.
+With this setup `prek` will run a series of fast linters, checks and formatters on the repository on every commit.
 
 The main tools we recommend are [ruff](https://docs.astral.sh/ruff/), [ty](https://docs.astral.sh/ty/) and [prettier](https://prettier.io/).
 These Git hook scripts can be installed locally by running
 
 ```sh
-pre-commit install
+prek install
 ```
 
 from the root of the project repository.
@@ -415,14 +415,14 @@ You will only need to do this once per `git clone` of the code.
 
 Once installed, the scripts will be called to inspect the changes each time `git commit` is run.
 Any failures of the checks will need to be fixed before the changes can be committed.
-Some of the `pre-commit` hooks include support for auto-fixing easy problems - in this case you will be alerted that a file has been changed by a hook and these changes need to be staged using `git add` before recommitting.
+Some of the `prek` hooks include support for auto-fixing easy problems - in this case you will be alerted that a file has been changed by a hook and these changes need to be staged using `git add` before recommitting.
 
 The hooks typically only run on the files _changed_ in a commit.
-The `pre-commit` hooks can be run against _all files in the repository_ by running
+The `prek` hooks can be run against _all files in the repository_ by running
 
 ```sh
-pre-commit run --all-files
+prek run --all-files
 ```
 
 from the root of the project repository.
-This is useful to check they will pass if the `pre-commit` configuration is updated, for example, when [adding a new plug-in](https://pre-commit.com/#plugins).
+This is useful to check they will pass if the `prek` configuration is updated, for example, when [adding a new plug-in](https://prek.j178.dev/authoring-hooks).
