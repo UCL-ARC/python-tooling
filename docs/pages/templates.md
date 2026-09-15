@@ -1,7 +1,7 @@
 ---
 title: Templates
 layout: default
-nav_order: 2
+nav_order: 3
 ---
 
 ## Package templates
@@ -12,7 +12,7 @@ The [UCL-ARC/python-tooling](https://github.com/UCL-ARC/python-tooling)
 repository contains our recommended package template for new ARC projects. It
 pre-configures the recommended tools listed in the other pages of this site. If
 you are working on a new project, our template should be a good starting point!
-We have a [tutorial](https://github.com/UCL-ARC/python-tooling/blob/main/tutorial.md)
+We have a [tutorial]({% link pages/tutorial.md %})
 available with detailed instructions for creating a package using the template
 and how to use the newly created package with some of the tools included.
 

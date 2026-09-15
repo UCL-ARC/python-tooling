@@ -204,7 +204,8 @@
       "profile": "https://willgraham01.github.io/",
       "contributions": [
         "content",
-        "review"
+        "review",
+        "code"
       ]
     },
     {
@@ -241,7 +242,8 @@
       "profile": "http://dpshelio.github.io",
       "contributions": [
         "code",
-        "question"
+        "question",
+        "bug"
       ]
     },
     {
@@ -281,7 +283,7 @@
       "login": "MitchellAcoustics",
       "name": "Andrew Mitchell",
       "avatar_url": "https://avatars.githubusercontent.com/u/22335636?v=4",
-      "profile": "http://drandrewmitchell.com",
+      "profile": "https://github.com/MitchellAcoustics",
       "contributions": [
         "bug"
       ]
@@ -295,7 +297,9 @@
         "bug",
         "a11y",
         "review",
-        "tutorial"
+        "tutorial",
+        "content",
+        "doc"
       ]
     },
     {
@@ -325,6 +329,25 @@
       "profile": "http://james.briant.co.uk",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "stellaprins",
+      "name": "Stella Prins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30465823?v=4",
+      "profile": "https://github.com/stellaprins",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "connoraird",
+      "name": "Connor Aird",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61978554?v=4",
+      "profile": "https://github.com/connoraird",
+      "contributions": [
+        "review"
       ]
     }
   ]

@@ -57,12 +57,12 @@ Centre for Advanced Research Computing, University College London
 
 We recommend installing in a project specific virtual environment created using
 a environment management tool such as
-[Conda](https://docs.conda.io/projects/conda/en/stable/). To install the latest
-development version of `cookiecutter-test` using `pip` in the currently active
+[uv](https://docs.astral.sh/uv/). To install the latest
+development version of `cookiecutter-test` using `uv pip` in the currently active
 environment run
 
 ```sh
-pip install git+https://github.com/test-user/cookiecutter-test.git
+uv pip install git+https://github.com/test-user/cookiecutter-test.git
 ```
 
 Alternatively create a local clone of the repository with
@@ -74,7 +74,7 @@ git clone https://github.com/test-user/cookiecutter-test.git
 and then install in editable mode by running
 
 ```sh
-pip install -e .
+uv pip install -e .
 ```
 
 ### Running Locally
@@ -112,7 +112,7 @@ from the root of the repository. The built documentation will be written to
 `site`.
 
 Alternatively to build and preview the documentation locally, in a Python
-environment with the optional `docs` dependencies installed, run
+environment with the `docs` dependency group installed, run
 
 ```sh
 mkdocs serve

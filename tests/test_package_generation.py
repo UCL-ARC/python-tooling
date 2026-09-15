@@ -21,14 +21,14 @@ def get_all_files_folders(root_path: pathlib.Path) -> set[pathlib.Path]:
     file_set: set[pathlib.Path] = set()
     for dirpath, _, filenames in os.walk(root_path):
         dirpath_path = pathlib.Path(dirpath).relative_to(root_path)
-        if dirpath_path.name in ["__pycache__"]:
+        if dirpath_path.name == "__pycache__":
             continue
 
         # Add this directory
         file_set.update((dirpath_path,))
         # Add any files in it
         for filename in filenames:
-            if filename in [".DS_Store"]:
+            if filename == ".DS_Store":
                 continue
             file_set.update((dirpath_path / filename,))
 

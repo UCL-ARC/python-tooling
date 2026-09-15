@@ -33,6 +33,7 @@ other packages.
 If you just want to get started with our recommendations, we have
 [our own Python package template](https://github.com/UCL-ARC/python-tooling#using-this-template)
 that lives in the same repository as these pages.
+A [tutorial]({% link pages/tutorial.md %}) explaining how to use the template is also available.
 
 Otherwise, each page on this site highlights recommended packages or services
 for each area. These should not be taken as set in stone for every project, but

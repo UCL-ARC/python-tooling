@@ -29,9 +29,10 @@ for some of these.
 
 ### Type checking
 
-| Name                                           | Short description                                                             |                     🚦                      |
-| ---------------------------------------------- | ----------------------------------------------------------------------------- | :-----------------------------------------: |
-| [mypy](https://mypy.readthedocs.io/en/stable/) | Static type checker, won't fail if no typing but will if typing is incorrect. | <span class="label label-green">Best</span> |
+| Name                                           | Short description                                                             |                      🚦                      |
+| ---------------------------------------------- | ----------------------------------------------------------------------------- | :------------------------------------------: |
+| [ty](https://docs.astral.sh/ty/)               | Static type checker, fast and rapidly developing.                             | <span class="label label-green">Best</span>  |
+| [mypy](https://mypy.readthedocs.io/en/stable/) | Static type checker, won't fail if no typing but will if typing is incorrect. | <span class="label label-yellow">Good</span> |
 
 ### Dependency checking
 
