@@ -1,5 +1,11 @@
 # Contributing Guide
 
+[![Link Checker](https://github.com/UCL-ARC/python-tooling/actions/workflows/links.yml/badge.svg)](https://github.com/UCL-ARC/python-tooling/actions/workflows/links.yml)
+[![Linting](https://github.com/UCL-ARC/python-tooling/actions/workflows/linting.yml/badge.svg)](https://github.com/UCL-ARC/python-tooling/actions/workflows/linting.yml)
+[![Run template tests](https://github.com/UCL-ARC/python-tooling/actions/workflows/test.yml/badge.svg)](https://github.com/UCL-ARC/python-tooling/actions/workflows/test.yml)
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
+[![prek](https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge.svg)](https://github.com/j178/prek)
+
 This template and our [recommendation pages][website] were made by [research
 software engineers] at [UCL's Centre for Advanced Research Computing][UCL ARC].
 We made it with research software projects in mind, but whoever you are, we hope
@@ -61,8 +67,6 @@ You can omit the `--checkout` option if you're already on the
 branch you want to test.
 
 #### Python version support
-
-[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
 
 We follow Scientific Python's [SPEC 0](https://scientific-python.org/specs/spec-0000/) policy.
 Notably this means our template will support [Python versions for three years after their release](https://scientific-python.org/specs/spec-0000/#support-window), and changes to the template are required to pass tests in all such python versions.

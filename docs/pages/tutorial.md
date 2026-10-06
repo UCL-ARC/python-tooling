@@ -400,7 +400,7 @@ The built documentation will be output to a directory `site`.
 
 The package is set-up to use [prek](https://prek.j178.dev/), a framework for running [Git hook scripts](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) on each commit to the repository.
 
-There is a `.pre-commit-config.yaml` configuration file which you can take a look at.
+There is a `prek.toml` configuration file which you can take a look at.
 With this setup `prek` will run a series of fast linters, checks and formatters on the repository on every commit.
 
 The main tools we recommend are [ruff](https://docs.astral.sh/ruff/), [ty](https://docs.astral.sh/ty/) and [prettier](https://prettier.io/).
