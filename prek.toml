@@ -1,6 +1,7 @@
 # Configuration file for `prek`, a git hook framework written in Rust.
 # See https://prek.j178.dev for more information.
 # :schema https://www.schemastore.org/prek.json
+# ^ Remove the space here when toml-sort/#105 is resolved. The directive should be:  '#:schema'
 
 exclude = "^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/"
 
