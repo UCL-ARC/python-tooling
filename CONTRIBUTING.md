@@ -20,6 +20,16 @@ members or associate members of ARC. Pull-request authors are trusted to add two
 reviewers to anything that they think might be opinionated. If a reviewer adds
 a second reviewer, please wait for both to approve before merging.
 
+## AI policy
+
+We adhere to the [UCL ARC] [policy on AI-assisted software development].
+AI tools can be used to assist with writing and reviewing code (and website
+content), but should not be used to generate large sections of code or content.
+We may ask GitHub Copilot to take a first pass review before a human reviewer.
+The proposer is responsible for their code and content.
+All of the normal best practices still apply: pull requests should be clear,
+focused, and as short as possible.
+
 ## Development workflow
 
 To contribute a change, please:
@@ -87,6 +97,7 @@ See the [jekyll docs] for more info.
 <!-- prettier-ignore-start -->
 [website]: https://github-pages.arc.ucl.ac.uk/python-tooling
 [UCL ARC]: https://ucl.ac.uk/arc
+[policy on AI-assisted software development]: https://doi.org/10.5522/04/34070631
 [open an issue]: https://github.com/UCL-ARC/python-tooling/issues/new/choose
 [Discussions tab]: https://github.com/UCL-ARC/python-tooling/discussions
 [Research software engineers]: https://society-rse.org/about/history
