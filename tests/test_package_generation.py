@@ -66,6 +66,25 @@ def test_pip_installable(
     )
 
 
+def test_uv_installable(
+    venv: pytest_venv.VirtualEnvironment,
+    generate_package: typing.Callable,
+) -> None:
+    """Test generated package is uv installable."""
+    _, test_project_dir = generate_package()
+    venv.install("uv", upgrade=True)
+    # Try to install the package in virtual environment with uv
+    uvsync = subprocess.run(  # noqa: S603
+        [pathlib.Path(venv.bin) / "uv", "sync"],
+        cwd=test_project_dir,
+        capture_output=True,
+        check=False,
+    )
+    assert uvsync.returncode == 0, (
+        f"Something went wrong with installation: {uvsync.stderr!r}"
+    )
+
+
 @pytest.mark.parametrize("funder", ["", "STFC", "UKRI", "Wellcome Trust"])
 def test_optional_funder(
     funder: str,
