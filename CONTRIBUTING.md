@@ -25,7 +25,7 @@ a second reviewer, please wait for both to approve before merging.
 We adhere to the [UCL ARC] [policy on AI-assisted software development].
 AI tools can be used to assist with writing and reviewing code (and website
 content), but should not be used to generate large sections of code or content.
-We may ask GitHub copilot to take a first pass review before a human reviewer.
+We may ask GitHub Copilot to take a first pass review before a human reviewer.
 The proposer is responsible for their code and content.
 All of the normal best practices still apply: pull requests should be clear,
 focused, and as short as possible.
