@@ -1,0 +1,73 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+# :schema https://www.schemastore.org/prek.json
+# ^ Remove the space here when toml-sort/#105 is resolved. The directive should be:  '#:schema'
+
+exclude = "^{{cookiecutter.project_slug}}/|^tests/data/test_package_generation/"
+
+[[repos]]
+hooks = [
+    {args = [
+        "--config=pyproject.toml",
+    ], id = "ruff-check"},
+    {args = [
+        "--config=pyproject.toml",
+    ], id = "ruff-format"},
+]
+repo = "https://github.com/astral-sh/ruff-pre-commit"
+rev = "v0.15.19"
+
+[[repos]]
+hooks = [{args = ["--dot"], id = "markdownlint-fix"}]
+repo = "https://github.com/igorshubovych/markdownlint-cli"
+rev = "v0.49.1"
+
+[[repos]]
+hooks = [{id = "forbid-tabs"}]
+repo = "https://github.com/Lucas-C/pre-commit-hooks"
+rev = "v1.5.6"
+
+[[repos]]
+hooks = [{id = "toml-sort-fix"}]
+repo = "https://github.com/pappasam/toml-sort"
+rev = "v0.24.4"
+
+[[repos]]
+hooks = [
+    {args = [
+        "--group=typechecking",
+        "--isolated",
+        "--no-default-groups",
+    ], id = "ty"},
+]
+repo = "https://github.com/astral-sh/ty-pre-commit"
+rev = "v0.0.79"
+
+[[repos]]
+hooks = [{args = ["--quote-props=as-needed"], id = "prettier"}]
+repo = "https://github.com/rbubley/mirrors-prettier"
+rev = "v3.8.4"
+
+[[repos]]
+hooks = [
+    {args = [
+        "--fix=lf",
+    ], id = "mixed-line-ending"},
+    {id = "check-case-conflict"},
+    {id = "check-docstring-first"},
+    {id = "check-merge-conflict"},
+    {id = "end-of-file-fixer"},
+    {id = "trailing-whitespace"},
+]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+
+[[repos]]
+hooks = [
+    {args = [
+        "--schemafile=.github/schemas/github-issue-forms.json",
+        "--verbose",
+    ], exclude = '^\.github/ISSUE_TEMPLATE/config\.yml$', files = '^\.github/ISSUE_TEMPLATE/.*\.yml$', id = "check-jsonschema", name = "Validate GitHub issue templates"},
+]
+repo = "https://github.com/python-jsonschema/check-jsonschema"
+rev = "0.38.0"
