@@ -6,7 +6,7 @@ layout: default
 ## Linting
 
 See
-[here for an example configuration](https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.pre-commit-config.yaml)
+[here for an example configuration](https://github.com/UCL-ARC/python-tooling/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/prek.toml)
 for some of these.
 
 ### Code formatting
